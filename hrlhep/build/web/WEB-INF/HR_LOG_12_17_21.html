@@ -1,0 +1,1768 @@
+<html>
+    <head>
+        <title>HR LHEP Log</title>
+        <META http-equiv=Content-Type content="text/html; charset=utf-8">
+        <style>
+            body{background-color:#eefff4;}
+            xmp {margin:0;} 
+            .pt {cursor:pointer;} 
+            span.req_start {border:solid 1px red; font-weight:bold; background-color:#FFFFA0;}
+            span.req_end {border:solid 1px red; font-weight:bold; background-color:#D0FFB0;}
+            div.req {display:none; border:solid 1px red; padding:4px; background-color:white;}
+
+            span.ss_start {border:solid 1px red; background-color:#D0E8FF;}
+            span.ss_back {border:solid 1px blue; background-color:#D0FFB0;}
+            div.ss {display:none; border:solid 1px green; border-right:none; padding:6px; margin-left:5px;}
+        </style>
+        <script type="text/javascript">
+            var toggleDiv = function (id) {
+                var d = document.getElementById(id);
+                if (d.style.display === "block")
+                    d.style.display = "none";
+                else
+                    d.style.display = "block";
+            };
+        </script>
+    </head><body>
++++++ session inactive=1; fromStart=620min<BR>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_12_17_21.html maxLength=500000
+</xmp>------ <b>execGetDataCmd: </b>'read file: HR_LOG_12_17_21.html maxLength=500000'<BR>
+*** file: 'HR_LOG_12_17_21.html' max.length=500000<br><BR>
+------ SQL done, 1ms.<br><BR>
+<xmp><BR>
+<HTML><HEAD><TITLE>LOG HR LHEP</TITLE><BR>
+<META http-equiv=Content-Type content="text/html; charset=utf-8"><BR>
+<script type="text/javascript"><BR>
+var clearLog=function() {<BR>
+document.theForm.ResetLog.value="true";<BR>
+document.theForm.submit();<BR>
+}<BR>
+var switchLog=function() {<BR>
+document.theForm.ResetLog.value="true";<BR>
+document.theForm.submit();<BR>
+}<BR>
+</script><BR>
+</head><BR>
+<body><BR>
+<div style="position: fixed; top:1; right:1; border:solid 1px gray; background-color:#FFFFA0; padding:5px;"><BR>
+<form name="theForm" method="POST" style="margin:0;"><BR>
+<input type=hidden name="c" value="sys/showLog_noDB"><BR>
+<input type=hidden name="ResetLog" value=""><BR>
+<input type=button value="ОБНОВИТЬ" style="width:120px; margin-right:20px;" onClick="document.theForm.submit();"><BR>
+<input type=button value="ОЧИСТИТЬ" style="width:120px; margin-right:20px;" onClick="clearLog();"><BR>
+LOG:<input type=radio name="setLog" value="on"<BR>
+checked<BR>
+onClick="switchLog();">ON<BR>
+<input type=radio name="setLog" value="off"<BR>
+onClick="switchLog();">OFF<BR>
+<input type=radio name="LogLevel" value="0"<BR>
+onClick="switchLog();">0<BR>
+<input type=radio name="LogLevel" value="1"<BR>
+onClick="switchLog();">1<BR>
+<input type=radio name="LogLevel" value="2"<BR>
+onClick="switchLog();">2<BR>
+<input type=radio name="LogLevel" value="3"<BR>
+onClick="switchLog();">3<BR>
+<input type=radio name="LogLevel" value="5"<BR>
+onClick="switchLog();">5<BR>
+<input type=radio name="LogLevel" value="7"<BR>
+checked<BR>
+onClick="switchLog();">7<BR>
+<input type=radio name="LogLevel" value="9"<BR>
+onClick="switchLog();">9<BR>
+&nbsp; &nbsp;<BR>
+<input type=checkbox name="setDebug"<BR>
+checked<BR>
+onClick="document.theForm.submit();">debug<BR>
+</form><BR>
+</div><BR>
+<input size=65 value='F:/LIT/dms/hrlhep/build/web/WEB-INF/HR_LOG_12_17_21.html'><BR>
+<br><BR>
+<hr><BR>
+</body></html><BR>
+</xmp><BR>
+<br><i>connect: jdbc:mysql://159.93.33.208/hrlhep?useUnicode=false&characterEncoding=utf8</i>... Connect OK! 19ms.</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_118");'> Request_HR_LHEP_118 [17.12 21:53:30] 2309: 0:0:0:0:0:0:0:1 c=tab_salary</span><div id='Request_HR_LHEP_118' class='req'> queryString:c=tab_salary&ajax=Y; log=true; session inactive=min;<br>+++++ session inactive=0; fromStart=621min<BR>
+<b>$INCLUDE </b>dat/utils.cfg[personal filters]<BR>
+##########main.cfg drop down<br> <b>SQL: [main.cfg[dropdowns] (1) ]:</b><xmp>select distinct concat('<option value="', post, '" '
+, case when post='' then 'selected' else '' end
+, '>' , post, '</option>') as POST
+from sotrudniki
+where lab_id = 100000
+order by post
+</xmp>------ <b>execGetDataCmd: </b>'select distinct concat('<option value="', post, '" ' , case when post='' then 'selected' else '' end , '>' , post, '</option>') as POST from sotrudniki where lab_id = 100000 order by post'<BR>
+<xmp>***** 112 record(s) retrieved. Filled 1 parameters: 
+POST=<option value="аппаратчик ожижения водорода и гелия" >аппаратчик ожижения водорода и гелия</option><option value="ведущий инженер по охране труда" >ведущий инженер по охране труда</option><option value="ведущий инженер" >ведущий инженер</option><option value="ведущий конструктор" >ведущий конструктор</option><option value="ведущий научный сотрудник" >ведущий научный сотрудник</option><option value="ведущий программист" >ведущий программист</option><option value="ведущий технолог" >ведущий технолог</option><option value="ведущий экономист" >ведущий экономист</option><option value="ведущий электроник" >ведущий электроник</option><option value="гальваник" >гальваник</option><option value="главный инженер лаборатории" >главный инженер лаборатории</option><option value="главный инженер установки" >главный инженер установки</option><option value="главный научный сотрудник" >главный научный сотрудник</option><option value="главный технический специалист" >главный технический специалист</option><option value="гравер" >гравер</option><option value="директор лаборатории" >директор лаборатории</option><option value="заведующий складом" >заведующий складом</option><option value="заведующий техническим архивом" >заведующий техническим архивом</option><option value="заведующий хозяйством" >заведующий хозяйством</option><option value="заместитель главного инженера лаборатории" >заместитель главного инженера лаборатории</option><option value="заместитель директора лаборатории по научной работе" >заместитель директора лаборатории по научной работе</option><option value="заместитель начальника отдела" >заместитель начальника отдела</option><option value="заместитель начальника отделения по научной работе" >заместитель начальника отделения по научной работе</option><option value="заместитель начальника цеха" >заместитель начальника цеха</option><option value="заточник" >заточник</option><option value="и.о.ведущего научного сотрудника" >и.о.ведущего научного сотрудника</option><option value="и.о.научного сотрудника" >и.о.научного сотрудника</option><option value="и.о.начальника сектора" >и.о.начальника сектора</option><option value="и.о.старшего научного сотрудника" >и.о.старшего научного сотрудника</option><option value="инженер" >инженер</option><option value="инженер-конструктор 1 категории" >инженер-конструктор 1 категории</option><option value="инженер-конструктор 2 категории" >инженер-конструктор 2 категории</option><option value="инженер-конструктор 3 категории" >инженер-конструктор 3 категории</option><option value="инженер-конструктор" >инженер-конструктор</option><option value="инженер-программист 1 категории" >инженер-программист 1 категории</option><option value="инженер-программист 2 категории" >инженер-программист 2 категории</option><option value="инженер-программист" >инженер-программист</option><option value="инженер-технолог 1 категории" >инженер-технолог 1 категории</option><option value="инженер-технолог 3 категории" >инженер-технолог 3 категории</option><option value="инженер-технолог" >инженер-технолог</option><option value="инженер-электроник 1 категории" >инженер-электроник 1 категории</option><option value="инженер-электроник 2 категории" >инженер-электроник 2 категории</option><option value="инженер-электроник" >инженер-электроник</option><option value="кладовщик инструментальной кладовой" >кладовщик инструментальной кладовой</option><option value="консультант при дирекции лаборатории" >консультант при дирекции лаборатории</option><option value="консультант" >консультант</option><option value="лаборант обработки фильмовой информации физического эксперимента" >лаборант обработки фильмовой информации физического эксперимента</option><option value="лаборант ускорительной установки" >лаборант ускорительной установки</option><option value="лаборант физической лаборатории" >лаборант физической лаборатории</option><option value="лаборант химико-технологических исследований" >лаборант химико-технологических исследований</option><option value="лаборант" >лаборант</option><option value="маляр" >маляр</option><option value="мастер" >мастер</option><option value="машинист компрессорных установок" >машинист компрессорных установок</option><option value="машинист по стирке и ремонту спецодежды" >машинист по стирке и ремонту спецодежды</option><option value="механик цеха" >механик цеха</option><option value="механик экспериментальных стендов и установок" >механик экспериментальных стендов и установок</option><option value="младший научный сотрудник" >младший научный сотрудник</option><option value="монтажник радиоэлектронной аппаратуры и приборов" >монтажник радиоэлектронной аппаратуры и приборов</option><option value="монтажник санитарно-технических систем и оборудования" >монтажник санитарно-технических систем и оборудования</option><option value="монтажник технологического оборудования и связанных с ним конструкций" >монтажник технологического оборудования и связанных с ним конструкций</option><option value="научный сотрудник" >научный сотрудник</option><option value="начальник бюро" >начальник бюро</option><option value="начальник группы" >начальник группы</option><option value="начальник отдела" >начальник отдела</option><option value="начальник отделения" >начальник отделения</option><option value="начальник сектора" >начальник сектора</option><option value="начальник службы" >начальник службы</option><option value="начальник цеха" >начальник цеха</option><option value="переводчик" >переводчик</option><option value="плотник" >плотник</option><option value="подсобный рабочий" >подсобный рабочий</option><option value="полировщик" >полировщик</option><option value="помощник директора лаборатории по капитальному строительству" >помощник директора лаборатории по капитальному строительству</option><option value="помощник директора лаборатории по общим вопросам" >помощник директора лаборатории по общим вопросам</option><option value="помощник директора лаборатории по финансовым вопросам" >помощник директора лаборатории по финансовым вопросам</option><option value="помощник начальника цеха по хозяйственным вопросам" >помощник начальника цеха по хозяйственным вопросам</option><option value="почетный директор лаборатории" >почетный директор лаборатории</option><option value="сверловщик" >сверловщик</option><option value="слесарь аварийно-восстановительных работ" >слесарь аварийно-восстановительных работ</option><option value="слесарь механосборочных работ" >слесарь механосборочных работ</option><option value="слесарь по контрольно-измерительным приборам и автоматике" >слесарь по контрольно-измерительным приборам и автоматике</option><option value="слесарь по ремонту и обслуживанию систем вентиляции и кондиционирования" >слесарь по ремонту и обслуживанию систем вентиляции и кондиционирования</option><option value="слесарь-ремонтник" >слесарь-ремонтник</option><option value="советник директора лаборатории" >советник директора лаборатории</option><option value="советник при дирекции лаборатории" >советник при дирекции лаборатории</option><option value="советник" >советник</option><option value="станочник широкого профиля" >станочник широкого профиля</option><option value="старший инженер" >старший инженер</option><option value="старший инспектор" >старший инспектор</option><option value="старший лаборант" >старший лаборант</option><option value="старший лаборант, имеющий высшее образование" >старший лаборант, имеющий высшее образование</option><option value="старший мастер" >старший мастер</option><option value="старший научный сотрудник" >старший научный сотрудник</option><option value="старший переводчик" >старший переводчик</option><option value="старший техник" >старший техник</option><option value="старший товаровед" >старший товаровед</option><option value="старший экономист" >старший экономист</option><option value="столяр" >столяр</option><option value="техник" >техник</option><option value="токарь" >токарь</option><option value="токарь-расточник" >токарь-расточник</option><option value="тракторист" >тракторист</option><option value="уборщик производственных помещений" >уборщик производственных помещений</option><option value="уборщик служебных помещений" >уборщик служебных помещений</option><option value="ученый секретарь лаборатории" >ученый секретарь лаборатории</option><option value="фрезеровщик" >фрезеровщик</option><option value="художник" >художник</option><option value="электрогазосварщик" >электрогазосварщик</option><option value="электромонтер по обслуживанию электрооборудования" >электромонтер по обслуживанию электрооборудования</option><option value="электромонтер по ремонту и обслуживанию электрооборудования" >электромонтер по ремонту и обслуживанию электрооборудования</option><option value="электросварщик ручной сварки" >электросварщик ручной сварки</option></xmp>------ SQL done, 18ms.<br><BR>
+main.cfg drop down<br> <b>SQL: [main.cfg[dropdowns] (2) ]:</b><xmp>select distinct concat('<option value="', category, '" '
+, case when category='' then 'selected' else '' end
+, '>' , category, '</option>')as CATEGORIES
+from sotrudniki
+where lab_id = 100000
+</xmp>------ <b>execGetDataCmd: </b>'select distinct concat('<option value="', category, '" ' , case when category='' then 'selected' else '' end , '>' , category, '</option>')as CATEGORIES from sotrudniki where lab_id = 100000'<BR>
+<xmp>***** 4 record(s) retrieved. Filled 1 parameters: 
+CATEGORIES=<option value="Научные и научно-педагогические работники" >Научные и научно-педагогические работники</option><option value="Специалисты" >Специалисты</option><option value="Рабочие" >Рабочие</option><option value="Руководители" >Руководители</option></xmp>------ SQL done, 13ms.<br><BR>
+main.cfg drop down<br> <b>SQL: [main.cfg[dropdowns] (3) ]:</b><xmp>select distinct concat('<option value="', stepen, '" '
+, case when stepen='' then 'selected' else '' end
+, '>' , stepen, '</option>')as STEPEN
+from sotrudniki
+where lab_id = 100000
+</xmp>------ <b>execGetDataCmd: </b>'select distinct concat('<option value="', stepen, '" ' , case when stepen='' then 'selected' else '' end , '>' , stepen, '</option>')as STEPEN from sotrudniki where lab_id = 100000'<BR>
+<xmp>***** 4 record(s) retrieved. Filled 1 parameters: 
+STEPEN=<option value="" selected></option><option value="Доктор наук" >Доктор наук</option><option value="Кандидат наук" >Кандидат наук</option></xmp>------ SQL done, 10ms.<br><BR>
+main.cfg drop down<br> <b>SQL: [main.cfg[dropdowns] (4) ]:</b><xmp>select distinct concat('<option value="', grazhdan, '" '
+, case when grazhdan='' then 'selected' else '' end
+, '>' , grazhdan, '</option>')as GRAZHDAN
+from sotrudniki
+where lab_id = 100000
+order by grazhdan
+</xmp>------ <b>execGetDataCmd: </b>'select distinct concat('<option value="', grazhdan, '" ' , case when grazhdan='' then 'selected' else '' end , '>' , grazhdan, '</option>')as GRAZHDAN from sotrudniki where lab_id = 100000 order by grazhdan'<BR>
+<xmp>***** 20 record(s) retrieved. Filled 1 parameters: 
+GRAZHDAN=<option value="АЗЕРБАЙДЖАН" >АЗЕРБАЙДЖАН</option><option value="АРМЕНИЯ" >АРМЕНИЯ</option><option value="БЕЛАРУСЬ" >БЕЛАРУСЬ</option><option value="БОЛГАРИЯ" >БОЛГАРИЯ</option><option value="ГЕРМАНИЯ" >ГЕРМАНИЯ</option><option value="ГРУЗИЯ" >ГРУЗИЯ</option><option value="КАЗАХСТАН" >КАЗАХСТАН</option><option value="КУБА" >КУБА</option><option value="ЛИТВА" >ЛИТВА</option><option value="МОЛДОВА, РЕСПУБЛИКА" >МОЛДОВА, РЕСПУБЛИКА</option><option value="МОНГОЛИЯ" >МОНГОЛИЯ</option><option value="НИГЕРИЯ" >НИГЕРИЯ</option><option value="ПОЛЬША" >ПОЛЬША</option><option value="РОССИЯ" >РОССИЯ</option><option value="РУМЫНИЯ" >РУМЫНИЯ</option><option value="СЛОВАКИЯ" >СЛОВАКИЯ</option><option value="УЗБЕКИСТАН" >УЗБЕКИСТАН</option><option value="УКРАИНА" >УКРАИНА</option><option value="ЧЕШСКАЯ РЕСПУБЛИКА" >ЧЕШСКАЯ РЕСПУБЛИКА</option></xmp>------ SQL done, 12ms.<br><BR>
+main.cfg drop down<br> <b>SQL: [main.cfg[dropdowns] (5) ]:</b><xmp>select distinct concat('<option value="', short_name, '" '
+, case when short_name='' then 'selected' else '' end
+, '>' , short_name, '</option>')as OTDEL
+from struktura str
+where str.pid  in (select id from struktura where pid = 100000)
+order by otdel
+</xmp>------ <b>execGetDataCmd: </b>'select distinct concat('<option value="', short_name, '" ' , case when short_name='' then 'selected' else '' end , '>' , short_name, '</option>')as OTDEL from struktura str where str.pid  in (select id from struktura where pid = 100000) order by otdel'<BR>
+<xmp>***** 46 record(s) retrieved. Filled 1 parameters: 
+OTDEL=<option value="Административное бюро" >Административное бюро</option><option value="Гр. №1 мат. учета и контроля" >Гр. №1 мат. учета и контроля</option><option value="Группа №1 высоковольтного оборудования" >Группа №1 высоковольтного оборудования</option><option value="Группа №2 низковольтного оборудования" >Группа №2 низковольтного оборудования</option><option value="Группа №2 планово- экономическая" >Группа №2 планово- экономическая</option><option value="Группа №3 обеспечения и контроля закупок" >Группа №3 обеспечения и контроля закупок</option><option value="Группа №3 тепловодоснабжения и вентиляции" >Группа №3 тепловодоснабжения и вентиляции</option><option value="Группа №4 электротехническая - высоковольтного оборудования" >Группа №4 электротехническая - высоковольтного оборудования</option><option value="Детекторный отдел" >Детекторный отдел</option><option value="Диспетчерская служба Нуклотрона" >Диспетчерская служба Нуклотрона</option><option value="Инженерный энерготехнологический отдел " >Инженерный энерготехнологический отдел </option><option value="Конструкторский отдел" >Конструкторский отдел</option><option value="Научно - экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA" >Научно - экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA</option><option value="Научно-инженерный отдел систем электропитания Нуклотрона" >Научно-инженерный отдел систем электропитания Нуклотрона</option><option value="Научно-исследовательский криогенный отдел" >Научно-исследовательский криогенный отдел</option><option value="Научно-методический отдел кремниевых трековых систем" >Научно-методический отдел кремниевых трековых систем</option><option value="Научно-технический отдел пучков" >Научно-технический отдел пучков</option><option value="Научно-экспериментальный отдел инжекции и кольца Нуклотрона" >Научно-экспериментальный отдел инжекции и кольца Нуклотрона</option><option value="Научно-экспериментальный отдел инженерно-физических проблем ускорителей" >Научно-экспериментальный отдел инженерно-физических проблем ускорителей</option><option value="Научно-экспериментальный отдел многоцелевого детектора (MPD)" >Научно-экспериментальный отдел многоцелевого детектора (MPD)</option><option value="Научно-экспериментальный отдел радиоэлектронных систем" >Научно-экспериментальный отдел радиоэлектронных систем</option><option value="Научно-экспериментальный отдел сверхпроводящих магнитов и технологий" >Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</option><option value="Научно-экспериментальный отдел спиновой физики малонуклонных систем" >Научно-экспериментальный отдел спиновой физики малонуклонных систем</option><option value="Научно-экспериментальный отдел ускорительных систем  " >Научно-экспериментальный отдел ускорительных систем  </option><option value="Научно-экспериментальный отдел физики легких кварков и лептонов" >Научно-экспериментальный отдел физики легких кварков и лептонов</option><option value="Научно-экспериментальный отдел физики на CMS" >Научно-экспериментальный отдел физики на CMS</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на LHC" >Научно-экспериментальный отдел физики тяжелых ионов на LHC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на RHIC" >Научно-экспериментальный отдел физики тяжелых ионов на RHIC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов" >Научно-экспериментальный отдел физики тяжелых ионов</option><option value="Научно–экспериментальный отдел автоматизации физических исследований" >Научно–экспериментальный отдел автоматизации физических исследований</option><option value="Отдел математического обеспечения" >Отдел математического обеспечения</option><option value="Отдел физики" >Отдел физики</option><option value="Сектор SPD" >Сектор SPD</option><option value="Сектор детекторных систем" >Сектор детекторных систем</option><option value="Сектор криофизических исследований" >Сектор криофизических исследований</option><option value="Сектор полупроводниковых детекторов" >Сектор полупроводниковых детекторов</option><option value="Сектор прикладных радиационных технологий" >Сектор прикладных радиационных технологий</option><option value="Сектор рентгеновской спектроскопии" >Сектор рентгеновской спектроскопии</option><option value="Сектор строу-детекторов" >Сектор строу-детекторов</option><option value="Сектор структуры частиц" >Сектор структуры частиц</option><option value="Сектор физики на АТЛАС" >Сектор физики на АТЛАС</option><option value="Сектор физики странных кварков в ядрах" >Сектор физики странных кварков в ядрах</option><option value="Серпуховской научно-экспериментальный отдел" >Серпуховской научно-экспериментальный отдел</option><option value="Ускорительный отдел" >Ускорительный отдел</option><option value="Хозяйственный отдел" >Хозяйственный отдел</option><option value="Цех опытно-экспериментального производства" >Цех опытно-экспериментального производства</option></xmp>------ SQL done, 5ms.<br><BR>
+main.cfg drop down<br> <b>SQL: [main.cfg[dropdowns] (6) ]:</b><xmp>select distinct concat('<option value="', short_name, '" '
+, case when short_name='' then 'selected' else '' end
+, '>' , subTopparent_name, '</option>')as OTDELENIE
+from struktura
+where pid = 100000
+order by OTDELENIE
+</xmp>------ <b>execGetDataCmd: </b>'select distinct concat('<option value="', short_name, '" ' , case when short_name='' then 'selected' else '' end , '>' , subTopparent_name, '</option>')as OTDELENIE from struktura where pid = 100000 order by OTDELENIE'<BR>
+XXXXXXXX Exception: java.sql.SQLException: Unknown column 'subTopparent_name' in 'field list'; SQL: 'select distinct concat('<option value="', short_name, '" ' , case when short_name='' then 'selected' else '' end , '>' , subTopparent_name, '</option>')as OTDELENIE from struktura where pid = 100000 order by OTDELENIE'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<xmp><BR>
+<tr><BR>
+<td class="label nowrap" nowrap><BR>
+ФИО:<BR>
+</td><td><BR>
+<input type="text" size=45 name="fio" value=""><BR>
+</td><BR>
+</tr><tr><BR>
+<td class="label nowrap" nowrap><BR>
+Табельный номер:</td><td><BR>
+<input size=15 name="tab_n"><BR>
+</td><BR>
+</tr><tr><BR>
+<td class="label nowrap" nowrap><BR>
+Ученая степень:<BR>
+</td><td><BR>
+<select name="stepen" class=norm><BR>
+<option value="">любая</option><BR>
+<option value="" selected></option><option value="Доктор наук" >Доктор наук</option><option value="Кандидат наук" >Кандидат наук</option><BR>
+</select><BR>
+</td><BR>
+</tr><tr><BR>
+<td class="label nowrap" nowrap><BR>
+Отдел:<BR>
+</td><td><BR>
+<select name=otdel class=norm><BR>
+<option value="">любой</option><BR>
+<option value="Административное бюро" >Административное бюро</option><option value="Гр. №1 мат. учета и контроля" >Гр. №1 мат. учета и контроля</option><option value="Группа №1 высоковольтного оборудования" >Группа №1 высоковольтного оборудования</option><option value="Группа №2 низковольтного оборудования" >Группа №2 низковольтного оборудования</option><option value="Группа №2 планово- экономическая" >Группа №2 планово- экономическая</option><option value="Группа №3 обеспечения и контроля закупок" >Группа №3 обеспечения и контроля закупок</option><option value="Группа №3 тепловодоснабжения и вентиляции" >Группа №3 тепловодоснабжения и вентиляции</option><option value="Группа №4 электротехническая - высоковольтного оборудования" >Группа №4 электротехническая - высоковольтного оборудования</option><option value="Детекторный отдел" >Детекторный отдел</option><option value="Диспетчерская служба Нуклотрона" >Диспетчерская служба Нуклотрона</option><option value="Инженерный энерготехнологический отдел " >Инженерный энерготехнологический отдел </option><option value="Конструкторский отдел" >Конструкторский отдел</option><option value="Научно - экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA" >Научно - экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA</option><option value="Научно-инженерный отдел систем электропитания Нуклотрона" >Научно-инженерный отдел систем электропитания Нуклотрона</option><option value="Научно-исследовательский криогенный отдел" >Научно-исследовательский криогенный отдел</option><option value="Научно-методический отдел кремниевых трековых систем" >Научно-методический отдел кремниевых трековых систем</option><option value="Научно-технический отдел пучков" >Научно-технический отдел пучков</option><option value="Научно-экспериментальный отдел инжекции и кольца Нуклотрона" >Научно-экспериментальный отдел инжекции и кольца Нуклотрона</option><option value="Научно-экспериментальный отдел инженерно-физических проблем ускорителей" >Научно-экспериментальный отдел инженерно-физических проблем ускорителей</option><option value="Научно-экспериментальный отдел многоцелевого детектора (MPD)" >Научно-экспериментальный отдел многоцелевого детектора (MPD)</option><option value="Научно-экспериментальный отдел радиоэлектронных систем" >Научно-экспериментальный отдел радиоэлектронных систем</option><option value="Научно-экспериментальный отдел сверхпроводящих магнитов и технологий" >Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</option><option value="Научно-экспериментальный отдел спиновой физики малонуклонных систем" >Научно-экспериментальный отдел спиновой физики малонуклонных систем</option><option value="Научно-экспериментальный отдел ускорительных систем  " >Научно-экспериментальный отдел ускорительных систем  </option><option value="Научно-экспериментальный отдел физики легких кварков и лептонов" >Научно-экспериментальный отдел физики легких кварков и лептонов</option><option value="Научно-экспериментальный отдел физики на CMS" >Научно-экспериментальный отдел физики на CMS</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на LHC" >Научно-экспериментальный отдел физики тяжелых ионов на LHC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на RHIC" >Научно-экспериментальный отдел физики тяжелых ионов на RHIC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов" >Научно-экспериментальный отдел физики тяжелых ионов</option><option value="Научно–экспериментальный отдел автоматизации физических исследований" >Научно–экспериментальный отдел автоматизации физических исследований</option><option value="Отдел математического обеспечения" >Отдел математического обеспечения</option><option value="Отдел физики" >Отдел физики</option><option value="Сектор SPD" >Сектор SPD</option><option value="Сектор детекторных систем" >Сектор детекторных систем</option><option value="Сектор криофизических исследований" >Сектор криофизических исследований</option><option value="Сектор полупроводниковых детекторов" >Сектор полупроводниковых детекторов</option><option value="Сектор прикладных радиационных технологий" >Сектор прикладных радиационных технологий</option><option value="Сектор рентгеновской спектроскопии" >Сектор рентгеновской спектроскопии</option><option value="Сектор строу-детекторов" >Сектор строу-детекторов</option><option value="Сектор структуры частиц" >Сектор структуры частиц</option><option value="Сектор физики на АТЛАС" >Сектор физики на АТЛАС</option><option value="Сектор физики странных кварков в ядрах" >Сектор физики странных кварков в ядрах</option><option value="Серпуховской научно-экспериментальный отдел" >Серпуховской научно-экспериментальный отдел</option><option value="Ускорительный отдел" >Ускорительный отдел</option><option value="Хозяйственный отдел" >Хозяйственный отдел</option><option value="Цех опытно-экспериментального производства" >Цех опытно-экспериментального производства</option><BR>
+</select><BR>
+</td><BR>
+<tr></tr><BR>
+<td class="label nowrap" nowrap><BR>
+Возраст: </td><BR>
+<td><BR>
+от: <input type="text" name="ot" size=5 value=""> по: <input type="text" name="do" size=5 value=""><BR>
+</td><BR>
+</tr><tr><BR>
+<td class="label nowrap" nowrap><BR>
+Категория:<BR>
+</td><td><BR>
+<select name="category" class=norm><BR>
+<option value="">все</option><BR>
+<option value="Научные и научно-педагогические работники" >Научные и научно-педагогические работники</option><option value="Специалисты" >Специалисты</option><option value="Рабочие" >Рабочие</option><option value="Руководители" >Руководители</option><BR>
+</select><BR>
+</td><BR>
+</tr><tr><BR>
+<td class="label nowrap" nowrap><BR>
+Должность1:<BR>
+</td><td><BR>
+<select name="post" class=norm><BR>
+<option value="">любая</option><BR>
+<option value="аппаратчик ожижения водорода и гелия" >аппаратчик ожижения водорода и гелия</option><option value="ведущий инженер по охране труда" >ведущий инженер по охране труда</option><option value="ведущий инженер" >ведущий инженер</option><option value="ведущий конструктор" >ведущий конструктор</option><option value="ведущий научный сотрудник" >ведущий научный сотрудник</option><option value="ведущий программист" >ведущий программист</option><option value="ведущий технолог" >ведущий технолог</option><option value="ведущий экономист" >ведущий экономист</option><option value="ведущий электроник" >ведущий электроник</option><option value="гальваник" >гальваник</option><option value="главный инженер лаборатории" >главный инженер лаборатории</option><option value="главный инженер установки" >главный инженер установки</option><option value="главный научный сотрудник" >главный научный сотрудник</option><option value="главный технический специалист" >главный технический специалист</option><option value="гравер" >гравер</option><option value="директор лаборатории" >директор лаборатории</option><option value="заведующий складом" >заведующий складом</option><option value="заведующий техническим архивом" >заведующий техническим архивом</option><option value="заведующий хозяйством" >заведующий хозяйством</option><option value="заместитель главного инженера лаборатории" >заместитель главного инженера лаборатории</option><option value="заместитель директора лаборатории по научной работе" >заместитель директора лаборатории по научной работе</option><option value="заместитель начальника отдела" >заместитель начальника отдела</option><option value="заместитель начальника отделения по научной работе" >заместитель начальника отделения по научной работе</option><option value="заместитель начальника цеха" >заместитель начальника цеха</option><option value="заточник" >заточник</option><option value="и.о.ведущего научного сотрудника" >и.о.ведущего научного сотрудника</option><option value="и.о.научного сотрудника" >и.о.научного сотрудника</option><option value="и.о.начальника сектора" >и.о.начальника сектора</option><option value="и.о.старшего научного сотрудника" >и.о.старшего научного сотрудника</option><option value="инженер" >инженер</option><option value="инженер-конструктор 1 категории" >инженер-конструктор 1 категории</option><option value="инженер-конструктор 2 категории" >инженер-конструктор 2 категории</option><option value="инженер-конструктор 3 категории" >инженер-конструктор 3 категории</option><option value="инженер-конструктор" >инженер-конструктор</option><option value="инженер-программист 1 категории" >инженер-программист 1 категории</option><option value="инженер-программист 2 категории" >инженер-программист 2 категории</option><option value="инженер-программист" >инженер-программист</option><option value="инженер-технолог 1 категории" >инженер-технолог 1 категории</option><option value="инженер-технолог 3 категории" >инженер-технолог 3 категории</option><option value="инженер-технолог" >инженер-технолог</option><option value="инженер-электроник 1 категории" >инженер-электроник 1 категории</option><option value="инженер-электроник 2 категории" >инженер-электроник 2 категории</option><option value="инженер-электроник" >инженер-электроник</option><option value="кладовщик инструментальной кладовой" >кладовщик инструментальной кладовой</option><option value="консультант при дирекции лаборатории" >консультант при дирекции лаборатории</option><option value="консультант" >консультант</option><option value="лаборант обработки фильмовой информации физического эксперимента" >лаборант обработки фильмовой информации физического эксперимента</option><option value="лаборант ускорительной установки" >лаборант ускорительной установки</option><option value="лаборант физической лаборатории" >лаборант физической лаборатории</option><option value="лаборант химико-технологических исследований" >лаборант химико-технологических исследований</option><option value="лаборант" >лаборант</option><option value="маляр" >маляр</option><option value="мастер" >мастер</option><option value="машинист компрессорных установок" >машинист компрессорных установок</option><option value="машинист по стирке и ремонту спецодежды" >машинист по стирке и ремонту спецодежды</option><option value="механик цеха" >механик цеха</option><option value="механик экспериментальных стендов и установок" >механик экспериментальных стендов и установок</option><option value="младший научный сотрудник" >младший научный сотрудник</option><option value="монтажник радиоэлектронной аппаратуры и приборов" >монтажник радиоэлектронной аппаратуры и приборов</option><option value="монтажник санитарно-технических систем и оборудования" >монтажник санитарно-технических систем и оборудования</option><option value="монтажник технологического оборудования и связанных с ним конструкций" >монтажник технологического оборудования и связанных с ним конструкций</option><option value="научный сотрудник" >научный сотрудник</option><option value="начальник бюро" >начальник бюро</option><option value="начальник группы" >начальник группы</option><option value="начальник отдела" >начальник отдела</option><option value="начальник отделения" >начальник отделения</option><option value="начальник сектора" >начальник сектора</option><option value="начальник службы" >начальник службы</option><option value="начальник цеха" >начальник цеха</option><option value="переводчик" >переводчик</option><option value="плотник" >плотник</option><option value="подсобный рабочий" >подсобный рабочий</option><option value="полировщик" >полировщик</option><option value="помощник директора лаборатории по капитальному строительству" >помощник директора лаборатории по капитальному строительству</option><option value="помощник директора лаборатории по общим вопросам" >помощник директора лаборатории по общим вопросам</option><option value="помощник директора лаборатории по финансовым вопросам" >помощник директора лаборатории по финансовым вопросам</option><option value="помощник начальника цеха по хозяйственным вопросам" >помощник начальника цеха по хозяйственным вопросам</option><option value="почетный директор лаборатории" >почетный директор лаборатории</option><option value="сверловщик" >сверловщик</option><option value="слесарь аварийно-восстановительных работ" >слесарь аварийно-восстановительных работ</option><option value="слесарь механосборочных работ" >слесарь механосборочных работ</option><option value="слесарь по контрольно-измерительным приборам и автоматике" >слесарь по контрольно-измерительным приборам и автоматике</option><option value="слесарь по ремонту и обслуживанию систем вентиляции и кондиционирования" >слесарь по ремонту и обслуживанию систем вентиляции и кондиционирования</option><option value="слесарь-ремонтник" >слесарь-ремонтник</option><option value="советник директора лаборатории" >советник директора лаборатории</option><option value="советник при дирекции лаборатории" >советник при дирекции лаборатории</option><option value="советник" >советник</option><option value="станочник широкого профиля" >станочник широкого профиля</option><option value="старший инженер" >старший инженер</option><option value="старший инспектор" >старший инспектор</option><option value="старший лаборант" >старший лаборант</option><option value="старший лаборант, имеющий высшее образование" >старший лаборант, имеющий высшее образование</option><option value="старший мастер" >старший мастер</option><option value="старший научный сотрудник" >старший научный сотрудник</option><option value="старший переводчик" >старший переводчик</option><option value="старший техник" >старший техник</option><option value="старший товаровед" >старший товаровед</option><option value="старший экономист" >старший экономист</option><option value="столяр" >столяр</option><option value="техник" >техник</option><option value="токарь" >токарь</option><option value="токарь-расточник" >токарь-расточник</option><option value="тракторист" >тракторист</option><option value="уборщик производственных помещений" >уборщик производственных помещений</option><option value="уборщик служебных помещений" >уборщик служебных помещений</option><option value="ученый секретарь лаборатории" >ученый секретарь лаборатории</option><option value="фрезеровщик" >фрезеровщик</option><option value="художник" >художник</option><option value="электрогазосварщик" >электрогазосварщик</option><option value="электромонтер по обслуживанию электрооборудования" >электромонтер по обслуживанию электрооборудования</option><option value="электромонтер по ремонту и обслуживанию электрооборудования" >электромонтер по ремонту и обслуживанию электрооборудования</option><option value="электросварщик ручной сварки" >электросварщик ручной сварки</option><BR>
+</tr><tr><BR>
+<td class="label nowrap" nowrap><BR>
+Начало работы:<BR>
+</td><td><BR>
+<input type="date" name="calendar"><BR>
+Окончание работы: <input type="date" name="calendarik"><BR>
+</td><BR>
+</tr> <tr><BR>
+<td class="label nowrap" nowrap><BR>
+Гражданство:<BR>
+</td><td><BR>
+<select name="grazhdan" class=norm><BR>
+<option value="">любое</option><BR>
+<option value="АЗЕРБАЙДЖАН" >АЗЕРБАЙДЖАН</option><option value="АРМЕНИЯ" >АРМЕНИЯ</option><option value="БЕЛАРУСЬ" >БЕЛАРУСЬ</option><option value="БОЛГАРИЯ" >БОЛГАРИЯ</option><option value="ГЕРМАНИЯ" >ГЕРМАНИЯ</option><option value="ГРУЗИЯ" >ГРУЗИЯ</option><option value="КАЗАХСТАН" >КАЗАХСТАН</option><option value="КУБА" >КУБА</option><option value="ЛИТВА" >ЛИТВА</option><option value="МОЛДОВА, РЕСПУБЛИКА" >МОЛДОВА, РЕСПУБЛИКА</option><option value="МОНГОЛИЯ" >МОНГОЛИЯ</option><option value="НИГЕРИЯ" >НИГЕРИЯ</option><option value="ПОЛЬША" >ПОЛЬША</option><option value="РОССИЯ" >РОССИЯ</option><option value="РУМЫНИЯ" >РУМЫНИЯ</option><option value="СЛОВАКИЯ" >СЛОВАКИЯ</option><option value="УЗБЕКИСТАН" >УЗБЕКИСТАН</option><option value="УКРАИНА" >УКРАИНА</option><option value="ЧЕШСКАЯ РЕСПУБЛИКА" >ЧЕШСКАЯ РЕСПУБЛИКА</option><BR>
+</select><BR>
+</td><td class="label nowrap" nowrap>Штат:</td><td><BR>
+<p><input type="radio" name="shtat_direct" value="">Все</p></td><td><BR>
+<p><input type="radio" name="shtat_direct" value="shtat_direct">Штат дирекции</p></td><td><BR>
+<p><input type="radio" name="shtat_direct" value="">Кроме штата дирекции</p><BR>
+</td><BR>
+</xmp><BR>
++++++ $CALL_SERVICE cfg=tab_salary_table.cfg<BR>
+<br><span class='ss_start pt'  onClick='toggleDiv("tab_salary_table1513536810397");'> $CALL_SERVICE: <b>tab_salary.cfg => tab_salary_table</b> (request:HR_LHEP_118)</span><div id='tab_salary_table1513536810397' class='ss'><B>=== Parameters: ===</B><BR>
+h_host=localhost:8084<BR>
+h_connection=keep-alive<BR>
+h_content-length=19<BR>
+h_accept=text/html, */*; q=0.01<BR>
+h_origin=http://localhost:8084<BR>
+h_x-requested-with=XMLHttpRequest<BR>
+h_user-agent=Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 YaBrowser/17.11.1.775 (beta) Yowser/2.5 Safari/537.36<BR>
+h_content-type=application/x-www-form-urlencoded; charset=UTF-8<BR>
+h_referer=http://localhost:8084/hrlhep/hrlhep<BR>
+h_accept-encoding=gzip, deflate, br<BR>
+h_accept-language=ru,en;q=0.9<BR>
+h_cookie=JSESSIONID=C0800A4E9383DFD01E3C2371C4ACE894<BR>
+q_JSESSIONID=C0800A4E9383DFD01E3C2371C4ACE894<BR>
+queryString===c=tab_salary&ajax=Y<BR>
+c=tab_salary_table<BR>
+ajax=Y<BR>
+cfgFile=tab_salary_table.cfg<BR>
+tm=1513536810397<BR>
+ContextPath=/hrlhep<BR>
+protocol=http<BR>
+ServerName=localhost<BR>
+ServerPort=8084<BR>
+Host=localhost<BR>
+ClientIP=0:0:0:0:0:0:0:1<BR>
+Windows=YES<BR>
+user_agent=Chrome<BR>
+imgPath=/hrlhep/images/<BR>
+jsPath=/hrlhep/js/<BR>
+cssPath=/hrlhep/css/<BR>
+referer=http://localhost:8084/hrlhep/hrlhep<BR>
+pause_time=0<BR>
+sess_fromStart=621<BR>
+sqlNr=1<BR>
+srn=1<BR>
+rpp=20<BR>
+srt=sotr.FIO<BR>
+desc=<BR>
+POST=<option value="аппаратчик ожижения водорода и гелия" >аппаратчик ожижения водорода и гелия</option><option value="ведущий инженер по охране труда" >ведущий инженер по охране труда</option><option value="ведущий инженер" >ведущий инженер</option><option value="ведущий конструктор" >ведущий конструктор</option><option value="ведущий научный сотрудник" >ведущий научный сотрудник</option><option value="ведущий программист" >ведущий программист</option><option value="ведущий технолог" >ведущий технолог</option><option value="ведущий экономист" >ведущий экономист</option><option value="ведущий электроник" >ведущий электроник</option><option value="гальваник" >гальваник</option><option value="главный инженер лаборатории" >главный инженер лаборатории</option><option value="главный инженер установки" >главный инженер установки</option><option value="главный научный сотрудник" >главный научный сотрудник</option><option value="главный технический специалист" >главный технический специалист</option><option value="гравер" >гравер</option><option value="директор лаборатории" >директор лаборатории</option><option value="заведующий складом" >заведующий складом</option><option value="заведующий техническим архивом" >заведующий техническим архивом</option><option value="заведующий хозяйством" >заведующий хозяйством</option><option value="заместитель главного инженера лаборатории" >заместитель главного инженера лаборатории</option><option value="заместитель директора лаборатории по научной работе" >заместитель директора лаборатории по научной работе</option><option value="заместитель начальника отдела" >заместитель начальника отдела</option><option value="заместитель начальника отделения по научной работе" >заместитель начальника отделения по научной работе</option><option value="заместитель начальника цеха" >заместитель начальника цеха</option><option value="заточник" >заточник</option><option value="и.о.ведущего научного сотрудника" >и.о.ведущего научного сотрудника</option><option value="и.о.научного сотрудника" >и.о.научного сотрудника</option><option value="и.о.начальника сектора" >и.о.начальника сектора</option><option value="и.о.старшего научного сотрудника" >и.о.старшего научного сотрудника</option><option value="инженер" >инженер</option><option value="инженер-конструктор 1 категории" >инженер-конструктор 1 категории</option><option value="инженер-конструктор 2 категории" >инженер-конструктор 2 категории</option><option value="инженер-конструктор 3 категории" >инженер-конструктор 3 категории</option><option value="инженер-конструктор" >инженер-конструктор</option><option value="инженер-программист 1 категории" >инженер-программист 1 категории</option><option value="инженер-программист 2 категории" >инженер-программист 2 категории</option><option value="инженер-программист" >инженер-программист</option><option value="инженер-технолог 1 категории" >инженер-технолог 1 категории</option><option value="инженер-технолог 3 категории" >инженер-технолог 3 категории</option><option value="инженер-технолог" >инженер-технолог</option><option value="инженер-электроник 1 категории" >инженер-электроник 1 категории</option><option value="инженер-электроник 2 категории" >инженер-электроник 2 категории</option><option value="инженер-электроник" >инженер-электроник</option><option value="кладовщик инструментальной кладовой" >кладовщик инструментальной кладовой</option><option value="консультант при дирекции лаборатории" >консультант при дирекции лаборатории</option><option value="консультант" >консультант</option><option value="лаборант обработки фильмовой информации физического эксперимента" >лаборант обработки фильмовой информации физического эксперимента</option><option value="лаборант ускорительной установки" >лаборант ускорительной установки</option><option value="лаборант физической лаборатории" >лаборант физической лаборатории</option><option value="лаборант химико-технологических исследований" >лаборант химико-технологических исследований</option><option value="лаборант" >лаборант</option><option value="маляр" >маляр</option><option value="мастер" >мастер</option><option value="машинист компрессорных установок" >машинист компрессорных установок</option><option value="машинист по стирке и ремонту спецодежды" >машинист по стирке и ремонту спецодежды</option><option value="механик цеха" >механик цеха</option><option value="механик экспериментальных стендов и установок" >механик экспериментальных стендов и установок</option><option value="младший научный сотрудник" >младший научный сотрудник</option><option value="монтажник радиоэлектронной аппаратуры и приборов" >монтажник радиоэлектронной аппаратуры и приборов</option><option value="монтажник санитарно-технических систем и оборудования" >монтажник санитарно-технических систем и оборудования</option><option value="монтажник технологического оборудования и связанных с ним конструкций" >монтажник технологического оборудования и связанных с ним конструкций</option><option value="научный сотрудник" >научный сотрудник</option><option value="начальник бюро" >начальник бюро</option><option value="начальник группы" >начальник группы</option><option value="начальник отдела" >начальник отдела</option><option value="начальник отделения" >начальник отделения</option><option value="начальник сектора" >начальник сектора</option><option value="начальник службы" >начальник службы</option><option value="начальник цеха" >начальник цеха</option><option value="переводчик" >переводчик</option><option value="плотник" >плотник</option><option value="подсобный рабочий" >подсобный рабочий</option><option value="полировщик" >полировщик</option><option value="помощник директора лаборатории по капитальному строительству" >помощник директора лаборатории по капитальному строительству</option><option value="помощник директора лаборатории по общим вопросам" >помощник директора лаборатории по общим вопросам</option><option value="помощник директора лаборатории по финансовым вопросам" >помощник директора лаборатории по финансовым вопросам</option><option value="помощник начальника цеха по хозяйственным вопросам" >помощник начальника цеха по хозяйственным вопросам</option><option value="почетный директор лаборатории" >почетный директор лаборатории</option><option value="сверловщик" >сверловщик</option><option value="слесарь аварийно-восстановительных работ" >слесарь аварийно-восстановительных работ</option><option value="слесарь механосборочных работ" >слесарь механосборочных работ</option><option value="слесарь по контрольно-измерительным приборам и автоматике" >слесарь по контрольно-измерительным приборам и автоматике</option><option value="слесарь по ремонту и обслуживанию систем вентиляции и кондиционирования" >слесарь по ремонту и обслуживанию систем вентиляции и кондиционирования</option><option value="слесарь-ремонтник" >слесарь-ремонтник</option><option value="советник директора лаборатории" >советник директора лаборатории</option><option value="советник при дирекции лаборатории" >советник при дирекции лаборатории</option><option value="советник" >советник</option><option value="станочник широкого профиля" >станочник широкого профиля</option><option value="старший инженер" >старший инженер</option><option value="старший инспектор" >старший инспектор</option><option value="старший лаборант" >старший лаборант</option><option value="старший лаборант, имеющий высшее образование" >старший лаборант, имеющий высшее образование</option><option value="старший мастер" >старший мастер</option><option value="старший научный сотрудник" >старший научный сотрудник</option><option value="старший переводчик" >старший переводчик</option><option value="старший техник" >старший техник</option><option value="старший товаровед" >старший товаровед</option><option value="старший экономист" >старший экономист</option><option value="столяр" >столяр</option><option value="техник" >техник</option><option value="токарь" >токарь</option><option value="токарь-расточник" >токарь-расточник</option><option value="тракторист" >тракторист</option><option value="уборщик производственных помещений" >уборщик производственных помещений</option><option value="уборщик служебных помещений" >уборщик служебных помещений</option><option value="ученый секретарь лаборатории" >ученый секретарь лаборатории</option><option value="фрезеровщик" >фрезеровщик</option><option value="художник" >художник</option><option value="электрогазосварщик" >электрогазосварщик</option><option value="электромонтер по обслуживанию электрооборудования" >электромонтер по обслуживанию электрооборудования</option><option value="электромонтер по ремонту и обслуживанию электрооборудования" >электромонтер по ремонту и обслуживанию электрооборудования</option><option value="электросварщик ручной сварки" >электросварщик ручной сварки</option><BR>
+CMD_TIME=5<BR>
+CATEGORIES=<option value="Научные и научно-педагогические работники" >Научные и научно-педагогические работники</option><option value="Специалисты" >Специалисты</option><option value="Рабочие" >Рабочие</option><option value="Руководители" >Руководители</option><BR>
+STEPEN=<option value="" selected></option><option value="Доктор наук" >Доктор наук</option><option value="Кандидат наук" >Кандидат наук</option><BR>
+GRAZHDAN=<option value="АЗЕРБАЙДЖАН" >АЗЕРБАЙДЖАН</option><option value="АРМЕНИЯ" >АРМЕНИЯ</option><option value="БЕЛАРУСЬ" >БЕЛАРУСЬ</option><option value="БОЛГАРИЯ" >БОЛГАРИЯ</option><option value="ГЕРМАНИЯ" >ГЕРМАНИЯ</option><option value="ГРУЗИЯ" >ГРУЗИЯ</option><option value="КАЗАХСТАН" >КАЗАХСТАН</option><option value="КУБА" >КУБА</option><option value="ЛИТВА" >ЛИТВА</option><option value="МОЛДОВА, РЕСПУБЛИКА" >МОЛДОВА, РЕСПУБЛИКА</option><option value="МОНГОЛИЯ" >МОНГОЛИЯ</option><option value="НИГЕРИЯ" >НИГЕРИЯ</option><option value="ПОЛЬША" >ПОЛЬША</option><option value="РОССИЯ" >РОССИЯ</option><option value="РУМЫНИЯ" >РУМЫНИЯ</option><option value="СЛОВАКИЯ" >СЛОВАКИЯ</option><option value="УЗБЕКИСТАН" >УЗБЕКИСТАН</option><option value="УКРАИНА" >УКРАИНА</option><option value="ЧЕШСКАЯ РЕСПУБЛИКА" >ЧЕШСКАЯ РЕСПУБЛИКА</option><BR>
+OTDEL=<option value="Административное бюро" >Административное бюро</option><option value="Гр. №1 мат. учета и контроля" >Гр. №1 мат. учета и контроля</option><option value="Группа №1 высоковольтного оборудования" >Группа №1 высоковольтного оборудования</option><option value="Группа №2 низковольтного оборудования" >Группа №2 низковольтного оборудования</option><option value="Группа №2 планово- экономическая" >Группа №2 планово- экономическая</option><option value="Группа №3 обеспечения и контроля закупок" >Группа №3 обеспечения и контроля закупок</option><option value="Группа №3 тепловодоснабжения и вентиляции" >Группа №3 тепловодоснабжения и вентиляции</option><option value="Группа №4 электротехническая - высоковольтного оборудования" >Группа №4 электротехническая - высоковольтного оборудования</option><option value="Детекторный отдел" >Детекторный отдел</option><option value="Диспетчерская служба Нуклотрона" >Диспетчерская служба Нуклотрона</option><option value="Инженерный энерготехнологический отдел " >Инженерный энерготехнологический отдел </option><option value="Конструкторский отдел" >Конструкторский отдел</option><option value="Научно - экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA" >Научно - экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA</option><option value="Научно-инженерный отдел систем электропитания Нуклотрона" >Научно-инженерный отдел систем электропитания Нуклотрона</option><option value="Научно-исследовательский криогенный отдел" >Научно-исследовательский криогенный отдел</option><option value="Научно-методический отдел кремниевых трековых систем" >Научно-методический отдел кремниевых трековых систем</option><option value="Научно-технический отдел пучков" >Научно-технический отдел пучков</option><option value="Научно-экспериментальный отдел инжекции и кольца Нуклотрона" >Научно-экспериментальный отдел инжекции и кольца Нуклотрона</option><option value="Научно-экспериментальный отдел инженерно-физических проблем ускорителей" >Научно-экспериментальный отдел инженерно-физических проблем ускорителей</option><option value="Научно-экспериментальный отдел многоцелевого детектора (MPD)" >Научно-экспериментальный отдел многоцелевого детектора (MPD)</option><option value="Научно-экспериментальный отдел радиоэлектронных систем" >Научно-экспериментальный отдел радиоэлектронных систем</option><option value="Научно-экспериментальный отдел сверхпроводящих магнитов и технологий" >Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</option><option value="Научно-экспериментальный отдел спиновой физики малонуклонных систем" >Научно-экспериментальный отдел спиновой физики малонуклонных систем</option><option value="Научно-экспериментальный отдел ускорительных систем  " >Научно-экспериментальный отдел ускорительных систем  </option><option value="Научно-экспериментальный отдел физики легких кварков и лептонов" >Научно-экспериментальный отдел физики легких кварков и лептонов</option><option value="Научно-экспериментальный отдел физики на CMS" >Научно-экспериментальный отдел физики на CMS</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на LHC" >Научно-экспериментальный отдел физики тяжелых ионов на LHC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на RHIC" >Научно-экспериментальный отдел физики тяжелых ионов на RHIC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов" >Научно-экспериментальный отдел физики тяжелых ионов</option><option value="Научно–экспериментальный отдел автоматизации физических исследований" >Научно–экспериментальный отдел автоматизации физических исследований</option><option value="Отдел математического обеспечения" >Отдел математического обеспечения</option><option value="Отдел физики" >Отдел физики</option><option value="Сектор SPD" >Сектор SPD</option><option value="Сектор детекторных систем" >Сектор детекторных систем</option><option value="Сектор криофизических исследований" >Сектор криофизических исследований</option><option value="Сектор полупроводниковых детекторов" >Сектор полупроводниковых детекторов</option><option value="Сектор прикладных радиационных технологий" >Сектор прикладных радиационных технологий</option><option value="Сектор рентгеновской спектроскопии" >Сектор рентгеновской спектроскопии</option><option value="Сектор строу-детекторов" >Сектор строу-детекторов</option><option value="Сектор структуры частиц" >Сектор структуры частиц</option><option value="Сектор физики на АТЛАС" >Сектор физики на АТЛАС</option><option value="Сектор физики странных кварков в ядрах" >Сектор физики странных кварков в ядрах</option><option value="Серпуховской научно-экспериментальный отдел" >Серпуховской научно-экспериментальный отдел</option><option value="Ускорительный отдел" >Ускорительный отдел</option><option value="Хозяйственный отдел" >Хозяйственный отдел</option><option value="Цех опытно-экспериментального производства" >Цех опытно-экспериментального производства</option><BR>
+GET_DATA_ERROR=java.sql.SQLException: Unknown column `subTopparent_name` in `field list`; SQL: `select distinct concat(`<option value="`, short_name, `" ` , case when short_name=`` then `selected` else `` end , `>` , subTopparent_name, `</option>`)as OTDELENIE from struktura where pid = 100000 order by OTDELENIE`
+<BR>
+ERROR=java.sql.SQLException: Unknown column `subTopparent_name` in `field list`; SQL: `select distinct concat(`<option value="`, short_name, `" ` , case when short_name=`` then `selected` else `` end , `>` , subTopparent_name, `</option>`)as OTDELENIE from struktura where pid = 100000 order by OTDELENIE`<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+=========================<BR>
+<b>$INCLUDE </b>[total table]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_OTDEL
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp>------ <b>execGetDataCmd: </b>'select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0) +ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0) +ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_OTDEL from sotrudniki sotr left join oklad on sotr.tab_n=oklad.tab_n where lab_id = 100000 order by sotr.FIO'<BR>
+<xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_OTDEL=37124418.00</xmp>------ SQL done, 12ms.<br><BR>
+<br> <b>SQL: [[get Totals] (2) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_OTDELENIE
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp>------ <b>execGetDataCmd: </b>'select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0) +ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0) +ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_OTDELENIE from sotrudniki sotr left join oklad on sotr.tab_n=oklad.tab_n where lab_id = 100000 order by sotr.FIO'<BR>
+<xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_OTDELENIE=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+<br> <b>SQL: [[get Totals] (3) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_CATEGORY
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp>------ <b>execGetDataCmd: </b>'select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0) +ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0) +ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_CATEGORY from sotrudniki sotr left join oklad on sotr.tab_n=oklad.tab_n where lab_id = 100000 order by sotr.FIO'<BR>
+<xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_CATEGORY=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+<xmp><BR>
+<table border=0 cellpadding=5 cellspacing=0><BR>
+<tr><td class="label" ><BR>
+Сумма по отделу:</td><td>37124418.00</td><BR>
+<td class="label" > Сумма по отделению:</td> <td>37124418.00</td><BR>
+<td class="label">Сумма по категории:</td><td>37124418.00</td></tr><BR>
+</table><br><BR>
+</xmp><BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>dat/utils.cfg[criteria]<BR>
+<font color=red>$INCLUDE dat/utils.cfg[criteria]: SECTION NOT FOUND OR EMPTY</font><BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.topparent_name,sotr.subtopparent_name,sotr.person_id, sotr.tab_n, sotr.F, sotr.I, sotr.O, sotr.FIO, sotr.otdel
+, sotr.division, sotr.shtat_direct, sotr.post, sotr.category, oklad.year
+, oklad.oklad, oklad.kompens, oklad.dopl_stepen, oklad.personal_nadbav
+, oklad.perconal_imen_nadbav, oklad.premija_rabochim, oklad.sovmeshenie
+, ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0) as itogo
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+order by sotr.FIO
+</xmp> <b> Processed in 212ms. </b><br>0.0: topparent_name=Научно-экспериментальный отдел физики адронов;<BR>
+0.1: subtopparent_name=Сектор №1 научно-методический;<BR>
+0.2: person_id=1;<BR>
+0.3: tab_n=5801;<BR>
+0.4: F=Абазов;<BR>
+0.5: I=Виктор;<BR>
+0.6: O=Мухамедович;<BR>
+0.7: FIO=Абазов Виктор Мухамедович;<BR>
+0.8: otdel=;<BR>
+0.9: division=Сектор №1 научно-методический;<BR>
+0.10: shtat_direct=;<BR>
+0.11: post=научный сотрудник;<BR>
+0.12: category=Научные и научно-педагогические работники;<BR>
+0.13: year=;<BR>
+0.14: oklad=37100;<BR>
+0.15: kompens=0;<BR>
+0.16: dopl_stepen=;<BR>
+0.17: personal_nadbav=;<BR>
+0.18: perconal_imen_nadbav=;<BR>
+0.19: premija_rabochim=;<BR>
+0.20: sovmeshenie=;<BR>
+0.21: itogo=37100.00;<BR>
+1.0: topparent_name=Отдел научно - образовательных проектов и программ;<BR>
+1.1: subtopparent_name=;<BR>
+1.2: person_id=9789;<BR>
+1.3: tab_n=174876;<BR>
+1.4: F=Абакумов;<BR>
+1.5: I=Алексей;<BR>
+1.6: O=Михайлович;<BR>
+1.7: FIO=Абакумов Алексей Михайлович;<BR>
+1.8: otdel=;<BR>
+1.9: division=Отдел научно-образовательных проектов и программ;<BR>
+1.10: shtat_direct=;<BR>
+1.11: post=старший лаборант;<BR>
+1.12: category=Специалисты;<BR>
+1.13: year=;<BR>
+1.14: oklad=14840;<BR>
+1.15: kompens=0;<BR>
+1.16: dopl_stepen=;<BR>
+1.17: personal_nadbav=;<BR>
+1.18: perconal_imen_nadbav=;<BR>
+1.19: premija_rabochim=;<BR>
+1.20: sovmeshenie=;<BR>
+1.21: itogo=14840.00;<BR>
+2.0: topparent_name=;<BR>
+2.1: subtopparent_name="";<BR>
+2.2: person_id=11647;<BR>
+2.3: tab_n=170714;<BR>
+2.4: F=Абатуров;<BR>
+2.5: I=Евгений;<BR>
+2.6: O=Сергеевич;<BR>
+2.7: FIO=Абатуров Евгений Сергеевич;<BR>
+2.8: otdel=;<BR>
+2.9: division=Участок тепловых сетей;<BR>
+2.10: shtat_direct=;<BR>
+2.11: post=электрогазосварщик;<BR>
+2.12: category=Рабочие;<BR>
+2.13: year=;<BR>
+2.14: oklad=14530;<BR>
+2.15: kompens=0;<BR>
+2.16: dopl_stepen=;<BR>
+2.17: personal_nadbav=;<BR>
+2.18: perconal_imen_nadbav=;<BR>
+2.19: premija_rabochim=;<BR>
+2.20: sovmeshenie=;<BR>
+2.21: itogo=14530.00;<BR>
+3.0: topparent_name=НОВФ;<BR>
+3.1: subtopparent_name=Сектор №5 алгебраических и квантовых вычислений;<BR>
+3.2: person_id=2;<BR>
+3.3: tab_n=114357;<BR>
+3.4: F=Абгарян;<BR>
+3.5: I=Ваагн;<BR>
+3.6: O=;<BR>
+3.7: FIO=Абгарян Ваагн;<BR>
+3.8: otdel=;<BR>
+3.9: division=Сектор №5 алгебраических и квантовых вычислений;<BR>
+3.10: shtat_direct=Штат Дирекции;<BR>
+3.11: post=младший научный сотрудник;<BR>
+3.12: category=Научные и научно-педагогические работники;<BR>
+3.13: year=;<BR>
+3.14: oklad=31800;<BR>
+3.15: kompens=0;<BR>
+3.16: dopl_stepen=;<BR>
+3.17: personal_nadbav=;<BR>
+3.18: perconal_imen_nadbav=;<BR>
+3.19: premija_rabochim=;<BR>
+3.20: sovmeshenie=;<BR>
+3.21: itogo=31800.00;<BR>
+4.0: topparent_name=Научно-экспериментальный отдел встречных пучков;<BR>
+4.1: subtopparent_name=Сектор №2 протон-протонных взаимодействий;<BR>
+4.2: person_id=9463;<BR>
+4.3: tab_n=151004;<BR>
+4.4: F=Абдельшакур;<BR>
+4.5: I=Эль;<BR>
+4.6: O=Саид Мохаммед Абу Эльазм;<BR>
+4.7: FIO=Абдельшакур Эль Саид Мохаммед Абу Эльазм;<BR>
+4.8: otdel=;<BR>
+4.9: division=Сектор №2 протон-протонных взаимодействий;<BR>
+4.10: shtat_direct=;<BR>
+4.11: post=старший научный сотрудник;<BR>
+4.12: category=Научные и научно-педагогические работники;<BR>
+4.13: year=;<BR>
+4.14: oklad=38200;<BR>
+4.15: kompens=0;<BR>
+4.16: dopl_stepen=;<BR>
+4.17: personal_nadbav=;<BR>
+4.18: perconal_imen_nadbav=;<BR>
+4.19: premija_rabochim=;<BR>
+4.20: sovmeshenie=;<BR>
+4.21: itogo=38200.00;<BR>
+5.0: topparent_name=Сектор №1 синтез и свойства сверхтяжелых ядер;<BR>
+5.1: subtopparent_name=;<BR>
+5.2: person_id=3;<BR>
+5.3: tab_n=1213;<BR>
+5.4: F=Абдуллин;<BR>
+5.5: I=Фарид;<BR>
+5.6: O=Шамильевич;<BR>
+5.7: FIO=Абдуллин Фарид Шамильевич;<BR>
+5.8: otdel=;<BR>
+5.9: division=Сектор №1 синтез и свойства сверхтяжелых ядер;<BR>
+5.10: shtat_direct=;<BR>
+5.11: post=научный сотрудник;<BR>
+5.12: category=Научные и научно-педагогические работники;<BR>
+5.13: year=;<BR>
+5.14: oklad=36800;<BR>
+5.15: kompens=0;<BR>
+5.16: dopl_stepen=;<BR>
+5.17: personal_nadbav=;<BR>
+5.18: perconal_imen_nadbav=;<BR>
+5.19: premija_rabochim=;<BR>
+5.20: sovmeshenie=;<BR>
+5.21: itogo=36800.00;<BR>
+6.0: topparent_name=;<BR>
+6.1: subtopparent_name="";<BR>
+6.2: person_id=5;<BR>
+6.3: tab_n=104339;<BR>
+6.4: F=Абзалетдинова;<BR>
+6.5: I=Ирина;<BR>
+6.6: O=Валерьевна;<BR>
+6.7: FIO=Абзалетдинова Ирина Валерьевна;<BR>
+6.8: otdel=;<BR>
+6.9: division=Столовая ЛЯП;<BR>
+6.10: shtat_direct=;<BR>
+6.11: post=повар;<BR>
+6.12: category=Рабочие;<BR>
+6.13: year=;<BR>
+6.14: oklad=16670;<BR>
+6.15: kompens=0;<BR>
+6.16: dopl_stepen=;<BR>
+6.17: personal_nadbav=;<BR>
+6.18: perconal_imen_nadbav=;<BR>
+6.19: premija_rabochim=;<BR>
+6.20: sovmeshenie=;<BR>
+6.21: itogo=16670.00;<BR>
+7.0: topparent_name=НТОПиИО;<BR>
+7.1: subtopparent_name=Сектор №3 развития и стандартизации прикладного программного обеспечения ;<BR>
+7.2: person_id=6;<BR>
+7.3: tab_n=112042;<BR>
+7.4: F=Аблязимов;<BR>
+7.5: I=Тимур;<BR>
+7.6: O=Отеллович;<BR>
+7.7: FIO=Аблязимов Тимур Отеллович;<BR>
+7.8: otdel=;<BR>
+7.9: division=Сектор №3 развития и стандартизации прикладного программного обеспечения;<BR>
+7.10: shtat_direct=;<BR>
+7.11: post=инженер-программист;<BR>
+7.12: category=Специалисты;<BR>
+7.13: year=;<BR>
+7.14: oklad=35650;<BR>
+7.15: kompens=0;<BR>
+7.16: dopl_stepen=;<BR>
+7.17: personal_nadbav=;<BR>
+7.18: perconal_imen_nadbav=;<BR>
+7.19: premija_rabochim=;<BR>
+7.20: sovmeshenie=;<BR>
+7.21: itogo=35650.00;<BR>
+8.0: topparent_name=Отделение №2 Физики на ускорительном комплексе Нуклотрон-NICA;<BR>
+8.1: subtopparent_name=Научно-экспериментальный отдел физики тяжелых ионов;<BR>
+8.2: person_id=7;<BR>
+8.3: tab_n=17914;<BR>
+8.4: F=Абраамян;<BR>
+8.5: I=Хачик;<BR>
+8.6: O=Унанович;<BR>
+8.7: FIO=Абраамян Хачик Унанович;<BR>
+8.8: otdel=НЭОФТИ;<BR>
+8.9: division=Группа №1 станций внутренних мишеней, электронного и ресурсного обеспечения;<BR>
+8.10: shtat_direct=Штат Дирекции;<BR>
+8.11: post=ведущий научный сотрудник;<BR>
+8.12: category=Научные и научно-педагогические работники;<BR>
+8.13: year=;<BR>
+8.14: oklad=37450;<BR>
+8.15: kompens=3530;<BR>
+8.16: dopl_stepen=3000;<BR>
+8.17: personal_nadbav=;<BR>
+8.18: perconal_imen_nadbav=;<BR>
+8.19: premija_rabochim=;<BR>
+8.20: sovmeshenie=;<BR>
+8.21: itogo=43980.00;<BR>
+9.0: topparent_name=;<BR>
+9.1: subtopparent_name="";<BR>
+9.2: person_id=10514;<BR>
+9.3: tab_n=160726;<BR>
+9.4: F=Абрамов;<BR>
+9.5: I=Александр;<BR>
+9.6: O=Алексеевич;<BR>
+9.7: FIO=Абрамов Александр Алексеевич;<BR>
+9.8: otdel=;<BR>
+9.9: division=Группа №2 эксплуатации линейно-кабельных сооружений, устройств радио и электропитания;<BR>
+9.10: shtat_direct=;<BR>
+9.11: post=электромонтер линейных сооружений телефонной связи и радиофикации;<BR>
+9.12: category=Рабочие;<BR>
+9.13: year=;<BR>
+9.14: oklad=18450;<BR>
+9.15: kompens=0;<BR>
+9.16: dopl_stepen=;<BR>
+9.17: personal_nadbav=;<BR>
+9.18: perconal_imen_nadbav=;<BR>
+9.19: premija_rabochim=;<BR>
+9.20: sovmeshenie=;<BR>
+9.21: itogo=18450.00;<BR>
+10.0: topparent_name=;<BR>
+10.1: subtopparent_name="";<BR>
+10.2: person_id=4941;<BR>
+10.3: tab_n=144843;<BR>
+10.4: F=Абрамов;<BR>
+10.5: I=Василий;<BR>
+10.6: O=Михайлович;<BR>
+10.7: FIO=Абрамов Василий Михайлович;<BR>
+10.8: otdel=;<BR>
+10.9: division=Административно-технический персонал;<BR>
+10.10: shtat_direct=;<BR>
+10.11: post=техник;<BR>
+10.12: category=Специалисты;<BR>
+10.13: year=;<BR>
+10.14: oklad=23160;<BR>
+10.15: kompens=0;<BR>
+10.16: dopl_stepen=;<BR>
+10.17: personal_nadbav=;<BR>
+10.18: perconal_imen_nadbav=;<BR>
+10.19: premija_rabochim=;<BR>
+10.20: sovmeshenie=;<BR>
+10.21: itogo=23160.00;<BR>
+11.0: topparent_name=;<BR>
+11.1: subtopparent_name="";<BR>
+11.2: person_id=4941;<BR>
+11.3: tab_n=150791;<BR>
+11.4: F=Абрамов;<BR>
+11.5: I=Василий;<BR>
+11.6: O=Михайлович;<BR>
+11.7: FIO=Абрамов Василий Михайлович;<BR>
+11.8: otdel=;<BR>
+11.9: division=Дом физкультуры;<BR>
+11.10: shtat_direct=;<BR>
+11.11: post=электромонтер по ремонту и обслуживанию электрооборудования;<BR>
+11.12: category=Рабочие;<BR>
+11.13: year=;<BR>
+11.14: oklad=17940;<BR>
+11.15: kompens=0;<BR>
+11.16: dopl_stepen=;<BR>
+11.17: personal_nadbav=;<BR>
+11.18: perconal_imen_nadbav=;<BR>
+11.19: premija_rabochim=;<BR>
+11.20: sovmeshenie=;<BR>
+11.21: itogo=17940.00;<BR>
+12.0: topparent_name=;<BR>
+12.1: subtopparent_name="";<BR>
+12.2: person_id=8;<BR>
+12.3: tab_n=263767;<BR>
+12.4: F=Абрамова;<BR>
+12.5: I=Валентина;<BR>
+12.6: O=Николаевна;<BR>
+12.7: FIO=Абрамова Валентина Николаевна;<BR>
+12.8: otdel=;<BR>
+12.9: division=Ресторан "Дубна";<BR>
+12.10: shtat_direct=;<BR>
+12.11: post=повар;<BR>
+12.12: category=Рабочие;<BR>
+12.13: year=;<BR>
+12.14: oklad=16670;<BR>
+12.15: kompens=0;<BR>
+12.16: dopl_stepen=;<BR>
+12.17: personal_nadbav=;<BR>
+12.18: perconal_imen_nadbav=;<BR>
+12.19: premija_rabochim=;<BR>
+12.20: sovmeshenie=;<BR>
+12.21: itogo=16670.00;<BR>
+13.0: topparent_name=Группа селективной лазерной ионизации и сепарации продуктов ядерных реакций (установка ГаЛС);<BR>
+13.1: subtopparent_name=;<BR>
+13.2: person_id=10019;<BR>
+13.3: tab_n=153456;<BR>
+13.4: F=Аввакумов;<BR>
+13.5: I=Константин;<BR>
+13.6: O=Александрович;<BR>
+13.7: FIO=Аввакумов Константин Александрович;<BR>
+13.8: otdel=;<BR>
+13.9: division=Группа селективной лазерной ионизации и сепарации продуктов ядерных реакций (установка ГаЛС);<BR>
+13.10: shtat_direct=;<BR>
+13.11: post=инженер;<BR>
+13.12: category=Специалисты;<BR>
+13.13: year=;<BR>
+13.14: oklad=29300;<BR>
+13.15: kompens=0;<BR>
+13.16: dopl_stepen=;<BR>
+13.17: personal_nadbav=;<BR>
+13.18: perconal_imen_nadbav=;<BR>
+13.19: premija_rabochim=;<BR>
+13.20: sovmeshenie=;<BR>
+13.21: itogo=29300.00;<BR>
+14.0: topparent_name=Отделение №2 Физики на ускорительном комплексе Нуклотрон-NICA;<BR>
+14.1: subtopparent_name=Научно-экспериментальный отдел спиновой физики малонуклонных систем;<BR>
+14.2: person_id=9464;<BR>
+14.3: tab_n=150996;<BR>
+14.4: F=Аввакумова;<BR>
+14.5: I=Ирина;<BR>
+14.6: O=Леонидовна;<BR>
+14.7: FIO=Аввакумова Ирина Леонидовна;<BR>
+14.8: otdel=НЭОСФМС;<BR>
+14.9: division=Группа №1 встречных поляризованных пучков;<BR>
+14.10: shtat_direct=;<BR>
+14.11: post=инженер;<BR>
+14.12: category=Специалисты;<BR>
+14.13: year=;<BR>
+14.14: oklad=31800;<BR>
+14.15: kompens=0;<BR>
+14.16: dopl_stepen=0;<BR>
+14.17: personal_nadbav=0;<BR>
+14.18: perconal_imen_nadbav=0;<BR>
+14.19: premija_rabochim=0.00;<BR>
+14.20: sovmeshenie=0;<BR>
+14.21: itogo=31800.00;<BR>
+15.0: topparent_name=Отделение нейтронных исследований и разработок в области конденсированных сред;<BR>
+15.1: subtopparent_name=Научно-экспериментальный отдел нейтронных исследований конденсированных сред;<BR>
+15.2: person_id=12;<BR>
+15.3: tab_n=56276;<BR>
+15.4: F=Авдеев;<BR>
+15.5: I=Михаил;<BR>
+15.6: O=Васильевич;<BR>
+15.7: FIO=Авдеев Михаил Васильевич;<BR>
+15.8: otdel=;<BR>
+15.9: division=Сектор №2 нейтронной оптики;<BR>
+15.10: shtat_direct=;<BR>
+15.11: post=начальник сектора;<BR>
+15.12: category=Научные и научно-педагогические работники;<BR>
+15.13: year=;<BR>
+15.14: oklad=55120;<BR>
+15.15: kompens=0;<BR>
+15.16: dopl_stepen=;<BR>
+15.17: personal_nadbav=;<BR>
+15.18: perconal_imen_nadbav=;<BR>
+15.19: premija_rabochim=;<BR>
+15.20: sovmeshenie=;<BR>
+15.21: itogo=55120.00;<BR>
+16.0: topparent_name=Научно-экспериментальный отдел ядерной спектроскопии и радиохимии;<BR>
+16.1: subtopparent_name=Сектор №6 спектрометра ФАЗА;<BR>
+16.2: person_id=13;<BR>
+16.3: tab_n=5406;<BR>
+16.4: F=Авдеев;<BR>
+16.5: I=Сергей;<BR>
+16.6: O=Петрович;<BR>
+16.7: FIO=Авдеев Сергей Петрович;<BR>
+16.8: otdel=;<BR>
+16.9: division=Сектор №6 спектрометра ФАЗА;<BR>
+16.10: shtat_direct=;<BR>
+16.11: post=начальник сектора;<BR>
+16.12: category=Научные и научно-педагогические работники;<BR>
+16.13: year=;<BR>
+16.14: oklad=53000;<BR>
+16.15: kompens=0;<BR>
+16.16: dopl_stepen=;<BR>
+16.17: personal_nadbav=;<BR>
+16.18: perconal_imen_nadbav=;<BR>
+16.19: premija_rabochim=;<BR>
+16.20: sovmeshenie=;<BR>
+16.21: itogo=53000.00;<BR>
+17.0: topparent_name=Группа ученого секретаря;<BR>
+17.1: subtopparent_name=;<BR>
+17.2: person_id=10;<BR>
+17.3: tab_n=90643;<BR>
+17.4: F=Авдеева;<BR>
+17.5: I=Татьяна;<BR>
+17.6: O=Валентиновна;<BR>
+17.7: FIO=Авдеева Татьяна Валентиновна;<BR>
+17.8: otdel=;<BR>
+17.9: division=Группа ученого секретаря;<BR>
+17.10: shtat_direct=;<BR>
+17.11: post=переводчик;<BR>
+17.12: category=Специалисты;<BR>
+17.13: year=;<BR>
+17.14: oklad=34140;<BR>
+17.15: kompens=0;<BR>
+17.16: dopl_stepen=;<BR>
+17.17: personal_nadbav=;<BR>
+17.18: perconal_imen_nadbav=;<BR>
+17.19: premija_rabochim=;<BR>
+17.20: sovmeshenie=;<BR>
+17.21: itogo=34140.00;<BR>
+18.0: topparent_name=Отделение №3 Физики адронов;<BR>
+18.1: subtopparent_name=Научно-экспериментальный отдел физики легких кварков и лептонов;<BR>
+18.2: person_id=14;<BR>
+18.3: tab_n=102044;<BR>
+18.4: F=Авдейчиков;<BR>
+18.5: I=Владимир;<BR>
+18.6: O=Владимирович;<BR>
+18.7: FIO=Авдейчиков Владимир Владимирович;<BR>
+18.8: otdel=НЭОЛКЛ;<BR>
+18.9: division=Сектор №3 больших множественностей;<BR>
+18.10: shtat_direct=;<BR>
+18.11: post=советник;<BR>
+18.12: category=Научные и научно-педагогические работники;<BR>
+18.13: year=;<BR>
+18.14: oklad=33000;<BR>
+18.15: kompens=0;<BR>
+18.16: dopl_stepen=7000;<BR>
+18.17: personal_nadbav=23400;<BR>
+18.18: perconal_imen_nadbav=0;<BR>
+18.19: premija_rabochim=0.00;<BR>
+18.20: sovmeshenie=0;<BR>
+18.21: itogo=63400.00;<BR>
+19.0: topparent_name=Отделение №1 Ускорительное ;<BR>
+19.1: subtopparent_name=Научно-исследовательский криогенный отдел;<BR>
+19.2: person_id=15;<BR>
+19.3: tab_n=20909;<BR>
+19.4: F=Аверичев;<BR>
+19.5: I=Андрей;<BR>
+19.6: O=Станиславович;<BR>
+19.7: FIO=Аверичев Андрей Станиславович;<BR>
+19.8: otdel=НИКО;<BR>
+19.9: division=Группа №1 компрессорных установок;<BR>
+19.10: shtat_direct=;<BR>
+19.11: post=ведущий инженер;<BR>
+19.12: category=Специалисты;<BR>
+19.13: year=;<BR>
+19.14: oklad=42400;<BR>
+19.15: kompens=3500;<BR>
+19.16: dopl_stepen=0;<BR>
+19.17: personal_nadbav=0;<BR>
+19.18: perconal_imen_nadbav=0;<BR>
+19.19: premija_rabochim=0.00;<BR>
+19.20: sovmeshenie=0;<BR>
+19.21: itogo=45900.00;<BR>
+ <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+<xmp><BR>
+Строк на странице:<BR>
+<SELECT NAME="rpp" class=small onChange="; goToRow(1);"><BR>
+<OPTION value="20"<BR>
+selected<BR>
+>20<BR>
+<OPTION value="50"<BR>
+>50 <OPTION value="100"<BR>
+>100<OPTION VALUE="9999"<BR>
+> не огр.<BR>
+</SELECT> &nbsp; &nbsp; &nbsp; Строки: |<span class=actPage>1-20</span>|<a class=page href="javascript:; goToRow(21);">21-40 </a>|<a class=page href="javascript:; goToRow(41);">41-60 </a>|<a class=page href="javascript:; goToRow(61);">61-80 </a>|<a class=page href="javascript:; goToRow(81);">81-100 </a>|<a class=page href="javascript:; goToRow(101);">101-120 </a>|<a class=page href="javascript:; goToRow(121);">121-140 </a>|<a class=page href="javascript:; goToRow(141);">141-160 </a>|<a class=page href="javascript:; goToRow(161);">161-180 </a>|<a class=page href="javascript:; goToRow(181);">181-200 </a> |<BR>
+</xmp><BR>
+</div><span class='ss_back pt'  onClick='toggleDiv("tab_salary_table1513536810397");'> BACK: <b>tab_salary_table => tab_salary.cfg; (499ms.)</b></span><BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_118");'>Request_HR_LHEP_118 (tab_salary) DONE! (694ms)</span> <BR>
++++++ session inactive=0; fromStart=621min<BR>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_12_17_21.html maxLength=500000
+</xmp>------ <b>execGetDataCmd: </b>'read file: HR_LOG_12_17_21.html maxLength=500000'<BR>
+*** file: 'HR_LOG_12_17_21.html' max.length=500000<br><BR>
+------ SQL done, 56ms.<br><BR>
+<xmp><BR>
+<HTML><HEAD><TITLE>LOG HR LHEP</TITLE><BR>
+<META http-equiv=Content-Type content="text/html; charset=utf-8"><BR>
+<script type="text/javascript"><BR>
+var clearLog=function() {<BR>
+document.theForm.ResetLog.value="true";<BR>
+document.theForm.submit();<BR>
+}<BR>
+var switchLog=function() {<BR>
+document.theForm.ResetLog.value="true";<BR>
+document.theForm.submit();<BR>
+}<BR>
+</script><BR>
+</head><BR>
+<body><BR>
+<div style="position: fixed; top:1; right:1; border:solid 1px gray; background-color:#FFFFA0; padding:5px;"><BR>
+<form name="theForm" method="POST" style="margin:0;"><BR>
+<input type=hidden name="c" value="sys/showLog_noDB"><BR>
+<input type=hidden name="ResetLog" value=""><BR>
+<input type=button value="ОБНОВИТЬ" style="width:120px; margin-right:20px;" onClick="document.theForm.submit();"><BR>
+<input type=button value="ОЧИСТИТЬ" style="width:120px; margin-right:20px;" onClick="clearLog();"><BR>
+LOG:<input type=radio name="setLog" value="on"<BR>
+checked<BR>
+onClick="switchLog();">ON<BR>
+<input type=radio name="setLog" value="off"<BR>
+onClick="switchLog();">OFF<BR>
+<input type=radio name="LogLevel" value="0"<BR>
+onClick="switchLog();">0<BR>
+<input type=radio name="LogLevel" value="1"<BR>
+onClick="switchLog();">1<BR>
+<input type=radio name="LogLevel" value="2"<BR>
+onClick="switchLog();">2<BR>
+<input type=radio name="LogLevel" value="3"<BR>
+onClick="switchLog();">3<BR>
+<input type=radio name="LogLevel" value="5"<BR>
+onClick="switchLog();">5<BR>
+<input type=radio name="LogLevel" value="7"<BR>
+checked<BR>
+onClick="switchLog();">7<BR>
+<input type=radio name="LogLevel" value="9"<BR>
+onClick="switchLog();">9<BR>
+&nbsp; &nbsp;<BR>
+<input type=checkbox name="setDebug"<BR>
+checked<BR>
+onClick="document.theForm.submit();">debug<BR>
+</form><BR>
+</div><BR>
+<input size=65 value='F:/LIT/dms/hrlhep/build/web/WEB-INF/HR_LOG_12_17_21.html'><BR>
+<br><BR>
+<html>
+    <head>
+        <title>HR LHEP Log</title>
+        <META http-equiv=Content-Type content="text/html; charset=utf-8">
+        <style>
+            body{background-color:#eefff4;}
+            xmp {margin:0;} 
+            .pt {cursor:pointer;} 
+            span.req_start {border:solid 1px red; font-weight:bold; background-color:#FFFFA0;}
+            span.req_end {border:solid 1px red; font-weight:bold; background-color:#D0FFB0;}
+            div.req {display:none; border:solid 1px red; padding:4px; background-color:white;}
+
+            span.ss_start {border:solid 1px red; background-color:#D0E8FF;}
+            span.ss_back {border:solid 1px blue; background-color:#D0FFB0;}
+            div.ss {display:none; border:solid 1px green; border-right:none; padding:6px; margin-left:5px;}
+        </style>
+        <script type="text/javascript">
+            var toggleDiv = function (id) {
+                var d = document.getElementById(id);
+                if (d.style.display === "block")
+                    d.style.display = "none";
+                else
+                    d.style.display = "block";
+            };
+        </script>
+    </head><body>
++++++ session inactive=1; fromStart=620min<BR>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_12_17_21.html maxLength=500000
+</xmp>------ <b>execGetDataCmd: </b>'read file: HR_LOG_12_17_21.html maxLength=500000'<BR>
+*** file: 'HR_LOG_12_17_21.html' max.length=500000<br><BR>
+------ SQL done, 1ms.<br><BR>
+<xmp><BR>
+<HTML><HEAD><TITLE>LOG HR LHEP</TITLE><BR>
+<META http-equiv=Content-Type content="text/html; charset=utf-8"><BR>
+<script type="text/javascript"><BR>
+var clearLog=function() {<BR>
+document.theForm.ResetLog.value="true";<BR>
+document.theForm.submit();<BR>
+}<BR>
+var switchLog=function() {<BR>
+document.theForm.ResetLog.value="true";<BR>
+document.theForm.submit();<BR>
+}<BR>
+</script><BR>
+</head><BR>
+<body><BR>
+<div style="position: fixed; top:1; right:1; border:solid 1px gray; background-color:#FFFFA0; padding:5px;"><BR>
+<form name="theForm" method="POST" style="margin:0;"><BR>
+<input type=hidden name="c" value="sys/showLog_noDB"><BR>
+<input type=hidden name="ResetLog" value=""><BR>
+<input type=button value="ОБНОВИТЬ" style="width:120px; margin-right:20px;" onClick="document.theForm.submit();"><BR>
+<input type=button value="ОЧИСТИТЬ" style="width:120px; margin-right:20px;" onClick="clearLog();"><BR>
+LOG:<input type=radio name="setLog" value="on"<BR>
+checked<BR>
+onClick="switchLog();">ON<BR>
+<input type=radio name="setLog" value="off"<BR>
+onClick="switchLog();">OFF<BR>
+<input type=radio name="LogLevel" value="0"<BR>
+onClick="switchLog();">0<BR>
+<input type=radio name="LogLevel" value="1"<BR>
+onClick="switchLog();">1<BR>
+<input type=radio name="LogLevel" value="2"<BR>
+onClick="switchLog();">2<BR>
+<input type=radio name="LogLevel" value="3"<BR>
+onClick="switchLog();">3<BR>
+<input type=radio name="LogLevel" value="5"<BR>
+onClick="switchLog();">5<BR>
+<input type=radio name="LogLevel" value="7"<BR>
+checked<BR>
+onClick="switchLog();">7<BR>
+<input type=radio name="LogLevel" value="9"<BR>
+onClick="switchLog();">9<BR>
+&nbsp; &nbsp;<BR>
+<input type=checkbox name="setDebug"<BR>
+checked<BR>
+onClick="document.theForm.submit();">debug<BR>
+</form><BR>
+</div><BR>
+<input size=65 value='F:/LIT/dms/hrlhep/build/web/WEB-INF/HR_LOG_12_17_21.html'><BR>
+<br><BR>
+<hr><BR>
+</body></html><BR>
+</xmp><BR>
+<br><i>connect: jdbc:mysql://159.93.33.208/hrlhep?useUnicode=false&characterEncoding=utf8</i>... Connect OK! 19ms.</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_118");'> Request_HR_LHEP_118 [17.12 21:53:30] 2309: 0:0:0:0:0:0:0:1 c=tab_salary</span><div id='Request_HR_LHEP_118' class='req'> queryString:c=tab_salary&ajax=Y; log=true; session inactive=min;<br>+++++ session inactive=0; fromStart=621min<BR>
+<b>$INCLUDE </b>dat/utils.cfg[personal filters]<BR>
+##########main.cfg drop down<br> <b>SQL: [main.cfg[dropdowns] (1) ]:</b><xmp>select distinct concat('<option value="', post, '" '
+, case when post='' then 'selected' else '' end
+, '>' , post, '</option>') as POST
+from sotrudniki
+where lab_id = 100000
+order by post
+</xmp>------ <b>execGetDataCmd: </b>'select distinct concat('<option value="', post, '" ' , case when post='' then 'selected' else '' end , '>' , post, '</option>') as POST from sotrudniki where lab_id = 100000 order by post'<BR>
+<xmp>***** 112 record(s) retrieved. Filled 1 parameters: 
+POST=<option value="аппаратчик ожижения водорода и гелия" >аппаратчик ожижения водорода и гелия</option><option value="ведущий инженер по охране труда" >ведущий инженер по охране труда</option><option value="ведущий инженер" >ведущий инженер</option><option value="ведущий конструктор" >ведущий конструктор</option><option value="ведущий научный сотрудник" >ведущий научный сотрудник</option><option value="ведущий программист" >ведущий программист</option><option value="ведущий технолог" >ведущий технолог</option><option value="ведущий экономист" >ведущий экономист</option><option value="ведущий электроник" >ведущий электроник</option><option value="гальваник" >гальваник</option><option value="главный инженер лаборатории" >главный инженер лаборатории</option><option value="главный инженер установки" >главный инженер установки</option><option value="главный научный сотрудник" >главный научный сотрудник</option><option value="главный технический специалист" >главный технический специалист</option><option value="гравер" >гравер</option><option value="директор лаборатории" >директор лаборатории</option><option value="заведующий складом" >заведующий складом</option><option value="заведующий техническим архивом" >заведующий техническим архивом</option><option value="заведующий хозяйством" >заведующий хозяйством</option><option value="заместитель главного инженера лаборатории" >заместитель главного инженера лаборатории</option><option value="заместитель директора лаборатории по научной работе" >заместитель директора лаборатории по научной работе</option><option value="заместитель начальника отдела" >заместитель начальника отдела</option><option value="заместитель начальника отделения по научной работе" >заместитель начальника отделения по научной работе</option><option value="заместитель начальника цеха" >заместитель начальника цеха</option><option value="заточник" >заточник</option><option value="и.о.ведущего научного сотрудника" >и.о.ведущего научного сотрудника</option><option value="и.о.научного сотрудника" >и.о.научного сотрудника</option><option value="и.о.начальника сектора" >и.о.начальника сектора</option><option value="и.о.старшего научного сотрудника" >и.о.старшего научного сотрудника</option><option value="инженер" >инженер</option><option value="инженер-конструктор 1 категории" >инженер-конструктор 1 категории</option><option value="инженер-конструктор 2 категории" >инженер-конструктор 2 категории</option><option value="инженер-конструктор 3 категории" >инженер-конструктор 3 категории</option><option value="инженер-конструктор" >инженер-конструктор</option><option value="инженер-программист 1 категории" >инженер-программист 1 категории</option><option value="инженер-программист 2 категории" >инженер-программист 2 категории</option><option value="инженер-программист" >инженер-программист</option><option value="инженер-технолог 1 категории" >инженер-технолог 1 категории</option><option value="инженер-технолог 3 категории" >инженер-технолог 3 категории</option><option value="инженер-технолог" >инженер-технолог</option><option value="инженер-электроник 1 категории" >инженер-электроник 1 категории</option><option value="инженер-электроник 2 категории" >инженер-электроник 2 категории</option><option value="инженер-электроник" >инженер-электроник</option><option value="кладовщик инструментальной кладовой" >кладовщик инструментальной кладовой</option><option value="консультант при дирекции лаборатории" >консультант при дирекции лаборатории</option><option value="консультант" >консультант</option><option value="лаборант обработки фильмовой информации физического эксперимента" >лаборант обработки фильмовой информации физического эксперимента</option><option value="лаборант ускорительной установки" >лаборант ускорительной установки</option><option value="лаборант физической лаборатории" >лаборант физической лаборатории</option><option value="лаборант химико-технологических исследований" >лаборант химико-технологических исследований</option><option value="лаборант" >лаборант</option><option value="маляр" >маляр</option><option value="мастер" >мастер</option><option value="машинист компрессорных установок" >машинист компрессорных установок</option><option value="машинист по стирке и ремонту спецодежды" >машинист по стирке и ремонту спецодежды</option><option value="механик цеха" >механик цеха</option><option value="механик экспериментальных стендов и установок" >механик экспериментальных стендов и установок</option><option value="младший научный сотрудник" >младший научный сотрудник</option><option value="монтажник радиоэлектронной аппаратуры и приборов" >монтажник радиоэлектронной аппаратуры и приборов</option><option value="монтажник санитарно-технических систем и оборудования" >монтажник санитарно-технических систем и оборудования</option><option value="монтажник технологического оборудования и связанных с ним конструкций" >монтажник технологического оборудования и связанных с ним конструкций</option><option value="научный сотрудник" >научный сотрудник</option><option value="начальник бюро" >начальник бюро</option><option value="начальник группы" >начальник группы</option><option value="начальник отдела" >начальник отдела</option><option value="начальник отделения" >начальник отделения</option><option value="начальник сектора" >начальник сектора</option><option value="начальник службы" >начальник службы</option><option value="начальник цеха" >начальник цеха</option><option value="переводчик" >переводчик</option><option value="плотник" >плотник</option><option value="подсобный рабочий" >подсобный рабочий</option><option value="полировщик" >полировщик</option><option value="помощник директора лаборатории по капитальному строительству" >помощник директора лаборатории по капитальному строительству</option><option value="помощник директора лаборатории по общим вопросам" >помощник директора лаборатории по общим вопросам</option><option value="помощник директора лаборатории по финансовым вопросам" >помощник директора лаборатории по финансовым вопросам</option><option value="помощник начальника цеха по хозяйственным вопросам" >помощник начальника цеха по хозяйственным вопросам</option><option value="почетный директор лаборатории" >почетный директор лаборатории</option><option value="сверловщик" >сверловщик</option><option value="слесарь аварийно-восстановительных работ" >слесарь аварийно-восстановительных работ</option><option value="слесарь механосборочных работ" >слесарь механосборочных работ</option><option value="слесарь по контрольно-измерительным приборам и автоматике" >слесарь по контрольно-измерительным приборам и автоматике</option><option value="слесарь по ремонту и обслуживанию систем вентиляции и кондиционирования" >слесарь по ремонту и обслуживанию систем вентиляции и кондиционирования</option><option value="слесарь-ремонтник" >слесарь-ремонтник</option><option value="советник директора лаборатории" >советник директора лаборатории</option><option value="советник при дирекции лаборатории" >советник при дирекции лаборатории</option><option value="советник" >советник</option><option value="станочник широкого профиля" >станочник широкого профиля</option><option value="старший инженер" >старший инженер</option><option value="старший инспектор" >старший инспектор</option><option value="старший лаборант" >старший лаборант</option><option value="старший лаборант, имеющий высшее образование" >старший лаборант, имеющий высшее образование</option><option value="старший мастер" >старший мастер</option><option value="старший научный сотрудник" >старший научный сотрудник</option><option value="старший переводчик" >старший переводчик</option><option value="старший техник" >старший техник</option><option value="старший товаровед" >старший товаровед</option><option value="старший экономист" >старший экономист</option><option value="столяр" >столяр</option><option value="техник" >техник</option><option value="токарь" >токарь</option><option value="токарь-расточник" >токарь-расточник</option><option value="тракторист" >тракторист</option><option value="уборщик производственных помещений" >уборщик производственных помещений</option><option value="уборщик служебных помещений" >уборщик служебных помещений</option><option value="ученый секретарь лаборатории" >ученый секретарь лаборатории</option><option value="фрезеровщик" >фрезеровщик</option><option value="художник" >художник</option><option value="электрогазосварщик" >электрогазосварщик</option><option value="электромонтер по обслуживанию электрооборудования" >электромонтер по обслуживанию электрооборудования</option><option value="электромонтер по ремонту и обслуживанию электрооборудования" >электромонтер по ремонту и обслуживанию электрооборудования</option><option value="электросварщик ручной сварки" >электросварщик ручной сварки</option></xmp>------ SQL done, 18ms.<br><BR>
+main.cfg drop down<br> <b>SQL: [main.cfg[dropdowns] (2) ]:</b><xmp>select distinct concat('<option value="', category, '" '
+, case when category='' then 'selected' else '' end
+, '>' , category, '</option>')as CATEGORIES
+from sotrudniki
+where lab_id = 100000
+</xmp>------ <b>execGetDataCmd: </b>'select distinct concat('<option value="', category, '" ' , case when category='' then 'selected' else '' end , '>' , category, '</option>')as CATEGORIES from sotrudniki where lab_id = 100000'<BR>
+<xmp>***** 4 record(s) retrieved. Filled 1 parameters: 
+CATEGORIES=<option value="Научные и научно-педагогические работники" >Научные и научно-педагогические работники</option><option value="Специалисты" >Специалисты</option><option value="Рабочие" >Рабочие</option><option value="Руководители" >Руководители</option></xmp>------ SQL done, 13ms.<br><BR>
+main.cfg drop down<br> <b>SQL: [main.cfg[dropdowns] (3) ]:</b><xmp>select distinct concat('<option value="', stepen, '" '
+, case when stepen='' then 'selected' else '' end
+, '>' , stepen, '</option>')as STEPEN
+from sotrudniki
+where lab_id = 100000
+</xmp>------ <b>execGetDataCmd: </b>'select distinct concat('<option value="', stepen, '" ' , case when stepen='' then 'selected' else '' end , '>' , stepen, '</option>')as STEPEN from sotrudniki where lab_id = 100000'<BR>
+<xmp>***** 4 record(s) retrieved. Filled 1 parameters: 
+STEPEN=<option value="" selected></option><option value="Доктор наук" >Доктор наук</option><option value="Кандидат наук" >Кандидат наук</option></xmp>------ SQL done, 10ms.<br><BR>
+main.cfg drop down<br> <b>SQL: [main.cfg[dropdowns] (4) ]:</b><xmp>select distinct concat('<option value="', grazhdan, '" '
+, case when grazhdan='' then 'selected' else '' end
+, '>' , grazhdan, '</option>')as GRAZHDAN
+from sotrudniki
+where lab_id = 100000
+order by grazhdan
+</xmp>------ <b>execGetDataCmd: </b>'select distinct concat('<option value="', grazhdan, '" ' , case when grazhdan='' then 'selected' else '' end , '>' , grazhdan, '</option>')as GRAZHDAN from sotrudniki where lab_id = 100000 order by grazhdan'<BR>
+<xmp>***** 20 record(s) retrieved. Filled 1 parameters: 
+GRAZHDAN=<option value="АЗЕРБАЙДЖАН" >АЗЕРБАЙДЖАН</option><option value="АРМЕНИЯ" >АРМЕНИЯ</option><option value="БЕЛАРУСЬ" >БЕЛАРУСЬ</option><option value="БОЛГАРИЯ" >БОЛГАРИЯ</option><option value="ГЕРМАНИЯ" >ГЕРМАНИЯ</option><option value="ГРУЗИЯ" >ГРУЗИЯ</option><option value="КАЗАХСТАН" >КАЗАХСТАН</option><option value="КУБА" >КУБА</option><option value="ЛИТВА" >ЛИТВА</option><option value="МОЛДОВА, РЕСПУБЛИКА" >МОЛДОВА, РЕСПУБЛИКА</option><option value="МОНГОЛИЯ" >МОНГОЛИЯ</option><option value="НИГЕРИЯ" >НИГЕРИЯ</option><option value="ПОЛЬША" >ПОЛЬША</option><option value="РОССИЯ" >РОССИЯ</option><option value="РУМЫНИЯ" >РУМЫНИЯ</option><option value="СЛОВАКИЯ" >СЛОВАКИЯ</option><option value="УЗБЕКИСТАН" >УЗБЕКИСТАН</option><option value="УКРАИНА" >УКРАИНА</option><option value="ЧЕШСКАЯ РЕСПУБЛИКА" >ЧЕШСКАЯ РЕСПУБЛИКА</option></xmp>------ SQL done, 12ms.<br><BR>
+main.cfg drop down<br> <b>SQL: [main.cfg[dropdowns] (5) ]:</b><xmp>select distinct concat('<option value="', short_name, '" '
+, case when short_name='' then 'selected' else '' end
+, '>' , short_name, '</option>')as OTDEL
+from struktura str
+where str.pid  in (select id from struktura where pid = 100000)
+order by otdel
+</xmp>------ <b>execGetDataCmd: </b>'select distinct concat('<option value="', short_name, '" ' , case when short_name='' then 'selected' else '' end , '>' , short_name, '</option>')as OTDEL from struktura str where str.pid  in (select id from struktura where pid = 100000) order by otdel'<BR>
+<xmp>***** 46 record(s) retrieved. Filled 1 parameters: 
+OTDEL=<option value="Административное бюро" >Административное бюро</option><option value="Гр. №1 мат. учета и контроля" >Гр. №1 мат. учета и контроля</option><option value="Группа №1 высоковольтного оборудования" >Группа №1 высоковольтного оборудования</option><option value="Группа №2 низковольтного оборудования" >Группа №2 низковольтного оборудования</option><option value="Группа №2 планово- экономическая" >Группа №2 планово- экономическая</option><option value="Группа №3 обеспечения и контроля закупок" >Группа №3 обеспечения и контроля закупок</option><option value="Группа №3 тепловодоснабжения и вентиляции" >Группа №3 тепловодоснабжения и вентиляции</option><option value="Группа №4 электротехническая - высоковольтного оборудования" >Группа №4 электротехническая - высоковольтного оборудования</option><option value="Детекторный отдел" >Детекторный отдел</option><option value="Диспетчерская служба Нуклотрона" >Диспетчерская служба Нуклотрона</option><option value="Инженерный энерготехнологический отдел " >Инженерный энерготехнологический отдел </option><option value="Конструкторский отдел" >Конструкторский отдел</option><option value="Научно - экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA" >Научно - экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA</option><option value="Научно-инженерный отдел систем электропитания Нуклотрона" >Научно-инженерный отдел систем электропитания Нуклотрона</option><option value="Научно-исследовательский криогенный отдел" >Научно-исследовательский криогенный отдел</option><option value="Научно-методический отдел кремниевых трековых систем" >Научно-методический отдел кремниевых трековых систем</option><option value="Научно-технический отдел пучков" >Научно-технический отдел пучков</option><option value="Научно-экспериментальный отдел инжекции и кольца Нуклотрона" >Научно-экспериментальный отдел инжекции и кольца Нуклотрона</option><option value="Научно-экспериментальный отдел инженерно-физических проблем ускорителей" >Научно-экспериментальный отдел инженерно-физических проблем ускорителей</option><option value="Научно-экспериментальный отдел многоцелевого детектора (MPD)" >Научно-экспериментальный отдел многоцелевого детектора (MPD)</option><option value="Научно-экспериментальный отдел радиоэлектронных систем" >Научно-экспериментальный отдел радиоэлектронных систем</option><option value="Научно-экспериментальный отдел сверхпроводящих магнитов и технологий" >Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</option><option value="Научно-экспериментальный отдел спиновой физики малонуклонных систем" >Научно-экспериментальный отдел спиновой физики малонуклонных систем</option><option value="Научно-экспериментальный отдел ускорительных систем  " >Научно-экспериментальный отдел ускорительных систем  </option><option value="Научно-экспериментальный отдел физики легких кварков и лептонов" >Научно-экспериментальный отдел физики легких кварков и лептонов</option><option value="Научно-экспериментальный отдел физики на CMS" >Научно-экспериментальный отдел физики на CMS</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на LHC" >Научно-экспериментальный отдел физики тяжелых ионов на LHC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на RHIC" >Научно-экспериментальный отдел физики тяжелых ионов на RHIC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов" >Научно-экспериментальный отдел физики тяжелых ионов</option><option value="Научно–экспериментальный отдел автоматизации физических исследований" >Научно–экспериментальный отдел автоматизации физических исследований</option><option value="Отдел математического обеспечения" >Отдел математического обеспечения</option><option value="Отдел физики" >Отдел физики</option><option value="Сектор SPD" >Сектор SPD</option><option value="Сектор детекторных систем" >Сектор детекторных систем</option><option value="Сектор криофизических исследований" >Сектор криофизических исследований</option><option value="Сектор полупроводниковых детекторов" >Сектор полупроводниковых детекторов</option><option value="Сектор прикладных радиационных технологий" >Сектор прикладных радиационных технологий</option><option value="Сектор рентгеновской спектроскопии" >Сектор рентгеновской спектроскопии</option><option value="Сектор строу-детекторов" >Сектор строу-детекторов</option><option value="Сектор структуры частиц" >Сектор структуры частиц</option><option value="Сектор физики на АТЛАС" >Сектор физики на АТЛАС</option><option value="Сектор физики странных кварков в ядрах" >Сектор физики странных кварков в ядрах</option><option value="Серпуховской научно-экспериментальный отдел" >Серпуховской научно-экспериментальный отдел</option><option value="Ускорительный отдел" >Ускорительный отдел</option><option value="Хозяйственный отдел" >Хозяйственный отдел</option><option value="Цех опытно-экспериментального производства" >Цех опытно-экспериментального производства</option></xmp>------ SQL done, 5ms.<br><BR>
+main.cfg drop down<br> <b>SQL: [main.cfg[dropdowns] (6) ]:</b><xmp>select distinct concat('<option value="', short_name, '" '
+, case when short_name='' then 'selected' else '' end
+, '>' , subTopparent_name, '</option>')as OTDELENIE
+from struktura
+where pid = 100000
+order by OTDELENIE
+</xmp>------ <b>execGetDataCmd: </b>'select distinct concat('<option value="', short_name, '" ' , case when short_name='' then 'selected' else '' end , '>' , subTopparent_name, '</option>')as OTDELENIE from struktura where pid = 100000 order by OTDELENIE'<BR>
+XXXXXXXX Exception: java.sql.SQLException: Unknown column 'subTopparent_name' in 'field list'; SQL: 'select distinct concat('<option value="', short_name, '" ' , case when short_name='' then 'selected' else '' end , '>' , subTopparent_name, '</option>')as OTDELENIE from struktura where pid = 100000 order by OTDELENIE'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<xmp><BR>
+<tr><BR>
+<td class="label nowrap" nowrap><BR>
+ФИО:<BR>
+</td><td><BR>
+<input type="text" size=45 name="fio" value=""><BR>
+</td><BR>
+</tr><tr><BR>
+<td class="label nowrap" nowrap><BR>
+Табельный номер:</td><td><BR>
+<input size=15 name="tab_n"><BR>
+</td><BR>
+</tr><tr><BR>
+<td class="label nowrap" nowrap><BR>
+Ученая степень:<BR>
+</td><td><BR>
+<select name="stepen" class=norm><BR>
+<option value="">любая</option><BR>
+<option value="" selected></option><option value="Доктор наук" >Доктор наук</option><option value="Кандидат наук" >Кандидат наук</option><BR>
+</select><BR>
+</td><BR>
+</tr><tr><BR>
+<td class="label nowrap" nowrap><BR>
+Отдел:<BR>
+</td><td><BR>
+<select name=otdel class=norm><BR>
+<option value="">любой</option><BR>
+<option value="Административное бюро" >Административное бюро</option><option value="Гр. №1 мат. учета и контроля" >Гр. №1 мат. учета и контроля</option><option value="Группа №1 высоковольтного оборудования" >Группа №1 высоковольтного оборудования</option><option value="Группа №2 низковольтного оборудования" >Группа №2 низковольтного оборудования</option><option value="Группа №2 планово- экономическая" >Группа №2 планово- экономическая</option><option value="Группа №3 обеспечения и контроля закупок" >Группа №3 обеспечения и контроля закупок</option><option value="Группа №3 тепловодоснабжения и вентиляции" >Группа №3 тепловодоснабжения и вентиляции</option><option value="Группа №4 электротехническая - высоковольтного оборудования" >Группа №4 электротехническая - высоковольтного оборудования</option><option value="Детекторный отдел" >Детекторный отдел</option><option value="Диспетчерская служба Нуклотрона" >Диспетчерская служба Нуклотрона</option><option value="Инженерный энерготехнологический отдел " >Инженерный энерготехнологический отдел </option><option value="Конструкторский отдел" >Конструкторский отдел</option><option value="Научно - экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA" >Научно - экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA</option><option value="Научно-инженерный отдел систем электропитания Нуклотрона" >Научно-инженерный отдел систем электропитания Нуклотрона</option><option value="Научно-исследовательский криогенный отдел" >Научно-исследовательский криогенный отдел</option><option value="Научно-методический отдел кремниевых трековых систем" >Научно-методический отдел кремниевых трековых систем</option><option value="Научно-технический отдел пучков" >Научно-технический отдел пучков</option><option value="Научно-экспериментальный отдел инжекции и кольца Нуклотрона" >Научно-экспериментальный отдел инжекции и кольца Нуклотрона</option><option value="Научно-экспериментальный отдел инженерно-физических проблем ускорителей" >Научно-экспериментальный отдел инженерно-физических проблем ускорителей</option><option value="Научно-экспериментальный отдел многоцелевого детектора (MPD)" >Научно-экспериментальный отдел многоцелевого детектора (MPD)</option><option value="Научно-экспериментальный отдел радиоэлектронных систем" >Научно-экспериментальный отдел радиоэлектронных систем</option><option value="Научно-экспериментальный отдел сверхпроводящих магнитов и технологий" >Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</option><option value="Научно-экспериментальный отдел спиновой физики малонуклонных систем" >Научно-экспериментальный отдел спиновой физики малонуклонных систем</option><option value="Научно-экспериментальный отдел ускорительных систем  " >Научно-экспериментальный отдел ускорительных систем  </option><option value="Научно-экспериментальный отдел физики легких кварков и лептонов" >Научно-экспериментальный отдел физики легких кварков и лептонов</option><option value="Научно-экспериментальный отдел физики на CMS" >Научно-экспериментальный отдел физики на CMS</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на LHC" >Научно-экспериментальный отдел физики тяжелых ионов на LHC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на RHIC" >Научно-экспериментальный отдел физики тяжелых ионов на RHIC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов" >Научно-экспериментальный отдел физики тяжелых ионов</option><option value="Научно–экспериментальный отдел автоматизации физических исследований" >Научно–экспериментальный отдел автоматизации физических исследований</option><option value="Отдел математического обеспечения" >Отдел математического обеспечения</option><option value="Отдел физики" >Отдел физики</option><option value="Сектор SPD" >Сектор SPD</option><option value="Сектор детекторных систем" >Сектор детекторных систем</option><option value="Сектор криофизических исследований" >Сектор криофизических исследований</option><option value="Сектор полупроводниковых детекторов" >Сектор полупроводниковых детекторов</option><option value="Сектор прикладных радиационных технологий" >Сектор прикладных радиационных технологий</option><option value="Сектор рентгеновской спектроскопии" >Сектор рентгеновской спектроскопии</option><option value="Сектор строу-детекторов" >Сектор строу-детекторов</option><option value="Сектор структуры частиц" >Сектор структуры частиц</option><option value="Сектор физики на АТЛАС" >Сектор физики на АТЛАС</option><option value="Сектор физики странных кварков в ядрах" >Сектор физики странных кварков в ядрах</option><option value="Серпуховской научно-экспериментальный отдел" >Серпуховской научно-экспериментальный отдел</option><option value="Ускорительный отдел" >Ускорительный отдел</option><option value="Хозяйственный отдел" >Хозяйственный отдел</option><option value="Цех опытно-экспериментального производства" >Цех опытно-экспериментального производства</option><BR>
+</select><BR>
+</td><BR>
+<tr></tr><BR>
+<td class="label nowrap" nowrap><BR>
+Возраст: </td><BR>
+<td><BR>
+от: <input type="text" name="ot" size=5 value=""> по: <input type="text" name="do" size=5 value=""><BR>
+</td><BR>
+</tr><tr><BR>
+<td class="label nowrap" nowrap><BR>
+Категория:<BR>
+</td><td><BR>
+<select name="category" class=norm><BR>
+<option value="">все</option><BR>
+<option value="Научные и научно-педагогические работники" >Научные и научно-педагогические работники</option><option value="Специалисты" >Специалисты</option><option value="Рабочие" >Рабочие</option><option value="Руководители" >Руководители</option><BR>
+</select><BR>
+</td><BR>
+</tr><tr><BR>
+<td class="label nowrap" nowrap><BR>
+Должность1:<BR>
+</td><td><BR>
+<select name="post" class=norm><BR>
+<option value="">любая</option><BR>
+<option value="аппаратчик ожижения водорода и гелия" >аппаратчик ожижения водорода и гелия</option><option value="ведущий инженер по охране труда" >ведущий инженер по охране труда</option><option value="ведущий инженер" >ведущий инженер</option><option value="ведущий конструктор" >ведущий конструктор</option><option value="ведущий научный сотрудник" >ведущий научный сотрудник</option><option value="ведущий программист" >ведущий программист</option><option value="ведущий технолог" >ведущий технолог</option><option value="ведущий экономист" >ведущий экономист</option><option value="ведущий электроник" >ведущий электроник</option><option value="гальваник" >гальваник</option><option value="главный инженер лаборатории" >главный инженер лаборатории</option><option value="главный инженер установки" >главный инженер установки</option><option value="главный научный сотрудник" >главный научный сотрудник</option><option value="главный технический специалист" >главный технический специалист</option><option value="гравер" >гравер</option><option value="директор лаборатории" >директор лаборатории</option><option value="заведующий складом" >заведующий складом</option><option value="заведующий техническим архивом" >заведующий техническим архивом</option><option value="заведующий хозяйством" >заведующий хозяйством</option><option value="заместитель главного инженера лаборатории" >заместитель главного инженера лаборатории</option><option value="заместитель директора лаборатории по научной работе" >заместитель директора лаборатории по научной работе</option><option value="заместитель начальника отдела" >заместитель начальника отдела</option><option value="заместитель начальника отделения по научной работе" >заместитель начальника отделения по научной работе</option><option value="заместитель начальника цеха" >заместитель начальника цеха</option><option value="заточник" >заточник</option><option value="и.о.ведущего научного сотрудника" >и.о.ведущего научного сотрудника</option><option value="и.о.научного сотрудника" >и.о.научного сотрудника</option><option value="и.о.начальника сектора" >и.о.начальника сектора</option><option value="и.о.старшего научного сотрудника" >и.о.старшего научного сотрудника</option><option value="инженер" >инженер</option><option value="инженер-конструктор 1 категории" >инженер-конструктор 1 категории</option><option value="инженер-конструктор 2 категории" >инженер-конструктор 2 категории</option><option value="инженер-конструктор 3 категории" >инженер-конструктор 3 категории</option><option value="инженер-конструктор" >инженер-конструктор</option><option value="инженер-программист 1 категории" >инженер-программист 1 категории</option><option value="инженер-программист 2 категории" >инженер-программист 2 категории</option><option value="инженер-программист" >инженер-программист</option><option value="инженер-технолог 1 категории" >инженер-технолог 1 категории</option><option value="инженер-технолог 3 категории" >инженер-технолог 3 категории</option><option value="инженер-технолог" >инженер-технолог</option><option value="инженер-электроник 1 категории" >инженер-электроник 1 категории</option><option value="инженер-электроник 2 категории" >инженер-электроник 2 категории</option><option value="инженер-электроник" >инженер-электроник</option><option value="кладовщик инструментальной кладовой" >кладовщик инструментальной кладовой</option><option value="консультант при дирекции лаборатории" >консультант при дирекции лаборатории</option><option value="консультант" >консультант</option><option value="лаборант обработки фильмовой информации физического эксперимента" >лаборант обработки фильмовой информации физического эксперимента</option><option value="лаборант ускорительной установки" >лаборант ускорительной установки</option><option value="лаборант физической лаборатории" >лаборант физической лаборатории</option><option value="лаборант химико-технологических исследований" >лаборант химико-технологических исследований</option><option value="лаборант" >лаборант</option><option value="маляр" >маляр</option><option value="мастер" >мастер</option><option value="машинист компрессорных установок" >машинист компрессорных установок</option><option value="машинист по стирке и ремонту спецодежды" >машинист по стирке и ремонту спецодежды</option><option value="механик цеха" >механик цеха</option><option value="механик экспериментальных стендов и установок" >механик экспериментальных стендов и установок</option><option value="младший научный сотрудник" >младший научный сотрудник</option><option value="монтажник радиоэлектронной аппаратуры и приборов" >монтажник радиоэлектронной аппаратуры и приборов</option><option value="монтажник санитарно-технических систем и оборудования" >монтажник санитарно-технических систем и оборудования</option><option value="монтажник технологического оборудования и связанных с ним конструкций" >монтажник технологического оборудования и связанных с ним конструкций</option><option value="научный сотрудник" >научный сотрудник</option><option value="начальник бюро" >начальник бюро</option><option value="начальник группы" >начальник группы</option><option value="начальник отдела" >начальник отдела</option><option value="начальник отделения" >начальник отделения</option><option value="начальник сектора" >начальник сектора</option><option value="начальник службы" >начальник службы</option><option value="начальник цеха" >начальник цеха</option><option value="переводчик" >переводчик</option><option value="плотник" >плотник</option><option value="подсобный рабочий" >подсобный рабочий</option><option value="полировщик" >полировщик</option><option value="помощник директора лаборатории по капитальному строительству" >помощник директора лаборатории по капитальному строительству</option><option value="помощник директора лаборатории по общим вопросам" >помощник директора лаборатории по общим вопросам</option><option value="помощник директора лаборатории по финансовым вопросам" >помощник директора лаборатории по финансовым вопросам</option><option value="помощник начальника цеха по хозяйственным вопросам" >помощник начальника цеха по хозяйственным вопросам</option><option value="почетный директор лаборатории" >почетный директор лаборатории</option><option value="сверловщик" >сверловщик</option><option value="слесарь аварийно-восстановительных работ" >слесарь аварийно-восстановительных работ</option><option value="слесарь механосборочных работ" >слесарь механосборочных работ</option><option value="слесарь по контрольно-измерительным приборам и автоматике" >слесарь по контрольно-измерительным приборам и автоматике</option><option value="слесарь по ремонту и обслуживанию систем вентиляции и кондиционирования" >слесарь по ремонту и обслуживанию систем вентиляции и кондиционирования</option><option value="слесарь-ремонтник" >слесарь-ремонтник</option><option value="советник директора лаборатории" >советник директора лаборатории</option><option value="советник при дирекции лаборатории" >советник при дирекции лаборатории</option><option value="советник" >советник</option><option value="станочник широкого профиля" >станочник широкого профиля</option><option value="старший инженер" >старший инженер</option><option value="старший инспектор" >старший инспектор</option><option value="старший лаборант" >старший лаборант</option><option value="старший лаборант, имеющий высшее образование" >старший лаборант, имеющий высшее образование</option><option value="старший мастер" >старший мастер</option><option value="старший научный сотрудник" >старший научный сотрудник</option><option value="старший переводчик" >старший переводчик</option><option value="старший техник" >старший техник</option><option value="старший товаровед" >старший товаровед</option><option value="старший экономист" >старший экономист</option><option value="столяр" >столяр</option><option value="техник" >техник</option><option value="токарь" >токарь</option><option value="токарь-расточник" >токарь-расточник</option><option value="тракторист" >тракторист</option><option value="уборщик производственных помещений" >уборщик производственных помещений</option><option value="уборщик служебных помещений" >уборщик служебных помещений</option><option value="ученый секретарь лаборатории" >ученый секретарь лаборатории</option><option value="фрезеровщик" >фрезеровщик</option><option value="художник" >художник</option><option value="электрогазосварщик" >электрогазосварщик</option><option value="электромонтер по обслуживанию электрооборудования" >электромонтер по обслуживанию электрооборудования</option><option value="электромонтер по ремонту и обслуживанию электрооборудования" >электромонтер по ремонту и обслуживанию электрооборудования</option><option value="электросварщик ручной сварки" >электросварщик ручной сварки</option><BR>
+</tr><tr><BR>
+<td class="label nowrap" nowrap><BR>
+Начало работы:<BR>
+</td><td><BR>
+<input type="date" name="calendar"><BR>
+Окончание работы: <input type="date" name="calendarik"><BR>
+</td><BR>
+</tr> <tr><BR>
+<td class="label nowrap" nowrap><BR>
+Гражданство:<BR>
+</td><td><BR>
+<select name="grazhdan" class=norm><BR>
+<option value="">любое</option><BR>
+<option value="АЗЕРБАЙДЖАН" >АЗЕРБАЙДЖАН</option><option value="АРМЕНИЯ" >АРМЕНИЯ</option><option value="БЕЛАРУСЬ" >БЕЛАРУСЬ</option><option value="БОЛГАРИЯ" >БОЛГАРИЯ</option><option value="ГЕРМАНИЯ" >ГЕРМАНИЯ</option><option value="ГРУЗИЯ" >ГРУЗИЯ</option><option value="КАЗАХСТАН" >КАЗАХСТАН</option><option value="КУБА" >КУБА</option><option value="ЛИТВА" >ЛИТВА</option><option value="МОЛДОВА, РЕСПУБЛИКА" >МОЛДОВА, РЕСПУБЛИКА</option><option value="МОНГОЛИЯ" >МОНГОЛИЯ</option><option value="НИГЕРИЯ" >НИГЕРИЯ</option><option value="ПОЛЬША" >ПОЛЬША</option><option value="РОССИЯ" >РОССИЯ</option><option value="РУМЫНИЯ" >РУМЫНИЯ</option><option value="СЛОВАКИЯ" >СЛОВАКИЯ</option><option value="УЗБЕКИСТАН" >УЗБЕКИСТАН</option><option value="УКРАИНА" >УКРАИНА</option><option value="ЧЕШСКАЯ РЕСПУБЛИКА" >ЧЕШСКАЯ РЕСПУБЛИКА</option><BR>
+</select><BR>
+</td><td class="label nowrap" nowrap>Штат:</td><td><BR>
+<p><input type="radio" name="shtat_direct" value="">Все</p></td><td><BR>
+<p><input type="radio" name="shtat_direct" value="shtat_direct">Штат дирекции</p></td><td><BR>
+<p><input type="radio" name="shtat_direct" value="">Кроме штата дирекции</p><BR>
+</td><BR>
+</xmp><BR>
++++++ $CALL_SERVICE cfg=tab_salary_table.cfg<BR>
+<br><span class='ss_start pt'  onClick='toggleDiv("tab_salary_table1513536810397");'> $CALL_SERVICE: <b>tab_salary.cfg => tab_salary_table</b> (request:HR_LHEP_118)</span><div id='tab_salary_table1513536810397' class='ss'><B>=== Parameters: ===</B><BR>
+h_host=localhost:8084<BR>
+h_connection=keep-alive<BR>
+h_content-length=19<BR>
+h_accept=text/html, */*; q=0.01<BR>
+h_origin=http://localhost:8084<BR>
+h_x-requested-with=XMLHttpRequest<BR>
+h_user-agent=Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 YaBrowser/17.11.1.775 (beta) Yowser/2.5 Safari/537.36<BR>
+h_content-type=application/x-www-form-urlencoded; charset=UTF-8<BR>
+h_referer=http://localhost:8084/hrlhep/hrlhep<BR>
+h_accept-encoding=gzip, deflate, br<BR>
+h_accept-language=ru,en;q=0.9<BR>
+h_cookie=JSESSIONID=C0800A4E9383DFD01E3C2371C4ACE894<BR>
+q_JSESSIONID=C0800A4E9383DFD01E3C2371C4ACE894<BR>
+queryString===c=tab_salary&ajax=Y<BR>
+c=tab_salary_table<BR>
+ajax=Y<BR>
+cfgFile=tab_salary_table.cfg<BR>
+tm=1513536810397<BR>
+ContextPath=/hrlhep<BR>
+protocol=http<BR>
+ServerName=localhost<BR>
+ServerPort=8084<BR>
+Host=localhost<BR>
+ClientIP=0:0:0:0:0:0:0:1<BR>
+Windows=YES<BR>
+user_agent=Chrome<BR>
+imgPath=/hrlhep/images/<BR>
+jsPath=/hrlhep/js/<BR>
+cssPath=/hrlhep/css/<BR>
+referer=http://localhost:8084/hrlhep/hrlhep<BR>
+pause_time=0<BR>
+sess_fromStart=621<BR>
+sqlNr=1<BR>
+srn=1<BR>
+rpp=20<BR>
+srt=sotr.FIO<BR>
+desc=<BR>
+POST=<option value="аппаратчик ожижения водорода и гелия" >аппаратчик ожижения водорода и гелия</option><option value="ведущий инженер по охране труда" >ведущий инженер по охране труда</option><option value="ведущий инженер" >ведущий инженер</option><option value="ведущий конструктор" >ведущий конструктор</option><option value="ведущий научный сотрудник" >ведущий научный сотрудник</option><option value="ведущий программист" >ведущий программист</option><option value="ведущий технолог" >ведущий технолог</option><option value="ведущий экономист" >ведущий экономист</option><option value="ведущий электроник" >ведущий электроник</option><option value="гальваник" >гальваник</option><option value="главный инженер лаборатории" >главный инженер лаборатории</option><option value="главный инженер установки" >главный инженер установки</option><option value="главный научный сотрудник" >главный научный сотрудник</option><option value="главный технический специалист" >главный технический специалист</option><option value="гравер" >гравер</option><option value="директор лаборатории" >директор лаборатории</option><option value="заведующий складом" >заведующий складом</option><option value="заведующий техническим архивом" >заведующий техническим архивом</option><option value="заведующий хозяйством" >заведующий хозяйством</option><option value="заместитель главного инженера лаборатории" >заместитель главного инженера лаборатории</option><option value="заместитель директора лаборатории по научной работе" >заместитель директора лаборатории по научной работе</option><option value="заместитель начальника отдела" >заместитель начальника отдела</option><option value="заместитель начальника отделения по научной работе" >заместитель начальника отделения по научной работе</option><option value="заместитель начальника цеха" >заместитель начальника цеха</option><option value="заточник" >заточник</option><option value="и.о.ведущего научного сотрудника" >и.о.ведущего научного сотрудника</option><option value="и.о.научного сотрудника" >и.о.научного сотрудника</option><option value="и.о.начальника сектора" >и.о.начальника сектора</option><option value="и.о.старшего научного сотрудника" >и.о.старшего научного сотрудника</option><option value="инженер" >инженер</option><option value="инженер-конструктор 1 категории" >инженер-конструктор 1 категории</option><option value="инженер-конструктор 2 категории" >инженер-конструктор 2 категории</option><option value="инженер-конструктор 3 категории" >инженер-конструктор 3 категории</option><option value="инженер-конструктор" >инженер-конструктор</option><option value="инженер-программист 1 категории" >инженер-программист 1 категории</option><option value="инженер-программист 2 категории" >инженер-программист 2 категории</option><option value="инженер-программист" >инженер-программист</option><option value="инженер-технолог 1 категории" >инженер-технолог 1 категории</option><option value="инженер-технолог 3 категории" >инженер-технолог 3 категории</option><option value="инженер-технолог" >инженер-технолог</option><option value="инженер-электроник 1 категории" >инженер-электроник 1 категории</option><option value="инженер-электроник 2 категории" >инженер-электроник 2 категории</option><option value="инженер-электроник" >инженер-электроник</option><option value="кладовщик инструментальной кладовой" >кладовщик инструментальной кладовой</option><option value="консультант при дирекции лаборатории" >консультант при дирекции лаборатории</option><option value="консультант" >консультант</option><option value="лаборант обработки фильмовой информации физического эксперимента" >лаборант обработки фильмовой информации физического эксперимента</option><option value="лаборант ускорительной установки" >лаборант ускорительной установки</option><option value="лаборант физической лаборатории" >лаборант физической лаборатории</option><option value="лаборант химико-технологических исследований" >лаборант химико-технологических исследований</option><option value="лаборант" >лаборант</option><option value="маляр" >маляр</option><option value="мастер" >мастер</option><option value="машинист компрессорных установок" >машинист компрессорных установок</option><option value="машинист по стирке и ремонту спецодежды" >машинист по стирке и ремонту спецодежды</option><option value="механик цеха" >механик цеха</option><option value="механик экспериментальных стендов и установок" >механик экспериментальных стендов и установок</option><option value="младший научный сотрудник" >младший научный сотрудник</option><option value="монтажник радиоэлектронной аппаратуры и приборов" >монтажник радиоэлектронной аппаратуры и приборов</option><option value="монтажник санитарно-технических систем и оборудования" >монтажник санитарно-технических систем и оборудования</option><option value="монтажник технологического оборудования и связанных с ним конструкций" >монтажник технологического оборудования и связанных с ним конструкций</option><option value="научный сотрудник" >научный сотрудник</option><option value="начальник бюро" >начальник бюро</option><option value="начальник группы" >начальник группы</option><option value="начальник отдела" >начальник отдела</option><option value="начальник отделения" >начальник отделения</option><option value="начальник сектора" >начальник сектора</option><option value="начальник службы" >начальник службы</option><option value="начальник цеха" >начальник цеха</option><option value="переводчик" >переводчик</option><option value="плотник" >плотник</option><option value="подсобный рабочий" >подсобный рабочий</option><option value="полировщик" >полировщик</option><option value="помощник директора лаборатории по капитальному строительству" >помощник директора лаборатории по капитальному строительству</option><option value="помощник директора лаборатории по общим вопросам" >помощник директора лаборатории по общим вопросам</option><option value="помощник директора лаборатории по финансовым вопросам" >помощник директора лаборатории по финансовым вопросам</option><option value="помощник начальника цеха по хозяйственным вопросам" >помощник начальника цеха по хозяйственным вопросам</option><option value="почетный директор лаборатории" >почетный директор лаборатории</option><option value="сверловщик" >сверловщик</option><option value="слесарь аварийно-восстановительных работ" >слесарь аварийно-восстановительных работ</option><option value="слесарь механосборочных работ" >слесарь механосборочных работ</option><option value="слесарь по контрольно-измерительным приборам и автоматике" >слесарь по контрольно-измерительным приборам и автоматике</option><option value="слесарь по ремонту и обслуживанию систем вентиляции и кондиционирования" >слесарь по ремонту и обслуживанию систем вентиляции и кондиционирования</option><option value="слесарь-ремонтник" >слесарь-ремонтник</option><option value="советник директора лаборатории" >советник директора лаборатории</option><option value="советник при дирекции лаборатории" >советник при дирекции лаборатории</option><option value="советник" >советник</option><option value="станочник широкого профиля" >станочник широкого профиля</option><option value="старший инженер" >старший инженер</option><option value="старший инспектор" >старший инспектор</option><option value="старший лаборант" >старший лаборант</option><option value="старший лаборант, имеющий высшее образование" >старший лаборант, имеющий высшее образование</option><option value="старший мастер" >старший мастер</option><option value="старший научный сотрудник" >старший научный сотрудник</option><option value="старший переводчик" >старший переводчик</option><option value="старший техник" >старший техник</option><option value="старший товаровед" >старший товаровед</option><option value="старший экономист" >старший экономист</option><option value="столяр" >столяр</option><option value="техник" >техник</option><option value="токарь" >токарь</option><option value="токарь-расточник" >токарь-расточник</option><option value="тракторист" >тракторист</option><option value="уборщик производственных помещений" >уборщик производственных помещений</option><option value="уборщик служебных помещений" >уборщик служебных помещений</option><option value="ученый секретарь лаборатории" >ученый секретарь лаборатории</option><option value="фрезеровщик" >фрезеровщик</option><option value="художник" >художник</option><option value="электрогазосварщик" >электрогазосварщик</option><option value="электромонтер по обслуживанию электрооборудования" >электромонтер по обслуживанию электрооборудования</option><option value="электромонтер по ремонту и обслуживанию электрооборудования" >электромонтер по ремонту и обслуживанию электрооборудования</option><option value="электросварщик ручной сварки" >электросварщик ручной сварки</option><BR>
+CMD_TIME=5<BR>
+CATEGORIES=<option value="Научные и научно-педагогические работники" >Научные и научно-педагогические работники</option><option value="Специалисты" >Специалисты</option><option value="Рабочие" >Рабочие</option><option value="Руководители" >Руководители</option><BR>
+STEPEN=<option value="" selected></option><option value="Доктор наук" >Доктор наук</option><option value="Кандидат наук" >Кандидат наук</option><BR>
+GRAZHDAN=<option value="АЗЕРБАЙДЖАН" >АЗЕРБАЙДЖАН</option><option value="АРМЕНИЯ" >АРМЕНИЯ</option><option value="БЕЛАРУСЬ" >БЕЛАРУСЬ</option><option value="БОЛГАРИЯ" >БОЛГАРИЯ</option><option value="ГЕРМАНИЯ" >ГЕРМАНИЯ</option><option value="ГРУЗИЯ" >ГРУЗИЯ</option><option value="КАЗАХСТАН" >КАЗАХСТАН</option><option value="КУБА" >КУБА</option><option value="ЛИТВА" >ЛИТВА</option><option value="МОЛДОВА, РЕСПУБЛИКА" >МОЛДОВА, РЕСПУБЛИКА</option><option value="МОНГОЛИЯ" >МОНГОЛИЯ</option><option value="НИГЕРИЯ" >НИГЕРИЯ</option><option value="ПОЛЬША" >ПОЛЬША</option><option value="РОССИЯ" >РОССИЯ</option><option value="РУМЫНИЯ" >РУМЫНИЯ</option><option value="СЛОВАКИЯ" >СЛОВАКИЯ</option><option value="УЗБЕКИСТАН" >УЗБЕКИСТАН</option><option value="УКРАИНА" >УКРАИНА</option><option value="ЧЕШСКАЯ РЕСПУБЛИКА" >ЧЕШСКАЯ РЕСПУБЛИКА</option><BR>
+OTDEL=<option value="Административное бюро" >Административное бюро</option><option value="Гр. №1 мат. учета и контроля" >Гр. №1 мат. учета и контроля</option><option value="Группа №1 высоковольтного оборудования" >Группа №1 высоковольтного оборудования</option><option value="Группа №2 низковольтного оборудования" >Группа №2 низковольтного оборудования</option><option value="Группа №2 планово- экономическая" >Группа №2 планово- экономическая</option><option value="Группа №3 обеспечения и контроля закупок" >Группа №3 обеспечения и контроля закупок</option><option value="Группа №3 тепловодоснабжения и вентиляции" >Группа №3 тепловодоснабжения и вентиляции</option><option value="Группа №4 электротехническая - высоковольтного оборудования" >Группа №4 электротехническая - высоковольтного оборудования</option><option value="Детекторный отдел" >Детекторный отдел</option><option value="Диспетчерская служба Нуклотрона" >Диспетчерская служба Нуклотрона</option><option value="Инженерный энерготехнологический отдел " >Инженерный энерготехнологический отдел </option><option value="Конструкторский отдел" >Конструкторский отдел</option><option value="Научно - экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA" >Научно - экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA</option><option value="Научно-инженерный отдел систем электропитания Нуклотрона" >Научно-инженерный отдел систем электропитания Нуклотрона</option><option value="Научно-исследовательский криогенный отдел" >Научно-исследовательский криогенный отдел</option><option value="Научно-методический отдел кремниевых трековых систем" >Научно-методический отдел кремниевых трековых систем</option><option value="Научно-технический отдел пучков" >Научно-технический отдел пучков</option><option value="Научно-экспериментальный отдел инжекции и кольца Нуклотрона" >Научно-экспериментальный отдел инжекции и кольца Нуклотрона</option><option value="Научно-экспериментальный отдел инженерно-физических проблем ускорителей" >Научно-экспериментальный отдел инженерно-физических проблем ускорителей</option><option value="Научно-экспериментальный отдел многоцелевого детектора (MPD)" >Научно-экспериментальный отдел многоцелевого детектора (MPD)</option><option value="Научно-экспериментальный отдел радиоэлектронных систем" >Научно-экспериментальный отдел радиоэлектронных систем</option><option value="Научно-экспериментальный отдел сверхпроводящих магнитов и технологий" >Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</option><option value="Научно-экспериментальный отдел спиновой физики малонуклонных систем" >Научно-экспериментальный отдел спиновой физики малонуклонных систем</option><option value="Научно-экспериментальный отдел ускорительных систем  " >Научно-экспериментальный отдел ускорительных систем  </option><option value="Научно-экспериментальный отдел физики легких кварков и лептонов" >Научно-экспериментальный отдел физики легких кварков и лептонов</option><option value="Научно-экспериментальный отдел физики на CMS" >Научно-экспериментальный отдел физики на CMS</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на LHC" >Научно-экспериментальный отдел физики тяжелых ионов на LHC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на RHIC" >Научно-экспериментальный отдел физики тяжелых ионов на RHIC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов" >Научно-экспериментальный отдел физики тяжелых ионов</option><option value="Научно–экспериментальный отдел автоматизации физических исследований" >Научно–экспериментальный отдел автоматизации физических исследований</option><option value="Отдел математического обеспечения" >Отдел математического обеспечения</option><option value="Отдел физики" >Отдел физики</option><option value="Сектор SPD" >Сектор SPD</option><option value="Сектор детекторных систем" >Сектор детекторных систем</option><option value="Сектор криофизических исследований" >Сектор криофизических исследований</option><option value="Сектор полупроводниковых детекторов" >Сектор полупроводниковых детекторов</option><option value="Сектор прикладных радиационных технологий" >Сектор прикладных радиационных технологий</option><option value="Сектор рентгеновской спектроскопии" >Сектор рентгеновской спектроскопии</option><option value="Сектор строу-детекторов" >Сектор строу-детекторов</option><option value="Сектор структуры частиц" >Сектор структуры частиц</option><option value="Сектор физики на АТЛАС" >Сектор физики на АТЛАС</option><option value="Сектор физики странных кварков в ядрах" >Сектор физики странных кварков в ядрах</option><option value="Серпуховской научно-экспериментальный отдел" >Серпуховской научно-экспериментальный отдел</option><option value="Ускорительный отдел" >Ускорительный отдел</option><option value="Хозяйственный отдел" >Хозяйственный отдел</option><option value="Цех опытно-экспериментального производства" >Цех опытно-экспериментального производства</option><BR>
+GET_DATA_ERROR=java.sql.SQLException: Unknown column `subTopparent_name` in `field list`; SQL: `select distinct concat(`<option value="`, short_name, `" ` , case when short_name=`` then `selected` else `` end , `>` , subTopparent_name, `</option>`)as OTDELENIE from struktura where pid = 100000 order by OTDELENIE`
+
+<BR>
+ERROR=java.sql.SQLException: Unknown column `subTopparent_name` in `field list`; SQL: `select distinct concat(`<option value="`, short_name, `" ` , case when short_name=`` then `selected` else `` end , `>` , subTopparent_name, `</option>`)as OTDELENIE from struktura where pid = 100000 order by OTDELENIE`<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+=========================<BR>
+<b>$INCLUDE </b>[total table]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_OTDEL
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp>------ <b>execGetDataCmd: </b>'select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0) +ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0) +ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_OTDEL from sotrudniki sotr left join oklad on sotr.tab_n=oklad.tab_n where lab_id = 100000 order by sotr.FIO'<BR>
+<xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_OTDEL=37124418.00</xmp>------ SQL done, 12ms.<br><BR>
+<br> <b>SQL: [[get Totals] (2) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_OTDELENIE
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp>------ <b>execGetDataCmd: </b>'select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0) +ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0) +ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_OTDELENIE from sotrudniki sotr left join oklad on sotr.tab_n=oklad.tab_n where lab_id = 100000 order by sotr.FIO'<BR>
+<xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_OTDELENIE=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+<br> <b>SQL: [[get Totals] (3) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_CATEGORY
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp>------ <b>execGetDataCmd: </b>'select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0) +ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0) +ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_CATEGORY from sotrudniki sotr left join oklad on sotr.tab_n=oklad.tab_n where lab_id = 100000 order by sotr.FIO'<BR>
+<xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_CATEGORY=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+<xmp><BR>
+<table border=0 cellpadding=5 cellspacing=0><BR>
+<tr><td class="label" ><BR>
+Сумма по отделу:</td><td>37124418.00</td><BR>
+<td class="label" > Сумма по отделению:</td> <td>37124418.00</td><BR>
+<td class="label">Сумма по категории:</td><td>37124418.00</td></tr><BR>
+</table><br><BR>
+</xmp><BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>dat/utils.cfg[criteria]<BR>
+<font color=red>$INCLUDE dat/utils.cfg[criteria]: SECTION NOT FOUND OR EMPTY</font><BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.topparent_name,sotr.subtopparent_name,sotr.person_id, sotr.tab_n, sotr.F, sotr.I, sotr.O, sotr.FIO, sotr.otdel
+, sotr.division, sotr.shtat_direct, sotr.post, sotr.category, oklad.year
+, oklad.oklad, oklad.kompens, oklad.dopl_stepen, oklad.personal_nadbav
+, oklad.perconal_imen_nadbav, oklad.premija_rabochim, oklad.sovmeshenie
+, ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0) as itogo
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+order by sotr.FIO
+</xmp> <b> Processed in 212ms. </b><br>0.0: topparent_name=Научно-экспериментальный отдел физики адронов;<BR>
+0.1: subtopparent_name=Сектор №1 научно-методический;<BR>
+0.2: person_id=1;<BR>
+0.3: tab_n=5801;<BR>
+0.4: F=Абазов;<BR>
+0.5: I=Виктор;<BR>
+0.6: O=Мухамедович;<BR>
+0.7: FIO=Абазов Виктор Мухамедович;<BR>
+0.8: otdel=;<BR>
+0.9: division=Сектор №1 научно-методический;<BR>
+0.10: shtat_direct=;<BR>
+0.11: post=научный сотрудник;<BR>
+0.12: category=Научные и научно-педагогические работники;<BR>
+0.13: year=;<BR>
+0.14: oklad=37100;<BR>
+0.15: kompens=0;<BR>
+0.16: dopl_stepen=;<BR>
+0.17: personal_nadbav=;<BR>
+0.18: perconal_imen_nadbav=;<BR>
+0.19: premija_rabochim=;<BR>
+0.20: sovmeshenie=;<BR>
+0.21: itogo=37100.00;<BR>
+1.0: topparent_name=Отдел научно - образовательных проектов и программ;<BR>
+1.1: subtopparent_name=;<BR>
+1.2: person_id=9789;<BR>
+1.3: tab_n=174876;<BR>
+1.4: F=Абакумов;<BR>
+1.5: I=Алексей;<BR>
+1.6: O=Михайлович;<BR>
+1.7: FIO=Абакумов Алексей Михайлович;<BR>
+1.8: otdel=;<BR>
+1.9: division=Отдел научно-образовательных проектов и программ;<BR>
+1.10: shtat_direct=;<BR>
+1.11: post=старший лаборант;<BR>
+1.12: category=Специалисты;<BR>
+1.13: year=;<BR>
+1.14: oklad=14840;<BR>
+1.15: kompens=0;<BR>
+1.16: dopl_stepen=;<BR>
+1.17: personal_nadbav=;<BR>
+1.18: perconal_imen_nadbav=;<BR>
+1.19: premija_rabochim=;<BR>
+1.20: sovmeshenie=;<BR>
+1.21: itogo=14840.00;<BR>
+2.0: topparent_name=;<BR>
+2.1: subtopparent_name="";<BR>
+2.2: person_id=11647;<BR>
+2.3: tab_n=170714;<BR>
+2.4: F=Абатуров;<BR>
+2.5: I=Евгений;<BR>
+2.6: O=Сергеевич;<BR>
+2.7: FIO=Абатуров Евгений Сергеевич;<BR>
+2.8: otdel=;<BR>
+2.9: division=Участок тепловых сетей;<BR>
+2.10: shtat_direct=;<BR>
+2.11: post=электрогазосварщик;<BR>
+2.12: category=Рабочие;<BR>
+2.13: year=;<BR>
+2.14: oklad=14530;<BR>
+2.15: kompens=0;<BR>
+2.16: dopl_stepen=;<BR>
+2.17: personal_nadbav=;<BR>
+2.18: perconal_imen_nadbav=;<BR>
+2.19: premija_rabochim=;<BR>
+2.20: sovmeshenie=;<BR>
+2.21: itogo=14530.00;<BR>
+3.0: topparent_name=НОВФ;<BR>
+3.1: subtopparent_name=Сектор №5 алгебраических и квантовых вычислений;<BR>
+3.2: person_id=2;<BR>
+3.3: tab_n=114357;<BR>
+3.4: F=Абгарян;<BR>
+3.5: I=Ваагн;<BR>
+3.6: O=;<BR>
+3.7: FIO=Абгарян Ваагн;<BR>
+3.8: otdel=;<BR>
+3.9: division=Сектор №5 алгебраических и квантовых вычислений;<BR>
+3.10: shtat_direct=Штат Дирекции;<BR>
+3.11: post=младший научный сотрудник;<BR>
+3.12: category=Научные и научно-педагогические работники;<BR>
+3.13: year=;<BR>
+3.14: oklad=31800;<BR>
+3.15: kompens=0;<BR>
+3.16: dopl_stepen=;<BR>
+3.17: personal_nadbav=;<BR>
+3.18: perconal_imen_nadbav=;<BR>
+3.19: premija_rabochim=;<BR>
+3.20: sovmeshenie=;<BR>
+3.21: itogo=31800.00;<BR>
+4.0: topparent_name=Научно-экспериментальный отдел встречных пучков;<BR>
+4.1: subtopparent_name=Сектор №2 протон-протонных взаимодействий;<BR>
+4.2: person_id=9463;<BR>
+4.3: tab_n=151004;<BR>
+4.4: F=Абдельшакур;<BR>
+4.5: I=Эль;<BR>
+4.6: O=Саид Мохаммед Абу Эльазм;<BR>
+4.7: FIO=Абдельшакур Эль Саид Мохаммед Абу Эльазм;<BR>
+4.8: otdel=;<BR>
+4.9: division=Сектор №2 протон-протонных взаимодействий;<BR>
+4.10: shtat_direct=;<BR>
+4.11: post=старший научный сотрудник;<BR>
+4.12: category=Научные и научно-педагогические работники;<BR>
+4.13: year=;<BR>
+4.14: oklad=38200;<BR>
+4.15: kompens=0;<BR>
+4.16: dopl_stepen=;<BR>
+4.17: personal_nadbav=;<BR>
+4.18: perconal_imen_nadbav=;<BR>
+4.19: premija_rabochim=;<BR>
+4.20: sovmeshenie=;<BR>
+4.21: itogo=38200.00;<BR>
+5.0: topparent_name=Сектор №1 синтез и свойства сверхтяжелых ядер;<BR>
+5.1: subtopparent_name=;<BR>
+5.2: person_id=3;<BR>
+5.3: tab_n=1213;<BR>
+5.4: F=Абдуллин;<BR>
+5.5: I=Фарид;<BR>
+5.6: O=Шамильевич;<BR>
+5.7: FIO=Абдуллин Фарид Шамильевич;<BR>
+5.8: otdel=;<BR>
+5.9: division=Сектор №1 синтез и свойства сверхтяжелых ядер;<BR>
+5.10: shtat_direct=;<BR>
+5.11: post=научный сотрудник;<BR>
+5.12: category=Научные и научно-педагогические работники;<BR>
+5.13: year=;<BR>
+5.14: oklad=36800;<BR>
+5.15: kompens=0;<BR>
+5.16: dopl_stepen=;<BR>
+5.17: personal_nadbav=;<BR>
+5.18: perconal_imen_nadbav=;<BR>
+5.19: premija_rabochim=;<BR>
+5.20: sovmeshenie=;<BR>
+5.21: itogo=36800.00;<BR>
+6.0: topparent_name=;<BR>
+6.1: subtopparent_name="";<BR>
+6.2: person_id=5;<BR>
+6.3: tab_n=104339;<BR>
+6.4: F=Абзалетдинова;<BR>
+6.5: I=Ирина;<BR>
+6.6: O=Валерьевна;<BR>
+6.7: FIO=Абзалетдинова Ирина Валерьевна;<BR>
+6.8: otdel=;<BR>
+6.9: division=Столовая ЛЯП;<BR>
+6.10: shtat_direct=;<BR>
+6.11: post=повар;<BR>
+6.12: category=Рабочие;<BR>
+6.13: year=;<BR>
+6.14: oklad=16670;<BR>
+6.15: kompens=0;<BR>
+6.16: dopl_stepen=;<BR>
+6.17: personal_nadbav=;<BR>
+6.18: perconal_imen_nadbav=;<BR>
+6.19: premija_rabochim=;<BR>
+6.20: sovmeshenie=;<BR>
+6.21: itogo=16670.00;<BR>
+7.0: topparent_name=НТОПиИО;<BR>
+7.1: subtopparent_name=Сектор №3 развития и стандартизации прикладного программного обеспечения ;<BR>
+7.2: person_id=6;<BR>
+7.3: tab_n=112042;<BR>
+7.4: F=Аблязимов;<BR>
+7.5: I=Тимур;<BR>
+7.6: O=Отеллович;<BR>
+7.7: FIO=Аблязимов Тимур Отеллович;<BR>
+7.8: otdel=;<BR>
+7.9: division=Сектор №3 развития и стандартизации прикладного программного обеспечения;<BR>
+7.10: shtat_direct=;<BR>
+7.11: post=инженер-программист;<BR>
+7.12: category=Специалисты;<BR>
+7.13: year=;<BR>
+7.14: oklad=35650;<BR>
+7.15: kompens=0;<BR>
+7.16: dopl_stepen=;<BR>
+7.17: personal_nadbav=;<BR>
+7.18: perconal_imen_nadbav=;<BR>
+7.19: premija_rabochim=;<BR>
+7.20: sovmeshenie=;<BR>
+7.21: itogo=35650.00;<BR>
+8.0: topparent_name=Отделение №2 Физики на ускорительном комплексе Нуклотрон-NICA;<BR>
+8.1: subtopparent_name=Научно-экспериментальный отдел физики тяжелых ионов;<BR>
+8.2: person_id=7;<BR>
+8.3: tab_n=17914;<BR>
+8.4: F=Абраамян;<BR>
+8.5: I=Хачик;<BR>
+8.6: O=Унанович;<BR>
+8.7: FIO=Абраамян Хачик Унанович;<BR>
+8.8: otdel=НЭОФТИ;<BR>
+8.9: division=Группа №1 станций внутренних мишеней, электронного и ресурсного обеспечения;<BR>
+8.10: shtat_direct=Штат Дирекции;<BR>
+8.11: post=ведущий научный сотрудник;<BR>
+8.12: category=Научные и научно-педагогические работники;<BR>
+8.13: year=;<BR>
+8.14: oklad=37450;<BR>
+8.15: kompens=3530;<BR>
+8.16: dopl_stepen=3000;<BR>
+8.17: personal_nadbav=;<BR>
+8.18: perconal_imen_nadbav=;<BR>
+8.19: premija_rabochim=;<BR>
+8.20: sovmeshenie=;<BR>
+8.21: itogo=43980.00;<BR>
+9.0: topparent_name=;<BR>
+9.1: subtopparent_name="";<BR>
+9.2: person_id=10514;<BR>
+9.3: tab_n=160726;<BR>
+9.4: F=Абрамов;<BR>
+9.5: I=Александр;<BR>
+9.6: O=Алексеевич;<BR>
+9.7: FIO=Абрамов Александр Алексеевич;<BR>
+9.8: otdel=;<BR>
+9.9: division=Группа №2 эксплуатации линейно-кабельных сооружений, устройств радио и электропитания;<BR>
+9.10: shtat_direct=;<BR>
+9.11: post=электромонтер линейных сооружений телефонной связи и радиофикации;<BR>
+9.12: category=Рабочие;<BR>
+9.13: year=;<BR>
+9.14: oklad=18450;<BR>
+9.15: kompens=0;<BR>
+9.16: dopl_stepen=;<BR>
+9.17: personal_nadbav=;<BR>
+9.18: perconal_imen_nadbav=;<BR>
+9.19: premija_rabochim=;<BR>
+9.20: sovmeshenie=;<BR>
+9.21: itogo=18450.00;<BR>
+10.0: topparent_name=;<BR>
+10.1: subtopparent_name="";<BR>
+10.2: person_id=4941;<BR>
+10.3: tab_n=144843;<BR>
+10.4: F=Абрамов;<BR>
+10.5: I=Василий;<BR>
+10.6: O=Михайлович;<BR>
+10.7: FIO=Абрамов Василий Михайлович;<BR>
+10.8: otdel=;<BR>
+10.9: division=Административно-технический персонал;<BR>
+10.10: shtat_direct=;<BR>
+10.11: post=техник;<BR>
+10.12: category=Специалисты;<BR>
+10.13: year=;<BR>
+10.14: oklad=23160;<BR>
+10.15: kompens=0;<BR>
+10.16: dopl_stepen=;<BR>
+10.17: personal_nadbav=;<BR>
+10.18: perconal_imen_nadbav=;<BR>
+10.19: premija_rabochim=;<BR>
+10.20: sovmeshenie=;<BR>
+10.21: itogo=23160.00;<BR>
+11.0: topparent_name=;<BR>
+11.1: subtopparent_name="";<BR>
+11.2: person_id=4941;<BR>
+11.3: tab_n=150791;<BR>
+11.4: F=Абрамов;<BR>
+11.5: I=Василий;<BR>
+11.6: O=Михайлович;<BR>
+11.7: FIO=Абрамов Василий Михайлович;<BR>
+11.8: otdel=;<BR>
+11.9: division=Дом физкультуры;<BR>
+11.10: shtat_direct=;<BR>
+11.11: post=электромонтер по ремонту и обслуживанию электрооборудования;<BR>
+11.12: category=Рабочие;<BR>
+11.13: year=;<BR>
+11.14: oklad=17940;<BR>
+11.15: kompens=0;<BR>
+11.16: dopl_stepen=;<BR>
+11.17: personal_nadbav=;<BR>
+11.18: perconal_imen_nadbav=;<BR>
+11.19: premija_rabochim=;<BR>
+11.20: sovmeshenie=;<BR>
+11.21: itogo=17940.00;<BR>
+12.0: topparent_name=;<BR>
+12.1: subtopparent_name="";<BR>
+12.2: person_id=8;<BR>
+12.3: tab_n=263767;<BR>
+12.4: F=Абрамова;<BR>
+12.5: I=Валентина;<BR>
+12.6: O=Николаевна;<BR>
+12.7: FIO=Абрамова Валентина Николаевна;<BR>
+12.8: otdel=;<BR>
+12.9: division=Ресторан "Дубна";<BR>
+12.10: shtat_direct=;<BR>
+12.11: post=повар;<BR>
+12.12: category=Рабочие;<BR>
+12.13: year=;<BR>
+12.14: oklad=16670;<BR>
+12.15: kompens=0;<BR>
+12.16: dopl_stepen=;<BR>
+12.17: personal_nadbav=;<BR>
+12.18: perconal_imen_nadbav=;<BR>
+12.19: premija_rabochim=;<BR>
+12.20: sovmeshenie=;<BR>
+12.21: itogo=16670.00;<BR>
+13.0: topparent_name=Группа селективной лазерной ионизации и сепарации продуктов ядерных реакций (установка ГаЛС);<BR>
+13.1: subtopparent_name=;<BR>
+13.2: person_id=10019;<BR>
+13.3: tab_n=153456;<BR>
+13.4: F=Аввакумов;<BR>
+13.5: I=Константин;<BR>
+13.6: O=Александрович;<BR>
+13.7: FIO=Аввакумов Константин Александрович;<BR>
+13.8: otdel=;<BR>
+13.9: division=Группа селективной лазерной ионизации и сепарации продуктов ядерных реакций (установка ГаЛС);<BR>
+13.10: shtat_direct=;<BR>
+13.11: post=инженер;<BR>
+13.12: category=Специалисты;<BR>
+13.13: year=;<BR>
+13.14: oklad=29300;<BR>
+13.15: kompens=0;<BR>
+13.16: dopl_stepen=;<BR>
+13.17: personal_nadbav=;<BR>
+13.18: perconal_imen_nadbav=;<BR>
+13.19: premija_rabochim=;<BR>
+13.20: sovmeshenie=;<BR>
+13.21: itogo=29300.00;<BR>
+14.0: topparent_name=Отделение №2 Физики на ускорительном комплексе Нуклотрон-NICA;<BR>
+14.1: subtopparent_name=Научно-экспериментальный отдел спиновой физики малонуклонных систем;<BR>
+14.2: person_id=9464;<BR>
+14.3: tab_n=150996;<BR>
+14.4: F=Аввакумова;<BR>
+14.5: I=Ирина;<BR>
+14.6: O=Леонидовна;<BR>
+14.7: FIO=Аввакумова Ирина Леонидовна;<BR>
+14.8: otdel=НЭОСФМС;<BR>
+14.9: division=Группа №1 встречных поляризованных пучков;<BR>
+14.10: shtat_direct=;<BR>
+14.11: post=инженер;<BR>
+14.12: category=Специалисты;<BR>
+14.13: year=;<BR>
+14.14: oklad=31800;<BR>
+14.15: kompens=0;<BR>
+14.16: dopl_stepen=0;<BR>
+14.17: personal_nadbav=0;<BR>
+14.18: perconal_imen_nadbav=0;<BR>
+14.19: premija_rabochim=0.00;<BR>
+14.20: sovmeshenie=0;<BR>
+14.21: itogo=31800.00;<BR>
+15.0: topparent_name=Отделение нейтронных исследований и разработок в области конденсированных сред;<BR>
+15.1: subtopparent_name=Научно-экспериментальный отдел нейтронных исследований конденсированных сред;<BR>
+15.2: person_id=12;<BR>
+15.3: tab_n=56276;<BR>
+15.4: F=Авдеев;<BR>
+15.5: I=Михаил;<BR>
+15.6: O=Васильевич;<BR>
+15.7: FIO=Авдеев Михаил Васильевич;<BR>
+15.8: otdel=;<BR>
+15.9: division=Сектор №2 нейтронной оптики;<BR>
+15.10: shtat_direct=;<BR>
+15.11: post=начальник сектора;<BR>
+15.12: category=Научные и научно-педагогические работники;<BR>
+15.13: year=;<BR>
+15.14: oklad=55120;<BR>
+15.15: kompens=0;<BR>
+15.16: dopl_stepen=;<BR>
+15.17: personal_nadbav=;<BR>
+15.18: perconal_imen_nadbav=;<BR>
+15.19: premija_rabochim=;<BR>
+15.20: sovmeshenie=;<BR>
+15.21: itogo=55120.00;<BR>
+16.0: topparent_name=Научно-экспериментальный отдел ядерной спектроскопии и радиохимии;<BR>
+16.1: subtopparent_name=Сектор №6 спектрометра ФАЗА;<BR>
+16.2: person_id=13;<BR>
+16.3: tab_n=5406;<BR>
+16.4: F=Авдеев;<BR>
+16.5: I=Сергей;<BR>
+16.6: O=Петрович;<BR>
+16.7: FIO=Авдеев Сергей Петрович;<BR>
+16.8: otdel=;<BR>
+16.9: division=Сектор №6 спектрометра ФАЗА;<BR>
+16.10: shtat_direct=;<BR>
+16.11: post=начальник сектора;<BR>
+16.12: category=Научные и научно-педагогические работники;<BR>
+16.13: year=;<BR>
+16.14: oklad=53000;<BR>
+16.15: kompens=0;<BR>
+16.16: dopl_stepen=;<BR>
+16.17: personal_nadbav=;<BR>
+16.18: perconal_imen_nadbav=;<BR>
+16.19: premija_rabochim=;<BR>
+16.20: sovmeshenie=;<BR>
+16.21: itogo=53000.00;<BR>
+17.0: topparent_name=Группа ученого секретаря;<BR>
+17.1: subtopparent_name=;<BR>
+17.2: person_id=10;<BR>
+17.3: tab_n=90643;<BR>
+17.4: F=Авдеева;<BR>
+17.5: I=Татьяна;<BR>
+17.6: O=Валентиновна;<BR>
+17.7: FIO=Авдеева Татьяна Валентиновна;<BR>
+17.8: otdel=;<BR>
+17.9: division=Группа ученого секретаря;<BR>
+17.10: shtat_direct=;<BR>
+17.11: post=переводчик;<BR>
+17.12: category=Специалисты;<BR>
+17.13: year=;<BR>
+17.14: oklad=34140;<BR>
+17.15: kompens=0;<BR>
+17.16: dopl_stepen=;<BR>
+17.17: personal_nadbav=;<BR>
+17.18: perconal_imen_nadbav=;<BR>
+17.19: premija_rabochim=;<BR>
+17.20: sovmeshenie=;<BR>
+17.21: itogo=34140.00;<BR>
+18.0: topparent_name=Отделение №3 Физики адронов;<BR>
+18.1: subtopparent_name=Научно-экспериментальный отдел физики легких кварков и лептонов;<BR>
+18.2: person_id=14;<BR>
+18.3: tab_n=102044;<BR>
+18.4: F=Авдейчиков;<BR>
+18.5: I=Владимир;<BR>
+18.6: O=Владимирович;<BR>
+18.7: FIO=Авдейчиков Владимир Владимирович;<BR>
+18.8: otdel=НЭОЛКЛ;<BR>
+18.9: division=Сектор №3 больших множественностей;<BR>
+18.10: shtat_direct=;<BR>
+18.11: post=советник;<BR>
+18.12: category=Научные и научно-педагогические работники;<BR>
+18.13: year=;<BR>
+18.14: oklad=33000;<BR>
+18.15: kompens=0;<BR>
+18.16: dopl_stepen=7000;<BR>
+18.17: personal_nadbav=23400;<BR>
+18.18: perconal_imen_nadbav=0;<BR>
+18.19: premija_rabochim=0.00;<BR>
+18.20: sovmeshenie=0;<BR>
+18.21: itogo=63400.00;<BR>
+19.0: topparent_name=Отделение №1 Ускорительное ;<BR>
+19.1: subtopparent_name=Научно-исследовательский криогенный отдел;<BR>
+19.2: person_id=15;<BR>
+19.3: tab_n=20909;<BR>
+19.4: F=Аверичев;<BR>
+19.5: I=Андрей;<BR>
+19.6: O=Станиславович;<BR>
+19.7: FIO=Аверичев Андрей Станиславович;<BR>
+19.8: otdel=НИКО;<BR>
+19.9: division=Группа №1 компрессорных установок;<BR>
+19.10: shtat_direct=;<BR>
+19.11: post=ведущий инженер;<BR>
+19.12: category=Специалисты;<BR>
+19.13: year=;<BR>
+19.14: oklad=42400;<BR>
+19.15: kompens=3500;<BR>
+19.16: dopl_stepen=0;<BR>
+19.17: personal_nadbav=0;<BR>
+19.18: perconal_imen_nadbav=0;<BR>
+19.19: premija_rabochim=0.00;<BR>
+19.20: sovmeshenie=0;<BR>
+19.21: itogo=45900.00;<BR>
+ <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+<xmp><BR>
+Строк на странице:<BR>
+<SELECT NAME="rpp" class=small onChange="; goToRow(1);"><BR>
+<OPTION value="20"<BR>
+selected<BR>
+>20<BR>
+<OPTION value="50"<BR>
+>50 <OPTION value="100"<BR>
+>100<OPTION VALUE="9999"<BR>
+> не огр.<BR>
+</SELECT> &nbsp; &nbsp; &nbsp; Строки: |<span class=actPage>1-20</span>|<a class=page href="javascript:; goToRow(21);">21-40 </a>|<a class=page href="javascript:; goToRow(41);">41-60 </a>|<a class=page href="javascript:; goToRow(61);">61-80 </a>|<a class=page href="javascript:; goToRow(81);">81-100 </a>|<a class=page href="javascript:; goToRow(101);">101-120 </a>|<a class=page href="javascript:; goToRow(121);">121-140 </a>|<a class=page href="javascript:; goToRow(141);">141-160 </a>|<a class=page href="javascript:; goToRow(161);">161-180 </a>|<a class=page href="javascript:; goToRow(181);">181-200 </a> |<BR>
+</xmp><BR>
+</div><span class='ss_back pt'  onClick='toggleDiv("tab_salary_table1513536810397");'> BACK: <b>tab_salary_table => tab_salary.cfg; (499ms.)</b></span><BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_118");'>Request_HR_LHEP_118 (tab_salary) DONE! (694ms)</span> <BR>
++++++ session inactive=0; fromStart=621min<BR>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_12_17_21.html maxLength=500000
+</xmp>------ <b>execGetDataCmd: </b>'read file: HR_LOG_12_17_21.html maxLength=500000'<BR>
+*** file: 'HR_LOG_12_17_21.html' max.length=500000<br><BR><BR>
+<hr><BR>
+</body></html><BR>
+</xmp><BR>

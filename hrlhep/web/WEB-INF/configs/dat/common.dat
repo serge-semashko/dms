@@ -22,7 +22,18 @@ $INCLUDE free/main_js_noDB.cfg[js]
 [scripts]
     <script>
         /*
-            sss
+        * ltrim rtrim trim удалние пробелов (для старый версий javascript
+        */
+
+        if (!String.prototype.trim) {
+            (function() {
+                String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g, '');};   
+                String.prototype.ltrim=function(){return this.replace(/^\s+/,'');};
+                String.prototype.rtrim=function(){return this.replace(/\s+$/,'');};
+                String.prototype.fulltrim=function(){return this.replace(/(?:(?:^|\n)\s+|\s+(?:$|\n))/g,'').replace(/\s+/g,' ');};
+                })();
+        }
+        /*
         * Аналог AjaxCall для загрузки в Excel, но через GET в wf
         *
         * query - запрос в URL-формате (param1=val1&param2=val2)

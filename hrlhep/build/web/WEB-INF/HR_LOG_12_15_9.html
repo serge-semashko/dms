@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>HR LHEP Log</title>
+        <META http-equiv=Content-Type content="text/html; charset=utf-8">
+        <style>
+            body{background-color:#eefff4;}
+            xmp {margin:0;} 
+            .pt {cursor:pointer;} 
+            span.req_start {border:solid 1px red; font-weight:bold; background-color:#FFFFA0;}
+            span.req_end {border:solid 1px red; font-weight:bold; background-color:#D0FFB0;}
+            div.req {display:none; border:solid 1px red; padding:4px; background-color:white;}
+
+            span.ss_start {border:solid 1px red; background-color:#D0E8FF;}
+            span.ss_back {border:solid 1px blue; background-color:#D0FFB0;}
+            div.ss {display:none; border:solid 1px green; border-right:none; padding:6px; margin-left:5px;}
+        </style>
+        <script type="text/javascript">
+            var toggleDiv = function (id) {
+                var d = document.getElementById(id);
+                if (d.style.display === "block")
+                    d.style.display = "none";
+                else
+                    d.style.display = "block";
+            };
+        </script>
+    </head><body>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_12_15_9.html maxLength=500000
+</xmp>------ SQL done, 0ms.<br><BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_9145");'> Request_HR_LHEP_9145 [15.12 09:50:59] 2309: 0:0:0:0:0:0:0:1 c=edit/salary</span><div id='Request_HR_LHEP_9145' class='req'> queryString:c=edit/salary&tab_n=17914&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n, sotr.post, oklad.year
+, oklad.oklad, oklad.kompens, oklad.dopl_stepen, oklad.personal_nadbav
+, oklad.perconal_imen_nadbav, oklad.premija_rabochim, oklad.sovmeshenie
+, ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim,0)+ifnull(oklad.sovmeshenie,0) summa
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where sotr.tab_n=17914
+</xmp><xmp>***** 2 record(s) retrieved. Filled 11 parameters: 
+FIO=Абраамян Хачик УнановичАбраамян Хачик Унанович
+tab_n=1791417914
+post=ведущий научный сотрудникведущий научный сотрудник
+oklad=3745037450
+kompens=35300
+dopl_stepen=3000
+personal_nadbav=0
+perconal_imen_nadbav=0
+premija_rabochim=0.00
+sovmeshenie=0
+summa=43980.0037450.00</xmp>------ SQL done, 2ms.<br><BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_9145");'>Request_HR_LHEP_9145 (edit/salary) DONE! (126ms)</span> <BR>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_12_15_9.html maxLength=500000
+</xmp>------ SQL done, 0ms.<br><BR>

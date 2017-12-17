@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>HR LHEP Log</title>
+        <META http-equiv=Content-Type content="text/html; charset=utf-8">
+        <style>
+            body{background-color:#eefff4;}
+            xmp {margin:0;} 
+            .pt {cursor:pointer;} 
+            span.req_start {border:solid 1px red; font-weight:bold; background-color:#FFFFA0;}
+            span.req_end {border:solid 1px red; font-weight:bold; background-color:#D0FFB0;}
+            div.req {display:none; border:solid 1px red; padding:4px; background-color:white;}
+
+            span.ss_start {border:solid 1px red; background-color:#D0E8FF;}
+            span.ss_back {border:solid 1px blue; background-color:#D0FFB0;}
+            div.ss {display:none; border:solid 1px green; border-right:none; padding:6px; margin-left:5px;}
+        </style>
+        <script type="text/javascript">
+            var toggleDiv = function (id) {
+                var d = document.getElementById(id);
+                if (d.style.display === "block")
+                    d.style.display = "none";
+                else
+                    d.style.display = "block";
+            };
+        </script>
+    </head><body>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_12_17_12.html maxLength=500000
+</xmp>------ SQL done, 0ms.<br><BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_93");'> Request_HR_LHEP_93 [17.12 12:57:50] 2309: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_93' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.FIO&otdel=Административное бюро&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> criteria Административное бюроcriteria  <p style="color:red"> division  </p><br> from sotrudniki sotr<br> where lab_id = 100000<br> and sotr.subTopParent like 'Административное бюро%'<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+from sotrudniki sotr
+where lab_id = 100000
+and sotr.subTopParent_name like 'Административное бюро%'
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=16</xmp>------ SQL done, 10ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+<br> criteria Административное бюроcriteria  <p style="color:red"> division  </p><br> from sotrudniki sotr<br> where lab_id = 100000<br> and sotr.subTopParent like 'Административное бюро%' SQL: [SQL]<BR>
+<b>$INCLUDE </b>[criteria]<BR>
+<br> criteria Административное бюроcriteria  <p style="color:red"> division  </p><br> from sotrudniki sotr<br> where lab_id = 100000<br> and sotr.subTopParent like 'Административное бюро%'<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+and sotr.subTopParent_name like 'Административное бюро%'
+order by sotr.FIO
+</xmp> <b> Processed in 9ms. </b><br> <b> NumTableRows=16; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_93");'>Request_HR_LHEP_93 (tab_personal_table) DONE! (1325ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_94");'> Request_HR_LHEP_94 [17.12 12:57:52] 2309: 0:0:0:0:0:0:0:1 c=personal_XL</span><div id='Request_HR_LHEP_94' class='req'> queryString:of=xl&c=personal_XL&otdel=???????????????? ????; log=true; session inactive=min;<br><br><span class='ss_start pt'  onClick='toggleDiv("tab_personal_table1513504672893");'> $CALL_SERVICE: <b>personal_XL.cfg => tab_personal_table</b> (request:HR_LHEP_94)</span><div id='tab_personal_table1513504672893' class='ss'><b>$INCLUDE </b>[criteria]<BR>
+<br> criteria ???????????????? ????criteria  <p style="color:red"> division  </p><br> from sotrudniki sotr<br> where lab_id = 100000<br> and sotr.subTopParent like '???????????????? ????%'<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+from sotrudniki sotr
+where lab_id = 100000
+and sotr.subTopParent_name like '???????????????? ????%'
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=0</xmp>------ SQL done, 8ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+<br> criteria ???????????????? ????criteria  <p style="color:red"> division  </p><br> from sotrudniki sotr<br> where lab_id = 100000<br> and sotr.subTopParent like '???????????????? ????%' SQL: [SQL]<BR>
+<b>$INCLUDE </b>[criteria]<BR>
+<br> criteria ???????????????? ????criteria  <p style="color:red"> division  </p><br> from sotrudniki sotr<br> where lab_id = 100000<br> and sotr.subTopParent like '???????????????? ????%'<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+and sotr.subTopParent_name like '???????????????? ????%'
+</xmp> <b> Processed in 8ms. </b><br> <b> NumTableRows=0; </b><BR>
+</div><span class='ss_back pt'  onClick='toggleDiv("tab_personal_table1513504672893");'> BACK: <b>tab_personal_table => personal_XL.cfg; (68ms.)</b></span><BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_94");'>Request_HR_LHEP_94 (personal_XL) DONE! (151ms)</span> <BR>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_12_17_12.html maxLength=500000
+</xmp>------ SQL done, 0ms.<br><BR>
