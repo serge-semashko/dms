@@ -1,7 +1,7 @@
 
 
 [head]
-<HTML><HEAD><TITLE>#title#</TITLE>
+<HTML><HEAD><TITLE>#title# sss</TITLE>
 <META http-equiv=Content-Type content="text/html; charset=utf-8">
 <link rel="stylesheet" href="#jsPath#jquery-ui-1.10.1.css" />
 <link rel="stylesheet" href="#jsPath#default/style.min.css" />
@@ -11,7 +11,7 @@
  
 
 <SCRIPT language=JavaScript src="#jsPath#lib.js"></SCRIPT>
-<link rel="stylesheet" href="/sed/css/sed.css" /> ??cache_cfg=true&ZZZ
+<link rel="stylesheet" href="/hrlhep/css/sed.css" /> ??cache_cfg=true&ZZZ
 <SCRIPT language=JavaScript src="#jsPath#sed.js"></SCRIPT>  ??cache_cfg=true&ZZZ
 
 $INCLUDE free/main_css_noDB.cfg[css] 
@@ -19,7 +19,44 @@ $INCLUDE free/main_css_noDB.cfg[css]
 $INCLUDE free/main_js_noDB.cfg[js] 
     ??!cache_cfg=true
 [end]
+[scripts]
+    <script>
+        /*
+            sss
+        * Аналог AjaxCall для загрузки в Excel, но через GET в wf
+        *
+        * query - запрос в URL-формате (param1=val1&param2=val2)
+        * containerId - если задан, то запрос дополняется значениями input в этом контейнере.
+        * значения параметров из query имеют приоритет - перекрывают значения из containerId, 
+        * если там присутствуют такие же параметры.
+        */
 
+        var getXL=function(query, containerId) {
+
+          var data = [];
+          var q = "of=xl";
+          if(query && query.length > 0)
+            q = q + "&" + query;
+          console.log("getXL: query='" + q + "'");
+          if(containerId) {
+            console.log("getXL: containerId='" + containerId + "'");
+            data = $("##"+containerId+" input, ##" +containerId+" textarea, ##"+containerId + " select" ).serializeArray();
+
+            for(i=0; i<data.length; i++) {
+              if(q.indexOf("&" + data[i].name + "=") === -1) {
+                if(data[i].value){
+                  console.log(i + ": " + data[i].name + "=" + data[i].value);
+                  q = q + "&" + data[i].name + "=" + data[i].value;
+                }
+              }
+            }
+            console.log("getXL: res. query='" + q + "'");
+            frames["wf"].window.location.href="#ServletPath#?" + q;
+          }    
+        }
+    </script>
+
+[end]
 
 [form]
 <form name="theForm" method="POST" enctype="multipart/form-data" id = "theForm" autocomplete="off"
