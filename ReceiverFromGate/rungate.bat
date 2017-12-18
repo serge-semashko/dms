@@ -1,1 +1,0 @@
-java -jar .\dist\ReceiverFromGate.jar -port 81 -url http://lt-a3.jinr.ru/gateway/a -size 5000 -count 2 -clientid 100 -objecttype 101 

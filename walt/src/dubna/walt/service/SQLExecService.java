@@ -70,7 +70,7 @@ protected ResultSet runSQL(String sqlSectionName) throws Exception
       dbUtil.update(sqlSectionName);
 
      cfgTuner.addParameter("timer", dbUtil.timeSpent+" sec.");
-     cfgTuner.outCustomSection("finished", out);
+     cfgTuner.outCustomSection("finisheddd", out);
 //      dbUtil.cancelAllStatements();
   }
   catch (Exception e)

@@ -217,6 +217,7 @@ public class SimpleQueryThread implements QueryThread {
 //                }
 
                 if (validateUser()) {
+
                     logQuery();
                     validateParameters();
                     startService();
@@ -364,7 +365,7 @@ public class SimpleQueryThread implements QueryThread {
                         if (v.length() > 0 && !name.equals("tm")) {
                             val = v;
                             if (method.equals("GET")) {
-                                val = new String(val.getBytes("ISO-8859-1"), clientEncoding);
+//                                val = new String(val.getBytes("ISO-8859-1"), clientEncoding);
                             }
                             s = s + "&" + name + "=" + val;
                             registerParameter(name, val, ht);
@@ -570,6 +571,7 @@ public class SimpleQueryThread implements QueryThread {
      * @throws java.lang.Exception
      */
     public void startService() throws Exception {
+
         srv = obtainService();
 // rm.println(" XXX Start Service:" +  srv);
         if (srv == null) {
@@ -590,6 +592,7 @@ public class SimpleQueryThread implements QueryThread {
      * @return @throws Exception
      */
     public Service obtainService() throws Exception {
+        System.out.println("obtainService $$$$$$$$$$$$$$$$$");
         String className = cfgTuner.getParameter("parameters", "service");
         if (className == null || className.length() == 0) {
             className = "dubna.walt.service.Service";
@@ -690,7 +693,7 @@ public class SimpleQueryThread implements QueryThread {
             }
             Date dat = new java.util.Date();
             String id = "Request_" + rm.getString("queryLabel");
-//            System.out.println(id + ": " + c + "; log=" + rmg.getString("log"));
+//            System.out.println(id + ":  " + c + "; log=" + rmg.getString("log"));
             IOUtil.writeLog("</div><br><span class='req_start pt' onClick='toggleDiv(\"" + id + "\");'> "
                     + id
                     + " [" + Fmt.shortDateStr(dat) + ":" + dat.getSeconds() + "] " + cfgTuner.getParameter("USER_ID") + ": " + cfgTuner.getParameter("ClientIP")
