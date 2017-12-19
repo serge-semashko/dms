@@ -67,17 +67,12 @@ public Query ( HttpServletRequest req
 //    Thread thisThread = Thread.currentThread();
 //    thisThread.setPriority(Thread.MAX_PRIORITY-1);
 //    thisThread.setName(queryLabel);
-System.out.println("$$$$$"+queryLabel);;
     rm.setParam("queryLabel", queryLabel);
-System.out.println("1 $$$$$");;
 //    if(1 == 1)
  //     throw (new Exception("AAA"));
 //    System.out.println("\n\r Make query thread...");
-System.out.println("2 $$$$$");;
     QueryThread t = makeQueryThread(rm);
-System.out.println("3 $$$$$");;
     t.start();
-System.out.println("4 $$$$$");;
 
 //    String name = queryLabel;
 //    String name = thisThread.getName();
