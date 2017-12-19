@@ -3,26 +3,34 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/table_no.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_fte_table.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/dat/common.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/fill_otdel.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/salary_XL.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_premii.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/utils.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/personal_XL.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_personal_table.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/free/js_CallModule.dat</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_fte.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_personal.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_salary_table.cfg</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_reports.cfg</file>
+            <file>file:/F:/LIT/dms/hrlhep/src/java/jinr/hrlhep/Servlet.java</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/js/main.js</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/main.cfg</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/table_no.cfg</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_fte_table.cfg</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/oauth_check_user.cfg</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/salary_XL.cfg</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/edit/salary.cfg</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/js/data.js</file>
+            <file>file:/F:/LIT/dms/hrlhep/src/java/jinr/hrlhep/ServiceMimeData.java</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_fte.cfg</file>
+            <file>file:/F:/LIT/dms/hrlhep/src/java/jinr/hrlhep/QueryThread.java</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_povysh.cfg</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_personal.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/dat/common.dat</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/gateway/receive.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_salary.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_premii_table.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/gateway/receive_7_sotrudnik.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/sys/export_xl.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/main.cfg</file>
         </group>
     </open-files>
 </project-private>

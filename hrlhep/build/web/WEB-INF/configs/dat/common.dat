@@ -14,11 +14,35 @@
 <link rel="stylesheet" href="/hrlhep/css/sed.css" /> ??cache_cfg=true&ZZZ
 <SCRIPT language=JavaScript src="#jsPath#sed.js"></SCRIPT>  ??cache_cfg=true&ZZZ
 
+ <script src="#jsPath#main.js"></script>
+ <script src="#jsPath#data.js"></script>
+ <script src="#jsPath#amcharts/amcharts.js"></script>
+ <script src="#jsPath#amcharts/amcharts.js"></script>
+ <script src="#jsPath#amcharts.js"></script>
+ <script src="#jsPath#amcharts/serial.js"></script>
+ <script src="#jsPath#amcharts/light.js"></script>
+ <script src="#jsPath#amcharts/plugins/export/export.min.js"></script>
+ <link rel="stylesheet" href="#jsPath#main.css" type="text/css" media="all" />
+ <link rel="stylesheet" href="#jsPath#amcharts/plugins/export/export.css" type="text/css" media="all" />
+
+ <meta http-equiv="Cache-Control" content="no-cache">
+ <meta http-equiv="Pragma" content="no-cache">
+
+
+
 $INCLUDE free/main_css_noDB.cfg[css] 
     ??!cache_cfg=true
 $INCLUDE free/main_js_noDB.cfg[js] 
     ??!cache_cfg=true
 [end]
+
+ <script src="#ContextPath#/amcharts/amcharts.js"></script>
+ <script src="#ContextPath#/amcharts/serial.js"></script>
+ <script src="#ContextPath#/amcharts/light.js"></script>
+ <script src="#ContextPath#/amcharts/plugins/export/export.min.js"></script>
+<link rel="stylesheet" href="#ContextPath#amcharts/plugins/export/export.css" type="text/css" media="all" />
+
+
 [scripts]
     <script>
         /*
