@@ -3,11 +3,11 @@
     background: #000;
     min-width: 500px;
     min-height: 465px;
-    max-height: 465px;
+    max-height: 565px;
     margin-left: 25px;
     padding: 10px;
-    max-width: 620px;
-    width: 420px;
+    max-width: 920px;
+    width: 820px;
 }
 .-graphContaner {
     width: 400px;
@@ -22,8 +22,6 @@
 .graphContaner {
     background: #efefef;
     border: 2px solid #898989;
-    width: 500px;
-    margin-top: -20px;
 }
 
 #chart2 {
