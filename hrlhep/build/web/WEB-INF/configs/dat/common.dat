@@ -17,10 +17,9 @@
  <script src="#jsPath#main.js"></script>
  <script src="#jsPath#data.js"></script>
  <script src="#jsPath#amcharts/amcharts.js"></script>
- <script src="#jsPath#amcharts/amcharts.js"></script>
+ <script src="#jsPath#amcharts/pie.js"></script>
  <script src="#jsPath#amcharts.js"></script>
  <script src="#jsPath#amcharts/serial.js"></script>
- <script src="#jsPath#amcharts/light.js"></script>
  <script src="#jsPath#amcharts/plugins/export/export.min.js"></script>
  <link rel="stylesheet" href="#jsPath#main.css" type="text/css" media="all" />
  <link rel="stylesheet" href="#jsPath#amcharts/plugins/export/export.css" type="text/css" media="all" />

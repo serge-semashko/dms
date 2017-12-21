@@ -2,18 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/F:/LIT/dms/walt/src/dubna/walt/service/CommandExecutor.java</file>
-            <file>file:/F:/LIT/dms/walt/src/dubna/walt/util/DBUtil.java</file>
-            <file>file:/F:/LIT/dms/walt/src/dubna/walt/Query.java</file>
-            <file>file:/F:/LIT/dms/walt/src/dubna/walt/PopUpHelpServlet.java</file>
-            <file>file:/F:/LIT/dms/walt/src/dubna/walt/SimpleQueryThread.java</file>
-            <file>file:/F:/LIT/dms/walt/src/dubna/walt/QueryThread.java</file>
-            <file>file:/F:/LIT/dms/walt/src/dubna/walt/util/ResourceManager.java</file>
-            <file>file:/F:/LIT/dms/walt/src/dubna/walt/BasicServlet.java</file>
-            <file>file:/F:/LIT/dms/walt/src/dubna/walt/service/SQLExecService.java</file>
-            <file>file:/F:/LIT/dms/walt/src/dubna/walt/util/Logger.java</file>
-            <file>file:/F:/LIT/dms/walt/src/dubna/walt/TestServlet2.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

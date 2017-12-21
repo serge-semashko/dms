@@ -3,10 +3,53 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+var pieData1 = [{
+        "pname": "Lithuania",
+        "value": 501.9
+    }, {
+        "pname": "Czech Republic",
+        "value": 301.9
+    }, {
+        "pname": "Ireland",
+        "value": 201.1
+    }, {
+        "pname": "Germany",
+        "value": 165.8
+    }, {
+        "pname": "Australia",
+        "value": 139.9
+    }, {
+        "pname": "Austria",
+        "value": 128.3
+    }, {
+        "pname": "UK",
+        "value": 199
+    }, {
+        "pname": "Belgium",
+        "value": 60
+    }, {
+        "pname": "The Netherlands",
+        "value": 50
+    }];
 var charts = {};
 var Chart1;
+var pieChart1;
+function createPieChart(divId) {
+    var chart = AmCharts.makeChart(divId, {
+        "type": "pie",
+        "theme": "light",
+        "dataProvider": pieData1,
+        "valueField": "value",
+        "titleField": "pname",
+        "balloon": {
+            "fixedPosition": true
+        },
+        "export": {
+            "enabled": true
+        }
+    });
+}
 function createChart(divId) {
-    debugger;
     Chart1 = AmCharts.makeChart(divId, {
         "type": "serial",
         "theme": "light",

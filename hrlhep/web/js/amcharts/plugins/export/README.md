@@ -1,6 +1,6 @@
 # amCharts Export
 
-Version: 1.4.53
+Version: 1.4.74
 
 
 ## Description
@@ -149,6 +149,7 @@ border | {} | An object of key/value pairs to define the overlaying border
 processData | | A function which can be used to change the dataProvider when exporting to CSV, XLSX, or JSON
 pageOrigin | true | A flag to show / hide the origin of the generated PDF ( pdf export only )
 forceRemoveImages | false | If true export removes all images
+debug | false | A flag which enables the plugin to write console logs (currently used by the dependency handler only).
 
 
 ## Configuring export menu
@@ -879,7 +880,7 @@ chart.export.setAnnotations({
 
 
 },function() {
-  // Callback when finished 
+  // Callback when finished
 });
 ```
 
@@ -972,6 +973,78 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 ## Changelog
 
+
+### 1.4.74
+* Fixed: fabricJS half pixel offset
+
+### 1.4.73
+* Fixed: Exit option in image download fallback (e.g. IE9)
+* Fixed: classList method access issue (see polyfill)
+* Added: `libs/classList.js` [classList polyfill](https://github.com/eligrey/classList.js/blob/master/classList.min.js) for old browser
+* Added: `libs.unsupportedIE9libs` to avoid loading unused resources
+
+### 1.4.72
+* Fixed: Memory leak within clear method, calls removeListeners on fabric instance.
+
+### 1.4.71
+* Fixed: Added additional node existance checks before removing
+
+### 1.4.70
+* Fixed: Safari export issue on text labels
+
+### 1.4.69
+* Fixed: Memory leak issue on observed listeners on document
+
+### 1.4.68
+* Fixed: PDFmake dependency version (jsZIP)
+* Fixed: XLSX export issue (caused by jsZIP dependency)
+* Fixed: Issue on given functions in given config for fabric instance creation
+
+### 1.4.67
+* Fixed: PDFmake multiplier issue on iOS devices; forced to 1
+* Updated: Libaries (ensure to replace/update the resources)
+
+### 1.4.66
+* Fixed: Menu active state on mouseleave.
+
+### 1.4.65
+* Fixed: Menu active state issue, menu kept its active when it hasn't been rerendered.
+
+### 1.4.64
+* Fixed: classList issue on IE11
+
+### 1.4.63
+* Fixed: Clip-path issue on graph lines
+
+### 1.4.62
+* Fixed: Gantt category issue
+
+### 1.4.61
+* Fixed: SmoothCustomBullet plugin support, clip-path issue on curved corners
+
+### 1.4.60
+* Fixed: Empty print output in chrome version 57
+
+### 1.4.59
+* Fixed: Issue with blurred element when closing annotation mode
+
+### 1.4.58
+* Fixed: SVG clip-path export issue; injection control; wrap elements to support fill reference
+* Fixed: Keyboard navigation disabled on touch devices
+
+### 1.4.57
+* Added: Support for keyboard navigation (tabs and arrow keys).
+* Fixed: Merged pull request [#84](https://github.com/amcharts/export/pull/54) fixing an issue when "a" is undefined within deepMerge (thanks to [RahavLussato](https://github.com/RahavLussato) )
+
+### 1.4.56
+* Added: Dependency handler on export methods, holds the actual call until the namespace shows up in current scope (uses libs.loadTimeout).
+
+### 1.4.55
+* Added: Radial gradient issue on pie caused by the vertical gradient fix (v1.4.44)
+
+### 1.4.54
+* Fixed: Default text size on width changes
+
 ### 1.4.53
 * Fixed: IOS print issue, captured the whole page instead of the single page
 
@@ -1046,7 +1119,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 * Fixed: Shallow copy of compared graphs in data exports (stock only)
 
 ### 1.4.33
-* Fixed: fill/stroke polyfilling issue on svg elements with color validation/preparation for fabric 
+* Fixed: fill/stroke polyfilling issue on svg elements with color validation/preparation for fabric
 
 ### 1.4.32
 * Fixed: Issue polyfilling the color attributes with "rgba" color codes
