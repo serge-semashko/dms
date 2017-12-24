@@ -1,0 +1,1047 @@
+<html>
+    <head>
+        <title>HR LHEP Log</title>
+        <META http-equiv=Content-Type content="text/html; charset=utf-8">
+        <style>
+            body{background-color:#eefff4;}
+            xmp {margin:0;} 
+            .pt {cursor:pointer;} 
+            span.req_start {border:solid 1px red; font-weight:bold; background-color:#FFFFA0;}
+            span.req_end {border:solid 1px red; font-weight:bold; background-color:#D0FFB0;}
+            div.req {display:none; border:solid 1px red; padding:4px; background-color:white;}
+
+            span.ss_start {border:solid 1px red; background-color:#D0E8FF;}
+            span.ss_back {border:solid 1px blue; background-color:#D0FFB0;}
+            div.ss {display:none; border:solid 1px green; border-right:none; padding:6px; margin-left:5px;}
+        </style>
+        <script type="text/javascript">
+            var toggleDiv = function (id) {
+                var d = document.getElementById(id);
+                if (d.style.display === "block")
+                    d.style.display = "none";
+                else
+                    d.style.display = "block";
+            };
+        </script>
+    </head><body>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_12_24_19.html maxLength=500000
+</xmp>------ SQL done, 0ms.<br><BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_209");'> Request_HR_LHEP_209 [24.12 19:41:1] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_209' class='req'> queryString:c=edit/premiya&tab_n=7084&month=1&istochnik1=2314&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+where sotr.tab_n=7084
+and premii.month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_209");'>Request_HR_LHEP_209 (edit/premiya) DONE! (95ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_210");'> Request_HR_LHEP_210 [24.12 19:41:3] 2309: 0:0:0:0:0:0:0:1 c=tab_premii_table</span><div id='Request_HR_LHEP_210' class='req'> queryString:c=tab_premii_table&srn=1&srt=sotr.post&otdelenie=Группа советников и консультантов&shtat_direct=exclude_shtat_direct&rpp=20&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_OTDEL
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.post
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_OTDEL=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+<br> <b>SQL: [[get Totals] (2) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_POST
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.post
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_POST=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+<br> <b>SQL: [[get Totals] (3) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_CATEGORY
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.post
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_CATEGORY=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+shtat_direct=exclude_shtat_direct<br> <b>SQL: [SQL]:</b><xmp>select sotr.person_id, sotr.tab_n, sotr.F, sotr.I, sotr.O, sotr.otdel, sotr.post
+, sotr.division, sotr.category, premii.year, premii.month, premii.istochnik1, premii.istochnik2
+, premii.istochnik3, premii.istochnik4, premii.istochnik5
+, premii.summa
+, ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0) as SUM_OTDEL
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+and sotr.TopParent_name like 'Группа советников и консультантов%'
+and sotr.shtat not like '%дирекции%'
+order by sotr.post
+</xmp> <b> Processed in 8ms. </b><br> <b> NumTableRows=5; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_210");'>Request_HR_LHEP_210 (tab_premii_table) DONE! (209ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_211");'> Request_HR_LHEP_211 [24.12 19:41:5] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_211' class='req'> queryString:c=edit/premiya&tab_n=3046&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+where sotr.tab_n=3046
+and premii.month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_211");'>Request_HR_LHEP_211 (edit/premiya) DONE! (64ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_212");'> Request_HR_LHEP_212 [24.12 19:41:6] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_212' class='req'> queryString:c=edit/premiya&mode=edit&tab_n=3046&month=1&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+where sotr.tab_n=3046
+and premii.month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[edit form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_212");'>Request_HR_LHEP_212 (edit/premiya) DONE! (83ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_213");'> Request_HR_LHEP_213 [24.12 19:41:9] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_213' class='req'> queryString:c=edit/premiya&cop=save&mode=edit&tab_n=3046&month=1&istochnik1=2314&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[edit form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_213");'>Request_HR_LHEP_213 (edit/premiya) DONE! (88ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_214");'> Request_HR_LHEP_214 [24.12 19:41:48] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_214' class='req'> queryString:c=edit/premiya&tab_n=3046&month=1&istochnik1=2314&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+where sotr.tab_n=3046
+and premii.month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_214");'>Request_HR_LHEP_214 (edit/premiya) DONE! (89ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_215");'> Request_HR_LHEP_215 [24.12 19:41:50] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_215' class='req'> queryString:c=edit/premiya&tab_n=3046&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+where sotr.tab_n=3046
+and premii.month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_215");'>Request_HR_LHEP_215 (edit/premiya) DONE! (82ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_216");'> Request_HR_LHEP_216 [24.12 19:41:52] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_216' class='req'> queryString:c=edit/premiya&mode=edit&tab_n=3046&month=1&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+where sotr.tab_n=3046
+and premii.month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[edit form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_216");'>Request_HR_LHEP_216 (edit/premiya) DONE! (121ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_217");'> Request_HR_LHEP_217 [24.12 19:41:55] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_217' class='req'> queryString:c=edit/premiya&cop=save&mode=edit&tab_n=3046&month=1&istochnik1=2314&ajax=Y; log=true; session inactive=min;<br>!!!!!!!!<br> <b>SQL: [[updateRecord] (1) ]:</b><xmp>select 'Y' as rec_exists from premii
+where tab_n=3046
+and month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+!!!!!!!!<br> <b>SQL: [[updateRecord] (2) ]:</b><xmp>update premii
+set tab_n='3046'
+, istochnik1=2314
+, istochnik2=null
+, istochnik3=null
+, istochnik4=null
+, istochnik5=null
+, istochnik6=null
+where tab_n=3046 and month=1
+</xmp> DONE! 0 record(s) affected------ SQL done, 1ms.<br><BR>
+!!!!!!!!<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[edit form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_217");'>Request_HR_LHEP_217 (edit/premiya) DONE! (73ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_218");'> Request_HR_LHEP_218 [24.12 19:41:56] 2309: 0:0:0:0:0:0:0:1 c=tab_premii_table</span><div id='Request_HR_LHEP_218' class='req'> queryString:c=tab_premii_table&srn=1&srt=sotr.post&otdelenie=Группа советников и консультантов&shtat_direct=exclude_shtat_direct&rpp=20&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_OTDEL
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.post
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_OTDEL=37124418.00</xmp>------ SQL done, 13ms.<br><BR>
+<br> <b>SQL: [[get Totals] (2) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_POST
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.post
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_POST=37124418.00</xmp>------ SQL done, 12ms.<br><BR>
+<br> <b>SQL: [[get Totals] (3) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_CATEGORY
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.post
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_CATEGORY=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+shtat_direct=exclude_shtat_direct<br> <b>SQL: [SQL]:</b><xmp>select sotr.person_id, sotr.tab_n, sotr.F, sotr.I, sotr.O, sotr.otdel, sotr.post
+, sotr.division, sotr.category, premii.year, premii.month, premii.istochnik1, premii.istochnik2
+, premii.istochnik3, premii.istochnik4, premii.istochnik5
+, premii.summa
+, ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0) as SUM_OTDEL
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+and sotr.TopParent_name like 'Группа советников и консультантов%'
+and sotr.shtat not like '%дирекции%'
+order by sotr.post
+</xmp> <b> Processed in 8ms. </b><br> <b> NumTableRows=5; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_218");'>Request_HR_LHEP_218 (tab_premii_table) DONE! (188ms)</span> <BR>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_12_24_19.html maxLength=500000
+</xmp>------ SQL done, 3ms.<br><BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_220");'> Request_HR_LHEP_220 [24.12 19:46:15] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_220' class='req'> queryString:c=edit/premiya&tab_n=3046&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+where sotr.tab_n=3046
+and premii.month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_220");'>Request_HR_LHEP_220 (edit/premiya) DONE! (84ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_221");'> Request_HR_LHEP_221 [24.12 19:46:18] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_221' class='req'> queryString:c=edit/premiya&mode=edit&tab_n=3046&month=1&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+where sotr.tab_n=3046
+and premii.month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[edit form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_221");'>Request_HR_LHEP_221 (edit/premiya) DONE! (72ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_222");'> Request_HR_LHEP_222 [24.12 19:46:21] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_222' class='req'> queryString:c=edit/premiya&cop=save&mode=edit&tab_n=3046&month=1&istochnik1=3&ajax=Y; log=true; session inactive=min;<br>!!!!!!!!<br> <b>SQL: [[updateRecord] (1) ]:</b><xmp>select 'Y' as rec_exists from premii
+where tab_n=3046
+and month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+!!!!!!!!<br> <b>SQL: [[updateRecord] (2) ]:</b><xmp>update premii
+set tab_n='3046'
+, istochnik1=3
+, istochnik2=null
+, istochnik3=null
+, istochnik4=null
+, istochnik5=null
+, istochnik6=null
+where tab_n=3046 and month=1
+</xmp> DONE! 0 record(s) affected------ SQL done, 2ms.<br><BR>
+!!!!!!!!<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[edit form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_222");'>Request_HR_LHEP_222 (edit/premiya) DONE! (126ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_223");'> Request_HR_LHEP_223 [24.12 19:46:22] 2309: 0:0:0:0:0:0:0:1 c=tab_premii_table</span><div id='Request_HR_LHEP_223' class='req'> queryString:c=tab_premii_table&srn=1&srt=sotr.post&otdelenie=Группа советников и консультантов&shtat_direct=exclude_shtat_direct&rpp=20&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_OTDEL
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.post
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_OTDEL=37124418.00</xmp>------ SQL done, 12ms.<br><BR>
+<br> <b>SQL: [[get Totals] (2) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_POST
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.post
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_POST=37124418.00</xmp>------ SQL done, 12ms.<br><BR>
+<br> <b>SQL: [[get Totals] (3) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_CATEGORY
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.post
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_CATEGORY=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+shtat_direct=exclude_shtat_direct<br> <b>SQL: [SQL]:</b><xmp>select sotr.person_id, sotr.tab_n, sotr.F, sotr.I, sotr.O, sotr.otdel, sotr.post
+, sotr.division, sotr.category, premii.year, premii.month, premii.istochnik1, premii.istochnik2
+, premii.istochnik3, premii.istochnik4, premii.istochnik5
+, premii.summa
+, ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0) as SUM_OTDEL
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+and sotr.TopParent_name like 'Группа советников и консультантов%'
+and sotr.shtat not like '%дирекции%'
+order by sotr.post
+</xmp> <b> Processed in 9ms. </b><br> <b> NumTableRows=5; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_223");'>Request_HR_LHEP_223 (tab_premii_table) DONE! (197ms)</span> <BR>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_12_24_19.html maxLength=500000
+</xmp>------ SQL done, 8ms.<br><BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_225");'> Request_HR_LHEP_225 [24.12 19:47:20] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_225' class='req'> queryString:c=edit/premiya&tab_n=3046&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+where sotr.tab_n=3046
+and premii.month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_225");'>Request_HR_LHEP_225 (edit/premiya) DONE! (100ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_226");'> Request_HR_LHEP_226 [24.12 19:47:22] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_226' class='req'> queryString:c=edit/premiya&mode=edit&tab_n=3046&month=1&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+where sotr.tab_n=3046
+and premii.month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[edit form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_226");'>Request_HR_LHEP_226 (edit/premiya) DONE! (112ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_227");'> Request_HR_LHEP_227 [24.12 19:47:25] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_227' class='req'> queryString:c=edit/premiya&cop=save&mode=edit&tab_n=3046&month=1&istochnik1=2314&ajax=Y; log=true; session inactive=min;<br>!!!!!!!!!!!!!!!! exists NO!!!!!!!! exists YES<br> <b>SQL: [[updateRecord] (1) ]:</b><xmp>select 'Y' as rec_exists from premii
+where tab_n=3046
+and month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+!!!!!!!!!!!!!!!! exists NO!!!!!!!! exists YES<br> <b>SQL: [[updateRecord] (2) ]:</b><xmp>update premii
+set tab_n='3046'
+, istochnik1=2314
+, istochnik2=null
+, istochnik3=null
+, istochnik4=null
+, istochnik5=null
+, istochnik6=null
+where tab_n=3046 and month=1
+</xmp> DONE! 0 record(s) affected------ SQL done, 2ms.<br><BR>
+!!!!!!!!!!!!!!!! exists NO!!!!!!!! exists YES<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[edit form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_227");'>Request_HR_LHEP_227 (edit/premiya) DONE! (89ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_228");'> Request_HR_LHEP_228 [24.12 19:47:25] 2309: 0:0:0:0:0:0:0:1 c=tab_premii_table</span><div id='Request_HR_LHEP_228' class='req'> queryString:c=tab_premii_table&srn=1&srt=sotr.post&otdelenie=Группа советников и консультантов&shtat_direct=exclude_shtat_direct&rpp=20&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_OTDEL
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.post
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_OTDEL=37124418.00</xmp>------ SQL done, 12ms.<br><BR>
+<br> <b>SQL: [[get Totals] (2) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_POST
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.post
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_POST=37124418.00</xmp>------ SQL done, 12ms.<br><BR>
+<br> <b>SQL: [[get Totals] (3) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_CATEGORY
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.post
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_CATEGORY=37124418.00</xmp>------ SQL done, 12ms.<br><BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+shtat_direct=exclude_shtat_direct<br> <b>SQL: [SQL]:</b><xmp>select sotr.person_id, sotr.tab_n, sotr.F, sotr.I, sotr.O, sotr.otdel, sotr.post
+, sotr.division, sotr.category, premii.year, premii.month, premii.istochnik1, premii.istochnik2
+, premii.istochnik3, premii.istochnik4, premii.istochnik5
+, premii.summa
+, ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0) as SUM_OTDEL
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+and sotr.TopParent_name like 'Группа советников и консультантов%'
+and sotr.shtat not like '%дирекции%'
+order by sotr.post
+</xmp> <b> Processed in 9ms. </b><br> <b> NumTableRows=5; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_228");'>Request_HR_LHEP_228 (tab_premii_table) DONE! (179ms)</span> <BR>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_12_24_19.html maxLength=500000
+</xmp>------ SQL done, 12ms.<br><BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_230");'> Request_HR_LHEP_230 [24.12 19:49:52] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_230' class='req'> queryString:c=edit/premiya&tab_n=3046&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+where sotr.tab_n=3046
+and premii.month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_230");'>Request_HR_LHEP_230 (edit/premiya) DONE! (93ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_231");'> Request_HR_LHEP_231 [24.12 19:49:54] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_231' class='req'> queryString:c=edit/premiya&mode=edit&tab_n=3046&month=1&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+where sotr.tab_n=3046
+and premii.month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[edit form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_231");'>Request_HR_LHEP_231 (edit/premiya) DONE! (76ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_232");'> Request_HR_LHEP_232 [24.12 19:49:58] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_232' class='req'> queryString:c=edit/premiya&cop=save&mode=edit&tab_n=3046&month=1&istochnik1=2314&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[updateRecord] (1) ]:</b><xmp>select 'Y' as rec_exists from premii
+where tab_n=3046
+and month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[updateRecord] (2) ]:</b><xmp>insert premii (tab_n, month, year) values(3046,1, year(now()))
+</xmp> DONE! 1 record(s) affected------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[updateRecord] (3) ]:</b><xmp>update premii
+set tab_n='3046'
+, istochnik1=2314
+, istochnik2=null
+, istochnik3=null
+, istochnik4=null
+, istochnik5=null
+, istochnik6=null
+where tab_n=3046 and month=1
+</xmp> DONE! 1 record(s) affected------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[edit form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_232");'>Request_HR_LHEP_232 (edit/premiya) DONE! (119ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_233");'> Request_HR_LHEP_233 [24.12 19:49:58] 2309: 0:0:0:0:0:0:0:1 c=tab_premii_table</span><div id='Request_HR_LHEP_233' class='req'> queryString:c=tab_premii_table&srn=1&srt=sotr.post&otdelenie=Группа советников и консультантов&shtat_direct=exclude_shtat_direct&rpp=20&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_OTDEL
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.post
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_OTDEL=37124418.00</xmp>------ SQL done, 12ms.<br><BR>
+<br> <b>SQL: [[get Totals] (2) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_POST
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.post
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_POST=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+<br> <b>SQL: [[get Totals] (3) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_CATEGORY
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.post
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_CATEGORY=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+shtat_direct=exclude_shtat_direct<br> <b>SQL: [SQL]:</b><xmp>select sotr.person_id, sotr.tab_n, sotr.F, sotr.I, sotr.O, sotr.otdel, sotr.post
+, sotr.division, sotr.category, premii.year, premii.month, premii.istochnik1, premii.istochnik2
+, premii.istochnik3, premii.istochnik4, premii.istochnik5
+, premii.summa
+, ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0) as SUM_OTDEL
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+and sotr.TopParent_name like 'Группа советников и консультантов%'
+and sotr.shtat not like '%дирекции%'
+order by sotr.post
+</xmp> <b> Processed in 8ms. </b><br> <b> NumTableRows=5; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_233");'>Request_HR_LHEP_233 (tab_premii_table) DONE! (187ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_234");'> Request_HR_LHEP_234 [24.12 19:50:2] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_234' class='req'> queryString:c=edit/premiya&tab_n=3046&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+where sotr.tab_n=3046
+and premii.month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_234");'>Request_HR_LHEP_234 (edit/premiya) DONE! (90ms)</span> <BR>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_12_24_19.html maxLength=500000
+</xmp>------ SQL done, 20ms.<br><BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_236");'> Request_HR_LHEP_236 [24.12 19:57:50] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_236' class='req'> queryString:c=edit/premiya&tab_n=3046&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n
+where sotr.tab_n=3046
+and premii.month=1
+</xmp><xmp>***** 1 record(s) retrieved. Filled 4 parameters: 
+FIO=Мельниченко Игорь Михайлович
+tab_n=3046
+istochnik1=2314
+summa=2314</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_236");'>Request_HR_LHEP_236 (edit/premiya) DONE! (99ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_237");'> Request_HR_LHEP_237 [24.12 19:57:58] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_237' class='req'> queryString:c=edit/premiya&tab_n=3256&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n
+where sotr.tab_n=3256
+and premii.month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_237");'>Request_HR_LHEP_237 (edit/premiya) DONE! (126ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_238");'> Request_HR_LHEP_238 [24.12 19:58:0] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_238' class='req'> queryString:c=edit/premiya&mode=edit&tab_n=3256&month=1&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n
+where sotr.tab_n=3256
+and premii.month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[edit form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_238");'>Request_HR_LHEP_238 (edit/premiya) DONE! (72ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_239");'> Request_HR_LHEP_239 [24.12 19:58:7] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_239' class='req'> queryString:c=edit/premiya&cop=save&mode=edit&tab_n=3256&month=1&istochnik2=2&istochnik3=3&istochnik5=4&istochnik6=5&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[updateRecord] (1) ]:</b><xmp>select 'Y' as rec_exists from premii
+where tab_n=3256
+and month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[updateRecord] (2) ]:</b><xmp>insert premii (tab_n, month, year) values(3256,1, year(now()))
+</xmp> DONE! 1 record(s) affected------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[updateRecord] (3) ]:</b><xmp>update premii
+set tab_n='3256'
+, istochnik1=null
+, istochnik2=2
+, istochnik3=3
+, istochnik4=null
+, istochnik5=4
+, istochnik6=5
+where tab_n=3256 and month=1
+</xmp> DONE! 1 record(s) affected------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[edit form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_239");'>Request_HR_LHEP_239 (edit/premiya) DONE! (127ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_240");'> Request_HR_LHEP_240 [24.12 19:58:8] 2309: 0:0:0:0:0:0:0:1 c=tab_premii_table</span><div id='Request_HR_LHEP_240' class='req'> queryString:c=tab_premii_table&srn=1&srt=sotr.post&otdelenie=Группа советников и консультантов&shtat_direct=exclude_shtat_direct&rpp=20&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_OTDEL
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.post
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_OTDEL=37124418.00</xmp>------ SQL done, 12ms.<br><BR>
+<br> <b>SQL: [[get Totals] (2) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_POST
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.post
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_POST=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+<br> <b>SQL: [[get Totals] (3) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_CATEGORY
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.post
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_CATEGORY=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+shtat_direct=exclude_shtat_direct<br> <b>SQL: [SQL]:</b><xmp>select sotr.person_id, sotr.tab_n, sotr.F, sotr.I, sotr.O, sotr.otdel, sotr.post
+, sotr.division, sotr.category, premii.year, premii.month, premii.istochnik1, premii.istochnik2
+, premii.istochnik3, premii.istochnik4, premii.istochnik5
+, premii.summa
+, ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0) as SUM_OTDEL
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+and sotr.TopParent_name like 'Группа советников и консультантов%'
+and sotr.shtat not like '%дирекции%'
+order by sotr.post
+</xmp> <b> Processed in 9ms. </b><br> <b> NumTableRows=5; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_240");'>Request_HR_LHEP_240 (tab_premii_table) DONE! (180ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_241");'> Request_HR_LHEP_241 [24.12 19:58:14] 2309: 0:0:0:0:0:0:0:1 c=tab_salary</span><div id='Request_HR_LHEP_241' class='req'> queryString:c=tab_salary&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>utils.cfg[personal filters]<BR>
+<br> <b>SQL: [utils.cfg[dropdowns] (1) ]:</b><xmp>select distinct concat('<option value="', trim(post), '" '
+, case when trim(post)='' then 'selected' else '' end
+, '>' , trim(post), '</option>') as POST
+from sotrudniki
+where lab_id = 100000
+order by post
+</xmp><xmp>***** 112 record(s) retrieved. Filled 1 parameters: 
+POST=<option value="аппаратчик ожижения водорода и гелия" >аппаратчик ожижения водорода и гелия</option><option value="ведущий инженер по охране труда" >ведущий инженер по охране труда</option><option value="ведущий инженер" >ведущий инженер</option><option value="ведущий конструктор" >ведущий конструктор</option><option value="ведущий научный сотрудник" >ведущий научный сотрудник</option><option value="ведущий программист" >ведущий программист</option><option value="ведущий технолог" >ведущий технолог</option><option value="ведущий экономист" >ведущий экономист</option><option value="ведущий электроник" >ведущий электроник</option><option value="гальваник" >гальваник</option><option value="главный инженер лаборатории" >главный инженер лаборатории</option><option value="главный инженер установки" >главный инженер установки</option><option value="главный научный сотрудник" >главный научный сотрудник</option><option value="главный технический специалист" >главный технический специалист</option><option value="гравер" >гравер</option><option value="директор лаборатории" >директор лаборатории</option><option value="заведующий складом" >заведующий складом</option><option value="заведующий техническим архивом" >заведующий техническим архивом</option><option value="заведующий хозяйством" >заведующий хозяйством</option><option value="заместитель главного инженера лаборатории" >заместитель главного инженера лаборатории</option><option value="заместитель директора лаборатории по научной работе" >заместитель директора лаборатории по научной работе</option><option value="заместитель начальника отдела" >заместитель начальника отдела</option><option value="заместитель начальника отделения по научной работе" >заместитель начальника отделения по научной работе</option><option value="заместитель начальника цеха" >заместитель начальника цеха</option><option value="заточник" >заточник</option><option value="и.о.ведущего научного сотрудника" >и.о.ведущего научного сотрудника</option><option value="и.о.научного сотрудника" >и.о.научного сотрудника</option><option value="и.о.начальника сектора" >и.о.начальника сектора</option><option value="и.о.старшего научного сотрудника" >и.о.старшего научного сотрудника</option><option value="инженер" >инженер</option><option value="инженер-конструктор 1 категории" >инженер-конструктор 1 категории</option><option value="инженер-конструктор 2 категории" >инженер-конструктор 2 категории</option><option value="инженер-конструктор 3 категории" >инженер-конструктор 3 категории</option><option value="инженер-конструктор" >инженер-конструктор</option><option value="инженер-программист 1 категории" >инженер-программист 1 категории</option><option value="инженер-программист 2 категории" >инженер-программист 2 категории</option><option value="инженер-программист" >инженер-программист</option><option value="инженер-технолог 1 категории" >инженер-технолог 1 категории</option><option value="инженер-технолог 3 категории" >инженер-технолог 3 категории</option><option value="инженер-технолог" >инженер-технолог</option><option value="инженер-электроник 1 категории" >инженер-электроник 1 категории</option><option value="инженер-электроник 2 категории" >инженер-электроник 2 категории</option><option value="инженер-электроник" >инженер-электроник</option><option value="кладовщик инструментальной кладовой" >кладовщик инструментальной кладовой</option><option value="консультант при дирекции лаборатории" >консультант при дирекции лаборатории</option><option value="консультант" >консультант</option><option value="лаборант обработки фильмовой информации физического эксперимента" >лаборант обработки фильмовой информации физического эксперимента</option><option value="лаборант ускорительной установки" >лаборант ускорительной установки</option><option value="лаборант физической лаборатории" >лаборант физической лаборатории</option><option value="лаборант химико-технологических исследований" >лаборант химико-технологических исследований</option><option value="лаборант" >лаборант</option><option value="маляр" >маляр</option><option value="мастер" >мастер</option><option value="машинист компрессорных установок" >машинист компрессорных установок</option><option value="машинист по стирке и ремонту спецодежды" >машинист по стирке и ремонту спецодежды</option><option value="механик цеха" >механик цеха</option><option value="механик экспериментальных стендов и установок" >механик экспериментальных стендов и установок</option><option value="младший научный сотрудник" >младший научный сотрудник</option><option value="монтажник радиоэлектронной аппаратуры и приборов" >монтажник радиоэлектронной аппаратуры и приборов</option><option value="монтажник санитарно-технических систем и оборудования" >монтажник санитарно-технических систем и оборудования</option><option value="монтажник технологического оборудования и связанных с ним конструкций" >монтажник технологического оборудования и связанных с ним конструкций</option><option value="научный сотрудник" >научный сотрудник</option><option value="начальник бюро" >начальник бюро</option><option value="начальник группы" >начальник группы</option><option value="начальник отдела" >начальник отдела</option><option value="начальник отделения" >начальник отделения</option><option value="начальник сектора" >начальник сектора</option><option value="начальник службы" >начальник службы</option><option value="начальник цеха" >начальник цеха</option><option value="переводчик" >переводчик</option><option value="плотник" >плотник</option><option value="подсобный рабочий" >подсобный рабочий</option><option value="полировщик" >полировщик</option><option value="помощник директора лаборатории по капитальному строительству" >помощник директора лаборатории по капитальному строительству</option><option value="помощник директора лаборатории по общим вопросам" >помощник директора лаборатории по общим вопросам</option><option value="помощник директора лаборатории по финансовым вопросам" >помощник директора лаборатории по финансовым вопросам</option><option value="помощник начальника цеха по хозяйственным вопросам" >помощник начальника цеха по хозяйственным вопросам</option><option value="почетный директор лаборатории" >почетный директор лаборатории</option><option value="сверловщик" >сверловщик</option><option value="слесарь аварийно-восстановительных работ" >слесарь аварийно-восстановительных работ</option><option value="слесарь механосборочных работ" >слесарь механосборочных работ</option><option value="слесарь по контрольно-измерительным приборам и автоматике" >слесарь по контрольно-измерительным приборам и автоматике</option><option value="слесарь по ремонту и обслуживанию систем вентиляции и кондиционирования" >слесарь по ремонту и обслуживанию систем вентиляции и кондиционирования</option><option value="слесарь-ремонтник" >слесарь-ремонтник</option><option value="советник директора лаборатории" >советник директора лаборатории</option><option value="советник при дирекции лаборатории" >советник при дирекции лаборатории</option><option value="советник" >советник</option><option value="станочник широкого профиля" >станочник широкого профиля</option><option value="старший инженер" >старший инженер</option><option value="старший инспектор" >старший инспектор</option><option value="старший лаборант" >старший лаборант</option><option value="старший лаборант, имеющий высшее образование" >старший лаборант, имеющий высшее образование</option><option value="старший мастер" >старший мастер</option><option value="старший научный сотрудник" >старший научный сотрудник</option><option value="старший переводчик" >старший переводчик</option><option value="старший техник" >старший техник</option><option value="старший товаровед" >старший товаровед</option><option value="старший экономист" >старший экономист</option><option value="столяр" >столяр</option><option value="техник" >техник</option><option value="токарь" >токарь</option><option value="токарь-расточник" >токарь-расточник</option><option value="тракторист" >тракторист</option><option value="уборщик производственных помещений" >уборщик производственных помещений</option><option value="уборщик служебных помещений" >уборщик служебных помещений</option><option value="ученый секретарь лаборатории" >ученый секретарь лаборатории</option><option value="фрезеровщик" >фрезеровщик</option><option value="художник" >художник</option><option value="электрогазосварщик" >электрогазосварщик</option><option value="электромонтер по обслуживанию электрооборудования" >электромонтер по обслуживанию электрооборудования</option><option value="электромонтер по ремонту и обслуживанию электрооборудования" >электромонтер по ремонту и обслуживанию электрооборудования</option><option value="электросварщик ручной сварки" >электросварщик ручной сварки</option></xmp>------ SQL done, 19ms.<br><BR>
+<br> <b>SQL: [utils.cfg[dropdowns] (2) ]:</b><xmp>select distinct concat('<option value="', trim(category), '" '
+, case when trim(category)='' then 'selected' else '' end
+, '>' , trim(category), '</option>')as CATEGORIES
+from sotrudniki
+where lab_id = 100000
+</xmp><xmp>***** 4 record(s) retrieved. Filled 1 parameters: 
+CATEGORIES=<option value="Научные и научно-педагогические работники" >Научные и научно-педагогические работники</option><option value="Специалисты" >Специалисты</option><option value="Рабочие" >Рабочие</option><option value="Руководители" >Руководители</option></xmp>------ SQL done, 14ms.<br><BR>
+<br> <b>SQL: [utils.cfg[dropdowns] (3) ]:</b><xmp>select distinct concat('<option value="', trim(stepen), '" '
+, case when stepen='' then 'selected' else '' end
+, '>' , trim(stepen), '</option>')as STEPEN
+from sotrudniki
+where lab_id = 100000
+</xmp><xmp>***** 4 record(s) retrieved. Filled 1 parameters: 
+STEPEN=<option value="" selected></option><option value="Доктор наук" >Доктор наук</option><option value="Кандидат наук" >Кандидат наук</option></xmp>------ SQL done, 11ms.<br><BR>
+<br> <b>SQL: [utils.cfg[dropdowns] (4) ]:</b><xmp>select distinct concat('<option value="', trim(grazhdan), '" '
+, case when trim(grazhdan)='' then 'selected' else '' end
+, '>' , trim(grazhdan), '</option>')as GRAZHDAN
+from sotrudniki
+where lab_id = 100000
+order by grazhdan
+</xmp><xmp>***** 20 record(s) retrieved. Filled 1 parameters: 
+GRAZHDAN=<option value="АЗЕРБАЙДЖАН" >АЗЕРБАЙДЖАН</option><option value="АРМЕНИЯ" >АРМЕНИЯ</option><option value="БЕЛАРУСЬ" >БЕЛАРУСЬ</option><option value="БОЛГАРИЯ" >БОЛГАРИЯ</option><option value="ГЕРМАНИЯ" >ГЕРМАНИЯ</option><option value="ГРУЗИЯ" >ГРУЗИЯ</option><option value="КАЗАХСТАН" >КАЗАХСТАН</option><option value="КУБА" >КУБА</option><option value="ЛИТВА" >ЛИТВА</option><option value="МОЛДОВА, РЕСПУБЛИКА" >МОЛДОВА, РЕСПУБЛИКА</option><option value="МОНГОЛИЯ" >МОНГОЛИЯ</option><option value="НИГЕРИЯ" >НИГЕРИЯ</option><option value="ПОЛЬША" >ПОЛЬША</option><option value="РОССИЯ" >РОССИЯ</option><option value="РУМЫНИЯ" >РУМЫНИЯ</option><option value="СЛОВАКИЯ" >СЛОВАКИЯ</option><option value="УЗБЕКИСТАН" >УЗБЕКИСТАН</option><option value="УКРАИНА" >УКРАИНА</option><option value="ЧЕШСКАЯ РЕСПУБЛИКА" >ЧЕШСКАЯ РЕСПУБЛИКА</option></xmp>------ SQL done, 13ms.<br><BR>
+<br> <b>SQL: [utils.cfg[dropdowns] (5) ]:</b><xmp>select distinct concat('<option value="', trim(name), '" '
+, case when trim(name)='' then 'selected' else '' end
+, '>' , trim(name), '</option>')as OTDEL
+from struktura str
+where str.pid  in (select id from struktura where pid = 100000)
+order by otdel
+</xmp><xmp>***** 41 record(s) retrieved. Filled 1 parameters: 
+OTDEL=<option value="Административное бюро" >Административное бюро</option><option value="Группа №1 высоковольтного оборудования" >Группа №1 высоковольтного оборудования</option><option value="Группа №1 материального учета и контроля" >Группа №1 материального учета и контроля</option><option value="Группа №2 низковольтного оборудования" >Группа №2 низковольтного оборудования</option><option value="Группа №2 планово- экономическая" >Группа №2 планово- экономическая</option><option value="Группа №3 обеспечения и контроля закупок" >Группа №3 обеспечения и контроля закупок</option><option value="Группа №3 тепловодоснабжения и вентиляции" >Группа №3 тепловодоснабжения и вентиляции</option><option value="Группа №4 электротехническая - высоковольтного оборудования" >Группа №4 электротехническая - высоковольтного оборудования</option><option value="Диспетчерская служба Нуклотрона" >Диспетчерская служба Нуклотрона</option><option value="Инженерный энерготехнологический отдел " >Инженерный энерготехнологический отдел </option><option value="Конструкторский отдел" >Конструкторский отдел</option><option value="Научно-инженерный отдел систем электропитания Нуклотрона" >Научно-инженерный отдел систем электропитания Нуклотрона</option><option value="Научно-исследовательский криогенный отдел" >Научно-исследовательский криогенный отдел</option><option value="Научно-методический отдел кремниевых трековых систем" >Научно-методический отдел кремниевых трековых систем</option><option value="Научно-технический отдел пучков" >Научно-технический отдел пучков</option><option value="Научно-экспериментальный отдел инжекции и кольца Нуклотрона" >Научно-экспериментальный отдел инжекции и кольца Нуклотрона</option><option value="Научно-экспериментальный отдел инженерно-физических проблем ускорителей" >Научно-экспериментальный отдел инженерно-физических проблем ускорителей</option><option value="Научно-экспериментальный отдел многоцелевого детектора (MPD)" >Научно-экспериментальный отдел многоцелевого детектора (MPD)</option><option value="Научно-экспериментальный отдел радиоэлектронных систем" >Научно-экспериментальный отдел радиоэлектронных систем</option><option value="Научно-экспериментальный отдел сверхпроводящих магнитов и технологий" >Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</option><option value="Научно-экспериментальный отдел спиновой физики малонуклонных систем" >Научно-экспериментальный отдел спиновой физики малонуклонных систем</option><option value="Научно-экспериментальный отдел ускорительных систем" >Научно-экспериментальный отдел ускорительных систем</option><option value="Научно-экспериментальный отдел физики легких кварков и лептонов" >Научно-экспериментальный отдел физики легких кварков и лептонов</option><option value="Научно-экспериментальный отдел физики на CMS" >Научно-экспериментальный отдел физики на CMS</option><option value="Научно-экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA" >Научно-экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на LHC" >Научно-экспериментальный отдел физики тяжелых ионов на LHC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на RHIC" >Научно-экспериментальный отдел физики тяжелых ионов на RHIC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов" >Научно-экспериментальный отдел физики тяжелых ионов</option><option value="Научно–экспериментальный отдел автоматизации физических исследований" >Научно–экспериментальный отдел автоматизации физических исследований</option><option value="Сектор детекторных систем" >Сектор детекторных систем</option><option value="Сектор криофизических исследований" >Сектор криофизических исследований</option><option value="Сектор полупроводниковых детекторов" >Сектор полупроводниковых детекторов</option><option value="Сектор прикладных радиационных технологий" >Сектор прикладных радиационных технологий</option><option value="Сектор рентгеновской спектроскопии" >Сектор рентгеновской спектроскопии</option><option value="Сектор строу-детекторов" >Сектор строу-детекторов</option><option value="Сектор структуры частиц" >Сектор структуры частиц</option><option value="Сектор физики на АТЛАС" >Сектор физики на АТЛАС</option><option value="Сектор физики странных кварков в ядрах" >Сектор физики странных кварков в ядрах</option><option value="Серпуховской научно-экспериментальный отдел" >Серпуховской научно-экспериментальный отдел</option><option value="Хозяйственный отдел" >Хозяйственный отдел</option><option value="Цех опытно-экспериментального производства" >Цех опытно-экспериментального производства</option></xmp>------ SQL done, 5ms.<br><BR>
+<br> <b>SQL: [utils.cfg[dropdowns] (6) ]:</b><xmp>select distinct concat('<option value="', trim(name), '" '
+, case when trim(name)='' then 'selected' else '' end
+, '>' , trim(name), '</option>')as OTDELENIE
+from struktura
+where pid = 100000
+order by OTDELENIE
+</xmp><xmp>***** 11 record(s) retrieved. Filled 1 parameters: 
+OTDELENIE=<option value="Административно-хозяйственное подразделение" >Административно-хозяйственное подразделение</option><option value="Группа советников и консультантов" >Группа советников и консультантов</option><option value="Инженерный энерготехнологический отдел" >Инженерный энерготехнологический отдел</option><option value="Отделение №1 Ускорительное" >Отделение №1 Ускорительное</option><option value="Отделение №2 Физики на ускорительном комплексе Нуклотрон-NICA" >Отделение №2 Физики на ускорительном комплексе Нуклотрон-NICA</option><option value="Отделение №3 Физики адронов" >Отделение №3 Физики адронов</option><option value="Отделение №4 Физики на встречных пучках" >Отделение №4 Физики на встречных пучках</option><option value="Отделение №5 Научно–методических исследований и инноваций" >Отделение №5 Научно–методических исследований и инноваций</option><option value="Отделение №6 Главного инженера" >Отделение №6 Главного инженера</option><option value="Планово-финансовое бюро" >Планово-финансовое бюро</option><option value="Руководство" >Руководство</option></xmp>------ SQL done, 3ms.<br><BR>
+<br> <b>SQL: [utils.cfg[dropdowns] (7) ]:</b><xmp>select distinct  concat(' "', name,'" "', name,'"  "',hex(name),' "')   as OTD
+from struktura
+where pid = 100000
+order by OTD
+</xmp><xmp>***** 11 record(s) retrieved. Filled 1 parameters: 
+OTD= "Административно-хозяйственное подразделение" "Административно-хозяйственное подразделение"  "D090D0B4D0BCD0B8D0BDD0B8D181D182D180D0B0D182D0B8D0B2D0BDD0BE2DD185D0BED0B7D18FD0B9D181D182D0B2D0B5D0BDD0BDD0BED0B520D0BFD0BED0B4D180D0B0D0B7D0B4D0B5D0BBD0B5D0BDD0B8D0B5 " "Группа советников и консультантов" "Группа советников и консультантов"  "D093D180D183D0BFD0BFD0B020D181D0BED0B2D0B5D182D0BDD0B8D0BAD0BED0B220D0B820D0BAD0BED0BDD181D183D0BBD18CD182D0B0D0BDD182D0BED0B2 " "Инженерный энерготехнологический отдел" "Инженерный энерготехнологический отдел"  "D098D0BDD0B6D0B5D0BDD0B5D180D0BDD18BD0B920D18DD0BDD0B5D180D0B3D0BED182D0B5D185D0BDD0BED0BBD0BED0B3D0B8D187D0B5D181D0BAD0B8D0B920D0BED182D0B4D0B5D0BB " "Отделение №1 Ускорительное" "Отделение №1 Ускорительное"  "D09ED182D0B4D0B5D0BBD0B5D0BDD0B8D0B520E284963120D0A3D181D0BAD0BED180D0B8D182D0B5D0BBD18CD0BDD0BED0B5 " "Отделение №2 Физики на ускорительном комплексе Нуклотрон-NICA" "Отделение №2 Физики на ускорительном комплексе Нуклотрон-NICA"  "D09ED182D0B4D0B5D0BBD0B5D0BDD0B8D0B520E284963220D0A4D0B8D0B7D0B8D0BAD0B820D0BDD0B020D183D181D0BAD0BED180D0B8D182D0B5D0BBD18CD0BDD0BED0BC20D0BAD0BED0BCD0BFD0BBD0B5D0BAD181D0B520D09DD183D0BAD0BBD0BED182D180D0BED0BD2D4E494341 " "Отделение №3 Физики адронов" "Отделение №3 Физики адронов"  "D09ED182D0B4D0B5D0BBD0B5D0BDD0B8D0B520E284963320D0A4D0B8D0B7D0B8D0BAD0B820D0B0D0B4D180D0BED0BDD0BED0B2 " "Отделение №4 Физики на встречных пучках" "Отделение №4 Физики на встречных пучках"  "D09ED182D0B4D0B5D0BBD0B5D0BDD0B8D0B520E284963420D0A4D0B8D0B7D0B8D0BAD0B820D0BDD0B020D0B2D181D182D180D0B5D187D0BDD18BD18520D0BFD183D187D0BAD0B0D185 " "Отделение №5 Научно–методических исследований и инноваций" "Отделение №5 Научно–методических исследований и инноваций"  "D09ED182D0B4D0B5D0BBD0B5D0BDD0B8D0B520E284963520D09DD0B0D183D187D0BDD0BEE28093D0BCD0B5D182D0BED0B4D0B8D187D0B5D181D0BAD0B8D18520D0B8D181D181D0BBD0B5D0B4D0BED0B2D0B0D0BDD0B8D0B920D0B820D0B8D0BDD0BDD0BED0B2D0B0D186D0B8D0B9 " "Отделение №6 Главного инженера" "Отделение №6 Главного инженера"  "D09ED182D0B4D0B5D0BBD0B5D0BDD0B8D0B520E284963620D093D0BBD0B0D0B2D0BDD0BED0B3D0BE20D0B8D0BDD0B6D0B5D0BDD0B5D180D0B0 " "Планово-финансовое бюро" "Планово-финансовое бюро"  "D09FD0BBD0B0D0BDD0BED0B2D0BE2DD184D0B8D0BDD0B0D0BDD181D0BED0B2D0BED0B520D0B1D18ED180D0BE " "Руководство" "Руководство"  "D0A0D183D0BAD0BED0B2D0BED0B4D181D182D0B2D0BE "</xmp>------ SQL done, 3ms.<br><BR>
+<br><span class='ss_start pt'  onClick='toggleDiv("fill_otdel1514134694825");'> $CALL_SERVICE: <b>tab_salary.cfg => fill_otdel</b> (request:HR_LHEP_241)</span><div id='fill_otdel1514134694825' class='ss'><b>$INCLUDE </b>[scripts]<BR>
+<br> <b>SQL: [[get otdels] (1) ]:</b><xmp>select distinct concat('<option value="', short_name, '" '
+, case when short_name='' then 'selected' else '' end
+, '>' , short_name, '</option>')as OTDEL
+from struktura str
+where str.pid  in (select id from struktura where pid = 100000)
+order by otdel
+</xmp><xmp>***** 41 record(s) retrieved. Filled 1 parameters: 
+OTDEL=<option value="Административное бюро" >Административное бюро</option><option value="Гр. №1 мат. учета и контроля" >Гр. №1 мат. учета и контроля</option><option value="Группа №1 высоковольтного оборудования" >Группа №1 высоковольтного оборудования</option><option value="Группа №2 низковольтного оборудования" >Группа №2 низковольтного оборудования</option><option value="Группа №2 планово- экономическая" >Группа №2 планово- экономическая</option><option value="Группа №3 обеспечения и контроля закупок" >Группа №3 обеспечения и контроля закупок</option><option value="Группа №3 тепловодоснабжения и вентиляции" >Группа №3 тепловодоснабжения и вентиляции</option><option value="Группа №4 электротехническая - высоковольтного оборудования" >Группа №4 электротехническая - высоковольтного оборудования</option><option value="Диспетчерская служба Нуклотрона" >Диспетчерская служба Нуклотрона</option><option value="Инженерный энерготехнологический отдел " >Инженерный энерготехнологический отдел </option><option value="Конструкторский отдел" >Конструкторский отдел</option><option value="Научно - экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA" >Научно - экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA</option><option value="Научно-инженерный отдел систем электропитания Нуклотрона" >Научно-инженерный отдел систем электропитания Нуклотрона</option><option value="Научно-исследовательский криогенный отдел" >Научно-исследовательский криогенный отдел</option><option value="Научно-методический отдел кремниевых трековых систем" >Научно-методический отдел кремниевых трековых систем</option><option value="Научно-технический отдел пучков" >Научно-технический отдел пучков</option><option value="Научно-экспериментальный отдел инжекции и кольца Нуклотрона" >Научно-экспериментальный отдел инжекции и кольца Нуклотрона</option><option value="Научно-экспериментальный отдел инженерно-физических проблем ускорителей" >Научно-экспериментальный отдел инженерно-физических проблем ускорителей</option><option value="Научно-экспериментальный отдел многоцелевого детектора (MPD)" >Научно-экспериментальный отдел многоцелевого детектора (MPD)</option><option value="Научно-экспериментальный отдел радиоэлектронных систем" >Научно-экспериментальный отдел радиоэлектронных систем</option><option value="Научно-экспериментальный отдел сверхпроводящих магнитов и технологий" >Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</option><option value="Научно-экспериментальный отдел спиновой физики малонуклонных систем" >Научно-экспериментальный отдел спиновой физики малонуклонных систем</option><option value="Научно-экспериментальный отдел ускорительных систем  " >Научно-экспериментальный отдел ускорительных систем  </option><option value="Научно-экспериментальный отдел физики легких кварков и лептонов" >Научно-экспериментальный отдел физики легких кварков и лептонов</option><option value="Научно-экспериментальный отдел физики на CMS" >Научно-экспериментальный отдел физики на CMS</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на LHC" >Научно-экспериментальный отдел физики тяжелых ионов на LHC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на RHIC" >Научно-экспериментальный отдел физики тяжелых ионов на RHIC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов" >Научно-экспериментальный отдел физики тяжелых ионов</option><option value="Научно–экспериментальный отдел автоматизации физических исследований" >Научно–экспериментальный отдел автоматизации физических исследований</option><option value="Сектор детекторных систем" >Сектор детекторных систем</option><option value="Сектор криофизических исследований" >Сектор криофизических исследований</option><option value="Сектор полупроводниковых детекторов" >Сектор полупроводниковых детекторов</option><option value="Сектор прикладных радиационных технологий" >Сектор прикладных радиационных технологий</option><option value="Сектор рентгеновской спектроскопии" >Сектор рентгеновской спектроскопии</option><option value="Сектор строу-детекторов" >Сектор строу-детекторов</option><option value="Сектор структуры частиц" >Сектор структуры частиц</option><option value="Сектор физики на АТЛАС" >Сектор физики на АТЛАС</option><option value="Сектор физики странных кварков в ядрах" >Сектор физики странных кварков в ядрах</option><option value="Серпуховской научно-экспериментальный отдел" >Серпуховской научно-экспериментальный отдел</option><option value="Хозяйственный отдел" >Хозяйственный отдел</option><option value="Цех опытно-экспериментального производства" >Цех опытно-экспериментального производства</option></xmp>------ SQL done, 6ms.<br><BR>
+<br> <b>SQL: [[get otdels] (2) ]:</b><xmp></xmp></div><span class='ss_back pt'  onClick='toggleDiv("fill_otdel1514134694825");'> BACK: <b>fill_otdel => tab_salary.cfg; (9ms.)</b></span><BR>
+<br><span class='ss_start pt'  onClick='toggleDiv("tab_salary_table1514134694857");'> $CALL_SERVICE: <b>tab_salary.cfg => tab_salary_table</b> (request:HR_LHEP_241)</span><div id='tab_salary_table1514134694857' class='ss'><b>$INCLUDE </b>[total table]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_OTDEL
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_OTDEL=37124418.00</xmp>------ SQL done, 12ms.<br><BR>
+<br> <b>SQL: [[get Totals] (2) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_OTDELENIE
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_OTDELENIE=37124418.00</xmp>------ SQL done, 12ms.<br><BR>
+<br> <b>SQL: [[get Totals] (3) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_CATEGORY
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_CATEGORY=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+shtat_direct=<br> <b>SQL: [SQL]:</b><xmp>select sotr.topparent_name,sotr.subtopparent_name,sotr.person_id, sotr.tab_n, sotr.F, sotr.I, sotr.O, sotr.FIO, sotr.otdel
+, sotr.division, sotr.shtat_direct, sotr.post, sotr.category, oklad.year
+, oklad.oklad, oklad.kompens, oklad.dopl_stepen, oklad.personal_nadbav
+, oklad.perconal_imen_nadbav, oklad.premija_rabochim, oklad.sovmeshenie
+, ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0) as itogo
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp> <b> Processed in 56ms. </b><br> <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='ss_back pt'  onClick='toggleDiv("tab_salary_table1514134694857");'> BACK: <b>tab_salary_table => tab_salary.cfg; (331ms.)</b></span><BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_241");'>Request_HR_LHEP_241 (tab_salary) DONE! (563ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_242");'> Request_HR_LHEP_242 [24.12 19:58:15] 2309: 0:0:0:0:0:0:0:1 c=tab_premii</span><div id='Request_HR_LHEP_242' class='req'> queryString:c=tab_premii&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>utils.cfg[personal filters]<BR>
+<br> <b>SQL: [utils.cfg[dropdowns] (1) ]:</b><xmp>select distinct concat('<option value="', trim(post), '" '
+, case when trim(post)='' then 'selected' else '' end
+, '>' , trim(post), '</option>') as POST
+from sotrudniki
+where lab_id = 100000
+order by post
+</xmp><xmp>***** 112 record(s) retrieved. Filled 1 parameters: 
+POST=<option value="аппаратчик ожижения водорода и гелия" >аппаратчик ожижения водорода и гелия</option><option value="ведущий инженер по охране труда" >ведущий инженер по охране труда</option><option value="ведущий инженер" >ведущий инженер</option><option value="ведущий конструктор" >ведущий конструктор</option><option value="ведущий научный сотрудник" >ведущий научный сотрудник</option><option value="ведущий программист" >ведущий программист</option><option value="ведущий технолог" >ведущий технолог</option><option value="ведущий экономист" >ведущий экономист</option><option value="ведущий электроник" >ведущий электроник</option><option value="гальваник" >гальваник</option><option value="главный инженер лаборатории" >главный инженер лаборатории</option><option value="главный инженер установки" >главный инженер установки</option><option value="главный научный сотрудник" >главный научный сотрудник</option><option value="главный технический специалист" >главный технический специалист</option><option value="гравер" >гравер</option><option value="директор лаборатории" >директор лаборатории</option><option value="заведующий складом" >заведующий складом</option><option value="заведующий техническим архивом" >заведующий техническим архивом</option><option value="заведующий хозяйством" >заведующий хозяйством</option><option value="заместитель главного инженера лаборатории" >заместитель главного инженера лаборатории</option><option value="заместитель директора лаборатории по научной работе" >заместитель директора лаборатории по научной работе</option><option value="заместитель начальника отдела" >заместитель начальника отдела</option><option value="заместитель начальника отделения по научной работе" >заместитель начальника отделения по научной работе</option><option value="заместитель начальника цеха" >заместитель начальника цеха</option><option value="заточник" >заточник</option><option value="и.о.ведущего научного сотрудника" >и.о.ведущего научного сотрудника</option><option value="и.о.научного сотрудника" >и.о.научного сотрудника</option><option value="и.о.начальника сектора" >и.о.начальника сектора</option><option value="и.о.старшего научного сотрудника" >и.о.старшего научного сотрудника</option><option value="инженер" >инженер</option><option value="инженер-конструктор 1 категории" >инженер-конструктор 1 категории</option><option value="инженер-конструктор 2 категории" >инженер-конструктор 2 категории</option><option value="инженер-конструктор 3 категории" >инженер-конструктор 3 категории</option><option value="инженер-конструктор" >инженер-конструктор</option><option value="инженер-программист 1 категории" >инженер-программист 1 категории</option><option value="инженер-программист 2 категории" >инженер-программист 2 категории</option><option value="инженер-программист" >инженер-программист</option><option value="инженер-технолог 1 категории" >инженер-технолог 1 категории</option><option value="инженер-технолог 3 категории" >инженер-технолог 3 категории</option><option value="инженер-технолог" >инженер-технолог</option><option value="инженер-электроник 1 категории" >инженер-электроник 1 категории</option><option value="инженер-электроник 2 категории" >инженер-электроник 2 категории</option><option value="инженер-электроник" >инженер-электроник</option><option value="кладовщик инструментальной кладовой" >кладовщик инструментальной кладовой</option><option value="консультант при дирекции лаборатории" >консультант при дирекции лаборатории</option><option value="консультант" >консультант</option><option value="лаборант обработки фильмовой информации физического эксперимента" >лаборант обработки фильмовой информации физического эксперимента</option><option value="лаборант ускорительной установки" >лаборант ускорительной установки</option><option value="лаборант физической лаборатории" >лаборант физической лаборатории</option><option value="лаборант химико-технологических исследований" >лаборант химико-технологических исследований</option><option value="лаборант" >лаборант</option><option value="маляр" >маляр</option><option value="мастер" >мастер</option><option value="машинист компрессорных установок" >машинист компрессорных установок</option><option value="машинист по стирке и ремонту спецодежды" >машинист по стирке и ремонту спецодежды</option><option value="механик цеха" >механик цеха</option><option value="механик экспериментальных стендов и установок" >механик экспериментальных стендов и установок</option><option value="младший научный сотрудник" >младший научный сотрудник</option><option value="монтажник радиоэлектронной аппаратуры и приборов" >монтажник радиоэлектронной аппаратуры и приборов</option><option value="монтажник санитарно-технических систем и оборудования" >монтажник санитарно-технических систем и оборудования</option><option value="монтажник технологического оборудования и связанных с ним конструкций" >монтажник технологического оборудования и связанных с ним конструкций</option><option value="научный сотрудник" >научный сотрудник</option><option value="начальник бюро" >начальник бюро</option><option value="начальник группы" >начальник группы</option><option value="начальник отдела" >начальник отдела</option><option value="начальник отделения" >начальник отделения</option><option value="начальник сектора" >начальник сектора</option><option value="начальник службы" >начальник службы</option><option value="начальник цеха" >начальник цеха</option><option value="переводчик" >переводчик</option><option value="плотник" >плотник</option><option value="подсобный рабочий" >подсобный рабочий</option><option value="полировщик" >полировщик</option><option value="помощник директора лаборатории по капитальному строительству" >помощник директора лаборатории по капитальному строительству</option><option value="помощник директора лаборатории по общим вопросам" >помощник директора лаборатории по общим вопросам</option><option value="помощник директора лаборатории по финансовым вопросам" >помощник директора лаборатории по финансовым вопросам</option><option value="помощник начальника цеха по хозяйственным вопросам" >помощник начальника цеха по хозяйственным вопросам</option><option value="почетный директор лаборатории" >почетный директор лаборатории</option><option value="сверловщик" >сверловщик</option><option value="слесарь аварийно-восстановительных работ" >слесарь аварийно-восстановительных работ</option><option value="слесарь механосборочных работ" >слесарь механосборочных работ</option><option value="слесарь по контрольно-измерительным приборам и автоматике" >слесарь по контрольно-измерительным приборам и автоматике</option><option value="слесарь по ремонту и обслуживанию систем вентиляции и кондиционирования" >слесарь по ремонту и обслуживанию систем вентиляции и кондиционирования</option><option value="слесарь-ремонтник" >слесарь-ремонтник</option><option value="советник директора лаборатории" >советник директора лаборатории</option><option value="советник при дирекции лаборатории" >советник при дирекции лаборатории</option><option value="советник" >советник</option><option value="станочник широкого профиля" >станочник широкого профиля</option><option value="старший инженер" >старший инженер</option><option value="старший инспектор" >старший инспектор</option><option value="старший лаборант" >старший лаборант</option><option value="старший лаборант, имеющий высшее образование" >старший лаборант, имеющий высшее образование</option><option value="старший мастер" >старший мастер</option><option value="старший научный сотрудник" >старший научный сотрудник</option><option value="старший переводчик" >старший переводчик</option><option value="старший техник" >старший техник</option><option value="старший товаровед" >старший товаровед</option><option value="старший экономист" >старший экономист</option><option value="столяр" >столяр</option><option value="техник" >техник</option><option value="токарь" >токарь</option><option value="токарь-расточник" >токарь-расточник</option><option value="тракторист" >тракторист</option><option value="уборщик производственных помещений" >уборщик производственных помещений</option><option value="уборщик служебных помещений" >уборщик служебных помещений</option><option value="ученый секретарь лаборатории" >ученый секретарь лаборатории</option><option value="фрезеровщик" >фрезеровщик</option><option value="художник" >художник</option><option value="электрогазосварщик" >электрогазосварщик</option><option value="электромонтер по обслуживанию электрооборудования" >электромонтер по обслуживанию электрооборудования</option><option value="электромонтер по ремонту и обслуживанию электрооборудования" >электромонтер по ремонту и обслуживанию электрооборудования</option><option value="электросварщик ручной сварки" >электросварщик ручной сварки</option></xmp>------ SQL done, 17ms.<br><BR>
+<br> <b>SQL: [utils.cfg[dropdowns] (2) ]:</b><xmp>select distinct concat('<option value="', trim(category), '" '
+, case when trim(category)='' then 'selected' else '' end
+, '>' , trim(category), '</option>')as CATEGORIES
+from sotrudniki
+where lab_id = 100000
+</xmp><xmp>***** 4 record(s) retrieved. Filled 1 parameters: 
+CATEGORIES=<option value="Научные и научно-педагогические работники" >Научные и научно-педагогические работники</option><option value="Специалисты" >Специалисты</option><option value="Рабочие" >Рабочие</option><option value="Руководители" >Руководители</option></xmp>------ SQL done, 13ms.<br><BR>
+<br> <b>SQL: [utils.cfg[dropdowns] (3) ]:</b><xmp>select distinct concat('<option value="', trim(stepen), '" '
+, case when stepen='' then 'selected' else '' end
+, '>' , trim(stepen), '</option>')as STEPEN
+from sotrudniki
+where lab_id = 100000
+</xmp><xmp>***** 4 record(s) retrieved. Filled 1 parameters: 
+STEPEN=<option value="" selected></option><option value="Доктор наук" >Доктор наук</option><option value="Кандидат наук" >Кандидат наук</option></xmp>------ SQL done, 11ms.<br><BR>
+<br> <b>SQL: [utils.cfg[dropdowns] (4) ]:</b><xmp>select distinct concat('<option value="', trim(grazhdan), '" '
+, case when trim(grazhdan)='' then 'selected' else '' end
+, '>' , trim(grazhdan), '</option>')as GRAZHDAN
+from sotrudniki
+where lab_id = 100000
+order by grazhdan
+</xmp><xmp>***** 20 record(s) retrieved. Filled 1 parameters: 
+GRAZHDAN=<option value="АЗЕРБАЙДЖАН" >АЗЕРБАЙДЖАН</option><option value="АРМЕНИЯ" >АРМЕНИЯ</option><option value="БЕЛАРУСЬ" >БЕЛАРУСЬ</option><option value="БОЛГАРИЯ" >БОЛГАРИЯ</option><option value="ГЕРМАНИЯ" >ГЕРМАНИЯ</option><option value="ГРУЗИЯ" >ГРУЗИЯ</option><option value="КАЗАХСТАН" >КАЗАХСТАН</option><option value="КУБА" >КУБА</option><option value="ЛИТВА" >ЛИТВА</option><option value="МОЛДОВА, РЕСПУБЛИКА" >МОЛДОВА, РЕСПУБЛИКА</option><option value="МОНГОЛИЯ" >МОНГОЛИЯ</option><option value="НИГЕРИЯ" >НИГЕРИЯ</option><option value="ПОЛЬША" >ПОЛЬША</option><option value="РОССИЯ" >РОССИЯ</option><option value="РУМЫНИЯ" >РУМЫНИЯ</option><option value="СЛОВАКИЯ" >СЛОВАКИЯ</option><option value="УЗБЕКИСТАН" >УЗБЕКИСТАН</option><option value="УКРАИНА" >УКРАИНА</option><option value="ЧЕШСКАЯ РЕСПУБЛИКА" >ЧЕШСКАЯ РЕСПУБЛИКА</option></xmp>------ SQL done, 13ms.<br><BR>
+<br> <b>SQL: [utils.cfg[dropdowns] (5) ]:</b><xmp>select distinct concat('<option value="', trim(name), '" '
+, case when trim(name)='' then 'selected' else '' end
+, '>' , trim(name), '</option>')as OTDEL
+from struktura str
+where str.pid  in (select id from struktura where pid = 100000)
+order by otdel
+</xmp><xmp>***** 41 record(s) retrieved. Filled 1 parameters: 
+OTDEL=<option value="Административное бюро" >Административное бюро</option><option value="Группа №1 высоковольтного оборудования" >Группа №1 высоковольтного оборудования</option><option value="Группа №1 материального учета и контроля" >Группа №1 материального учета и контроля</option><option value="Группа №2 низковольтного оборудования" >Группа №2 низковольтного оборудования</option><option value="Группа №2 планово- экономическая" >Группа №2 планово- экономическая</option><option value="Группа №3 обеспечения и контроля закупок" >Группа №3 обеспечения и контроля закупок</option><option value="Группа №3 тепловодоснабжения и вентиляции" >Группа №3 тепловодоснабжения и вентиляции</option><option value="Группа №4 электротехническая - высоковольтного оборудования" >Группа №4 электротехническая - высоковольтного оборудования</option><option value="Диспетчерская служба Нуклотрона" >Диспетчерская служба Нуклотрона</option><option value="Инженерный энерготехнологический отдел " >Инженерный энерготехнологический отдел </option><option value="Конструкторский отдел" >Конструкторский отдел</option><option value="Научно-инженерный отдел систем электропитания Нуклотрона" >Научно-инженерный отдел систем электропитания Нуклотрона</option><option value="Научно-исследовательский криогенный отдел" >Научно-исследовательский криогенный отдел</option><option value="Научно-методический отдел кремниевых трековых систем" >Научно-методический отдел кремниевых трековых систем</option><option value="Научно-технический отдел пучков" >Научно-технический отдел пучков</option><option value="Научно-экспериментальный отдел инжекции и кольца Нуклотрона" >Научно-экспериментальный отдел инжекции и кольца Нуклотрона</option><option value="Научно-экспериментальный отдел инженерно-физических проблем ускорителей" >Научно-экспериментальный отдел инженерно-физических проблем ускорителей</option><option value="Научно-экспериментальный отдел многоцелевого детектора (MPD)" >Научно-экспериментальный отдел многоцелевого детектора (MPD)</option><option value="Научно-экспериментальный отдел радиоэлектронных систем" >Научно-экспериментальный отдел радиоэлектронных систем</option><option value="Научно-экспериментальный отдел сверхпроводящих магнитов и технологий" >Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</option><option value="Научно-экспериментальный отдел спиновой физики малонуклонных систем" >Научно-экспериментальный отдел спиновой физики малонуклонных систем</option><option value="Научно-экспериментальный отдел ускорительных систем" >Научно-экспериментальный отдел ускорительных систем</option><option value="Научно-экспериментальный отдел физики легких кварков и лептонов" >Научно-экспериментальный отдел физики легких кварков и лептонов</option><option value="Научно-экспериментальный отдел физики на CMS" >Научно-экспериментальный отдел физики на CMS</option><option value="Научно-экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA" >Научно-экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на LHC" >Научно-экспериментальный отдел физики тяжелых ионов на LHC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на RHIC" >Научно-экспериментальный отдел физики тяжелых ионов на RHIC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов" >Научно-экспериментальный отдел физики тяжелых ионов</option><option value="Научно–экспериментальный отдел автоматизации физических исследований" >Научно–экспериментальный отдел автоматизации физических исследований</option><option value="Сектор детекторных систем" >Сектор детекторных систем</option><option value="Сектор криофизических исследований" >Сектор криофизических исследований</option><option value="Сектор полупроводниковых детекторов" >Сектор полупроводниковых детекторов</option><option value="Сектор прикладных радиационных технологий" >Сектор прикладных радиационных технологий</option><option value="Сектор рентгеновской спектроскопии" >Сектор рентгеновской спектроскопии</option><option value="Сектор строу-детекторов" >Сектор строу-детекторов</option><option value="Сектор структуры частиц" >Сектор структуры частиц</option><option value="Сектор физики на АТЛАС" >Сектор физики на АТЛАС</option><option value="Сектор физики странных кварков в ядрах" >Сектор физики странных кварков в ядрах</option><option value="Серпуховской научно-экспериментальный отдел" >Серпуховской научно-экспериментальный отдел</option><option value="Хозяйственный отдел" >Хозяйственный отдел</option><option value="Цех опытно-экспериментального производства" >Цех опытно-экспериментального производства</option></xmp>------ SQL done, 5ms.<br><BR>
+<br> <b>SQL: [utils.cfg[dropdowns] (6) ]:</b><xmp>select distinct concat('<option value="', trim(name), '" '
+, case when trim(name)='' then 'selected' else '' end
+, '>' , trim(name), '</option>')as OTDELENIE
+from struktura
+where pid = 100000
+order by OTDELENIE
+</xmp><xmp>***** 11 record(s) retrieved. Filled 1 parameters: 
+OTDELENIE=<option value="Административно-хозяйственное подразделение" >Административно-хозяйственное подразделение</option><option value="Группа советников и консультантов" >Группа советников и консультантов</option><option value="Инженерный энерготехнологический отдел" >Инженерный энерготехнологический отдел</option><option value="Отделение №1 Ускорительное" >Отделение №1 Ускорительное</option><option value="Отделение №2 Физики на ускорительном комплексе Нуклотрон-NICA" >Отделение №2 Физики на ускорительном комплексе Нуклотрон-NICA</option><option value="Отделение №3 Физики адронов" >Отделение №3 Физики адронов</option><option value="Отделение №4 Физики на встречных пучках" >Отделение №4 Физики на встречных пучках</option><option value="Отделение №5 Научно–методических исследований и инноваций" >Отделение №5 Научно–методических исследований и инноваций</option><option value="Отделение №6 Главного инженера" >Отделение №6 Главного инженера</option><option value="Планово-финансовое бюро" >Планово-финансовое бюро</option><option value="Руководство" >Руководство</option></xmp>------ SQL done, 3ms.<br><BR>
+<br> <b>SQL: [utils.cfg[dropdowns] (7) ]:</b><xmp>select distinct  concat(' "', name,'" "', name,'"  "',hex(name),' "')   as OTD
+from struktura
+where pid = 100000
+order by OTD
+</xmp><xmp>***** 11 record(s) retrieved. Filled 1 parameters: 
+OTD= "Административно-хозяйственное подразделение" "Административно-хозяйственное подразделение"  "D090D0B4D0BCD0B8D0BDD0B8D181D182D180D0B0D182D0B8D0B2D0BDD0BE2DD185D0BED0B7D18FD0B9D181D182D0B2D0B5D0BDD0BDD0BED0B520D0BFD0BED0B4D180D0B0D0B7D0B4D0B5D0BBD0B5D0BDD0B8D0B5 " "Группа советников и консультантов" "Группа советников и консультантов"  "D093D180D183D0BFD0BFD0B020D181D0BED0B2D0B5D182D0BDD0B8D0BAD0BED0B220D0B820D0BAD0BED0BDD181D183D0BBD18CD182D0B0D0BDD182D0BED0B2 " "Инженерный энерготехнологический отдел" "Инженерный энерготехнологический отдел"  "D098D0BDD0B6D0B5D0BDD0B5D180D0BDD18BD0B920D18DD0BDD0B5D180D0B3D0BED182D0B5D185D0BDD0BED0BBD0BED0B3D0B8D187D0B5D181D0BAD0B8D0B920D0BED182D0B4D0B5D0BB " "Отделение №1 Ускорительное" "Отделение №1 Ускорительное"  "D09ED182D0B4D0B5D0BBD0B5D0BDD0B8D0B520E284963120D0A3D181D0BAD0BED180D0B8D182D0B5D0BBD18CD0BDD0BED0B5 " "Отделение №2 Физики на ускорительном комплексе Нуклотрон-NICA" "Отделение №2 Физики на ускорительном комплексе Нуклотрон-NICA"  "D09ED182D0B4D0B5D0BBD0B5D0BDD0B8D0B520E284963220D0A4D0B8D0B7D0B8D0BAD0B820D0BDD0B020D183D181D0BAD0BED180D0B8D182D0B5D0BBD18CD0BDD0BED0BC20D0BAD0BED0BCD0BFD0BBD0B5D0BAD181D0B520D09DD183D0BAD0BBD0BED182D180D0BED0BD2D4E494341 " "Отделение №3 Физики адронов" "Отделение №3 Физики адронов"  "D09ED182D0B4D0B5D0BBD0B5D0BDD0B8D0B520E284963320D0A4D0B8D0B7D0B8D0BAD0B820D0B0D0B4D180D0BED0BDD0BED0B2 " "Отделение №4 Физики на встречных пучках" "Отделение №4 Физики на встречных пучках"  "D09ED182D0B4D0B5D0BBD0B5D0BDD0B8D0B520E284963420D0A4D0B8D0B7D0B8D0BAD0B820D0BDD0B020D0B2D181D182D180D0B5D187D0BDD18BD18520D0BFD183D187D0BAD0B0D185 " "Отделение №5 Научно–методических исследований и инноваций" "Отделение №5 Научно–методических исследований и инноваций"  "D09ED182D0B4D0B5D0BBD0B5D0BDD0B8D0B520E284963520D09DD0B0D183D187D0BDD0BEE28093D0BCD0B5D182D0BED0B4D0B8D187D0B5D181D0BAD0B8D18520D0B8D181D181D0BBD0B5D0B4D0BED0B2D0B0D0BDD0B8D0B920D0B820D0B8D0BDD0BDD0BED0B2D0B0D186D0B8D0B9 " "Отделение №6 Главного инженера" "Отделение №6 Главного инженера"  "D09ED182D0B4D0B5D0BBD0B5D0BDD0B8D0B520E284963620D093D0BBD0B0D0B2D0BDD0BED0B3D0BE20D0B8D0BDD0B6D0B5D0BDD0B5D180D0B0 " "Планово-финансовое бюро" "Планово-финансовое бюро"  "D09FD0BBD0B0D0BDD0BED0B2D0BE2DD184D0B8D0BDD0B0D0BDD181D0BED0B2D0BED0B520D0B1D18ED180D0BE " "Руководство" "Руководство"  "D0A0D183D0BAD0BED0B2D0BED0B4D181D182D0B2D0BE "</xmp>------ SQL done, 3ms.<br><BR>
+<br><span class='ss_start pt'  onClick='toggleDiv("fill_otdel1514134696052");'> $CALL_SERVICE: <b>tab_premii.cfg => fill_otdel</b> (request:HR_LHEP_242)</span><div id='fill_otdel1514134696052' class='ss'><b>$INCLUDE </b>[scripts]<BR>
+<br> <b>SQL: [[get otdels] (1) ]:</b><xmp>select distinct concat('<option value="', short_name, '" '
+, case when short_name='' then 'selected' else '' end
+, '>' , short_name, '</option>')as OTDEL
+from struktura str
+where str.pid  in (select id from struktura where pid = 100000)
+order by otdel
+</xmp><xmp>***** 41 record(s) retrieved. Filled 1 parameters: 
+OTDEL=<option value="Административное бюро" >Административное бюро</option><option value="Гр. №1 мат. учета и контроля" >Гр. №1 мат. учета и контроля</option><option value="Группа №1 высоковольтного оборудования" >Группа №1 высоковольтного оборудования</option><option value="Группа №2 низковольтного оборудования" >Группа №2 низковольтного оборудования</option><option value="Группа №2 планово- экономическая" >Группа №2 планово- экономическая</option><option value="Группа №3 обеспечения и контроля закупок" >Группа №3 обеспечения и контроля закупок</option><option value="Группа №3 тепловодоснабжения и вентиляции" >Группа №3 тепловодоснабжения и вентиляции</option><option value="Группа №4 электротехническая - высоковольтного оборудования" >Группа №4 электротехническая - высоковольтного оборудования</option><option value="Диспетчерская служба Нуклотрона" >Диспетчерская служба Нуклотрона</option><option value="Инженерный энерготехнологический отдел " >Инженерный энерготехнологический отдел </option><option value="Конструкторский отдел" >Конструкторский отдел</option><option value="Научно - экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA" >Научно - экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA</option><option value="Научно-инженерный отдел систем электропитания Нуклотрона" >Научно-инженерный отдел систем электропитания Нуклотрона</option><option value="Научно-исследовательский криогенный отдел" >Научно-исследовательский криогенный отдел</option><option value="Научно-методический отдел кремниевых трековых систем" >Научно-методический отдел кремниевых трековых систем</option><option value="Научно-технический отдел пучков" >Научно-технический отдел пучков</option><option value="Научно-экспериментальный отдел инжекции и кольца Нуклотрона" >Научно-экспериментальный отдел инжекции и кольца Нуклотрона</option><option value="Научно-экспериментальный отдел инженерно-физических проблем ускорителей" >Научно-экспериментальный отдел инженерно-физических проблем ускорителей</option><option value="Научно-экспериментальный отдел многоцелевого детектора (MPD)" >Научно-экспериментальный отдел многоцелевого детектора (MPD)</option><option value="Научно-экспериментальный отдел радиоэлектронных систем" >Научно-экспериментальный отдел радиоэлектронных систем</option><option value="Научно-экспериментальный отдел сверхпроводящих магнитов и технологий" >Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</option><option value="Научно-экспериментальный отдел спиновой физики малонуклонных систем" >Научно-экспериментальный отдел спиновой физики малонуклонных систем</option><option value="Научно-экспериментальный отдел ускорительных систем  " >Научно-экспериментальный отдел ускорительных систем  </option><option value="Научно-экспериментальный отдел физики легких кварков и лептонов" >Научно-экспериментальный отдел физики легких кварков и лептонов</option><option value="Научно-экспериментальный отдел физики на CMS" >Научно-экспериментальный отдел физики на CMS</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на LHC" >Научно-экспериментальный отдел физики тяжелых ионов на LHC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на RHIC" >Научно-экспериментальный отдел физики тяжелых ионов на RHIC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов" >Научно-экспериментальный отдел физики тяжелых ионов</option><option value="Научно–экспериментальный отдел автоматизации физических исследований" >Научно–экспериментальный отдел автоматизации физических исследований</option><option value="Сектор детекторных систем" >Сектор детекторных систем</option><option value="Сектор криофизических исследований" >Сектор криофизических исследований</option><option value="Сектор полупроводниковых детекторов" >Сектор полупроводниковых детекторов</option><option value="Сектор прикладных радиационных технологий" >Сектор прикладных радиационных технологий</option><option value="Сектор рентгеновской спектроскопии" >Сектор рентгеновской спектроскопии</option><option value="Сектор строу-детекторов" >Сектор строу-детекторов</option><option value="Сектор структуры частиц" >Сектор структуры частиц</option><option value="Сектор физики на АТЛАС" >Сектор физики на АТЛАС</option><option value="Сектор физики странных кварков в ядрах" >Сектор физики странных кварков в ядрах</option><option value="Серпуховской научно-экспериментальный отдел" >Серпуховской научно-экспериментальный отдел</option><option value="Хозяйственный отдел" >Хозяйственный отдел</option><option value="Цех опытно-экспериментального производства" >Цех опытно-экспериментального производства</option></xmp>------ SQL done, 4ms.<br><BR>
+<br> <b>SQL: [[get otdels] (2) ]:</b><xmp></xmp></div><span class='ss_back pt'  onClick='toggleDiv("fill_otdel1514134696052");'> BACK: <b>fill_otdel => tab_premii.cfg; (8ms.)</b></span><BR>
+<br><span class='ss_start pt'  onClick='toggleDiv("tab_premii_table1514134696065");'> $CALL_SERVICE: <b>tab_premii.cfg => tab_premii_table</b> (request:HR_LHEP_242)</span><div id='tab_premii_table1514134696065' class='ss'><br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_OTDEL
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_OTDEL=37124418.00</xmp>------ SQL done, 12ms.<br><BR>
+<br> <b>SQL: [[get Totals] (2) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_POST
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_POST=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+<br> <b>SQL: [[get Totals] (3) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_CATEGORY
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_CATEGORY=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+shtat_direct=<br> <b>SQL: [SQL]:</b><xmp>select sotr.person_id, sotr.tab_n, sotr.F, sotr.I, sotr.O, sotr.otdel, sotr.post
+, sotr.division, sotr.category, premii.year, premii.month, premii.istochnik1, premii.istochnik2
+, premii.istochnik3, premii.istochnik4, premii.istochnik5
+, premii.summa
+, ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0) as SUM_OTDEL
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp> <b> Processed in 52ms. </b><br> <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='ss_back pt'  onClick='toggleDiv("tab_premii_table1514134696065");'> BACK: <b>tab_premii_table => tab_premii.cfg; (276ms.)</b></span><BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_242");'>Request_HR_LHEP_242 (tab_premii) DONE! (443ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_243");'> Request_HR_LHEP_243 [24.12 19:58:29] 2309: 0:0:0:0:0:0:0:1 c=fill_otdel</span><div id='Request_HR_LHEP_243' class='req'> queryString:c=fill_otdel&otdelenie=Группа советников и консультантов&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[scripts]<BR>
+<br> <b>SQL: [[get otdels] (1) ]:</b><xmp>select distinct concat('<option value="', short_name, '" '
+, case when short_name='' then 'selected' else '' end
+, '>' , short_name, '</option>')as OTDEL
+from struktura str
+where str.pid  in (select id from struktura where pid = 100000)
+and pid in (select id from struktura where short_name like "Группа советников и консультантов%")
+order by otdel
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 5ms.<br><BR>
+<br> <b>SQL: [[get otdels] (2) ]:</b><xmp></xmp></div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_243");'>Request_HR_LHEP_243 (fill_otdel) DONE! (89ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_244");'> Request_HR_LHEP_244 [24.12 19:58:30] 2309: 0:0:0:0:0:0:0:1 c=tab_premii_table</span><div id='Request_HR_LHEP_244' class='req'> queryString:c=tab_premii_table&srn=1&srt=sotr.FIO&otdelenie=Группа советников и консультантов&rpp=20&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_OTDEL
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_OTDEL=37124418.00</xmp>------ SQL done, 12ms.<br><BR>
+<br> <b>SQL: [[get Totals] (2) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_POST
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_POST=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+<br> <b>SQL: [[get Totals] (3) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_CATEGORY
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_CATEGORY=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+shtat_direct=<br> <b>SQL: [SQL]:</b><xmp>select sotr.person_id, sotr.tab_n, sotr.F, sotr.I, sotr.O, sotr.otdel, sotr.post
+, sotr.division, sotr.category, premii.year, premii.month, premii.istochnik1, premii.istochnik2
+, premii.istochnik3, premii.istochnik4, premii.istochnik5
+, premii.summa
+, ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0) as SUM_OTDEL
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+and sotr.TopParent_name like 'Группа советников и консультантов%'
+order by sotr.FIO
+</xmp> <b> Processed in 10ms. </b><br> <b> NumTableRows=5; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_244");'>Request_HR_LHEP_244 (tab_premii_table) DONE! (207ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_245");'> Request_HR_LHEP_245 [24.12 19:58:34] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_245' class='req'> queryString:c=edit/premiya&tab_n=7084&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n
+where sotr.tab_n=7084
+and premii.month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_245");'>Request_HR_LHEP_245 (edit/premiya) DONE! (89ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_246");'> Request_HR_LHEP_246 [24.12 19:58:35] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_246' class='req'> queryString:c=edit/premiya&mode=edit&tab_n=7084&month=1&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n
+where sotr.tab_n=7084
+and premii.month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[edit form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_246");'>Request_HR_LHEP_246 (edit/premiya) DONE! (74ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_247");'> Request_HR_LHEP_247 [24.12 19:58:47] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_247' class='req'> queryString:c=edit/premiya&cop=save&mode=edit&tab_n=7084&month=1&istochnik1=1&istochnik2=2&istochnik3=3&istochnik4=4&istochnik5=5&istochnik6=6&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[updateRecord] (1) ]:</b><xmp>select 'Y' as rec_exists from premii
+where tab_n=7084
+and month=1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[updateRecord] (2) ]:</b><xmp>insert premii (tab_n, month, year) values(7084,1, year(now()))
+</xmp> DONE! 1 record(s) affected------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[updateRecord] (3) ]:</b><xmp>update premii
+set tab_n='7084'
+, istochnik1=1
+, istochnik2=2
+, istochnik3=3
+, istochnik4=4
+, istochnik5=5
+, istochnik6=6
+where tab_n=7084 and month=1
+</xmp> DONE! 1 record(s) affected------ SQL done, 1ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[edit form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_247");'>Request_HR_LHEP_247 (edit/premiya) DONE! (85ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_248");'> Request_HR_LHEP_248 [24.12 19:58:48] 2309: 0:0:0:0:0:0:0:1 c=tab_premii_table</span><div id='Request_HR_LHEP_248' class='req'> queryString:c=tab_premii_table&srn=1&srt=sotr.FIO&otdelenie=Группа советников и консультантов&rpp=20&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_OTDEL
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_OTDEL=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+<br> <b>SQL: [[get Totals] (2) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_POST
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_POST=37124418.00</xmp>------ SQL done, 10ms.<br><BR>
+<br> <b>SQL: [[get Totals] (3) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_CATEGORY
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_CATEGORY=37124418.00</xmp>------ SQL done, 12ms.<br><BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+shtat_direct=<br> <b>SQL: [SQL]:</b><xmp>select sotr.person_id, sotr.tab_n, sotr.F, sotr.I, sotr.O, sotr.otdel, sotr.post
+, sotr.division, sotr.category, premii.year, premii.month, premii.istochnik1, premii.istochnik2
+, premii.istochnik3, premii.istochnik4, premii.istochnik5
+, premii.summa
+, ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0) as SUM_OTDEL
+from sotrudniki sotr
+left join premii on sotr.person_id=premii.person_id
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+and sotr.TopParent_name like 'Группа советников и консультантов%'
+order by sotr.FIO
+</xmp> <b> Processed in 8ms. </b><br> <b> NumTableRows=5; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_248");'>Request_HR_LHEP_248 (tab_premii_table) DONE! (192ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_249");'> Request_HR_LHEP_249 [24.12 19:58:50] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_249' class='req'> queryString:c=edit/premiya&tab_n=7084&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n
+where sotr.tab_n=7084
+and premii.month=1
+</xmp><xmp>***** 1 record(s) retrieved. Filled 9 parameters: 
+FIO=Глаголев Виктор Викторович
+tab_n=7084
+istochnik1=1
+istochnik2=2
+istochnik3=3
+istochnik4=4
+istochnik5=5
+istochnik6=6
+summa=21</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_249");'>Request_HR_LHEP_249 (edit/premiya) DONE! (96ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_250");'> Request_HR_LHEP_250 [24.12 19:58:58] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_250' class='req'> queryString:c=edit/premiya&tab_n=7084&month=2&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n
+where sotr.tab_n=7084
+and premii.month=2
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_250");'>Request_HR_LHEP_250 (edit/premiya) DONE! (294ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_251");'> Request_HR_LHEP_251 [24.12 19:59:4] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_251' class='req'> queryString:c=edit/premiya&tab_n=7084&month=1&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n
+where sotr.tab_n=7084
+and premii.month=1
+</xmp><xmp>***** 1 record(s) retrieved. Filled 9 parameters: 
+FIO=Глаголев Виктор Викторович
+tab_n=7084
+istochnik1=1
+istochnik2=2
+istochnik3=3
+istochnik4=4
+istochnik5=5
+istochnik6=6
+summa=21</xmp>------ SQL done, 1ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_251");'>Request_HR_LHEP_251 (edit/premiya) DONE! (116ms)</span> <BR>
