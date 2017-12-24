@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>HR LHEP Log</title>
+        <META http-equiv=Content-Type content="text/html; charset=utf-8">
+        <style>
+            body{background-color:#eefff4;}
+            xmp {margin:0;} 
+            .pt {cursor:pointer;} 
+            span.req_start {border:solid 1px red; font-weight:bold; background-color:#FFFFA0;}
+            span.req_end {border:solid 1px red; font-weight:bold; background-color:#D0FFB0;}
+            div.req {display:none; border:solid 1px red; padding:4px; background-color:white;}
+
+            span.ss_start {border:solid 1px red; background-color:#D0E8FF;}
+            span.ss_back {border:solid 1px blue; background-color:#D0FFB0;}
+            div.ss {display:none; border:solid 1px green; border-right:none; padding:6px; margin-left:5px;}
+        </style>
+        <script type="text/javascript">
+            var toggleDiv = function (id) {
+                var d = document.getElementById(id);
+                if (d.style.display === "block")
+                    d.style.display = "none";
+                else
+                    d.style.display = "block";
+            };
+        </script>
+    </head><body>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_12_25_0.html maxLength=500000
+</xmp>------ SQL done, 0ms.<br><BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_375");'> Request_HR_LHEP_375 [25.12 00:23:51] 2309: 0:0:0:0:0:0:0:1 c=edit/premiya</span><div id='Request_HR_LHEP_375' class='req'> queryString:c=edit/premiya&tab_n=7446&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[istochnik titles] (1) ]:</b><xmp>select name as istochnik1_title from istochniki where id=1
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+istochnik1_title=Источник 1</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[istochnik titles] (2) ]:</b><xmp>select name as istochnik2_title  from istochniki where id=2
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+istochnik2_title=Источник 2</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[istochnik titles] (3) ]:</b><xmp>select name as istochnik3_title  from istochniki where id=3
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+istochnik3_title=Источник 3</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[istochnik titles] (4) ]:</b><xmp>select name as istochnik4_title  from istochniki where id=4
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+istochnik4_title=Источник 4</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[istochnik titles] (5) ]:</b><xmp>select name as istochnik5_title  from istochniki where id=5
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+istochnik5_title=Источник 5</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[istochnik titles] (6) ]:</b><xmp>select name as istochnik6_title  from istochniki where id=6
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+istochnik6_title=Источник 6</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[istochnik titles] (7) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+, premii.istochnik1, premii.istochnik2, premii.istochnik3
+, premii.istochnik4, premii.istochnik5, premii.istochnik6
+, ifnull(premii.istochnik1,0)+ifnull(premii.istochnik2,0)+ifnull(premii.istochnik3,0)
++ifnull(premii.istochnik4,0)+ifnull(premii.istochnik5,0)+ ifnull(premii.istochnik6,0) summa
+from sotrudniki sotr
+join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=7446
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_375");'>Request_HR_LHEP_375 (edit/premiya) DONE! (104ms)</span> <BR>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_12_25_0.html maxLength=500000
+</xmp>
