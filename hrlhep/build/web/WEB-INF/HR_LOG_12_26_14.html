@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>HR LHEP Log</title>
+        <META http-equiv=Content-Type content="text/html; charset=utf-8">
+        <style>
+            body{background-color:#eefff4;}
+            xmp {margin:0;} 
+            .pt {cursor:pointer;} 
+            span.req_start {border:solid 1px red; font-weight:bold; background-color:#FFFFA0;}
+            span.req_end {border:solid 1px red; font-weight:bold; background-color:#D0FFB0;}
+            div.req {display:none; border:solid 1px red; padding:4px; background-color:white;}
+
+            span.ss_start {border:solid 1px red; background-color:#D0E8FF;}
+            span.ss_back {border:solid 1px blue; background-color:#D0FFB0;}
+            div.ss {display:none; border:solid 1px green; border-right:none; padding:6px; margin-left:5px;}
+        </style>
+        <script type="text/javascript">
+            var toggleDiv = function (id) {
+                var d = document.getElementById(id);
+                if (d.style.display === "block")
+                    d.style.display = "none";
+                else
+                    d.style.display = "block";
+            };
+        </script>
+    </head><body>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_12_26_14.html maxLength=500000
+</xmp>------ SQL done, 0ms.<br><BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_766");'> Request_HR_LHEP_766 [26.12 14:58:46] : 0:0:0:0:0:0:0:1 c=tab_reports_chart</span><div id='Request_HR_LHEP_766' class='req'> queryString:c=tab_reports_chart&srn=1&srt=sotr.FIO&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[total table]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [[get full] (1) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as sum_otdelenie,
+sotr.TopParent_Name, count(sotr.TopParent_Name) as ppls,
+sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0))/count(sotr.TopParent_Name) as mean
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+group by sotr.TopParent_Name
+</xmp><xmp>***** 11 record(s) retrieved. Filled 4 parameters: 
+sum_otdelenie=1514630.00262200.001732750.0011501118.003132710.005592225.004194780.003689235.003013550.00733720.001757500.00
+TopParent_Name=Административно-хозяйственное подразделениеГруппа советников и консультантовИнженерный энерготехнологический отделОтделение №1 Ускорительное Отделение №2 Физики на ускорительном комплексе Нуклотрон-NICAОтделение №3 Физики адроновОтделение №4 Физики на встречных пучкахОтделение №5 Научно–методических исследований и инновацийОтделение №6 Главного инженераПланово-финансовое бюроРуководство
+ppls=77570362991681201121001918
+mean=19670.51948152440.00000024753.57142931771.04419931643.53535433287.05357134956.50000032939.59821430135.50000038616.84210597638.888889</xmp>------ SQL done, 19ms.<br><BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [[get full] (2) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as sum_otdelenie, sotr.TopParent_Name, count(sotr.TopParent_Name) as ppls,
+sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0))/count(sotr.TopParent_Name) as mean
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+group by sotr.TopParent_Name
+</xmp><xmp>***** 11 record(s) retrieved. Filled 4 parameters: 
+sum_otdelenie=1514630.00262200.001732750.0011501118.003132710.005592225.004194780.003689235.003013550.00733720.001757500.00
+TopParent_Name=Административно-хозяйственное подразделениеГруппа советников и консультантовИнженерный энерготехнологический отделОтделение №1 Ускорительное Отделение №2 Физики на ускорительном комплексе Нуклотрон-NICAОтделение №3 Физики адроновОтделение №4 Физики на встречных пучкахОтделение №5 Научно–методических исследований и инновацийОтделение №6 Главного инженераПланово-финансовое бюроРуководство
+ppls=77570362991681201121001918
+mean=19670.51948152440.00000024753.57142931771.04419931643.53535433287.05357134956.50000032939.59821430135.50000038616.84210597638.888889</xmp>------ SQL done, 18ms.<br><BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [[get full] (3) ]:</b><xmp>select concat("{ pname:'",sotr.TopParent_Name,  "', value:",sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)) div 1000,"},") as d_otdelenie
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+group by sotr.TopParent_Name
+</xmp><xmp>***** 11 record(s) retrieved. Filled 1 parameters: 
+d_otdelenie={ pname:'Административно-хозяйственное подразделение', value:1504},{ pname:'Группа советников и консультантов', value:262},{ pname:'Инженерный энерготехнологический отдел', value:1732},{ pname:'Отделение №1 Ускорительное ', value:11431},{ pname:'Отделение №2 Физики на ускорительном комплексе Нуклотрон-NICA', value:3125},{ pname:'Отделение №3 Физики адронов', value:5533},{ pname:'Отделение №4 Физики на встречных пучках', value:4181},{ pname:'Отделение №5 Научно–методических исследований и инноваций', value:3638},{ pname:'Отделение №6 Главного инженера', value:3013},{ pname:'Планово-финансовое бюро', value:725},{ pname:'Руководство', value:1735},</xmp>------ SQL done, 18ms.<br><BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [[get full] (4) ]:</b><xmp>select concat("{ pname:'",sotr.TopParent_Name,
+"', mean_salary:",sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)) div count(sotr.TopParent_Name)*1000,
+"', mean_age:",sum(((year(now())-year(sotr.dr))) div count(sotr.TopParent_Name),
+"},")
+as d_otdelenie_age_salary
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+group by sotr.TopParent_Name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' "},") as d_otdelenie_age_salary from sotrudniki sotr left join oklad on sotr.ta' at line 1; SQL: 'select concat("{ pname:'",sotr.TopParent_Name, "', mean_salary:",sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)) div count(sotr.TopParent_Name)*1000, "', mean_age:",sum(((year(now())-year(sotr.dr))) div count(sotr.TopParent_Name), "},") as d_otdelenie_age_salary from sotrudniki sotr left join oklad on sotr.tab_n=oklad.tab_n where lab_id = 100000 group by sotr.TopParent_Name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+otdelenie  otdel<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_OTDEL
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_OTDEL=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+otdelenie  otdel<br> <b>SQL: [[get Totals] (2) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_OTDELENIE
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_OTDELENIE=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+otdelenie  otdel<br> <b>SQL: [[get Totals] (3) ]:</b><xmp>select sum(ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0)) as SUM_CATEGORY
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+SUM_CATEGORY=37124418.00</xmp>------ SQL done, 11ms.<br><BR>
+otdelenie  otdel SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.topparent_name,sotr.subtopparent_name,sotr.person_id, sotr.tab_n, sotr.F, sotr.I, sotr.O, sotr.FIO, sotr.otdel
+, sotr.division, sotr.shtat_direct, sotr.post, sotr.category, oklad.year
+, oklad.oklad, oklad.kompens, oklad.dopl_stepen, oklad.personal_nadbav
+, oklad.perconal_imen_nadbav, oklad.premija_rabochim, oklad.sovmeshenie
+, ifnull(oklad.oklad,0)+ifnull(oklad.kompens,0)+ifnull(oklad.dopl_stepen,0)
++ifnull(oklad.personal_nadbav,0)+ifnull(oklad.perconal_imen_nadbav,0)
++ifnull(oklad.premija_rabochim+oklad.sovmeshenie,0) as itogo
+from sotrudniki sotr
+left join oklad on sotr.tab_n=oklad.tab_n
+where lab_id = 100000
+order by sotr.FIO
+</xmp> <b> Processed in 57ms. </b><br> <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_766");'>Request_HR_LHEP_766 (tab_reports_chart) DONE! (640ms)</span> <BR>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_12_26_14.html maxLength=500000
+</xmp>------ SQL done, 1ms.<br><BR>
