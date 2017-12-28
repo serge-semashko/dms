@@ -257,6 +257,7 @@ public class Service {
                 rm.setObject("DBUtil", dbUtil);
             }
             rm.println("\n\r+++++  Using default connection isAlive=" + dbUtil.isAlive() + ": ");
+            IOUtil.writeLogLn(3,"+++ USING DB default:  keepAlive=" + rm.getBoolean("keepAlive") + "; isAlive=" + dbUtil.isAlive(), rm);
 
         } else {
             makeDBUtil(db);
@@ -266,7 +267,7 @@ public class Service {
                 rm.println("+++++  connection to " + db + ": failed ");
                 useDb("");
             } else {
-                IOUtil.writeLogLn("+++ USING DB " + db, rm);
+                IOUtil.writeLogLn(3,"+++ USING DB " + db + "; keepAlive=" + rm.getBoolean("keepAlive") + "; isAlive=" + dbUtil.isAlive(), rm);
                 currDB = db;
             }
         }
@@ -292,9 +293,9 @@ public class Service {
             Class.forName(cfgTuner.getParameter("dbDriver" + db));        // init the JDBC driver
             /* Establish connection to the database and make DBUtil */
             rm.println("+++++---  connect to " + db + ": "
-            //	 + cfgTuner.getParameter("connString" + db)
-            //				 + cfgTuner.getParameter("database" + db) + cfgTuner.getParameter("connParam" + db) 
-            //				 + " / " + cfgTuner.getParameter("usr" + db) +  "/" + cfgTuner.getParameter("pw" + db)
+            	 + cfgTuner.getParameter("connString" + db)
+            				 + cfgTuner.getParameter("database" + db) + cfgTuner.getParameter("connParam" + db) 
+            				 + " / " + cfgTuner.getParameter("usr" + db) +  "/" + cfgTuner.getParameter("pw" + db)
             );
             Long ttt = System.currentTimeMillis();
             IOUtil.writeLog(3, "<br><i>connect to " + db + ": " + cfgTuner.getParameter("connString" + db)

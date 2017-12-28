@@ -224,7 +224,13 @@ public class IOUtil extends java.lang.Object {
             }
             String lf_name = getLogFileName(rmg);
             String prev_lf_name = rm.getString("lf_name", false, "");
-//       System.out.println("=== IOUtil.getLogWriter(...): logFileName = " + rm.getString("logPath") + " : " + lf_name);
+            System.out.println("=== IOUtil.getLogWriter(...): logPath = " + rm.getString("logPath") + " lf_name: " + lf_name);
+            String logPath = (rm.getString("logPath")+"/").replaceAll("[\\\\/]{1,}", "/");
+            rm.putString("logPath", logPath);
+            rmg.putString("logPath", logPath);
+            System.out.println("=== IOUtil.getLogWriter(...): logPath = " + logPath + " lf_name: " + lf_name);
+            String logFileFullPath = logPath + lf_name ;
+            System.out.println("=== IOUtil.getLogWriter(...): logFileFullPath = " + logFileFullPath);
 
             lw = (PrintWriter) rmg.getObject("LogWriter", false);
             if (!lf_name.equals(prev_lf_name)) {  // имя сменилось - закрываем старый лог-файл
@@ -240,10 +246,10 @@ public class IOUtil extends java.lang.Object {
                 lw.close();
             
             if (!lf_name.equals(prev_lf_name) || !append )   // если файл новый или старый, но не дописывать- копируем шапку
-                copyFile(rm.getString("logPath") + "logHead.html", rm.getString("logPath") + lf_name);
+                copyFile(rm.getString("logPath") + "logHead.html", logFileFullPath);
             
 //          Открываем файл
-            Path path = FileSystems.getDefault().getPath(rm.getString("logPath") + lf_name); // новый Path файла
+            Path path = FileSystems.getDefault().getPath(logFileFullPath); // новый Path файла
             Charset cs = Charset.forName(rm.getString("clientEncoding", false, "UTF-8"));
             OpenOption o = StandardOpenOption.CREATE; //TRUNCATE_EXISTING;
             lw = (new PrintWriter(Files.newBufferedWriter(path, cs, StandardOpenOption.WRITE, StandardOpenOption.CREATE, StandardOpenOption.APPEND)));           

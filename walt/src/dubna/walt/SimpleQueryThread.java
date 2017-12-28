@@ -192,6 +192,7 @@ public class SimpleQueryThread implements QueryThread {
      *
      *
      */
+    @Override
     public void start() // throws Exception
     {
         try {
@@ -217,7 +218,6 @@ public class SimpleQueryThread implements QueryThread {
 //                }
 
                 if (validateUser()) {
-
                     logQuery();
                     validateParameters();
                     startService();
@@ -290,9 +290,10 @@ public class SimpleQueryThread implements QueryThread {
                 params.addElement("Host=" + host);
             }
     //        params.addElement("ServerPath=" + request.getScheme() + "://" + host); 
-            if(rm.getString("ServerPath", false,"").isEmpty() || rm.getString("ServerPath", false,"").contains("localhost") ) {
+            // пусть каждому запросу ставится путь к серверу с тем урлом, по которому обратились 19.12.2017
+            //if(rm.getString("ServerPath", false,"").isEmpty() || rm.getString("ServerPath", false,"").contains("localhost") ) {
                 rm.setObject("ServerPath", request.getScheme() + "://" + host, true);
-            }
+            //}
         }
         else {
             params.addElement("Host=NULL");            
@@ -571,7 +572,6 @@ public class SimpleQueryThread implements QueryThread {
      * @throws java.lang.Exception
      */
     public void startService() throws Exception {
-
         srv = obtainService();
 // rm.println(" XXX Start Service:" +  srv);
         if (srv == null) {
@@ -592,7 +592,6 @@ public class SimpleQueryThread implements QueryThread {
      * @return @throws Exception
      */
     public Service obtainService() throws Exception {
-        System.out.println("obtainService $$$$$$$$$$$$$$$$$");
         String className = cfgTuner.getParameter("parameters", "service");
         if (className == null || className.length() == 0) {
             className = "dubna.walt.service.Service";
@@ -693,7 +692,7 @@ public class SimpleQueryThread implements QueryThread {
             }
             Date dat = new java.util.Date();
             String id = "Request_" + rm.getString("queryLabel");
-//            System.out.println(id + ":  " + c + "; log=" + rmg.getString("log"));
+//            System.out.println(id + ": " + c + "; log=" + rmg.getString("log"));
             IOUtil.writeLog("</div><br><span class='req_start pt' onClick='toggleDiv(\"" + id + "\");'> "
                     + id
                     + " [" + Fmt.shortDateStr(dat) + ":" + dat.getSeconds() + "] " + cfgTuner.getParameter("USER_ID") + ": " + cfgTuner.getParameter("ClientIP")
