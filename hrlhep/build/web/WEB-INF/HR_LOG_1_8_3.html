@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>HR LHEP Log</title>
+        <META http-equiv=Content-Type content="text/html; charset=utf-8">
+        <style>
+            body{background-color:#eefff4;}
+            xmp {margin:0;} 
+            .pt {cursor:pointer;} 
+            span.req_start {border:solid 1px red; font-weight:bold; background-color:#FFFFA0;}
+            span.req_end {border:solid 1px red; font-weight:bold; background-color:#D0FFB0;}
+            div.req {display:none; border:solid 1px red; padding:4px; background-color:white;}
+
+            span.ss_start {border:solid 1px red; background-color:#D0E8FF;}
+            span.ss_back {border:solid 1px blue; background-color:#D0FFB0;}
+            div.ss {display:none; border:solid 1px green; border-right:none; padding:6px; margin-left:5px;}
+        </style>
+        <script type="text/javascript">
+            var toggleDiv = function (id) {
+                var d = document.getElementById(id);
+                if (d.style.display === "block")
+                    d.style.display = "none";
+                else
+                    d.style.display = "block";
+            };
+        </script>
+    </head><body>
+===== get System Const SQL:select alias, value from sys_const<BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_1");'> Request_HR_LHEP_1 [08.01 03:10:9] : 0:0:0:0:0:0:0:1 c=main</span><div id='Request_HR_LHEP_1' class='req'> queryString:c=main; log=true; session inactive=min;<br>====== main.cfg; <br><b>$INCLUDE </b>main.cfg[top]<BR>
+<b>$INCLUDE </b>dat/common.dat[head]<BR>
+<b>$INCLUDE </b>free/main_css_noDB.cfg[css]<BR>
+<b>$INCLUDE </b>free/main_css_noDB.cfg[report]<BR>
+<b>$INCLUDE </b>free/main_js_noDB.cfg[js]<BR>
+<b>$INCLUDE </b>free/main_js_noDB.cfg[report]<BR>
+<b>$INCLUDE </b>free/js_tabs.dat[report]<BR>
+<b>$INCLUDE </b>free/js_forms.dat[report]<BR>
+<b>$INCLUDE </b>free/js_jQuery.dat[report]<BR>
+<b>$INCLUDE </b>free/js_popup.dat[report]<BR>
+<b>$INCLUDE </b>free/js_service.dat[report]<BR>
+<b>$INCLUDE </b>free/js_CallModule.dat[report]<BR>
+<b>$INCLUDE </b>dat/common.dat[scripts]<BR>
+<b>$INCLUDE </b>dat/common.dat[form]<BR>
+<b>$INCLUDE </b>[login-logout link]<BR>
+!!!!!!!!!!!!!!!1  username  username_id<b>$INCLUDE </b>main.cfg[bottom]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_1");'>Request_HR_LHEP_1 (main) DONE! (389ms)</span> <BR>
