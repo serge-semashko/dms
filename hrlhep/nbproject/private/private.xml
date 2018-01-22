@@ -5,14 +5,9 @@
         <group>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/table_no.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/fill_otdel.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/salary_XL.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/edit/salary.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_premii.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/js/data.js</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/utils.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/personal_XL.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_personal_table.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/free/js_CallModule.dat</file>
             <file>file:/F:/LIT/dms/hrlhep/web/js/main.css</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_povysh.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_personal.cfg</file>
@@ -20,10 +15,8 @@
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/dat/common.dat</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/gateway/receive.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_reports.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_salary.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_premii_table.cfg</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/sys/tab_jubilee.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/gateway/receive_7_sotrudnik.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/sys/export_xl.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/js/main.js</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_reports_chart.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/main.cfg</file>
