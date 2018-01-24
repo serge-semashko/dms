@@ -1,0 +1,1096 @@
+<html>
+    <head>
+        <title>HR LHEP Log</title>
+        <META http-equiv=Content-Type content="text/html; charset=utf-8">
+        <style>
+            body{background-color:#eefff4;}
+            xmp {margin:0;} 
+            .pt {cursor:pointer;} 
+            span.req_start {border:solid 1px red; font-weight:bold; background-color:#FFFFA0;}
+            span.req_end {border:solid 1px red; font-weight:bold; background-color:#D0FFB0;}
+            div.req {display:none; border:solid 1px red; padding:4px; background-color:white;}
+
+            span.ss_start {border:solid 1px red; background-color:#D0E8FF;}
+            span.ss_back {border:solid 1px blue; background-color:#D0FFB0;}
+            div.ss {display:none; border:solid 1px green; border-right:none; padding:6px; margin-left:5px;}
+        </style>
+        <script type="text/javascript">
+            var toggleDiv = function (id) {
+                var d = document.getElementById(id);
+                if (d.style.display === "block")
+                    d.style.display = "none";
+                else
+                    d.style.display = "block";
+            };
+        </script>
+    </head><body>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_1_24_10.html maxLength=500000
+</xmp>------ SQL done, 0ms.<br><BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_312");'> Request_HR_LHEP_312 [24.01 10:51:49] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_312' class='req'> queryString:c=edit/fte_v1&tab_n=17914&project_id=-1&ajax=Y; log=true; session inactive=min;<br></div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_312");'>Request_HR_LHEP_312 (edit/fte_v1) DONE! (82ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_313");'> Request_HR_LHEP_313 [24.01 10:54:38] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_313' class='req'> queryString:c=edit/fte_v1&tab_n=17914&project_id=-1&ajax=Y; log=true; session inactive=min;<br></div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_313");'>Request_HR_LHEP_313 (edit/fte_v1) DONE! (146ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_314");'> Request_HR_LHEP_314 [24.01 10:54:40] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_314' class='req'> queryString:c=edit/fte_v1&tab_n=17914&project_id=-1&ajax=Y; log=true; session inactive=min;<br></div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_314");'>Request_HR_LHEP_314 (edit/fte_v1) DONE! (69ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_315");'> Request_HR_LHEP_315 [24.01 10:54:41] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_315' class='req'> queryString:c=edit/fte_v1&tab_n=17914&project_id=-1&ajax=Y; log=true; session inactive=min;<br></div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_315");'>Request_HR_LHEP_315 (edit/fte_v1) DONE! (53ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_316");'> Request_HR_LHEP_316 [24.01 10:54:43] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_316' class='req'> queryString:c=edit/fte_v1&tab_n=17914&project_id=-1&ajax=Y; log=true; session inactive=min;<br></div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_316");'>Request_HR_LHEP_316 (edit/fte_v1) DONE! (75ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_317");'> Request_HR_LHEP_317 [24.01 10:55:56] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_317' class='req'> queryString:c=edit/fte_v1&tab_n=20909&project_id=-1&ajax=Y; log=true; session inactive=min;<br></div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_317");'>Request_HR_LHEP_317 (edit/fte_v1) DONE! (152ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_318");'> Request_HR_LHEP_318 [24.01 10:57:7] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_318' class='req'> queryString:c=edit/fte_v1&tab_n=102044&project_id=10&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 10
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=5</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=102044
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Авдейчиков Владимир Владимирович
+tab_n=102044</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 102044 and project_id = 10
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 10
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=5</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=5
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-0-1081-2009/2019</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=10
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=prj 53</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =-1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_318");'>Request_HR_LHEP_318 (edit/fte_v1) DONE! (316ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_319");'> Request_HR_LHEP_319 [24.01 10:57:10] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_319' class='req'> queryString:c=edit/fte_v1&tab_n=102044&project_id=-1&ajax=Y; log=true; session inactive=min;<br></div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_319");'>Request_HR_LHEP_319 (edit/fte_v1) DONE! (78ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_320");'> Request_HR_LHEP_320 [24.01 10:57:11] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_320' class='req'> queryString:c=edit/fte_v1&tab_n=102044&project_id=-1&ajax=Y; log=true; session inactive=min;<br></div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_320");'>Request_HR_LHEP_320 (edit/fte_v1) DONE! (170ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_321");'> Request_HR_LHEP_321 [24.01 10:57:13] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_321' class='req'> queryString:c=edit/fte_v1&tab_n=20909&project_id=-1&ajax=Y; log=true; session inactive=min;<br></div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_321");'>Request_HR_LHEP_321 (edit/fte_v1) DONE! (153ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_322");'> Request_HR_LHEP_322 [24.01 10:57:14] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_322' class='req'> queryString:c=edit/fte_v1&tab_n=40650&project_id=-1&ajax=Y; log=true; session inactive=min;<br></div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_322");'>Request_HR_LHEP_322 (edit/fte_v1) DONE! (77ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_323");'> Request_HR_LHEP_323 [24.01 10:57:15] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_323' class='req'> queryString:c=edit/fte_v1&tab_n=40650&project_id=-1&ajax=Y; log=true; session inactive=min;<br></div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_323");'>Request_HR_LHEP_323 (edit/fte_v1) DONE! (70ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_324");'> Request_HR_LHEP_324 [24.01 10:57:16] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_324' class='req'> queryString:c=edit/fte_v1&tab_n=40650&project_id=-1&ajax=Y; log=true; session inactive=min;<br></div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_324");'>Request_HR_LHEP_324 (edit/fte_v1) DONE! (75ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_325");'> Request_HR_LHEP_325 [24.01 10:57:17] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_325' class='req'> queryString:c=edit/fte_v1&tab_n=40650&project_id=-1&ajax=Y; log=true; session inactive=min;<br></div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_325");'>Request_HR_LHEP_325 (edit/fte_v1) DONE! (63ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_326");'> Request_HR_LHEP_326 [24.01 10:57:20] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_326' class='req'> queryString:c=edit/fte_v1&tab_n=6351&project_id=-1&ajax=Y; log=true; session inactive=min;<br></div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_326");'>Request_HR_LHEP_326 (edit/fte_v1) DONE! (138ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_327");'> Request_HR_LHEP_327 [24.01 10:57:21] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_327' class='req'> queryString:c=edit/fte_v1&tab_n=6101&project_id=6&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 6
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=20</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=6101
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Агапов Николай Николаевич
+tab_n=6101</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 6101 and project_id = 6
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 6
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=20</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=20
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-0-1066-2007/2020</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=6
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=prj 23</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =-1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_327");'>Request_HR_LHEP_327 (edit/fte_v1) DONE! (248ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_328");'> Request_HR_LHEP_328 [24.01 10:57:26] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_328' class='req'> queryString:c=edit/fte_v1&tab_n=17914&project_id=4&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 4
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=20</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=17914
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Абраамян Хачик Унанович
+tab_n=17914</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 17914 and project_id = 4
+</xmp><xmp>***** 1 record(s) retrieved. Filled 3 parameters: 
+percent=1236
+changed=2018-01-24 00:59:07.0
+changed_by=3663</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 4
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=20</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=20
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-0-1066-2007/2020</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=4
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=prj 21</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =3663
+</xmp><xmp>***** 2 record(s) retrieved. Filled 1 parameters: 
+changed_by_fio=Семашко Сергей ВладимировичСемашко Сергей Владимирович</xmp>------ SQL done, 3ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_328");'>Request_HR_LHEP_328 (edit/fte_v1) DONE! (467ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_329");'> Request_HR_LHEP_329 [24.01 10:58:1] 2: 0:0:0:0:0:0:0:1 c=tab_fte_table</span><div id='Request_HR_LHEP_329' class='req'> queryString:c=tab_fte_table&srn=1&srt=sotr.shtat_direct&rpp=20&ajax=Y; log=true; session inactive=min;<br><br> <b>SQL: [[fte topics header] (1) ]:</b><xmp>select concat("<th colspan=",
+ifnull((select count(topic_id) as cnt from projects where topic_id=tpc.id group by topic_id),1),
+">",short_number,"</th>") as topics_header
+from topics  tpc
+order by  short_number
+</xmp><xmp>***** 19 record(s) retrieved. Filled 1 parameters: 
+topics_header=<th colspan=3>1065</th><th colspan=4>1066</th><th colspan=5>1081</th><th colspan=1>1083</th><th colspan=1>1085</th><th colspan=1>1086</th><th colspan=1>1087</th><th colspan=1>1088</th><th colspan=1>1096</th><th colspan=1>1097</th><th colspan=1>1099</th><th colspan=1>1106</th><th colspan=1>1107</th><th colspan=1>1108</th><th colspan=1>1123</th><th colspan=1>1124</th><th colspan=1>1125</th><th colspan=1>1127</th><th colspan=1>1134
+</th></xmp>------ SQL done, 4ms.<br><BR>
+<br> <b>SQL: [[fte topics header] (2) ]:</b><xmp>select
+concat("<th>",ifnull(prj.short_name,""),"</th>") as projects_header
+from  topics tpc left join projects prj on prj.Topic_id = tpc.ID
+order by tpc.short_name, prj.short_name
+</xmp><xmp>***** 28 record(s) retrieved. Filled 1 parameters: 
+projects_header=<th>prj 1</th><th>prj 2</th><th>prj 3</th><th>prj 21</th><th>prj 22</th><th>prj 23</th><th>prj 24</th><th>prj 51</th><th>prj 52</th><th>prj 53</th><th>prj 54</th><th>prj 55</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>1124-1
+</th><th></th><th></th><th></th></xmp>------ SQL done, 3ms.<br><BR>
+<br> <b>SQL: [[fte topics header] (3) ]:</b><xmp></xmp> SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.person_id, sotr.tab_n, sotr.F, sotr.I, sotr.O, sotr.FIO, sotr.otdel, sotr.post
+, sotr.division, sotr.category,  sotr.shtat_direct
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.shtat_direct
+</xmp> <b> Processed in 42ms. </b><br><br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=",
+ifnull(prj.id,-1),
+"', true);"" ",
+">",
+ifnull(ft.percent,0),"</td>") as tab_n_projects_fte
+from  topics tpc left join projects prj on prj.Topic_id = tpc.ID left join FTE ft on prj.ID=ft.project_id and ft.tab_n = 173624
+order by tpc.short_name, prj.short_name
+</xmp><xmp>***** 28 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173624&project_id=-1', true);" >0</td></xmp>------ SQL done, 32ms.<br><BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=",
+ifnull(prj.id,-1),
+"', true);"" ",
+">",
+ifnull(ft.percent,0),"</td>") as tab_n_projects_fte
+from  topics tpc left join projects prj on prj.Topic_id = tpc.ID left join FTE ft on prj.ID=ft.project_id and ft.tab_n = 172868
+order by tpc.short_name, prj.short_name
+</xmp><xmp>***** 28 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172868&project_id=-1', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=",
+ifnull(prj.id,-1),
+"', true);"" ",
+">",
+ifnull(ft.percent,0),"</td>") as tab_n_projects_fte
+from  topics tpc left join projects prj on prj.Topic_id = tpc.ID left join FTE ft on prj.ID=ft.project_id and ft.tab_n = 166318
+order by tpc.short_name, prj.short_name
+</xmp><xmp>***** 28 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166318&project_id=-1', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=",
+ifnull(prj.id,-1),
+"', true);"" ",
+">",
+ifnull(ft.percent,0),"</td>") as tab_n_projects_fte
+from  topics tpc left join projects prj on prj.Topic_id = tpc.ID left join FTE ft on prj.ID=ft.project_id and ft.tab_n = 174996
+order by tpc.short_name, prj.short_name
+</xmp><xmp>***** 28 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=174996&project_id=-1', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=",
+ifnull(prj.id,-1),
+"', true);"" ",
+">",
+ifnull(ft.percent,0),"</td>") as tab_n_projects_fte
+from  topics tpc left join projects prj on prj.Topic_id = tpc.ID left join FTE ft on prj.ID=ft.project_id and ft.tab_n = 172869
+order by tpc.short_name, prj.short_name
+</xmp><xmp>***** 28 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=-1', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=",
+ifnull(prj.id,-1),
+"', true);"" ",
+">",
+ifnull(ft.percent,0),"</td>") as tab_n_projects_fte
+from  topics tpc left join projects prj on prj.Topic_id = tpc.ID left join FTE ft on prj.ID=ft.project_id and ft.tab_n = 172766
+order by tpc.short_name, prj.short_name
+</xmp><xmp>***** 28 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172766&project_id=-1', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=",
+ifnull(prj.id,-1),
+"', true);"" ",
+">",
+ifnull(ft.percent,0),"</td>") as tab_n_projects_fte
+from  topics tpc left join projects prj on prj.Topic_id = tpc.ID left join FTE ft on prj.ID=ft.project_id and ft.tab_n = 164594
+order by tpc.short_name, prj.short_name
+</xmp><xmp>***** 28 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=164594&project_id=-1', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=",
+ifnull(prj.id,-1),
+"', true);"" ",
+">",
+ifnull(ft.percent,0),"</td>") as tab_n_projects_fte
+from  topics tpc left join projects prj on prj.Topic_id = tpc.ID left join FTE ft on prj.ID=ft.project_id and ft.tab_n = 165510
+order by tpc.short_name, prj.short_name
+</xmp><xmp>***** 28 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165510&project_id=-1', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=",
+ifnull(prj.id,-1),
+"', true);"" ",
+">",
+ifnull(ft.percent,0),"</td>") as tab_n_projects_fte
+from  topics tpc left join projects prj on prj.Topic_id = tpc.ID left join FTE ft on prj.ID=ft.project_id and ft.tab_n = 165816
+order by tpc.short_name, prj.short_name
+</xmp><xmp>***** 28 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=-1', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=",
+ifnull(prj.id,-1),
+"', true);"" ",
+">",
+ifnull(ft.percent,0),"</td>") as tab_n_projects_fte
+from  topics tpc left join projects prj on prj.Topic_id = tpc.ID left join FTE ft on prj.ID=ft.project_id and ft.tab_n = 170054
+order by tpc.short_name, prj.short_name
+</xmp><xmp>***** 28 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170054&project_id=-1', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=",
+ifnull(prj.id,-1),
+"', true);"" ",
+">",
+ifnull(ft.percent,0),"</td>") as tab_n_projects_fte
+from  topics tpc left join projects prj on prj.Topic_id = tpc.ID left join FTE ft on prj.ID=ft.project_id and ft.tab_n = 170276
+order by tpc.short_name, prj.short_name
+</xmp><xmp>***** 28 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170276&project_id=-1', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=",
+ifnull(prj.id,-1),
+"', true);"" ",
+">",
+ifnull(ft.percent,0),"</td>") as tab_n_projects_fte
+from  topics tpc left join projects prj on prj.Topic_id = tpc.ID left join FTE ft on prj.ID=ft.project_id and ft.tab_n = 170330
+order by tpc.short_name, prj.short_name
+</xmp><xmp>***** 28 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170330&project_id=-1', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=",
+ifnull(prj.id,-1),
+"', true);"" ",
+">",
+ifnull(ft.percent,0),"</td>") as tab_n_projects_fte
+from  topics tpc left join projects prj on prj.Topic_id = tpc.ID left join FTE ft on prj.ID=ft.project_id and ft.tab_n = 170438
+order by tpc.short_name, prj.short_name
+</xmp><xmp>***** 28 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=-1', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=",
+ifnull(prj.id,-1),
+"', true);"" ",
+">",
+ifnull(ft.percent,0),"</td>") as tab_n_projects_fte
+from  topics tpc left join projects prj on prj.Topic_id = tpc.ID left join FTE ft on prj.ID=ft.project_id and ft.tab_n = 173174
+order by tpc.short_name, prj.short_name
+</xmp><xmp>***** 28 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=-1', true);" >0</td></xmp>------ SQL done, 44ms.<br><BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=",
+ifnull(prj.id,-1),
+"', true);"" ",
+">",
+ifnull(ft.percent,0),"</td>") as tab_n_projects_fte
+from  topics tpc left join projects prj on prj.Topic_id = tpc.ID left join FTE ft on prj.ID=ft.project_id and ft.tab_n = 170746
+order by tpc.short_name, prj.short_name
+</xmp><xmp>***** 28 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170746&project_id=-1', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=",
+ifnull(prj.id,-1),
+"', true);"" ",
+">",
+ifnull(ft.percent,0),"</td>") as tab_n_projects_fte
+from  topics tpc left join projects prj on prj.Topic_id = tpc.ID left join FTE ft on prj.ID=ft.project_id and ft.tab_n = 170560
+order by tpc.short_name, prj.short_name
+</xmp><xmp>***** 28 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170560&project_id=-1', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=",
+ifnull(prj.id,-1),
+"', true);"" ",
+">",
+ifnull(ft.percent,0),"</td>") as tab_n_projects_fte
+from  topics tpc left join projects prj on prj.Topic_id = tpc.ID left join FTE ft on prj.ID=ft.project_id and ft.tab_n = 170667
+order by tpc.short_name, prj.short_name
+</xmp><xmp>***** 28 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170667&project_id=-1', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=",
+ifnull(prj.id,-1),
+"', true);"" ",
+">",
+ifnull(ft.percent,0),"</td>") as tab_n_projects_fte
+from  topics tpc left join projects prj on prj.Topic_id = tpc.ID left join FTE ft on prj.ID=ft.project_id and ft.tab_n = 170665
+order by tpc.short_name, prj.short_name
+</xmp><xmp>***** 28 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170665&project_id=-1', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=",
+ifnull(prj.id,-1),
+"', true);"" ",
+">",
+ifnull(ft.percent,0),"</td>") as tab_n_projects_fte
+from  topics tpc left join projects prj on prj.Topic_id = tpc.ID left join FTE ft on prj.ID=ft.project_id and ft.tab_n = 170719
+order by tpc.short_name, prj.short_name
+</xmp><xmp>***** 28 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=-1', true);" >0</td></xmp>------ SQL done, 5ms.<br><BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=",
+ifnull(prj.id,-1),
+"', true);"" ",
+">",
+ifnull(ft.percent,0),"</td>") as tab_n_projects_fte
+from  topics tpc left join projects prj on prj.Topic_id = tpc.ID left join FTE ft on prj.ID=ft.project_id and ft.tab_n = 170747
+order by tpc.short_name, prj.short_name
+</xmp><xmp>***** 28 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=-1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170747&project_id=-1', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp> <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_329");'>Request_HR_LHEP_329 (tab_fte_table) DONE! (1507ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_330");'> Request_HR_LHEP_330 [24.01 10:58:36] 2: 0:0:0:0:0:0:0:1 c=tab_personal</span><div id='Request_HR_LHEP_330' class='req'> queryString:c=tab_personal&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>utils.cfg[personal filters]<BR>
+<br> <b>SQL: [utils.cfg[dropdowns] (1) ]:</b><xmp>select distinct concat('<option value="', trim(post), '" '
+, case when trim(post)='' then 'selected' else '' end
+, '>' , trim(post), '</option>') as POST
+from sotrudniki
+where lab_id = 100000
+order by post
+</xmp><xmp>***** 112 record(s) retrieved. Filled 1 parameters: 
+POST=<option value="аппаратчик ожижения водорода и гелия" >аппаратчик ожижения водорода и гелия</option><option value="ведущий инженер по охране труда" >ведущий инженер по охране труда</option><option value="ведущий инженер" >ведущий инженер</option><option value="ведущий конструктор" >ведущий конструктор</option><option value="ведущий научный сотрудник" >ведущий научный сотрудник</option><option value="ведущий программист" >ведущий программист</option><option value="ведущий технолог" >ведущий технолог</option><option value="ведущий экономист" >ведущий экономист</option><option value="ведущий электроник" >ведущий электроник</option><option value="гальваник" >гальваник</option><option value="главный инженер лаборатории" >главный инженер лаборатории</option><option value="главный инженер установки" >главный инженер установки</option><option value="главный научный сотрудник" >главный научный сотрудник</option><option value="главный технический специалист" >главный технический специалист</option><option value="гравер" >гравер</option><option value="директор лаборатории" >директор лаборатории</option><option value="заведующий складом" >заведующий складом</option><option value="заведующий техническим архивом" >заведующий техническим архивом</option><option value="заведующий хозяйством" >заведующий хозяйством</option><option value="заместитель главного инженера лаборатории" >заместитель главного инженера лаборатории</option><option value="заместитель директора лаборатории по научной работе" >заместитель директора лаборатории по научной работе</option><option value="заместитель начальника отдела" >заместитель начальника отдела</option><option value="заместитель начальника отделения по научной работе" >заместитель начальника отделения по научной работе</option><option value="заместитель начальника цеха" >заместитель начальника цеха</option><option value="заточник" >заточник</option><option value="и.о.ведущего научного сотрудника" >и.о.ведущего научного сотрудника</option><option value="и.о.научного сотрудника" >и.о.научного сотрудника</option><option value="и.о.начальника сектора" >и.о.начальника сектора</option><option value="и.о.старшего научного сотрудника" >и.о.старшего научного сотрудника</option><option value="инженер" >инженер</option><option value="инженер-конструктор 1 категории" >инженер-конструктор 1 категории</option><option value="инженер-конструктор 2 категории" >инженер-конструктор 2 категории</option><option value="инженер-конструктор 3 категории" >инженер-конструктор 3 категории</option><option value="инженер-конструктор" >инженер-конструктор</option><option value="инженер-программист 1 категории" >инженер-программист 1 категории</option><option value="инженер-программист 2 категории" >инженер-программист 2 категории</option><option value="инженер-программист" >инженер-программист</option><option value="инженер-технолог 1 категории" >инженер-технолог 1 категории</option><option value="инженер-технолог 3 категории" >инженер-технолог 3 категории</option><option value="инженер-технолог" >инженер-технолог</option><option value="инженер-электроник 1 категории" >инженер-электроник 1 категории</option><option value="инженер-электроник 2 категории" >инженер-электроник 2 категории</option><option value="инженер-электроник" >инженер-электроник</option><option value="кладовщик инструментальной кладовой" >кладовщик инструментальной кладовой</option><option value="консультант при дирекции лаборатории" >консультант при дирекции лаборатории</option><option value="консультант" >консультант</option><option value="лаборант обработки фильмовой информации физического эксперимента" >лаборант обработки фильмовой информации физического эксперимента</option><option value="лаборант ускорительной установки" >лаборант ускорительной установки</option><option value="лаборант физической лаборатории" >лаборант физической лаборатории</option><option value="лаборант химико-технологических исследований" >лаборант химико-технологических исследований</option><option value="лаборант" >лаборант</option><option value="маляр" >маляр</option><option value="мастер" >мастер</option><option value="машинист компрессорных установок" >машинист компрессорных установок</option><option value="машинист по стирке и ремонту спецодежды" >машинист по стирке и ремонту спецодежды</option><option value="механик цеха" >механик цеха</option><option value="механик экспериментальных стендов и установок" >механик экспериментальных стендов и установок</option><option value="младший научный сотрудник" >младший научный сотрудник</option><option value="монтажник радиоэлектронной аппаратуры и приборов" >монтажник радиоэлектронной аппаратуры и приборов</option><option value="монтажник санитарно-технических систем и оборудования" >монтажник санитарно-технических систем и оборудования</option><option value="монтажник технологического оборудования и связанных с ним конструкций" >монтажник технологического оборудования и связанных с ним конструкций</option><option value="научный сотрудник" >научный сотрудник</option><option value="начальник бюро" >начальник бюро</option><option value="начальник группы" >начальник группы</option><option value="начальник отдела" >начальник отдела</option><option value="начальник отделения" >начальник отделения</option><option value="начальник сектора" >начальник сектора</option><option value="начальник службы" >начальник службы</option><option value="начальник цеха" >начальник цеха</option><option value="переводчик" >переводчик</option><option value="плотник" >плотник</option><option value="подсобный рабочий" >подсобный рабочий</option><option value="полировщик" >полировщик</option><option value="помощник директора лаборатории по капитальному строительству" >помощник директора лаборатории по капитальному строительству</option><option value="помощник директора лаборатории по общим вопросам" >помощник директора лаборатории по общим вопросам</option><option value="помощник директора лаборатории по финансовым вопросам" >помощник директора лаборатории по финансовым вопросам</option><option value="помощник начальника цеха по хозяйственным вопросам" >помощник начальника цеха по хозяйственным вопросам</option><option value="почетный директор лаборатории" >почетный директор лаборатории</option><option value="сверловщик" >сверловщик</option><option value="слесарь аварийно-восстановительных работ" >слесарь аварийно-восстановительных работ</option><option value="слесарь механосборочных работ" >слесарь механосборочных работ</option><option value="слесарь по контрольно-измерительным приборам и автоматике" >слесарь по контрольно-измерительным приборам и автоматике</option><option value="слесарь по ремонту и обслуживанию систем вентиляции и кондиционирования" >слесарь по ремонту и обслуживанию систем вентиляции и кондиционирования</option><option value="слесарь-ремонтник" >слесарь-ремонтник</option><option value="советник директора лаборатории" >советник директора лаборатории</option><option value="советник при дирекции лаборатории" >советник при дирекции лаборатории</option><option value="советник" >советник</option><option value="станочник широкого профиля" >станочник широкого профиля</option><option value="старший инженер" >старший инженер</option><option value="старший инспектор" >старший инспектор</option><option value="старший лаборант" >старший лаборант</option><option value="старший лаборант, имеющий высшее образование" >старший лаборант, имеющий высшее образование</option><option value="старший мастер" >старший мастер</option><option value="старший научный сотрудник" >старший научный сотрудник</option><option value="старший переводчик" >старший переводчик</option><option value="старший техник" >старший техник</option><option value="старший товаровед" >старший товаровед</option><option value="старший экономист" >старший экономист</option><option value="столяр" >столяр</option><option value="техник" >техник</option><option value="токарь" >токарь</option><option value="токарь-расточник" >токарь-расточник</option><option value="тракторист" >тракторист</option><option value="уборщик производственных помещений" >уборщик производственных помещений</option><option value="уборщик служебных помещений" >уборщик служебных помещений</option><option value="ученый секретарь лаборатории" >ученый секретарь лаборатории</option><option value="фрезеровщик" >фрезеровщик</option><option value="художник" >художник</option><option value="электрогазосварщик" >электрогазосварщик</option><option value="электромонтер по обслуживанию электрооборудования" >электромонтер по обслуживанию электрооборудования</option><option value="электромонтер по ремонту и обслуживанию электрооборудования" >электромонтер по ремонту и обслуживанию электрооборудования</option><option value="электросварщик ручной сварки" >электросварщик ручной сварки</option></xmp>------ SQL done, 20ms.<br><BR>
+<br> <b>SQL: [utils.cfg[dropdowns] (2) ]:</b><xmp>select distinct concat('<option value="', trim(category), '" '
+, case when trim(category)='' then 'selected' else '' end
+, '>' , trim(category), '</option>')as CATEGORIES
+from sotrudniki
+where lab_id = 100000
+</xmp><xmp>***** 4 record(s) retrieved. Filled 1 parameters: 
+CATEGORIES=<option value="Научные и научно-педагогические работники" >Научные и научно-педагогические работники</option><option value="Специалисты" >Специалисты</option><option value="Рабочие" >Рабочие</option><option value="Руководители" >Руководители</option></xmp>------ SQL done, 14ms.<br><BR>
+<br> <b>SQL: [utils.cfg[dropdowns] (3) ]:</b><xmp>select distinct concat('<option value="', trim(stepen), '" '
+, case when stepen='' then 'selected' else '' end
+, '>' , trim(stepen), '</option>')as STEPEN
+from sotrudniki
+where lab_id = 100000
+</xmp><xmp>***** 4 record(s) retrieved. Filled 1 parameters: 
+STEPEN=<option value="" selected></option><option value="Доктор наук" >Доктор наук</option><option value="Кандидат наук" >Кандидат наук</option></xmp>------ SQL done, 12ms.<br><BR>
+<br> <b>SQL: [utils.cfg[dropdowns] (4) ]:</b><xmp>select distinct concat('<option value="', trim(grazhdan), '" '
+, case when trim(grazhdan)='' then 'selected' else '' end
+, '>' , trim(grazhdan), '</option>')as GRAZHDAN
+from sotrudniki
+where lab_id = 100000
+order by grazhdan
+</xmp><xmp>***** 20 record(s) retrieved. Filled 1 parameters: 
+GRAZHDAN=<option value="АЗЕРБАЙДЖАН" >АЗЕРБАЙДЖАН</option><option value="АРМЕНИЯ" >АРМЕНИЯ</option><option value="БЕЛАРУСЬ" >БЕЛАРУСЬ</option><option value="БОЛГАРИЯ" >БОЛГАРИЯ</option><option value="ГЕРМАНИЯ" >ГЕРМАНИЯ</option><option value="ГРУЗИЯ" >ГРУЗИЯ</option><option value="КАЗАХСТАН" >КАЗАХСТАН</option><option value="КУБА" >КУБА</option><option value="ЛИТВА" >ЛИТВА</option><option value="МОЛДОВА, РЕСПУБЛИКА" >МОЛДОВА, РЕСПУБЛИКА</option><option value="МОНГОЛИЯ" >МОНГОЛИЯ</option><option value="НИГЕРИЯ" >НИГЕРИЯ</option><option value="ПОЛЬША" >ПОЛЬША</option><option value="РОССИЯ" >РОССИЯ</option><option value="РУМЫНИЯ" >РУМЫНИЯ</option><option value="СЛОВАКИЯ" >СЛОВАКИЯ</option><option value="УЗБЕКИСТАН" >УЗБЕКИСТАН</option><option value="УКРАИНА" >УКРАИНА</option><option value="ЧЕШСКАЯ РЕСПУБЛИКА" >ЧЕШСКАЯ РЕСПУБЛИКА</option></xmp>------ SQL done, 13ms.<br><BR>
+<br> <b>SQL: [utils.cfg[dropdowns] (5) ]:</b><xmp>select distinct concat('<option value="', trim(name), '" '
+, case when trim(name)='' then 'selected' else '' end
+, '>' , trim(name), '</option>')as OTDEL
+from struktura str
+where str.pid  in (select id from struktura where pid = 100000)
+order by otdel
+</xmp><xmp>***** 41 record(s) retrieved. Filled 1 parameters: 
+OTDEL=<option value="Административное бюро" >Административное бюро</option><option value="Группа №1 высоковольтного оборудования" >Группа №1 высоковольтного оборудования</option><option value="Группа №1 материального учета и контроля" >Группа №1 материального учета и контроля</option><option value="Группа №2 низковольтного оборудования" >Группа №2 низковольтного оборудования</option><option value="Группа №2 планово- экономическая" >Группа №2 планово- экономическая</option><option value="Группа №3 обеспечения и контроля закупок" >Группа №3 обеспечения и контроля закупок</option><option value="Группа №3 тепловодоснабжения и вентиляции" >Группа №3 тепловодоснабжения и вентиляции</option><option value="Группа №4 электротехническая - высоковольтного оборудования" >Группа №4 электротехническая - высоковольтного оборудования</option><option value="Диспетчерская служба Нуклотрона" >Диспетчерская служба Нуклотрона</option><option value="Инженерный энерготехнологический отдел " >Инженерный энерготехнологический отдел </option><option value="Конструкторский отдел" >Конструкторский отдел</option><option value="Научно-инженерный отдел систем электропитания Нуклотрона" >Научно-инженерный отдел систем электропитания Нуклотрона</option><option value="Научно-исследовательский криогенный отдел" >Научно-исследовательский криогенный отдел</option><option value="Научно-методический отдел кремниевых трековых систем" >Научно-методический отдел кремниевых трековых систем</option><option value="Научно-технический отдел пучков" >Научно-технический отдел пучков</option><option value="Научно-экспериментальный отдел инжекции и кольца Нуклотрона" >Научно-экспериментальный отдел инжекции и кольца Нуклотрона</option><option value="Научно-экспериментальный отдел инженерно-физических проблем ускорителей" >Научно-экспериментальный отдел инженерно-физических проблем ускорителей</option><option value="Научно-экспериментальный отдел многоцелевого детектора (MPD)" >Научно-экспериментальный отдел многоцелевого детектора (MPD)</option><option value="Научно-экспериментальный отдел радиоэлектронных систем" >Научно-экспериментальный отдел радиоэлектронных систем</option><option value="Научно-экспериментальный отдел сверхпроводящих магнитов и технологий" >Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</option><option value="Научно-экспериментальный отдел спиновой физики малонуклонных систем" >Научно-экспериментальный отдел спиновой физики малонуклонных систем</option><option value="Научно-экспериментальный отдел ускорительных систем" >Научно-экспериментальный отдел ускорительных систем</option><option value="Научно-экспериментальный отдел физики легких кварков и лептонов" >Научно-экспериментальный отдел физики легких кварков и лептонов</option><option value="Научно-экспериментальный отдел физики на CMS" >Научно-экспериментальный отдел физики на CMS</option><option value="Научно-экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA" >Научно-экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на LHC" >Научно-экспериментальный отдел физики тяжелых ионов на LHC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на RHIC" >Научно-экспериментальный отдел физики тяжелых ионов на RHIC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов" >Научно-экспериментальный отдел физики тяжелых ионов</option><option value="Научно–экспериментальный отдел автоматизации физических исследований" >Научно–экспериментальный отдел автоматизации физических исследований</option><option value="Сектор детекторных систем" >Сектор детекторных систем</option><option value="Сектор криофизических исследований" >Сектор криофизических исследований</option><option value="Сектор полупроводниковых детекторов" >Сектор полупроводниковых детекторов</option><option value="Сектор прикладных радиационных технологий" >Сектор прикладных радиационных технологий</option><option value="Сектор рентгеновской спектроскопии" >Сектор рентгеновской спектроскопии</option><option value="Сектор строу-детекторов" >Сектор строу-детекторов</option><option value="Сектор структуры частиц" >Сектор структуры частиц</option><option value="Сектор физики на АТЛАС" >Сектор физики на АТЛАС</option><option value="Сектор физики странных кварков в ядрах" >Сектор физики странных кварков в ядрах</option><option value="Серпуховской научно-экспериментальный отдел" >Серпуховской научно-экспериментальный отдел</option><option value="Хозяйственный отдел" >Хозяйственный отдел</option><option value="Цех опытно-экспериментального производства" >Цех опытно-экспериментального производства</option></xmp>------ SQL done, 5ms.<br><BR>
+<br> <b>SQL: [utils.cfg[dropdowns] (6) ]:</b><xmp>select distinct concat('<option value="', trim(name), '" '
+, case when trim(name)='' then 'selected' else '' end
+, '>' , trim(name), '</option>')as OTDELENIE
+from struktura
+where pid = 100000
+order by OTDELENIE
+</xmp><xmp>***** 11 record(s) retrieved. Filled 1 parameters: 
+OTDELENIE=<option value="Административно-хозяйственное подразделение" >Административно-хозяйственное подразделение</option><option value="Группа советников и консультантов" >Группа советников и консультантов</option><option value="Инженерный энерготехнологический отдел" >Инженерный энерготехнологический отдел</option><option value="Отделение №1 Ускорительное" >Отделение №1 Ускорительное</option><option value="Отделение №2 Физики на ускорительном комплексе Нуклотрон-NICA" >Отделение №2 Физики на ускорительном комплексе Нуклотрон-NICA</option><option value="Отделение №3 Физики адронов" >Отделение №3 Физики адронов</option><option value="Отделение №4 Физики на встречных пучках" >Отделение №4 Физики на встречных пучках</option><option value="Отделение №5 Научно–методических исследований и инноваций" >Отделение №5 Научно–методических исследований и инноваций</option><option value="Отделение №6 Главного инженера" >Отделение №6 Главного инженера</option><option value="Планово-финансовое бюро" >Планово-финансовое бюро</option><option value="Руководство" >Руководство</option></xmp>------ SQL done, 3ms.<br><BR>
+<br> <b>SQL: [utils.cfg[dropdowns] (7) ]:</b><xmp>select distinct  concat(' "', name,'" "', name,'"  "',hex(name),' "')   as OTD
+from struktura
+where pid = 100000
+order by OTD
+</xmp><xmp>***** 11 record(s) retrieved. Filled 1 parameters: 
+OTD= "Административно-хозяйственное подразделение" "Административно-хозяйственное подразделение"  "D090D0B4D0BCD0B8D0BDD0B8D181D182D180D0B0D182D0B8D0B2D0BDD0BE2DD185D0BED0B7D18FD0B9D181D182D0B2D0B5D0BDD0BDD0BED0B520D0BFD0BED0B4D180D0B0D0B7D0B4D0B5D0BBD0B5D0BDD0B8D0B5 " "Группа советников и консультантов" "Группа советников и консультантов"  "D093D180D183D0BFD0BFD0B020D181D0BED0B2D0B5D182D0BDD0B8D0BAD0BED0B220D0B820D0BAD0BED0BDD181D183D0BBD18CD182D0B0D0BDD182D0BED0B2 " "Инженерный энерготехнологический отдел" "Инженерный энерготехнологический отдел"  "D098D0BDD0B6D0B5D0BDD0B5D180D0BDD18BD0B920D18DD0BDD0B5D180D0B3D0BED182D0B5D185D0BDD0BED0BBD0BED0B3D0B8D187D0B5D181D0BAD0B8D0B920D0BED182D0B4D0B5D0BB " "Отделение №1 Ускорительное" "Отделение №1 Ускорительное"  "D09ED182D0B4D0B5D0BBD0B5D0BDD0B8D0B520E284963120D0A3D181D0BAD0BED180D0B8D182D0B5D0BBD18CD0BDD0BED0B5 " "Отделение №2 Физики на ускорительном комплексе Нуклотрон-NICA" "Отделение №2 Физики на ускорительном комплексе Нуклотрон-NICA"  "D09ED182D0B4D0B5D0BBD0B5D0BDD0B8D0B520E284963220D0A4D0B8D0B7D0B8D0BAD0B820D0BDD0B020D183D181D0BAD0BED180D0B8D182D0B5D0BBD18CD0BDD0BED0BC20D0BAD0BED0BCD0BFD0BBD0B5D0BAD181D0B520D09DD183D0BAD0BBD0BED182D180D0BED0BD2D4E494341 " "Отделение №3 Физики адронов" "Отделение №3 Физики адронов"  "D09ED182D0B4D0B5D0BBD0B5D0BDD0B8D0B520E284963320D0A4D0B8D0B7D0B8D0BAD0B820D0B0D0B4D180D0BED0BDD0BED0B2 " "Отделение №4 Физики на встречных пучках" "Отделение №4 Физики на встречных пучках"  "D09ED182D0B4D0B5D0BBD0B5D0BDD0B8D0B520E284963420D0A4D0B8D0B7D0B8D0BAD0B820D0BDD0B020D0B2D181D182D180D0B5D187D0BDD18BD18520D0BFD183D187D0BAD0B0D185 " "Отделение №5 Научно–методических исследований и инноваций" "Отделение №5 Научно–методических исследований и инноваций"  "D09ED182D0B4D0B5D0BBD0B5D0BDD0B8D0B520E284963520D09DD0B0D183D187D0BDD0BEE28093D0BCD0B5D182D0BED0B4D0B8D187D0B5D181D0BAD0B8D18520D0B8D181D181D0BBD0B5D0B4D0BED0B2D0B0D0BDD0B8D0B920D0B820D0B8D0BDD0BDD0BED0B2D0B0D186D0B8D0B9 " "Отделение №6 Главного инженера" "Отделение №6 Главного инженера"  "D09ED182D0B4D0B5D0BBD0B5D0BDD0B8D0B520E284963620D093D0BBD0B0D0B2D0BDD0BED0B3D0BE20D0B8D0BDD0B6D0B5D0BDD0B5D180D0B0 " "Планово-финансовое бюро" "Планово-финансовое бюро"  "D09FD0BBD0B0D0BDD0BED0B2D0BE2DD184D0B8D0BDD0B0D0BDD181D0BED0B2D0BED0B520D0B1D18ED180D0BE " "Руководство" "Руководство"  "D0A0D183D0BAD0BED0B2D0BED0B4D181D182D0B2D0BE "</xmp>------ SQL done, 3ms.<br><BR>
+<br><span class='ss_start pt'  onClick='toggleDiv("fill_otdel1516780717195");'> $CALL_SERVICE: <b>tab_personal.cfg => fill_otdel</b> (request:HR_LHEP_330)</span><div id='fill_otdel1516780717195' class='ss'><b>$INCLUDE </b>[scripts]<BR>
+<br> <b>SQL: [[get otdels] (1) ]:</b><xmp>select distinct concat('<option value="', short_name, '" '
+, case when short_name='' then 'selected' else '' end
+, '>' , short_name, '</option>')as OTDEL
+from struktura str
+where str.pid  in (select id from struktura where pid = 100000)
+order by otdel
+</xmp><xmp>***** 41 record(s) retrieved. Filled 1 parameters: 
+OTDEL=<option value="Административное бюро" >Административное бюро</option><option value="Гр. №1 мат. учета и контроля" >Гр. №1 мат. учета и контроля</option><option value="Группа №1 высоковольтного оборудования" >Группа №1 высоковольтного оборудования</option><option value="Группа №2 низковольтного оборудования" >Группа №2 низковольтного оборудования</option><option value="Группа №2 планово- экономическая" >Группа №2 планово- экономическая</option><option value="Группа №3 обеспечения и контроля закупок" >Группа №3 обеспечения и контроля закупок</option><option value="Группа №3 тепловодоснабжения и вентиляции" >Группа №3 тепловодоснабжения и вентиляции</option><option value="Группа №4 электротехническая - высоковольтного оборудования" >Группа №4 электротехническая - высоковольтного оборудования</option><option value="Диспетчерская служба Нуклотрона" >Диспетчерская служба Нуклотрона</option><option value="Инженерный энерготехнологический отдел " >Инженерный энерготехнологический отдел </option><option value="Конструкторский отдел" >Конструкторский отдел</option><option value="Научно - экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA" >Научно - экспериментальный отдел физики столкновений тяжелых ионов на комплексе NICA</option><option value="Научно-инженерный отдел систем электропитания Нуклотрона" >Научно-инженерный отдел систем электропитания Нуклотрона</option><option value="Научно-исследовательский криогенный отдел" >Научно-исследовательский криогенный отдел</option><option value="Научно-методический отдел кремниевых трековых систем" >Научно-методический отдел кремниевых трековых систем</option><option value="Научно-технический отдел пучков" >Научно-технический отдел пучков</option><option value="Научно-экспериментальный отдел инжекции и кольца Нуклотрона" >Научно-экспериментальный отдел инжекции и кольца Нуклотрона</option><option value="Научно-экспериментальный отдел инженерно-физических проблем ускорителей" >Научно-экспериментальный отдел инженерно-физических проблем ускорителей</option><option value="Научно-экспериментальный отдел многоцелевого детектора (MPD)" >Научно-экспериментальный отдел многоцелевого детектора (MPD)</option><option value="Научно-экспериментальный отдел радиоэлектронных систем" >Научно-экспериментальный отдел радиоэлектронных систем</option><option value="Научно-экспериментальный отдел сверхпроводящих магнитов и технологий" >Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</option><option value="Научно-экспериментальный отдел спиновой физики малонуклонных систем" >Научно-экспериментальный отдел спиновой физики малонуклонных систем</option><option value="Научно-экспериментальный отдел ускорительных систем  " >Научно-экспериментальный отдел ускорительных систем  </option><option value="Научно-экспериментальный отдел физики легких кварков и лептонов" >Научно-экспериментальный отдел физики легких кварков и лептонов</option><option value="Научно-экспериментальный отдел физики на CMS" >Научно-экспериментальный отдел физики на CMS</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на LHC" >Научно-экспериментальный отдел физики тяжелых ионов на LHC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов на RHIC" >Научно-экспериментальный отдел физики тяжелых ионов на RHIC</option><option value="Научно-экспериментальный отдел физики тяжелых ионов" >Научно-экспериментальный отдел физики тяжелых ионов</option><option value="Научно–экспериментальный отдел автоматизации физических исследований" >Научно–экспериментальный отдел автоматизации физических исследований</option><option value="Сектор детекторных систем" >Сектор детекторных систем</option><option value="Сектор криофизических исследований" >Сектор криофизических исследований</option><option value="Сектор полупроводниковых детекторов" >Сектор полупроводниковых детекторов</option><option value="Сектор прикладных радиационных технологий" >Сектор прикладных радиационных технологий</option><option value="Сектор рентгеновской спектроскопии" >Сектор рентгеновской спектроскопии</option><option value="Сектор строу-детекторов" >Сектор строу-детекторов</option><option value="Сектор структуры частиц" >Сектор структуры частиц</option><option value="Сектор физики на АТЛАС" >Сектор физики на АТЛАС</option><option value="Сектор физики странных кварков в ядрах" >Сектор физики странных кварков в ядрах</option><option value="Серпуховской научно-экспериментальный отдел" >Серпуховской научно-экспериментальный отдел</option><option value="Хозяйственный отдел" >Хозяйственный отдел</option><option value="Цех опытно-экспериментального производства" >Цех опытно-экспериментального производства</option></xmp>------ SQL done, 5ms.<br><BR>
+<br> <b>SQL: [[get otdels] (2) ]:</b><xmp></xmp></div><span class='ss_back pt'  onClick='toggleDiv("fill_otdel1516780717195");'> BACK: <b>fill_otdel => tab_personal.cfg; (28ms.)</b></span><BR>
+<br><span class='ss_start pt'  onClick='toggleDiv("tab_personal_table1516780717241");'> $CALL_SERVICE: <b>tab_personal.cfg => tab_personal_table</b> (request:HR_LHEP_330)</span><div id='tab_personal_table1516780717241' class='ss'><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.FIO
+</xmp> <b> Processed in 70ms. </b><br> <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='ss_back pt'  onClick='toggleDiv("tab_personal_table1516780717241");'> BACK: <b>tab_personal_table => tab_personal.cfg; (422ms.)</b></span><BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_330");'>Request_HR_LHEP_330 (tab_personal) DONE! (1028ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_331");'> Request_HR_LHEP_331 [24.01 10:58:40] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_331' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.TopParent_name&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.TopParent_name
+</xmp> <b> Processed in 73ms. </b><br> <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_331");'>Request_HR_LHEP_331 (tab_personal_table) DONE! (466ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_332");'> Request_HR_LHEP_332 [24.01 10:58:41] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_332' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.TopParent_name&desc=desc&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 1ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.TopParent_name desc
+</xmp> <b> Processed in 78ms. </b><br> <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_332");'>Request_HR_LHEP_332 (tab_personal_table) DONE! (473ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_333");'> Request_HR_LHEP_333 [24.01 10:58:42] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_333' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.subTopParent_name&desc=desc&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 1ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.subTopParent_name desc
+</xmp> <b> Processed in 72ms. </b><br> <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_333");'>Request_HR_LHEP_333 (tab_personal_table) DONE! (536ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_334");'> Request_HR_LHEP_334 [24.01 10:58:44] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_334' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.subTopParent_name&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 1ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.subTopParent_name
+</xmp> <b> Processed in 72ms. </b><br> <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_334");'>Request_HR_LHEP_334 (tab_personal_table) DONE! (512ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_335");'> Request_HR_LHEP_335 [24.01 10:58:46] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_335' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.post&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 1ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.post
+</xmp> <b> Processed in 75ms. </b><br> <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_335");'>Request_HR_LHEP_335 (tab_personal_table) DONE! (510ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_336");'> Request_HR_LHEP_336 [24.01 10:58:47] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_336' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.post&desc=desc&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.post desc
+</xmp> <b> Processed in 72ms. </b><br> <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_336");'>Request_HR_LHEP_336 (tab_personal_table) DONE! (496ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_337");'> Request_HR_LHEP_337 [24.01 10:58:49] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_337' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.category&desc=desc&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.category desc
+</xmp> <b> Processed in 71ms. </b><br> <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_337");'>Request_HR_LHEP_337 (tab_personal_table) DONE! (498ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_338");'> Request_HR_LHEP_338 [24.01 10:58:51] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_338' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.category&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 1ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.category
+</xmp> <b> Processed in 72ms. </b><br> <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_338");'>Request_HR_LHEP_338 (tab_personal_table) DONE! (469ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_339");'> Request_HR_LHEP_339 [24.01 10:58:53] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_339' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.stepen&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.stepen
+</xmp> <b> Processed in 82ms. </b><br> <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_339");'>Request_HR_LHEP_339 (tab_personal_table) DONE! (760ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_340");'> Request_HR_LHEP_340 [24.01 10:58:55] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_340' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.category&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.category
+</xmp> <b> Processed in 75ms. </b><br> <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_340");'>Request_HR_LHEP_340 (tab_personal_table) DONE! (463ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_341");'> Request_HR_LHEP_341 [24.01 10:58:57] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_341' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.stepen&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 8ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.stepen
+</xmp> <b> Processed in 104ms. </b><br> <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_341");'>Request_HR_LHEP_341 (tab_personal_table) DONE! (601ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_342");'> Request_HR_LHEP_342 [24.01 10:59:0] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_342' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.stepen&desc=desc&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.stepen desc
+</xmp> <b> Processed in 72ms. </b><br> <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_342");'>Request_HR_LHEP_342 (tab_personal_table) DONE! (543ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_343");'> Request_HR_LHEP_343 [24.01 10:59:2] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_343' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.usl_truda&desc=desc&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 1ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.usl_truda desc
+</xmp> <b> Processed in 75ms. </b><br> <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_343");'>Request_HR_LHEP_343 (tab_personal_table) DONE! (403ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_344");'> Request_HR_LHEP_344 [24.01 10:59:4] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_344' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.usl_rab&desc=desc&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.usl_rab desc
+</xmp> <b> Processed in 72ms. </b><br> <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_344");'>Request_HR_LHEP_344 (tab_personal_table) DONE! (548ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_345");'> Request_HR_LHEP_345 [24.01 10:59:6] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_345' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.history_cont&desc=desc&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 1ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.history_cont desc
+</xmp>*** EXCEPTION:<br><xmp>java.sql.SQLException: Unknown column 'sotr.history_cont' in 'order clause'; SQL: 'select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct , sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday , sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab , date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct , sotr.sovmeshenie , ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age from sotrudniki sotr where lab_id = 100000 order by sotr.history_cont desc '</xmp><hr>java.sql.SQLException: Unknown column 'sotr.history_cont' in 'order clause'; SQL: 'select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct , sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday , sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab , date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct , sotr.sovmeshenie , ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age from sotrudniki sotr where lab_id = 100000 order by sotr.history_cont desc '
+	at dubna.walt.util.DBUtil.getResults(DBUtil.java:448)
+	at dubna.walt.service.TableServiceSimple.runSQL(TableServiceSimple.java:1033)
+	at dubna.walt.service.TableServiceSimple.makeTable(TableServiceSimple.java:478)
+	at dubna.walt.service.TableServiceSimple.start(TableServiceSimple.java:304)
+	at dubna.walt.service.Service.doIt(Service.java:202)
+	at dubna.walt.SimpleQueryThread.startService(SimpleQueryThread.java:583)
+	at jinr.hrlhep.QueryThread.start(QueryThread.java:61)
+	at dubna.walt.Query.<init>(Query.java:75)
+	at jinr.hrlhep.Servlet.doGet(Servlet.java:89)
+	at dubna.walt.BasicServlet.doPost(BasicServlet.java:191)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.netbeans.modules.web.monitor.server.MonitorFilter.doFilter(MonitorFilter.java:393)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:217)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_346");'> Request_HR_LHEP_346 [24.01 10:59:10] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_346' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.history_cont&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.history_cont
+</xmp>*** EXCEPTION:<br><xmp>java.sql.SQLException: Unknown column 'sotr.history_cont' in 'order clause'; SQL: 'select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct , sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday , sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab , date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct , sotr.sovmeshenie , ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age from sotrudniki sotr where lab_id = 100000 order by sotr.history_cont '</xmp><hr>java.sql.SQLException: Unknown column 'sotr.history_cont' in 'order clause'; SQL: 'select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct , sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday , sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab , date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct , sotr.sovmeshenie , ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age from sotrudniki sotr where lab_id = 100000 order by sotr.history_cont '
+	at dubna.walt.util.DBUtil.getResults(DBUtil.java:448)
+	at dubna.walt.service.TableServiceSimple.runSQL(TableServiceSimple.java:1033)
+	at dubna.walt.service.TableServiceSimple.makeTable(TableServiceSimple.java:478)
+	at dubna.walt.service.TableServiceSimple.start(TableServiceSimple.java:304)
+	at dubna.walt.service.Service.doIt(Service.java:202)
+	at dubna.walt.SimpleQueryThread.startService(SimpleQueryThread.java:583)
+	at jinr.hrlhep.QueryThread.start(QueryThread.java:61)
+	at dubna.walt.Query.<init>(Query.java:75)
+	at jinr.hrlhep.Servlet.doGet(Servlet.java:89)
+	at dubna.walt.BasicServlet.doPost(BasicServlet.java:191)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.netbeans.modules.web.monitor.server.MonitorFilter.doFilter(MonitorFilter.java:393)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:217)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_347");'> Request_HR_LHEP_347 [24.01 10:59:12] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_347' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.dr&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 1ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.dr
+</xmp> <b> Processed in 75ms. </b><br><b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_348");'> Request_HR_LHEP_348 [24.01 10:59:16] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_348' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.grazhdan&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.grazhdan
+</xmp> <b> Processed in 74ms. </b><br><b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_349");'> Request_HR_LHEP_349 [24.01 10:59:17] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_349' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.nachalo_rab&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 1ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.nachalo_rab
+</xmp> <b> Processed in 72ms. </b><br><b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_350");'> Request_HR_LHEP_350 [24.01 10:59:17] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_350' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.okonch_rab&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.okonch_rab
+</xmp> <b> Processed in 85ms. </b><br><b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_351");'> Request_HR_LHEP_351 [24.01 10:59:23] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_351' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.stepen&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.stepen
+</xmp> <b> Processed in 88ms. </b><br><b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_352");'> Request_HR_LHEP_352 [24.01 10:59:29] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_352' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.TopParent_name&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.TopParent_name
+</xmp> <b> Processed in 73ms. </b><br> <b> NumTableRows=1151; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_347");'>Request_HR_LHEP_347 (tab_personal_table) DONE! (17335ms)</span> <BR>
+ <b> NumTableRows=1151; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_348");'>Request_HR_LHEP_348 (tab_personal_table) DONE! (16763ms)</span> <BR>
+ <b> NumTableRows=1151; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_350");'>Request_HR_LHEP_350 (tab_personal_table) DONE! (15325ms)</span> <BR>
+ <b> NumTableRows=1151; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_351");'>Request_HR_LHEP_351 (tab_personal_table) DONE! (12940ms)</span> <BR>
+ <b> NumTableRows=1151; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_349");'>Request_HR_LHEP_349 (tab_personal_table) DONE! (19518ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_353");'> Request_HR_LHEP_353 [24.01 10:59:38] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_353' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.usl_truda&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.usl_truda
+</xmp> <b> Processed in 75ms. </b><br> <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_353");'>Request_HR_LHEP_353 (tab_personal_table) DONE! (505ms)</span> <BR>
+ <b> NumTableRows=1151; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_352");'>Request_HR_LHEP_352 (tab_personal_table) DONE! (10256ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_354");'> Request_HR_LHEP_354 [24.01 10:59:40] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_354' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.history_cont&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.history_cont
+</xmp>*** EXCEPTION:<br><xmp>java.sql.SQLException: Unknown column 'sotr.history_cont' in 'order clause'; SQL: 'select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct , sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday , sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab , date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct , sotr.sovmeshenie , ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age from sotrudniki sotr where lab_id = 100000 order by sotr.history_cont '</xmp><hr>java.sql.SQLException: Unknown column 'sotr.history_cont' in 'order clause'; SQL: 'select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct , sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday , sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab , date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct , sotr.sovmeshenie , ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age from sotrudniki sotr where lab_id = 100000 order by sotr.history_cont '
+	at dubna.walt.util.DBUtil.getResults(DBUtil.java:448)
+	at dubna.walt.service.TableServiceSimple.runSQL(TableServiceSimple.java:1033)
+	at dubna.walt.service.TableServiceSimple.makeTable(TableServiceSimple.java:478)
+	at dubna.walt.service.TableServiceSimple.start(TableServiceSimple.java:304)
+	at dubna.walt.service.Service.doIt(Service.java:202)
+	at dubna.walt.SimpleQueryThread.startService(SimpleQueryThread.java:583)
+	at jinr.hrlhep.QueryThread.start(QueryThread.java:61)
+	at dubna.walt.Query.<init>(Query.java:75)
+	at jinr.hrlhep.Servlet.doGet(Servlet.java:89)
+	at dubna.walt.BasicServlet.doPost(BasicServlet.java:191)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.netbeans.modules.web.monitor.server.MonitorFilter.doFilter(MonitorFilter.java:393)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:217)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_355");'> Request_HR_LHEP_355 [24.01 10:59:43] 2: 0:0:0:0:0:0:0:1 c=tab_personal_table</span><div id='Request_HR_LHEP_355' class='req'> queryString:c=tab_personal_table&srn=1&srt=sotr.history_cont&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=1</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.history_cont
+</xmp>*** EXCEPTION:<br><xmp>java.sql.SQLException: Unknown column 'sotr.history_cont' in 'order clause'; SQL: 'select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct , sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday , sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab , date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct , sotr.sovmeshenie , ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age from sotrudniki sotr where lab_id = 100000 order by sotr.history_cont '</xmp><hr>java.sql.SQLException: Unknown column 'sotr.history_cont' in 'order clause'; SQL: 'select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct , sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday , sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab , date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct , sotr.sovmeshenie , ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age from sotrudniki sotr where lab_id = 100000 order by sotr.history_cont '
+	at dubna.walt.util.DBUtil.getResults(DBUtil.java:448)
+	at dubna.walt.service.TableServiceSimple.runSQL(TableServiceSimple.java:1033)
+	at dubna.walt.service.TableServiceSimple.makeTable(TableServiceSimple.java:478)
+	at dubna.walt.service.TableServiceSimple.start(TableServiceSimple.java:304)
+	at dubna.walt.service.Service.doIt(Service.java:202)
+	at dubna.walt.SimpleQueryThread.startService(SimpleQueryThread.java:583)
+	at jinr.hrlhep.QueryThread.start(QueryThread.java:61)
+	at dubna.walt.Query.<init>(Query.java:75)
+	at jinr.hrlhep.Servlet.doGet(Servlet.java:89)
+	at dubna.walt.BasicServlet.doPost(BasicServlet.java:191)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.netbeans.modules.web.monitor.server.MonitorFilter.doFilter(MonitorFilter.java:393)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:217)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
