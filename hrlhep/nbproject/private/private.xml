@@ -28,6 +28,7 @@
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/gateway/receive.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_salary.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_premii_table.cfg</file>
+            <file>file:/F:/LIT/dms/hrlhep/src/java/hrlhep.properties</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/gateway/receive_7_sotrudnik.cfg</file>
         </group>
     </open-files>

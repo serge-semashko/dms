@@ -1,0 +1,459 @@
+<html>
+    <head>
+        <title>HR LHEP Log</title>
+        <META http-equiv=Content-Type content="text/html; charset=utf-8">
+        <style>
+            body{background-color:#eefff4;}
+            xmp {margin:0;} 
+            .pt {cursor:pointer;} 
+            span.req_start {border:solid 1px red; font-weight:bold; background-color:#FFFFA0;}
+            span.req_end {border:solid 1px red; font-weight:bold; background-color:#D0FFB0;}
+            div.req {display:none; border:solid 1px red; padding:4px; background-color:white;}
+
+            span.ss_start {border:solid 1px red; background-color:#D0E8FF;}
+            span.ss_back {border:solid 1px blue; background-color:#D0FFB0;}
+            div.ss {display:none; border:solid 1px green; border-right:none; padding:6px; margin-left:5px;}
+        </style>
+        <script type="text/javascript">
+            var toggleDiv = function (id) {
+                var d = document.getElementById(id);
+                if (d.style.display === "block")
+                    d.style.display = "none";
+                else
+                    d.style.display = "block";
+            };
+        </script>
+    </head><body>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_1_29_19.html maxLength=500000
+</xmp>------ SQL done, 1ms.<br><BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_135");'> Request_HR_LHEP_135 [29.01 19:17:50] 2: 0:0:0:0:0:0:0:1 c=tab_fte_table</span><div id='Request_HR_LHEP_135' class='req'> queryString:c=tab_fte_table&srn=1&srt=sotr.FIO&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[fte topics header] (1) ]:</b><xmp>select concat("<th style=""text-align:center""  colspan=",
+count(topic_id) ,
+">",topic_id,"</th>") as topics_header
+FROM
+(SELECT * FROM (
+SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+GROUP BY utp.topic_id
+ORDER BY utp.topic_id
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Duplicate column name 'Topic_id'; SQL: 'select concat("<th style=""text-align:center""  colspan=", count(topic_id) , ">",topic_id,"</th>") as topics_header FROM (SELECT * FROM ( SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1 LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp GROUP BY utp.topic_id ORDER BY utp.topic_id'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.person_id, sotr.tab_n, sotr.F, sotr.I, sotr.O, sotr.FIO, sotr.otdel, sotr.post
+, sotr.division, sotr.category,  sotr.shtat_direct
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.FIO
+</xmp> <b> Processed in 39ms. </b><br><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=17914
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Duplicate column name 'Topic_id'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT * FROM ( SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1 LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=17914 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=150996
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Duplicate column name 'Topic_id'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT * FROM ( SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1 LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=150996 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=5406
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Duplicate column name 'Topic_id'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT * FROM ( SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1 LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=5406 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=102044
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Duplicate column name 'Topic_id'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT * FROM ( SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1 LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=102044 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=20909
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Duplicate column name 'Topic_id'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT * FROM ( SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1 LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=20909 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=40650
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Duplicate column name 'Topic_id'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT * FROM ( SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1 LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=40650 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=100720
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Duplicate column name 'Topic_id'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT * FROM ( SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1 LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=100720 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=82772
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Duplicate column name 'Topic_id'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT * FROM ( SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1 LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=82772 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=111580
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Duplicate column name 'Topic_id'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT * FROM ( SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1 LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=111580 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=10881
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Duplicate column name 'Topic_id'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT * FROM ( SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1 LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=10881 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=99087
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Duplicate column name 'Topic_id'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT * FROM ( SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1 LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=99087 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=6101
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Duplicate column name 'Topic_id'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT * FROM ( SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1 LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=6101 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=68055
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Duplicate column name 'Topic_id'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT * FROM ( SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1 LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=68055 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=6351
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Duplicate column name 'Topic_id'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT * FROM ( SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1 LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=6351 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=114497
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Duplicate column name 'Topic_id'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT * FROM ( SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1 LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=114497 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=166184
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Duplicate column name 'Topic_id'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT * FROM ( SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1 LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=166184 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=68700
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Duplicate column name 'Topic_id'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT * FROM ( SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1 LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=68700 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=145259
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Duplicate column name 'Topic_id'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT * FROM ( SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1 LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=145259 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=13884
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Duplicate column name 'Topic_id'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT * FROM ( SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1 LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=13884 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=3084
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Duplicate column name 'Topic_id'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT * FROM ( SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1 LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=3084 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+ <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_135");'>Request_HR_LHEP_135 (tab_fte_table) DONE! (2074ms)</span> <BR>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_1_29_19.html maxLength=500000
+</xmp>

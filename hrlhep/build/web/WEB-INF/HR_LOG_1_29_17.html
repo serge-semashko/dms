@@ -1,0 +1,1740 @@
+<html>
+    <head>
+        <title>HR LHEP Log</title>
+        <META http-equiv=Content-Type content="text/html; charset=utf-8">
+        <style>
+            body{background-color:#eefff4;}
+            xmp {margin:0;} 
+            .pt {cursor:pointer;} 
+            span.req_start {border:solid 1px red; font-weight:bold; background-color:#FFFFA0;}
+            span.req_end {border:solid 1px red; font-weight:bold; background-color:#D0FFB0;}
+            div.req {display:none; border:solid 1px red; padding:4px; background-color:white;}
+
+            span.ss_start {border:solid 1px red; background-color:#D0E8FF;}
+            span.ss_back {border:solid 1px blue; background-color:#D0FFB0;}
+            div.ss {display:none; border:solid 1px green; border-right:none; padding:6px; margin-left:5px;}
+        </style>
+        <script type="text/javascript">
+            var toggleDiv = function (id) {
+                var d = document.getElementById(id);
+                if (d.style.display === "block")
+                    d.style.display = "none";
+                else
+                    d.style.display = "block";
+            };
+        </script>
+    </head><body>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_1_29_17.html maxLength=500000
+</xmp>------ SQL done, 0ms.<br><BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_109");'> Request_HR_LHEP_109 [29.01 17:23:21] 2: 0:0:0:0:0:0:0:1 c=tab_fte_table</span><div id='Request_HR_LHEP_109' class='req'> queryString:c=tab_fte_table&srn=1&srt=sotr.FIO&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[fte topics header] (1) ]:</b><xmp>select concat("<th style=""text-align:center""  colspan=",
+count(topic_id) ,
+">",topic_id,"</th>") as topics_header
+FROM
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+GROUP BY utp.topic_id
+ORDER BY utp.topic_id
+</xmp><xmp>***** 4 record(s) retrieved. Filled 1 parameters: 
+topics_header=<th style="text-align:center"  colspan=3>1065</th><th style="text-align:center"  colspan=1>1081</th><th style="text-align:center"  colspan=1>1085</th><th style="text-align:center"  colspan=4>1087</th></xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[fte topics header] (2) ]:</b><xmp>select
+concat("<th>",ifnull(short_name,""),"</th>") as projects_header
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN projects p ON p.id = utp.project_id
+order BY p.topic_id, p.short_name
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+projects_header=<th>BM@N</th><th>MPD</th><th>Нукл./NICA</th><th>ATLAS</th><th>COMPASS-II</th><th>NA61-Shine</th><th>БЕККЕРЕЛЬ</th><th>СКАН-3</th><th>ФАЗА</th></xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[fte topics header] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.person_id, sotr.tab_n, sotr.F, sotr.I, sotr.O, sotr.FIO, sotr.otdel, sotr.post
+, sotr.division, sotr.category,  sotr.shtat_direct
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.FIO
+</xmp> <b> Processed in 39ms. </b><br><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=17914
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=9', true);" >1</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=7', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp>select concat(" prj=",
+utp.project_id, "perc=", ifnull(f.percent,0)) as tmpo_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=17914
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tmpo_projects_fte= prj=1perc=0 prj=2perc=0 prj=3perc=0 prj=9perc=1 prj=10perc=0 prj=4perc=0 prj=5perc=0 prj=6perc=0 prj=7perc=0</xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=150996
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=7', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp>select concat(" prj=",
+utp.project_id, "perc=", ifnull(f.percent,0)) as tmpo_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=150996
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tmpo_projects_fte= prj=1perc=0 prj=2perc=0 prj=3perc=0 prj=9perc=0 prj=10perc=0 prj=4perc=0 prj=5perc=0 prj=6perc=0 prj=7perc=0</xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=5406
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=7', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp>select concat(" prj=",
+utp.project_id, "perc=", ifnull(f.percent,0)) as tmpo_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=5406
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tmpo_projects_fte= prj=1perc=0 prj=2perc=0 prj=3perc=0 prj=9perc=0 prj=10perc=0 prj=4perc=0 prj=5perc=0 prj=6perc=0 prj=7perc=0</xmp>------ SQL done, 50ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=102044
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=7', true);" >0</td></xmp>------ SQL done, 50ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp>select concat(" prj=",
+utp.project_id, "perc=", ifnull(f.percent,0)) as tmpo_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=102044
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tmpo_projects_fte= prj=1perc=0 prj=2perc=0 prj=3perc=0 prj=9perc=0 prj=10perc=0 prj=4perc=0 prj=5perc=0 prj=6perc=0 prj=7perc=0</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=20909
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=7', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp>select concat(" prj=",
+utp.project_id, "perc=", ifnull(f.percent,0)) as tmpo_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=20909
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tmpo_projects_fte= prj=1perc=0 prj=2perc=0 prj=3perc=0 prj=9perc=0 prj=10perc=0 prj=4perc=0 prj=5perc=0 prj=6perc=0 prj=7perc=0</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=40650
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=7', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp>select concat(" prj=",
+utp.project_id, "perc=", ifnull(f.percent,0)) as tmpo_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=40650
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tmpo_projects_fte= prj=1perc=0 prj=2perc=0 prj=3perc=0 prj=9perc=0 prj=10perc=0 prj=4perc=0 prj=5perc=0 prj=6perc=0 prj=7perc=0</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=100720
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=2', true);" >1</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=7', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp>select concat(" prj=",
+utp.project_id, "perc=", ifnull(f.percent,0)) as tmpo_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=100720
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tmpo_projects_fte= prj=1perc=0 prj=2perc=1 prj=3perc=0 prj=9perc=0 prj=10perc=0 prj=4perc=0 prj=5perc=0 prj=6perc=0 prj=7perc=0</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=82772
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=7', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp>select concat(" prj=",
+utp.project_id, "perc=", ifnull(f.percent,0)) as tmpo_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=82772
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tmpo_projects_fte= prj=1perc=0 prj=2perc=0 prj=3perc=0 prj=9perc=0 prj=10perc=0 prj=4perc=0 prj=5perc=0 prj=6perc=0 prj=7perc=0</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=111580
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=7', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp>select concat(" prj=",
+utp.project_id, "perc=", ifnull(f.percent,0)) as tmpo_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=111580
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tmpo_projects_fte= prj=1perc=0 prj=2perc=0 prj=3perc=0 prj=9perc=0 prj=10perc=0 prj=4perc=0 prj=5perc=0 prj=6perc=0 prj=7perc=0</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=10881
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=7', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp>select concat(" prj=",
+utp.project_id, "perc=", ifnull(f.percent,0)) as tmpo_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=10881
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tmpo_projects_fte= prj=1perc=0 prj=2perc=0 prj=3perc=0 prj=9perc=0 prj=10perc=0 prj=4perc=0 prj=5perc=0 prj=6perc=0 prj=7perc=0</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=99087
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=7', true);" >0</td></xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp>select concat(" prj=",
+utp.project_id, "perc=", ifnull(f.percent,0)) as tmpo_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=99087
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tmpo_projects_fte= prj=1perc=0 prj=2perc=0 prj=3perc=0 prj=9perc=0 prj=10perc=0 prj=4perc=0 prj=5perc=0 prj=6perc=0 prj=7perc=0</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=6101
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=7', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp>select concat(" prj=",
+utp.project_id, "perc=", ifnull(f.percent,0)) as tmpo_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=6101
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tmpo_projects_fte= prj=1perc=0 prj=2perc=0 prj=3perc=0 prj=9perc=0 prj=10perc=0 prj=4perc=0 prj=5perc=0 prj=6perc=0 prj=7perc=0</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=68055
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=7', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp>select concat(" prj=",
+utp.project_id, "perc=", ifnull(f.percent,0)) as tmpo_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=68055
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tmpo_projects_fte= prj=1perc=0 prj=2perc=0 prj=3perc=0 prj=9perc=0 prj=10perc=0 prj=4perc=0 prj=5perc=0 prj=6perc=0 prj=7perc=0</xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=6351
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=7', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp>select concat(" prj=",
+utp.project_id, "perc=", ifnull(f.percent,0)) as tmpo_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=6351
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tmpo_projects_fte= prj=1perc=0 prj=2perc=0 prj=3perc=0 prj=9perc=0 prj=10perc=0 prj=4perc=0 prj=5perc=0 prj=6perc=0 prj=7perc=0</xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=114497
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=7', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp>select concat(" prj=",
+utp.project_id, "perc=", ifnull(f.percent,0)) as tmpo_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=114497
+order by utp.topic_id, utp.project_id
+</xmp><b>$INCLUDE </b>[report_]<BR>
+<xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tmpo_projects_fte= prj=1perc=0 prj=2perc=0 prj=3perc=0 prj=9perc=0 prj=10perc=0 prj=4perc=0 prj=5perc=0 prj=6perc=0 prj=7perc=0</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_1_29_17.html maxLength=500000
+</xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+------ SQL done, 23ms.<br><BR>
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=166184
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=7', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp>select concat(" prj=",
+utp.project_id, "perc=", ifnull(f.percent,0)) as tmpo_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=166184
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tmpo_projects_fte= prj=1perc=0 prj=2perc=0 prj=3perc=0 prj=9perc=0 prj=10perc=0 prj=4perc=0 prj=5perc=0 prj=6perc=0 prj=7perc=0</xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=68700
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=7', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp>select concat(" prj=",
+utp.project_id, "perc=", ifnull(f.percent,0)) as tmpo_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=68700
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tmpo_projects_fte= prj=1perc=0 prj=2perc=0 prj=3perc=0 prj=9perc=0 prj=10perc=0 prj=4perc=0 prj=5perc=0 prj=6perc=0 prj=7perc=0</xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=145259
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=7', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp>select concat(" prj=",
+utp.project_id, "perc=", ifnull(f.percent,0)) as tmpo_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=145259
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tmpo_projects_fte= prj=1perc=0 prj=2perc=0 prj=3perc=0 prj=9perc=0 prj=10perc=0 prj=4perc=0 prj=5perc=0 prj=6perc=0 prj=7perc=0</xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=13884
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=7', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp>select concat(" prj=",
+utp.project_id, "perc=", ifnull(f.percent,0)) as tmpo_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=13884
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tmpo_projects_fte= prj=1perc=0 prj=2perc=0 prj=3perc=0 prj=9perc=0 prj=10perc=0 prj=4perc=0 prj=5perc=0 prj=6perc=0 prj=7perc=0</xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=3084
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=7', true);" >0</td></xmp>------ SQL done, 2ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp>select concat(" prj=",
+utp.project_id, "perc=", ifnull(f.percent,0)) as tmpo_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=3084
+order by utp.topic_id, utp.project_id
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+tmpo_projects_fte= prj=1perc=0 prj=2perc=0 prj=3perc=0 prj=9perc=0 prj=10perc=0 prj=4perc=0 prj=5perc=0 prj=6perc=0 prj=7perc=0</xmp>------ SQL done, 49ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+ <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_109");'>Request_HR_LHEP_109 (tab_fte_table) DONE! (3539ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_111");'> Request_HR_LHEP_111 [29.01 17:24:57] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_111' class='req'> queryString:c=edit/fte_v1&tab_n=17914&project_id=1&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 1
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1065</xmp>------ SQL done, 7ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=17914
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Абраамян Хачик Унанович
+tab_n=17914</xmp>------ SQL done, 8ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 17914 and project_id = 1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 8ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 1
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1065</xmp>------ SQL done, 7ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=1065
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-0-1065-2007/2019	</xmp>------ SQL done, 9ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=1
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=BM@N</xmp>------ SQL done, 8ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =-1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 8ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_111");'>Request_HR_LHEP_111 (edit/fte_v1) DONE! (418ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_112");'> Request_HR_LHEP_112 [29.01 17:25:2] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_112' class='req'> queryString:c=edit/fte_v1&tab_n=17914&project_id=2&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 2
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1065</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=17914
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Абраамян Хачик Унанович
+tab_n=17914</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 17914 and project_id = 2
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 2
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1065</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=1065
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-0-1065-2007/2019	</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=2
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=MPD</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =-1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_112");'>Request_HR_LHEP_112 (edit/fte_v1) DONE! (317ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_113");'> Request_HR_LHEP_113 [29.01 17:25:6] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_113' class='req'> queryString:c=edit/fte_v1&tab_n=17914&project_id=3&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 3
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1065</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=17914
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Абраамян Хачик Унанович
+tab_n=17914</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 17914 and project_id = 3
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 3
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1065</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=1065
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-0-1065-2007/2019	</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=3
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=Нукл./NICA</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =-1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_113");'>Request_HR_LHEP_113 (edit/fte_v1) DONE! (336ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_114");'> Request_HR_LHEP_114 [29.01 17:25:9] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_114' class='req'> queryString:c=edit/fte_v1&tab_n=17914&project_id=9&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 9
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1081</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=17914
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Абраамян Хачик Унанович
+tab_n=17914</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 17914 and project_id = 9
+</xmp><xmp>***** 1 record(s) retrieved. Filled 3 parameters: 
+percent=1
+changed=2018-01-28 15:45:50.0
+changed_by=3663</xmp>------ SQL done, 11ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 9
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1081</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=1081
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-0-1081-2009/2019</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=9
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=ATLAS</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =3663
+</xmp><xmp>***** 2 record(s) retrieved. Filled 1 parameters: 
+changed_by_fio=Семашко Сергей ВладимировичСемашко Сергей Владимирович</xmp>------ SQL done, 3ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_114");'>Request_HR_LHEP_114 (edit/fte_v1) DONE! (330ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_115");'> Request_HR_LHEP_115 [29.01 17:25:12] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_115' class='req'> queryString:c=edit/fte_v1&tab_n=17914&project_id=10&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 10
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1085</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=17914
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Абраамян Хачик Унанович
+tab_n=17914</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 17914 and project_id = 10
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 10
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1085</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=1085
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-0-1085-2009/2019</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=10
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=COMPASS-II</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =-1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_115");'>Request_HR_LHEP_115 (edit/fte_v1) DONE! (314ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_116");'> Request_HR_LHEP_116 [29.01 17:25:16] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_116' class='req'> queryString:c=edit/fte_v1&tab_n=17914&project_id=4&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 4
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=17914
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Абраамян Хачик Унанович
+tab_n=17914</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 17914 and project_id = 4
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 4
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=1087
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-1-1087-2009/2020</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=4
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=NA61-Shine</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =-1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_116");'>Request_HR_LHEP_116 (edit/fte_v1) DONE! (337ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_117");'> Request_HR_LHEP_117 [29.01 17:25:23] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_117' class='req'> queryString:c=edit/fte_v1&tab_n=17914&project_id=5&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 5
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=17914
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Абраамян Хачик Унанович
+tab_n=17914</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 17914 and project_id = 5
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 5
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=1087
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-1-1087-2009/2020</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=5
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=ФАЗА</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =-1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_117");'>Request_HR_LHEP_117 (edit/fte_v1) DONE! (537ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_118");'> Request_HR_LHEP_118 [29.01 17:25:28] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_118' class='req'> queryString:c=edit/fte_v1&tab_n=17914&project_id=6&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 6
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=17914
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Абраамян Хачик Унанович
+tab_n=17914</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 17914 and project_id = 6
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 6
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=1087
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-1-1087-2009/2020</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=6
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=БЕККЕРЕЛЬ</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =-1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_118");'>Request_HR_LHEP_118 (edit/fte_v1) DONE! (247ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_119");'> Request_HR_LHEP_119 [29.01 17:25:32] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_119' class='req'> queryString:c=edit/fte_v1&tab_n=17914&project_id=4&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 4
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 6ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=17914
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Абраамян Хачик Унанович
+tab_n=17914</xmp>------ SQL done, 8ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 17914 and project_id = 4
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 8ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 4
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 7ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=1087
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-1-1087-2009/2020</xmp>------ SQL done, 7ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=4
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=NA61-Shine</xmp>------ SQL done, 9ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =-1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 7ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_119");'>Request_HR_LHEP_119 (edit/fte_v1) DONE! (426ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_120");'> Request_HR_LHEP_120 [29.01 17:25:36] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_120' class='req'> queryString:c=edit/fte_v1&tab_n=17914&project_id=5&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 5
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 7ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=17914
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Абраамян Хачик Унанович
+tab_n=17914</xmp>------ SQL done, 8ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 17914 and project_id = 5
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 8ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 5
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 8ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=1087
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-1-1087-2009/2020</xmp>------ SQL done, 8ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=5
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=ФАЗА</xmp>------ SQL done, 7ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =-1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_120");'>Request_HR_LHEP_120 (edit/fte_v1) DONE! (375ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_121");'> Request_HR_LHEP_121 [29.01 17:25:39] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_121' class='req'> queryString:c=edit/fte_v1&tab_n=17914&project_id=6&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 6
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=17914
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Абраамян Хачик Унанович
+tab_n=17914</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 17914 and project_id = 6
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 6
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=1087
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-1-1087-2009/2020</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=6
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=БЕККЕРЕЛЬ</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =-1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_121");'>Request_HR_LHEP_121 (edit/fte_v1) DONE! (265ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_122");'> Request_HR_LHEP_122 [29.01 17:25:42] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_122' class='req'> queryString:c=edit/fte_v1&tab_n=17914&project_id=7&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 7
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=17914
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Абраамян Хачик Унанович
+tab_n=17914</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 17914 and project_id = 7
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 7
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=1087
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-1-1087-2009/2020</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=7
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=СКАН-3</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =-1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_122");'>Request_HR_LHEP_122 (edit/fte_v1) DONE! (282ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_123");'> Request_HR_LHEP_123 [29.01 17:25:46] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_123' class='req'> queryString:c=edit/fte_v1&tab_n=150996&project_id=4&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 4
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=150996
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Аввакумова Ирина Леонидовна
+tab_n=150996</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 150996 and project_id = 4
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 4
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=1087
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-1-1087-2009/2020</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=4
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=NA61-Shine</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =-1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_123");'>Request_HR_LHEP_123 (edit/fte_v1) DONE! (285ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_124");'> Request_HR_LHEP_124 [29.01 17:25:49] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_124' class='req'> queryString:c=edit/fte_v1&tab_n=150996&project_id=5&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 5
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=150996
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Аввакумова Ирина Леонидовна
+tab_n=150996</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 150996 and project_id = 5
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 5
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=1087
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-1-1087-2009/2020</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=5
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=ФАЗА</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =-1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_124");'>Request_HR_LHEP_124 (edit/fte_v1) DONE! (273ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_125");'> Request_HR_LHEP_125 [29.01 17:25:52] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_125' class='req'> queryString:c=edit/fte_v1&tab_n=150996&project_id=6&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 6
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=150996
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Аввакумова Ирина Леонидовна
+tab_n=150996</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 150996 and project_id = 6
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 6
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=1087
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-1-1087-2009/2020</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=6
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=БЕККЕРЕЛЬ</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =-1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_125");'>Request_HR_LHEP_125 (edit/fte_v1) DONE! (339ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_126");'> Request_HR_LHEP_126 [29.01 17:25:56] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_126' class='req'> queryString:c=edit/fte_v1&tab_n=150996&project_id=7&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 7
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=150996
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Аввакумова Ирина Леонидовна
+tab_n=150996</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 150996 and project_id = 7
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 7
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=1087
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-1-1087-2009/2020</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=7
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=СКАН-3</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =-1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_126");'>Request_HR_LHEP_126 (edit/fte_v1) DONE! (350ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_127");'> Request_HR_LHEP_127 [29.01 17:26:0] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_127' class='req'> queryString:c=edit/fte_v1&tab_n=82772&project_id=4&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 4
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=82772
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Аверьянов Михаил Юрьевич
+tab_n=82772</xmp>------ SQL done, 3ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 82772 and project_id = 4
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 4
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=1087
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-1-1087-2009/2020</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=4
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=NA61-Shine</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =-1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_127");'>Request_HR_LHEP_127 (edit/fte_v1) DONE! (276ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_128");'> Request_HR_LHEP_128 [29.01 17:26:5] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_128' class='req'> queryString:c=edit/fte_v1&tab_n=40650&project_id=5&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 5
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=40650
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Аверичев Георгий Станиславович
+tab_n=40650</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 40650 and project_id = 5
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 5
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=1087
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-1-1087-2009/2020</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=5
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=ФАЗА</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =-1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_128");'>Request_HR_LHEP_128 (edit/fte_v1) DONE! (246ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_129");'> Request_HR_LHEP_129 [29.01 17:26:10] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_129' class='req'> queryString:c=edit/fte_v1&tab_n=99087&project_id=5&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 5
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=99087
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Агакишиев Гейдар Нусрат Оглы
+tab_n=99087</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 99087 and project_id = 5
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 5
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=1087
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-1-1087-2009/2020</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=5
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=ФАЗА</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =-1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_129");'>Request_HR_LHEP_129 (edit/fte_v1) DONE! (246ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_130");'> Request_HR_LHEP_130 [29.01 17:26:14] 2: 0:0:0:0:0:0:0:1 c=edit/fte_v1</span><div id='Request_HR_LHEP_130' class='req'> queryString:c=edit/fte_v1&tab_n=17914&project_id=6&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[edit fte form]<BR>
+<br> <b>SQL: [[fill topic id] (1) ]:</b><xmp>select topic_id from projects where id = 6
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[fill topic id] (2) ]:</b><xmp></xmp><br> <b>SQL: [[getRecord] (1) ]:</b><xmp>select sotr.FIO, sotr.tab_n
+from sotrudniki sotr
+left join premii on sotr.tab_n=premii.tab_n  and premii.year=year(now())and premii.month=1
+where sotr.tab_n=17914
+</xmp><xmp>***** 1 record(s) retrieved. Filled 2 parameters: 
+FIO=Абраамян Хачик Унанович
+tab_n=17914</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (2) ]:</b><xmp>select percent, changed, ifnull(changed_by,-1) as changed_by from FTE
+where tab_n = 17914 and project_id = 6
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 3ms.<br><BR>
+<br> <b>SQL: [[getRecord] (3) ]:</b><xmp>select topic_id from projects where id = 6
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_id=1087</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (4) ]:</b><xmp>select full_number as topic_name from topics  where id=1087
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+topic_name=02-1-1087-2009/2020</xmp>------ SQL done, 1ms.<br><BR>
+<br> <b>SQL: [[getRecord] (5) ]:</b><xmp>select short_name as project_name  from projects where id=6
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+project_name=БЕККЕРЕЛЬ</xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (6) ]:</b><xmp>select ifnull(fio,"") as changed_by_fio from sotrudniki where person_id =-1
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 2ms.<br><BR>
+<br> <b>SQL: [[getRecord] (7) ]:</b><xmp></xmp><b>$INCLUDE </b>[month]</tr><BR>
+<b>$INCLUDE </b>[view form]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_130");'>Request_HR_LHEP_130 (edit/fte_v1) DONE! (280ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_131");'> Request_HR_LHEP_131 [29.01 17:27:26] 2: 0:0:0:0:0:0:0:1 c=tab_fte_table</span><div id='Request_HR_LHEP_131' class='req'> queryString:c=tab_fte_table&srn=1&srt=sotr.FIO&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[fte topics header] (1) ]:</b><xmp>select concat("<th style=""text-align:center""  colspan=",
+count(topic_id) ,
+">",topic_id,"</th>") as topics_header
+FROM
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+GROUP BY utp.topic_id
+ORDER BY utp.topic_id
+</xmp><xmp>***** 4 record(s) retrieved. Filled 1 parameters: 
+topics_header=<th style="text-align:center"  colspan=3>1065</th><th style="text-align:center"  colspan=1>1081</th><th style="text-align:center"  colspan=1>1085</th><th style="text-align:center"  colspan=4>1087</th></xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[fte topics header] (2) ]:</b><xmp>select
+concat("<th>",ifnull(short_name,""),"</th>") as projects_header
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN projects p ON p.id = utp.project_id
+order BY p.topic_id, p.short_name
+</xmp><xmp>***** 9 record(s) retrieved. Filled 1 parameters: 
+projects_header=<th>BM@N</th><th>MPD</th><th>Нукл./NICA</th><th>ATLAS</th><th>COMPASS-II</th><th>NA61-Shine</th><th>БЕККЕРЕЛЬ</th><th>СКАН-3</th><th>ФАЗА</th></xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[fte topics header] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.person_id, sotr.tab_n, sotr.F, sotr.I, sotr.O, sotr.FIO, sotr.otdel, sotr.post
+, sotr.division, sotr.category,  sotr.shtat_direct
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.FIO
+</xmp> <b> Processed in 41ms. </b><br><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=17914
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Unknown column 'utp.short_name' in 'order clause'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=17914 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=150996
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Unknown column 'utp.short_name' in 'order clause'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=150996 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=5406
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Unknown column 'utp.short_name' in 'order clause'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=5406 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=102044
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Unknown column 'utp.short_name' in 'order clause'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=102044 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=20909
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Unknown column 'utp.short_name' in 'order clause'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=20909 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=40650
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Unknown column 'utp.short_name' in 'order clause'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=40650 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=100720
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Unknown column 'utp.short_name' in 'order clause'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=100720 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=82772
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Unknown column 'utp.short_name' in 'order clause'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=82772 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=111580
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Unknown column 'utp.short_name' in 'order clause'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=111580 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=10881
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Unknown column 'utp.short_name' in 'order clause'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=10881 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=99087
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Unknown column 'utp.short_name' in 'order clause'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=99087 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=6101
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Unknown column 'utp.short_name' in 'order clause'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=6101 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=68055
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Unknown column 'utp.short_name' in 'order clause'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=68055 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=6351
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Unknown column 'utp.short_name' in 'order clause'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=6351 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=114497
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Unknown column 'utp.short_name' in 'order clause'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=114497 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=166184
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Unknown column 'utp.short_name' in 'order clause'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=166184 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=68700
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Unknown column 'utp.short_name' in 'order clause'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=68700 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=145259
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Unknown column 'utp.short_name' in 'order clause'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=145259 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=13884
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Unknown column 'utp.short_name' in 'order clause'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=13884 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=3084
+order by utp.topic_id, utp.short_name
+</xmp>XXXXXXXX Exception: java.sql.SQLException: Unknown column 'utp.short_name' in 'order clause'; SQL: 'select concat("<td ", "onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=", ifnull(utp.project_id,-1), "', true);"" ", ">", ifnull(f.percent,0),"</td>") as tab_n_projects_fte from (SELECT ur.topic_id AS topic_id, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0 UNION SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN (SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) utp LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=3084 order by utp.topic_id, utp.short_name'<BR>
+XXXXXXXX FATAL Exception - QUIT <BR>
+ <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_131");'>Request_HR_LHEP_131 (tab_fte_table) DONE! (2069ms)</span> <BR>
