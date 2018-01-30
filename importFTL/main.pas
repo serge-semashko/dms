@@ -68,7 +68,7 @@ var
  topic, project, fte,prstr, outstr,post, fio, tab_n : string;
  ff : tfilestream;
  ffsql : tfilestream;
-
+ fte_perc : Integer;
 begin
   DeleteFile(ExtractFilePath(Application.ExeName)+'out.txt');
   DeleteFile(ExtractFilePath(Application.ExeName)+'sql.txt');
@@ -94,12 +94,15 @@ begin
            projects[prj] := project;
          end;
          fte := sheetin.cells[xrow,prj];
-         fte := StringReplace(fte,',','.',[rfReplaceAll]);
-         outstr := tab_n   +fio+' '+' '+topic+ ' '+project+' '+' '+fte+' '+#13;
+         DecimalSeparator := '.';
          if Trim(fte) <> ''  then begin
+           fte := StringReplace(fte,',','.',[rfReplaceAll]);
+
+           fte_perc := Round(strtofloat(fte)*100);
+           outstr := tab_n   +fio+' '+' '+topic+ ' '+project+' '+' '+IntToStr(fte_perc)+' '+#13;
            ff.Write(outstr[1],Length(outstr));
            outstr := 'insert FTE (tab_n,topic_id,project_id,percent, changed_by) values('+tab_n+', '+topic+', '+
-           'ifnull((select id from projects where short_name = "'+project+'"),'+IntToStr(-xrow+13)+'),'+fte+',-1);'+#13;
+           'ifnull((select id from projects where short_name like "'+project+'%"),'+IntToStr(-xrow+13)+'),'+IntToStr(fte_perc)+',-1);'+#13;
            ffsql.Write(outstr[1],Length(outstr));
          end;
        end;

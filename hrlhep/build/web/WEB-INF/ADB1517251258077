@@ -1,0 +1,899 @@
+<HTML>
+<HEAD><TITLE></TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<style>
+td {vertical-align:top;}
+</style>
+</head><body>
+<table class="tlist tgreen" cellspacing=0 border=1 cellpadding="3">
+<tr>
+<th colspan="7" style="text-align:center"></th>
+<th colspan="222" style="text-align:center">FTE по темам</th>
+</tr><tr>
+<th class="srh" sr="sotr.tab_n">Таб.№</th>
+<th class="srh" sr="sotr.FIO">ФИО</th>
+<th class="srh"  sr="sotr.TopParent_name" >Отделение</th>
+<th class="srh"  sr="sotr.subTopParent_name" >Подразделение</th>
+<th class="srh" sr="sotr.post">Должность</th>
+<th class="srh" sr="sotr.category">Категория</th>
+<th class="srh" sr="sotr.shtat_direct">Штат</th>
+<th  sr="fte">FTE</th>
+<th style="text-align:center"  colspan=3>1065</th><th style="text-align:center"  colspan=1>1081</th><th style="text-align:center"  colspan=1>1085</th><th style="text-align:center"  colspan=4>1087</th>
+</tr><tr>
+<th colspan="7" style="text-align:center"> </th>
+<th  >FTE</th>
+<th>BM@N</th><th>MPD</th><th>Нукл./NICA</th><th>ATLAS</th><th>COMPASS-II</th><th>NA61-Shine</th><th>БЕККЕРЕЛЬ</th><th>СКАН-3</th><th>ФАЗА</th>
+</tr>
+<tr
+>
+<td style="1border-right: none">3166</td>
+<td style="1border-left: none;border-right: none">Жабицкий Вячеслав Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">ведущий научный сотрудник</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Научные и научно-педагогические работники</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3166&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3166&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3166&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3166&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3166&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3166&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3166&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3166&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3166&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">7619</td>
+<td style="1border-left: none;border-right: none">Мончинский Валерий Алексеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">консультант при дирекции лаборатории</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Научные и научно-педагогические работники</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7619&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7619&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7619&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7619&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7619&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7619&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7619&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7619&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7619&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">7986</td>
+<td style="1border-left: none;border-right: none">Семенюшкин Игорь Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">консультант</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Научные и научно-педагогические работники</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7986&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7986&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7986&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7986&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7986&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7986&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7986&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7986&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7986&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">101433</td>
+<td style="1border-left: none;border-right: none">Шурхно Николай Алексеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">научный сотрудник</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Научные и научно-педагогические работники</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=101433&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=101433&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=101433&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=101433&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=101433&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=101433&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=101433&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=101433&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=101433&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">154815</td>
+<td style="1border-left: none;border-right: none">Сыресин Евгений Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">главный инженер установки</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Руководители</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=154815&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=154815&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=154815&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=154815&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=154815&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=154815&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=154815&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=154815&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=154815&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">251209</td>
+<td style="1border-left: none;border-right: none">Ширков Григорий Дмитриевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">главный научный сотрудник</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Научные и научно-педагогические работники</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=251209&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=251209&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=251209&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=251209&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=251209&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=251209&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=251209&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=251209&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=251209&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">275391</td>
+<td style="1border-left: none;border-right: none">Сидорин Анатолий Олегович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">заместитель начальника отделения по научной работе</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Научные и научно-педагогические работники</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=275391&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=275391&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=275391&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=275391&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=275391&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=275391&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=275391&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=275391&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=275391&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">170438</td>
+<td style="1border-left: none;border-right: none">Лалаян Михаил Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">научный сотрудник</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Научные и научно-педагогические работники</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170438&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">173174</td>
+<td style="1border-left: none;border-right: none">Гусарова Мария Александровна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">научный сотрудник</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Научные и научно-педагогические работники</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173174&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">173646</td>
+<td style="1border-left: none;border-right: none">Шатохин Вадим Леонидович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">научный сотрудник</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Научные и научно-педагогические работники</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173646&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173646&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173646&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173646&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173646&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173646&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173646&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173646&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173646&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">6204</td>
+<td style="1border-left: none;border-right: none">Юдин Иван Степанович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Диспетчерская служба Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Рабочие</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6204&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6204&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6204&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6204&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6204&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6204&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6204&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6204&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6204&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">6278</td>
+<td style="1border-left: none;border-right: none">Руднев Евгений Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Диспетчерская служба Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">ведущий инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6278&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6278&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6278&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6278&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6278&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6278&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6278&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6278&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6278&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">6655</td>
+<td style="1border-left: none;border-right: none">Чуркин Виктор Георгиевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Диспетчерская служба Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Рабочие</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6655&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6655&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6655&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6655&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6655&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6655&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6655&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6655&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6655&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">6661</td>
+<td style="1border-left: none;border-right: none">Нефедьев Иван Яковлевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Диспетчерская служба Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">ведущий инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6661&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6661&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6661&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6661&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6661&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6661&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6661&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6661&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6661&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">7588</td>
+<td style="1border-left: none;border-right: none">Исаев Александр Сергеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Диспетчерская служба Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">ведущий инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7588&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7588&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7588&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7588&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7588&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7588&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7588&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7588&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=7588&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">131020</td>
+<td style="1border-left: none;border-right: none">Кутенков Сергей Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Диспетчерская служба Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Рабочие</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=131020&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=131020&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=131020&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=131020&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=131020&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=131020&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=131020&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=131020&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=131020&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">131759</td>
+<td style="1border-left: none;border-right: none">Нефедьев Сергей Иванович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Диспетчерская служба Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">ведущий инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=131759&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=131759&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=131759&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=131759&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=131759&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=131759&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=131759&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=131759&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=131759&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">150004</td>
+<td style="1border-left: none;border-right: none">Карягин Александр Юрьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Диспетчерская служба Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Рабочие</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150004&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150004&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150004&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150004&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150004&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150004&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150004&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150004&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150004&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">230577</td>
+<td style="1border-left: none;border-right: none">Алфеев Александр Валерьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Диспетчерская служба Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">начальник службы</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Руководители</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=230577&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=230577&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=230577&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=230577&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=230577&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=230577&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=230577&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=230577&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=230577&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">2264</td>
+<td style="1border-left: none;border-right: none">Виноградов Александр Сергеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=2264&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=2264&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=2264&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=2264&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=2264&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=2264&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=2264&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=2264&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=2264&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">6280</td>
+<td style="1border-left: none;border-right: none">Савельев Александр Алексеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Рабочие</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6280&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6280&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6280&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6280&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6280&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6280&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6280&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6280&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6280&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">6351</td>
+<td style="1border-left: none;border-right: none">Агафонова Тамара Николаевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Рабочие</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">6386</td>
+<td style="1border-left: none;border-right: none">Кондратьев Николай Григорьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">ведущий инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6386&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6386&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6386&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6386&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6386&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6386&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6386&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6386&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6386&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">6406</td>
+<td style="1border-left: none;border-right: none">Филиппов Николай Анатольевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">начальник группы</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Руководители</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6406&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6406&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6406&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6406&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6406&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6406&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6406&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6406&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6406&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">6408</td>
+<td style="1border-left: none;border-right: none">Филиппов Анатолий Яковлевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Рабочие</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6408&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6408&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6408&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6408&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6408&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6408&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6408&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6408&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6408&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">6412</td>
+<td style="1border-left: none;border-right: none">Шахматов Александр Сергеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Рабочие</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6412&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6412&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6412&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6412&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6412&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6412&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6412&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6412&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6412&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">6435</td>
+<td style="1border-left: none;border-right: none">Попков Роман Григорьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Рабочие</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6435&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6435&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6435&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6435&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6435&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6435&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6435&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6435&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6435&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">6457</td>
+<td style="1border-left: none;border-right: none">Морохова Татьяна Борисовна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">инженер-конструктор 2 категории</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6457&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6457&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6457&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6457&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6457&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6457&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6457&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6457&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6457&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">6515</td>
+<td style="1border-left: none;border-right: none">Добрынина Ольга Викторовна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">старший инспектор</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6515&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6515&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6515&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6515&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6515&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6515&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6515&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6515&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6515&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">6602</td>
+<td style="1border-left: none;border-right: none">Блинов Николай Алексеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">начальник группы</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Руководители</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6602&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6602&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6602&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6602&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6602&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6602&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6602&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6602&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6602&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">6630</td>
+<td style="1border-left: none;border-right: none">Кукушкин Анатолий Андреевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">механик экспериментальных стендов и установок</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Рабочие</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6630&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6630&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6630&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6630&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6630&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6630&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6630&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6630&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6630&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">6660</td>
+<td style="1border-left: none;border-right: none">Писарев Юрий Алексеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Рабочие</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6660&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6660&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6660&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6660&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6660&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6660&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6660&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6660&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6660&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">6663</td>
+<td style="1border-left: none;border-right: none">Жильцова Наталья Александровна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">старший инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6663&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6663&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6663&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6663&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6663&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6663&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6663&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6663&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6663&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">21185</td>
+<td style="1border-left: none;border-right: none">Силушин Геннадий Иванович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Рабочие</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=21185&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=21185&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=21185&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=21185&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=21185&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=21185&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=21185&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=21185&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=21185&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">27977</td>
+<td style="1border-left: none;border-right: none">Уразаков Эрнаст Истюреевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">советник</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Научные и научно-педагогические работники</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=27977&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=27977&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=27977&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=27977&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=27977&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=27977&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=27977&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=27977&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=27977&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">80734</td>
+<td style="1border-left: none;border-right: none">Карпинский Виктор Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">начальник отдела</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Научные и научно-педагогические работники</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=80734&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=80734&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=80734&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=80734&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=80734&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=80734&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=80734&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=80734&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=80734&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">102728</td>
+<td style="1border-left: none;border-right: none">Федоров Виктор Викторович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Рабочие</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102728&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102728&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102728&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102728&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102728&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102728&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102728&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102728&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102728&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">102852</td>
+<td style="1border-left: none;border-right: none">Шурыгин Александр Алексеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102852&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102852&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102852&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102852&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102852&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102852&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102852&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102852&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102852&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">103657</td>
+<td style="1border-left: none;border-right: none">Ноженко Юрий Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=103657&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=103657&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=103657&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=103657&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=103657&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=103657&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=103657&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=103657&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=103657&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">104683</td>
+<td style="1border-left: none;border-right: none">Орлов Артем Станиславович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">старший техник</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=104683&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=104683&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=104683&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=104683&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=104683&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=104683&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=104683&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=104683&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=104683&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">111578</td>
+<td style="1border-left: none;border-right: none">Товстуха Владимир Григорьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Рабочие</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111578&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111578&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111578&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111578&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111578&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111578&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111578&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111578&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111578&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">113025</td>
+<td style="1border-left: none;border-right: none">Андрюхин Роман Васильевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Рабочие</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=113025&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=113025&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=113025&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=113025&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=113025&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=113025&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=113025&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=113025&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=113025&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">122456</td>
+<td style="1border-left: none;border-right: none">Арефьев Сергей Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=122456&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=122456&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=122456&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=122456&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=122456&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=122456&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=122456&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=122456&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=122456&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">123024</td>
+<td style="1border-left: none;border-right: none">Купцов Антон Валерьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Рабочие</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=123024&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=123024&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=123024&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=123024&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=123024&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=123024&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=123024&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=123024&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=123024&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">123991</td>
+<td style="1border-left: none;border-right: none">Караваев Андрей Валерьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Рабочие</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=123991&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=123991&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=123991&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=123991&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=123991&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=123991&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=123991&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=123991&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=123991&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">133236</td>
+<td style="1border-left: none;border-right: none">Бугаев Владимир Викторович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">ведущий инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=133236&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=133236&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=133236&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=133236&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=133236&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=133236&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=133236&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=133236&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=133236&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">133491</td>
+<td style="1border-left: none;border-right: none">Калагин Илья Игоревич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=133491&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=133491&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=133491&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=133491&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=133491&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=133491&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=133491&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=133491&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=133491&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">134827</td>
+<td style="1border-left: none;border-right: none">Степанов Виктор Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Рабочие</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=134827&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=134827&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=134827&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=134827&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=134827&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=134827&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=134827&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=134827&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=134827&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">134894</td>
+<td style="1border-left: none;border-right: none">Рябов Виталий Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">техник</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=134894&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=134894&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=134894&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=134894&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=134894&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=134894&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=134894&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=134894&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=134894&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">144673</td>
+<td style="1border-left: none;border-right: none">Копченов Александр Викторович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=144673&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=144673&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=144673&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=144673&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=144673&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=144673&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=144673&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=144673&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=144673&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">145093</td>
+<td style="1border-left: none;border-right: none">Кулаева Татьяна Анатольевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145093&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145093&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145093&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145093&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145093&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145093&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145093&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145093&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145093&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">146293</td>
+<td style="1border-left: none;border-right: none">Нефедов Олег Андреевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">техник</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=146293&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=146293&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=146293&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=146293&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=146293&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=146293&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=146293&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=146293&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=146293&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">152486</td>
+<td style="1border-left: none;border-right: none">Ахмадризялов Ринат Мубаракович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=152486&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=152486&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=152486&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=152486&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=152486&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=152486&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=152486&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=152486&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=152486&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">152579</td>
+<td style="1border-left: none;border-right: none">Киров Сергей Валерьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=152579&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=152579&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=152579&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=152579&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=152579&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=152579&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=152579&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=152579&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=152579&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">160110</td>
+<td style="1border-left: none;border-right: none">Гулина Марина Валерьевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=160110&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=160110&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=160110&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=160110&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=160110&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=160110&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=160110&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=160110&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=160110&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">160723</td>
+<td style="1border-left: none;border-right: none">Щербаков Алексей Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=160723&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=160723&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=160723&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=160723&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=160723&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=160723&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=160723&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=160723&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=160723&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">162313</td>
+<td style="1border-left: none;border-right: none">Травин Никита Валерьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=162313&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=162313&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=162313&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=162313&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=162313&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=162313&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=162313&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=162313&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=162313&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">230542</td>
+<td style="1border-left: none;border-right: none">Осипенков Андрей Леонидович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">начальник группы</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Руководители</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=230542&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=230542&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=230542&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=230542&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=230542&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=230542&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=230542&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=230542&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=230542&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">260143</td>
+<td style="1border-left: none;border-right: none">Зорин Андрей Геннадьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">научный сотрудник</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Научные и научно-педагогические работники</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=260143&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=260143&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=260143&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=260143&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=260143&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=260143&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=260143&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=260143&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=260143&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">293765</td>
+<td style="1border-left: none;border-right: none">Кузнецов Павел Сергеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Рабочие</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=293765&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=293765&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=293765&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=293765&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=293765&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=293765&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=293765&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=293765&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=293765&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">172869</td>
+<td style="1border-left: none;border-right: none">Кузнецов Максим Игоревич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=172869&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">165816</td>
+<td style="1border-left: none;border-right: none">Гришина Юлия Владимировна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">старший техник</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=165816&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">170719</td>
+<td style="1border-left: none;border-right: none">Филиппов Михаил Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=170719&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">173915</td>
+<td style="1border-left: none;border-right: none">Чебыкин Иван Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173915&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173915&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173915&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173915&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173915&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173915&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173915&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173915&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=173915&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">3666</td>
+<td style="1border-left: none;border-right: none">Мельникова Наталья Владимировна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">старший товаровед</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3666&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3666&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3666&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3666&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3666&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3666&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3666&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3666&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3666&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">6106</td>
+<td style="1border-left: none;border-right: none">Батин Владимир Ильич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">заместитель начальника отдела</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Научные и научно-педагогические работники</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6106&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6106&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6106&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6106&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6106&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6106&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6106&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6106&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6106&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">6110</td>
+<td style="1border-left: none;border-right: none">Борзунов Юрий Тимофеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">ведущий инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6110&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6110&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6110&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6110&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6110&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6110&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6110&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6110&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6110&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">6119</td>
+<td style="1border-left: none;border-right: none">Гончаров Игорь Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">консультант</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Научные и научно-педагогические работники</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6119&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6119&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6119&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6119&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6119&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6119&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6119&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6119&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6119&project_id=5', true);" >0</td>
+</tr>
+<tr
+>
+<td style="1border-right: none">6125</td>
+<td style="1border-left: none;border-right: none">Дробин Валерий Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">ведущий инженер</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Специалисты</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6125&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6125&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6125&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6125&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6125&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6125&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6125&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6125&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6125&project_id=5', true);" >0</td>
+</tr>
+<tr
+class="pt oddRow"
+>
+<td style="1border-right: none">6136</td>
+<td style="1border-left: none;border-right: none">Егорова Людмила Николаевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">аппаратчик ожижения водорода и гелия</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1">Рабочие</td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
+<td style="padding:4px;border-left: 1;border-right: 1;border-bottom: 1"></td>
