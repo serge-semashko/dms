@@ -539,4 +539,474 @@ order by utp.topic_id, utp.short_name
 </div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_10");'>Request_HR_LHEP_10 (tab_fte) DONE! (2965ms)</span> <BR>
 <b>$INCLUDE </b>[report_]<BR>
 <br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_1_30_17.html maxLength=500000
-</xmp>
+</xmp>------ SQL done, 65ms.<br><BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_12");'> Request_HR_LHEP_12 [30.01 17:54:57] 2: 0:0:0:0:0:0:0:1 c=tab_fte_table</span><div id='Request_HR_LHEP_12' class='req'> queryString:c=tab_fte_table&srn=1&srt=sotr.FIO&rpp=20&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[fte topics header] (1) ]:</b><xmp>select concat("<th style=""text-align:center""  colspan=",
+count(topic) ,
+">",topic,"</th>") as topics_header
+FROM
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+GROUP BY utp.topic
+ORDER BY utp.topic
+</xmp><xmp>***** 16 record(s) retrieved. Filled 1 parameters: 
+topics_header=<th style="text-align:center"  colspan=3>1065</th><th style="text-align:center"  colspan=1>1066</th><th style="text-align:center"  colspan=1>1081</th><th style="text-align:center"  colspan=1>1083</th><th style="text-align:center"  colspan=1>1085</th><th style="text-align:center"  colspan=1>1086</th><th style="text-align:center"  colspan=4>1087</th><th style="text-align:center"  colspan=1>1088</th><th style="text-align:center"  colspan=1>1096</th><th style="text-align:center"  colspan=2>1097</th><th style="text-align:center"  colspan=2>1106</th><th style="text-align:center"  colspan=1>1107</th><th style="text-align:center"  colspan=1>1108</th><th style="text-align:center"  colspan=1>1120</th><th style="text-align:center"  colspan=1>1127</th><th style="text-align:center"  colspan=2>1128</th></xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[fte topics header] (2) ]:</b><xmp>select
+concat("<th>",ifnull(short_name,""),"</th>") as projects_header
+from
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+order BY topic, short_name
+</xmp><xmp>***** 24 record(s) retrieved. Filled 1 parameters: 
+projects_header=<th>BM@N</th><th>MPD</th><th>Нукл./NICA</th><th>STAR</th><th>ATLAS</th><th>CMS
+</th><th>COMPASS-II</th><th>HyperNIS</th><th>NA61-Shine</th><th>БЕККЕРЕЛЬ</th><th>СКАН-3</th><th>ФАЗА</th><th>ALICE</th><th>NA62</th><th>DSS</th><th>АЛПОМ-2</th><th>CBM</th><th>HADES</th><th>E+T RAW</th><th>PANDA</th><th>Education</th><th>Acc. R&D</th><th>TANGRA</th><th>ИРЕН</th></xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[fte topics header] (3) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, ((YEAR(CURRENT_DATE)-YEAR(dr))-(DATE_FORMAT(CURRENT_DATE, '%m%d')<DATE_FORMAT(dr, '%m%d'))) AS age
+from sotrudniki sotr
+where lab_id = 100000
+order by sotr.FIO
+</xmp> <b> Processed in 71ms. </b><br><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=17914
+order by utp.topic_id, utp.short_name
+</xmp><xmp>***** 24 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=14', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=16', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=15', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=17', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=18', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=19', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=20', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=21', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=22', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=24', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=17914&project_id=23', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=150996
+order by utp.topic_id, utp.short_name
+</xmp><xmp>***** 24 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=14', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=16', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=15', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=17', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=18', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=19', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=20', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=21', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=22', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=24', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=150996&project_id=23', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=5406
+order by utp.topic_id, utp.short_name
+</xmp><xmp>***** 24 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=14', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=16', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=15', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=17', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=18', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=19', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=20', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=21', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=22', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=24', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=5406&project_id=23', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=102044
+order by utp.topic_id, utp.short_name
+</xmp><xmp>***** 24 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=11', true);" >50</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=14', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=16', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=15', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=17', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=18', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=19', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=20', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=21', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=22', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=24', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=102044&project_id=23', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=20909
+order by utp.topic_id, utp.short_name
+</xmp><xmp>***** 24 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=14', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=16', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=15', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=17', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=18', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=19', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=20', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=21', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=22', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=24', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=20909&project_id=23', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=40650
+order by utp.topic_id, utp.short_name
+</xmp><xmp>***** 24 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=1', true);" >25</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=2', true);" >25</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=8', true);" >50</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=14', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=16', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=15', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=17', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=18', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=19', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=20', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=21', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=22', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=24', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=40650&project_id=23', true);" >0</td></xmp>------ SQL done, 5ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=100720
+order by utp.topic_id, utp.short_name
+</xmp><xmp>***** 24 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=2', true);" >60</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=11', true);" >40</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=14', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=16', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=15', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=17', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=18', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=19', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=20', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=21', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=22', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=24', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=100720&project_id=23', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=82772
+order by utp.topic_id, utp.short_name
+</xmp><xmp>***** 24 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=14', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=16', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=15', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=17', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=18', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=19', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=20', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=21', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=22', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=24', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=82772&project_id=23', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=111580
+order by utp.topic_id, utp.short_name
+</xmp><xmp>***** 24 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=14', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=16', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=15', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=17', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=18', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=19', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=20', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=21', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=22', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=24', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=111580&project_id=23', true);" >0</td></xmp>------ SQL done, 50ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=10881
+order by utp.topic_id, utp.short_name
+</xmp><xmp>***** 24 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=11', true);" >100</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=14', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=16', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=15', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=17', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=18', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=19', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=20', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=21', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=22', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=24', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=10881&project_id=23', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=99087
+order by utp.topic_id, utp.short_name
+</xmp><xmp>***** 24 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=1', true);" >10</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=2', true);" >10</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=8', true);" >80</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=14', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=16', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=15', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=17', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=18', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=19', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=20', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=21', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=22', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=24', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=99087&project_id=23', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=6101
+order by utp.topic_id, utp.short_name
+</xmp><xmp>***** 24 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=14', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=16', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=15', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=17', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=18', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=19', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=20', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=21', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=22', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=24', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6101&project_id=23', true);" >0</td></xmp>------ SQL done, 3ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=68055
+order by utp.topic_id, utp.short_name
+</xmp><xmp>***** 24 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=3', true);" >100</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=14', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=16', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=15', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=17', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=18', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=19', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=20', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=21', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=22', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=24', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68055&project_id=23', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=6351
+order by utp.topic_id, utp.short_name
+</xmp><xmp>***** 24 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=14', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=16', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=15', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=17', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=18', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=19', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=20', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=21', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=22', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=24', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=6351&project_id=23', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=114497
+order by utp.topic_id, utp.short_name
+</xmp><xmp>***** 24 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=1', true);" >100</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=14', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=16', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=15', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=17', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=18', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=19', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=20', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=21', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=22', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=24', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=114497&project_id=23', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=166184
+order by utp.topic_id, utp.short_name
+</xmp><xmp>***** 24 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=14', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=16', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=15', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=17', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=18', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=19', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=20', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=21', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=22', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=24', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=166184&project_id=23', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=68700
+order by utp.topic_id, utp.short_name
+</xmp><xmp>***** 24 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=14', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=16', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=15', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=17', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=18', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=19', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=20', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=21', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=22', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=24', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=68700&project_id=23', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=145259
+order by utp.topic_id, utp.short_name
+</xmp><xmp>***** 24 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=14', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=16', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=15', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=17', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=18', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=19', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=20', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=21', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=22', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=24', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=145259&project_id=23', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=13884
+order by utp.topic_id, utp.short_name
+</xmp><xmp>***** 24 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=11', true);" >100</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=14', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=16', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=15', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=17', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=18', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=19', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=20', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=21', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=22', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=24', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=13884&project_id=23', true);" >0</td></xmp>------ SQL done, 4ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (1) ]:</b><xmp>select
+concat("<td ",
+"onClick=""ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=",
+ifnull(utp.project_id,-1),
+"', true);"" ",
+">",
+ifnull(f.percent,0),"</td>") as tab_n_projects_fte
+from
+(SELECT * FROM (
+SELECT  ur.topic_id AS topic, ur.project_id AS project_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id !=0
+UNION
+SELECT topic_id AS topic_id, id AS project_id FROM projects p  WHERE topic_id IN
+(SELECT ur.topic_id FROM user_rights ur WHERE ur.person_id = 3663 AND ur.project_id =0)) tmp_1
+LEFT JOIN projects p ON p.ID=tmp_1.project_id) utp
+LEFT JOIN FTE f ON f.project_id = utp.project_id and f.tab_n=3084
+order by utp.topic_id, utp.short_name
+</xmp><xmp>***** 24 record(s) retrieved. Filled 1 parameters: 
+tab_n_projects_fte=<td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=1', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=2', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=3', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=8', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=9', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=13', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=10', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=11', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=4', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=6', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=7', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=5', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=12', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=14', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=16', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=15', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=17', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=18', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=19', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=20', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=21', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=22', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=24', true);" >0</td><td onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/fte_v1&tab_n=3084&project_id=23', true);" >0</td></xmp>------ SQL done, 5ms.<br><BR>
+<b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+<br> <b>SQL: [[get fte for tab_n] (2) ]:</b><xmp></xmp><b>$INCLUDE </b>[select topics and project for user by rights]<BR>
+ <b> NumTableRows=200; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_12");'>Request_HR_LHEP_12 (tab_fte_table) DONE! (2373ms)</span> <BR>
