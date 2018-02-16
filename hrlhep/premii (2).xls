@@ -1,0 +1,4603 @@
+<HTML>
+<HEAD><TITLE></TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<style>
+td {vertical-align:top;}
+</style>
+</head><body>
+<table border=1 cellpadding=5 cellspacing=0>
+<tr><td class="label" >
+Сумма по выборке:</td>
+<td>за месяц = 1000</td>
+<td>за год = 1000</td>
+</tr>
+</table> </br>
+<table class="tlist tgreen" cellspacing=0" border=1>
+<th class="srh" sr="sotr.tab_n">Таб.№</th>
+<th class="srh" sr="sotr.FIO">ФИО</th>
+<th  class="srh"  sr="sotr.TopParent_name">Отделение</th>
+<th  class="srh"  sr="sotr.subTopParent_name">Отдел/сектор</th>
+<th class="srh" sr="sotr.post">Должность</th>
+<th class="srh" sr="sotr.category">Категория</th>
+<th>Сумма (за месяц)</th>
+<th>Сумма (за год)</th>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=173174&month=2', true);">
+<td style="1border-right: none">173174</td>
+<td style="1border-left: none;border-right: none">Гусарова Мария Александровна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none"></td>
+<td>научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3166&month=2', true);">
+<td style="1border-right: none">3166</td>
+<td style="1border-left: none;border-right: none">Жабицкий Вячеслав Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none"></td>
+<td>ведущий научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=170438&month=2', true);">
+<td style="1border-right: none">170438</td>
+<td style="1border-left: none;border-right: none">Лалаян Михаил Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none"></td>
+<td>научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7619&month=2', true);">
+<td style="1border-right: none">7619</td>
+<td style="1border-left: none;border-right: none">Мончинский Валерий Алексеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none"></td>
+<td>консультант при дирекции лаборатории</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7986&month=2', true);">
+<td style="1border-right: none">7986</td>
+<td style="1border-left: none;border-right: none">Семенюшкин Игорь Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none"></td>
+<td>консультант</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=275391&month=2', true);">
+<td style="1border-right: none">275391</td>
+<td style="1border-left: none;border-right: none">Сидорин Анатолий Олегович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none"></td>
+<td>заместитель начальника отделения по научной работе</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=154815&month=2', true);">
+<td style="1border-right: none">154815</td>
+<td style="1border-left: none;border-right: none">Сыресин Евгений Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none"></td>
+<td>главный инженер установки</td>
+<td>Руководители</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=173646&month=2', true);">
+<td style="1border-right: none">173646</td>
+<td style="1border-left: none;border-right: none">Шатохин Вадим Леонидович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none"></td>
+<td>научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=251209&month=2', true);">
+<td style="1border-right: none">251209</td>
+<td style="1border-left: none;border-right: none">Ширков Григорий Дмитриевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none"></td>
+<td>главный научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=101433&month=2', true);">
+<td style="1border-right: none">101433</td>
+<td style="1border-left: none;border-right: none">Шурхно Николай Алексеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none"></td>
+<td>научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=230577&month=2', true);">
+<td style="1border-right: none">230577</td>
+<td style="1border-left: none;border-right: none">Алфеев Александр Валерьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Диспетчерская служба Нуклотрона</td>
+<td>начальник службы</td>
+<td>Руководители</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7588&month=2', true);">
+<td style="1border-right: none">7588</td>
+<td style="1border-left: none;border-right: none">Исаев Александр Сергеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Диспетчерская служба Нуклотрона</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=150004&month=2', true);">
+<td style="1border-right: none">150004</td>
+<td style="1border-left: none;border-right: none">Карягин Александр Юрьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Диспетчерская служба Нуклотрона</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=131020&month=2', true);">
+<td style="1border-right: none">131020</td>
+<td style="1border-left: none;border-right: none">Кутенков Сергей Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Диспетчерская служба Нуклотрона</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6661&month=2', true);">
+<td style="1border-right: none">6661</td>
+<td style="1border-left: none;border-right: none">Нефедьев Иван Яковлевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Диспетчерская служба Нуклотрона</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=131759&month=2', true);">
+<td style="1border-right: none">131759</td>
+<td style="1border-left: none;border-right: none">Нефедьев Сергей Иванович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Диспетчерская служба Нуклотрона</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6278&month=2', true);">
+<td style="1border-right: none">6278</td>
+<td style="1border-left: none;border-right: none">Руднев Евгений Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Диспетчерская служба Нуклотрона</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6655&month=2', true);">
+<td style="1border-right: none">6655</td>
+<td style="1border-left: none;border-right: none">Чуркин Виктор Георгиевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Диспетчерская служба Нуклотрона</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6204&month=2', true);">
+<td style="1border-right: none">6204</td>
+<td style="1border-left: none;border-right: none">Юдин Иван Степанович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Диспетчерская служба Нуклотрона</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6351&month=2', true);">
+<td style="1border-right: none">6351</td>
+<td style="1border-left: none;border-right: none">Агафонова Тамара Николаевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=113025&month=2', true);">
+<td style="1border-right: none">113025</td>
+<td style="1border-left: none;border-right: none">Андрюхин Роман Васильевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=122456&month=2', true);">
+<td style="1border-right: none">122456</td>
+<td style="1border-left: none;border-right: none">Арефьев Сергей Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=152486&month=2', true);">
+<td style="1border-right: none">152486</td>
+<td style="1border-left: none;border-right: none">Ахмадризялов Ринат Мубаракович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6602&month=2', true);">
+<td style="1border-right: none">6602</td>
+<td style="1border-left: none;border-right: none">Блинов Николай Алексеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>начальник группы</td>
+<td>Руководители</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=133236&month=2', true);">
+<td style="1border-right: none">133236</td>
+<td style="1border-left: none;border-right: none">Бугаев Владимир Викторович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=2264&month=2', true);">
+<td style="1border-right: none">2264</td>
+<td style="1border-left: none;border-right: none">Виноградов Александр Сергеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=165816&month=2', true);">
+<td style="1border-right: none">165816</td>
+<td style="1border-left: none;border-right: none">Гришина Юлия Владимировна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>старший техник</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=160110&month=2', true);">
+<td style="1border-right: none">160110</td>
+<td style="1border-left: none;border-right: none">Гулина Марина Валерьевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6515&month=2', true);">
+<td style="1border-right: none">6515</td>
+<td style="1border-left: none;border-right: none">Добрынина Ольга Викторовна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>старший инспектор</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6663&month=2', true);">
+<td style="1border-right: none">6663</td>
+<td style="1border-left: none;border-right: none">Жильцова Наталья Александровна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=260143&month=2', true);">
+<td style="1border-right: none">260143</td>
+<td style="1border-left: none;border-right: none">Зорин Андрей Геннадьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=133491&month=2', true);">
+<td style="1border-right: none">133491</td>
+<td style="1border-left: none;border-right: none">Калагин Илья Игоревич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=123991&month=2', true);">
+<td style="1border-right: none">123991</td>
+<td style="1border-left: none;border-right: none">Караваев Андрей Валерьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=80734&month=2', true);">
+<td style="1border-right: none">80734</td>
+<td style="1border-left: none;border-right: none">Карпинский Виктор Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>начальник отдела</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=152579&month=2', true);">
+<td style="1border-right: none">152579</td>
+<td style="1border-left: none;border-right: none">Киров Сергей Валерьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6386&month=2', true);">
+<td style="1border-right: none">6386</td>
+<td style="1border-left: none;border-right: none">Кондратьев Николай Григорьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=144673&month=2', true);">
+<td style="1border-right: none">144673</td>
+<td style="1border-left: none;border-right: none">Копченов Александр Викторович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=172869&month=2', true);">
+<td style="1border-right: none">172869</td>
+<td style="1border-left: none;border-right: none">Кузнецов Максим Игоревич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=293765&month=2', true);">
+<td style="1border-right: none">293765</td>
+<td style="1border-left: none;border-right: none">Кузнецов Павел Сергеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6630&month=2', true);">
+<td style="1border-right: none">6630</td>
+<td style="1border-left: none;border-right: none">Кукушкин Анатолий Андреевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=145093&month=2', true);">
+<td style="1border-right: none">145093</td>
+<td style="1border-left: none;border-right: none">Кулаева Татьяна Анатольевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=123024&month=2', true);">
+<td style="1border-right: none">123024</td>
+<td style="1border-left: none;border-right: none">Купцов Антон Валерьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6457&month=2', true);">
+<td style="1border-right: none">6457</td>
+<td style="1border-left: none;border-right: none">Морохова Татьяна Борисовна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>инженер-конструктор 2 категории</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=146293&month=2', true);">
+<td style="1border-right: none">146293</td>
+<td style="1border-left: none;border-right: none">Нефедов Олег Андреевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>техник</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=103657&month=2', true);">
+<td style="1border-right: none">103657</td>
+<td style="1border-left: none;border-right: none">Ноженко Юрий Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=104683&month=2', true);">
+<td style="1border-right: none">104683</td>
+<td style="1border-left: none;border-right: none">Орлов Артем Станиславович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>старший техник</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=230542&month=2', true);">
+<td style="1border-right: none">230542</td>
+<td style="1border-left: none;border-right: none">Осипенков Андрей Леонидович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>начальник группы</td>
+<td>Руководители</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6660&month=2', true);">
+<td style="1border-right: none">6660</td>
+<td style="1border-left: none;border-right: none">Писарев Юрий Алексеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6435&month=2', true);">
+<td style="1border-right: none">6435</td>
+<td style="1border-left: none;border-right: none">Попков Роман Григорьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=134894&month=2', true);">
+<td style="1border-right: none">134894</td>
+<td style="1border-left: none;border-right: none">Рябов Виталий Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>техник</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6280&month=2', true);">
+<td style="1border-right: none">6280</td>
+<td style="1border-left: none;border-right: none">Савельев Александр Алексеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=21185&month=2', true);">
+<td style="1border-right: none">21185</td>
+<td style="1border-left: none;border-right: none">Силушин Геннадий Иванович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=134827&month=2', true);">
+<td style="1border-right: none">134827</td>
+<td style="1border-left: none;border-right: none">Степанов Виктор Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=111578&month=2', true);">
+<td style="1border-right: none">111578</td>
+<td style="1border-left: none;border-right: none">Товстуха Владимир Григорьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=162313&month=2', true);">
+<td style="1border-right: none">162313</td>
+<td style="1border-left: none;border-right: none">Травин Никита Валерьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=27977&month=2', true);">
+<td style="1border-right: none">27977</td>
+<td style="1border-left: none;border-right: none">Уразаков Эрнаст Истюреевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>советник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=102728&month=2', true);">
+<td style="1border-right: none">102728</td>
+<td style="1border-left: none;border-right: none">Федоров Виктор Викторович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6408&month=2', true);">
+<td style="1border-right: none">6408</td>
+<td style="1border-left: none;border-right: none">Филиппов Анатолий Яковлевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=170719&month=2', true);">
+<td style="1border-right: none">170719</td>
+<td style="1border-left: none;border-right: none">Филиппов Михаил Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6406&month=2', true);">
+<td style="1border-right: none">6406</td>
+<td style="1border-left: none;border-right: none">Филиппов Николай Анатольевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>начальник группы</td>
+<td>Руководители</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=173915&month=2', true);">
+<td style="1border-right: none">173915</td>
+<td style="1border-left: none;border-right: none">Чебыкин Иван Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6412&month=2', true);">
+<td style="1border-right: none">6412</td>
+<td style="1border-left: none;border-right: none">Шахматов Александр Сергеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=102852&month=2', true);">
+<td style="1border-right: none">102852</td>
+<td style="1border-left: none;border-right: none">Шурыгин Александр Алексеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=160723&month=2', true);">
+<td style="1border-right: none">160723</td>
+<td style="1border-left: none;border-right: none">Щербаков Алексей Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-инженерный отдел систем электропитания Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=20909&month=2', true);">
+<td style="1border-right: none">20909</td>
+<td style="1border-left: none;border-right: none">Аверичев Андрей Станиславович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td>1000</td>
+<td>1000</td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=112769&month=2', true);">
+<td style="1border-right: none">112769</td>
+<td style="1border-left: none;border-right: none">Арефьев Андрей Васильевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>машинист компрессорных установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=160220&month=2', true);">
+<td style="1border-right: none">160220</td>
+<td style="1border-left: none;border-right: none">Балдин Никита Антонович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6106&month=2', true);">
+<td style="1border-right: none">6106</td>
+<td style="1border-left: none;border-right: none">Батин Владимир Ильич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>заместитель начальника отдела</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=212754&month=2', true);">
+<td style="1border-right: none">212754</td>
+<td style="1border-left: none;border-right: none">Башева Марина Александровна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>старший техник</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=291229&month=2', true);">
+<td style="1border-right: none">291229</td>
+<td style="1border-left: none;border-right: none">Белов Дмитрий Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6110&month=2', true);">
+<td style="1border-right: none">6110</td>
+<td style="1border-left: none;border-right: none">Борзунов Юрий Тимофеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=140839&month=2', true);">
+<td style="1border-right: none">140839</td>
+<td style="1border-left: none;border-right: none">Воробьев Евгений Иванович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6119&month=2', true);">
+<td style="1border-right: none">6119</td>
+<td style="1border-left: none;border-right: none">Гончаров Игорь Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>консультант</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=161208&month=2', true);">
+<td style="1border-right: none">161208</td>
+<td style="1border-left: none;border-right: none">Гореликов Сергей Петрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=232504&month=2', true);">
+<td style="1border-right: none">232504</td>
+<td style="1border-left: none;border-right: none">Громова Екатерина Владиславовна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>старший техник</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=294313&month=2', true);">
+<td style="1border-right: none">294313</td>
+<td style="1border-left: none;border-right: none">Гудков Станислав Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6125&month=2', true);">
+<td style="1border-right: none">6125</td>
+<td style="1border-left: none;border-right: none">Дробин Валерий Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6136&month=2', true);">
+<td style="1border-right: none">6136</td>
+<td style="1border-left: none;border-right: none">Егорова Людмила Николаевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>аппаратчик ожижения водорода и гелия</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=164010&month=2', true);">
+<td style="1border-right: none">164010</td>
+<td style="1border-left: none;border-right: none">Емельянов Антон Эдуардович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=112134&month=2', true);">
+<td style="1border-right: none">112134</td>
+<td style="1border-left: none;border-right: none">Емельянов Никита Эдуардович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>заместитель начальника отдела</td>
+<td>Руководители</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=104125&month=2', true);">
+<td style="1border-right: none">104125</td>
+<td style="1border-left: none;border-right: none">Епимахов Владимир Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=201920&month=2', true);">
+<td style="1border-right: none">201920</td>
+<td style="1border-left: none;border-right: none">Иваненко Елена Юрьевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=175803&month=2', true);">
+<td style="1border-right: none">175803</td>
+<td style="1border-left: none;border-right: none">Каширин Владимир Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=230880&month=2', true);">
+<td style="1border-right: none">230880</td>
+<td style="1border-left: none;border-right: none">Клементьев Василий Васильевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>машинист компрессорных установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=171148&month=2', true);">
+<td style="1border-right: none">171148</td>
+<td style="1border-left: none;border-right: none">Климанский Дмитрий Ильич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=131730&month=2', true);">
+<td style="1border-right: none">131730</td>
+<td style="1border-left: none;border-right: none">Козловски Камил Кшиштоф</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=282551&month=2', true);">
+<td style="1border-right: none">282551</td>
+<td style="1border-left: none;border-right: none">Кондратьев Михаил Васильевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=103157&month=2', true);">
+<td style="1border-right: none">103157</td>
+<td style="1border-left: none;border-right: none">Константинов Антон Валерьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>начальник отдела</td>
+<td>Руководители</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=294314&month=2', true);">
+<td style="1border-right: none">294314</td>
+<td style="1border-left: none;border-right: none">Косинов Валерий Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=100015&month=2', true);">
+<td style="1border-right: none">100015</td>
+<td style="1border-left: none;border-right: none">Куликов Евгений Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=91284&month=2', true);">
+<td style="1border-right: none">91284</td>
+<td style="1border-left: none;border-right: none">Лабазова Валентина Федоровна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>заведующий складом</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6152&month=2', true);">
+<td style="1border-right: none">6152</td>
+<td style="1border-left: none;border-right: none">Липченко Валерий Иванович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=233310&month=2', true);">
+<td style="1border-right: none">233310</td>
+<td style="1border-left: none;border-right: none">Лобанов Денис Витальевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=122927&month=2', true);">
+<td style="1border-right: none">122927</td>
+<td style="1border-left: none;border-right: none">Майорова Наталья Александровна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>техник</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=264244&month=2', true);">
+<td style="1border-right: none">264244</td>
+<td style="1border-left: none;border-right: none">Малиновски Хенрик Казимеж</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>начальник сектора</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3666&month=2', true);">
+<td style="1border-right: none">3666</td>
+<td style="1border-left: none;border-right: none">Мельникова Наталья Владимировна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>старший товаровед</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=211268&month=2', true);">
+<td style="1border-right: none">211268</td>
+<td style="1border-left: none;border-right: none">Митрофанова Юлия Анатольевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>начальник группы</td>
+<td>Руководители</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=60931&month=2', true);">
+<td style="1border-right: none">60931</td>
+<td style="1border-left: none;border-right: none">Орлов Валерий Васильевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=151884&month=2', true);">
+<td style="1border-right: none">151884</td>
+<td style="1border-left: none;border-right: none">Петров Игорь Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6161&month=2', true);">
+<td style="1border-right: none">6161</td>
+<td style="1border-left: none;border-right: none">Петрова Лидия Васильевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=176393&month=2', true);">
+<td style="1border-right: none">176393</td>
+<td style="1border-left: none;border-right: none">Семашко Сергей Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>инженер-программист</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=174588&month=2', true);">
+<td style="1border-right: none">174588</td>
+<td style="1border-left: none;border-right: none">Семенов Вадим Евгеньевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>слесарь механосборочных работ</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=291647&month=2', true);">
+<td style="1border-right: none">291647</td>
+<td style="1border-left: none;border-right: none">Сидоров Сергей Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>техник</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6177&month=2', true);">
+<td style="1border-right: none">6177</td>
+<td style="1border-left: none;border-right: none">Тараканов Виктор Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>аппаратчик ожижения водорода и гелия</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=163331&month=2', true);">
+<td style="1border-right: none">163331</td>
+<td style="1border-left: none;border-right: none">Тарасюк Денис Сергеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>слесарь механосборочных работ</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=95613&month=2', true);">
+<td style="1border-right: none">95613</td>
+<td style="1border-left: none;border-right: none">Филиппова Елена Юрьевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=151220&month=2', true);">
+<td style="1border-right: none">151220</td>
+<td style="1border-left: none;border-right: none">Швидкий Денис Сергеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>начальник группы</td>
+<td>Руководители</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=210896&month=2', true);">
+<td style="1border-right: none">210896</td>
+<td style="1border-left: none;border-right: none">Яровикова Ольга Борисовна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-исследовательский криогенный отдел</td>
+<td>старший техник</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3084&month=2', true);">
+<td style="1border-right: none">3084</td>
+<td style="1border-left: none;border-right: none">Александров Владимир Семенович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>начальник сектора</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=66397&month=2', true);">
+<td style="1border-right: none">66397</td>
+<td style="1border-left: none;border-right: none">Андреев Василий Анатольевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=220918&month=2', true);">
+<td style="1border-right: none">220918</td>
+<td style="1border-left: none;border-right: none">Бутенко Анна Михайловна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7560&month=2', true);">
+<td style="1border-right: none">7560</td>
+<td style="1border-left: none;border-right: none">Василишин Богдан-Ростислав Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>старший научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7564&month=2', true);">
+<td style="1border-right: none">7564</td>
+<td style="1border-left: none;border-right: none">Волков Валерий Иванович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>начальник отдела</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=47499&month=2', true);">
+<td style="1border-right: none">47499</td>
+<td style="1border-left: none;border-right: none">Горбачев Евгений Валерьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>начальник группы</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=292811&month=2', true);">
+<td style="1border-right: none">292811</td>
+<td style="1border-left: none;border-right: none">Горченко Владимир Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=152904&month=2', true);">
+<td style="1border-right: none">152904</td>
+<td style="1border-left: none;border-right: none">Гусев Сергей Алексеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=994311&month=2', true);">
+<td style="1border-right: none">994311</td>
+<td style="1border-left: none;border-right: none">Елисеев Алексей Викторович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6973&month=2', true);">
+<td style="1border-right: none">6973</td>
+<td style="1border-left: none;border-right: none">Ефимов Анатолий Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7634&month=2', true);">
+<td style="1border-right: none">7634</td>
+<td style="1border-left: none;border-right: none">Ефимова Людмила Серафимовна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>старший инспектор</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=100003&month=2', true);">
+<td style="1border-right: none">100003</td>
+<td style="1border-left: none;border-right: none">Исадов Виктор Алексеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=154849&month=2', true);">
+<td style="1border-right: none">154849</td>
+<td style="1border-left: none;border-right: none">Казинова Ольга</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=71785&month=2', true);">
+<td style="1border-right: none">71785</td>
+<td style="1border-left: none;border-right: none">Кириченко Александр Евгеньевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>ведущий электроник</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3109&month=2', true);">
+<td style="1border-right: none">3109</td>
+<td style="1border-left: none;border-right: none">Ковалев Виктор Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>лаборант ускорительной установки</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=161456&month=2', true);">
+<td style="1border-right: none">161456</td>
+<td style="1border-left: none;border-right: none">Ковачев Лальо Димитров</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=26211&month=2', true);">
+<td style="1border-right: none">26211</td>
+<td style="1border-left: none;border-right: none">Козлов Олег Святославович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>старший научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=20557&month=2', true);">
+<td style="1border-right: none">20557</td>
+<td style="1border-left: none;border-right: none">Королева Галина Евгеньевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3102&month=2', true);">
+<td style="1border-right: none">3102</td>
+<td style="1border-left: none;border-right: none">Косухина Лариса Ивановна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7194&month=2', true);">
+<td style="1border-right: none">7194</td>
+<td style="1border-left: none;border-right: none">Кочуров Анатолий Григорьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7947&month=2', true);">
+<td style="1border-right: none">7947</td>
+<td style="1border-left: none;border-right: none">Кукушкина Раиса Ивановна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=133883&month=2', true);">
+<td style="1border-right: none">133883</td>
+<td style="1border-left: none;border-right: none">Купцов Валерий Валентинович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3116&month=2', true);">
+<td style="1border-right: none">3116</td>
+<td style="1border-left: none;border-right: none">Лебедев Николай Иванович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>начальник сектора</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6266&month=2', true);">
+<td style="1border-right: none">6266</td>
+<td style="1border-left: none;border-right: none">Леонов Леонид Алексеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6267&month=2', true);">
+<td style="1border-right: none">6267</td>
+<td style="1border-left: none;border-right: none">Липченко Лилия Павловна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>монтажник радиоэлектронной аппаратуры и приборов</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7616&month=2', true);">
+<td style="1border-right: none">7616</td>
+<td style="1border-left: none;border-right: none">Михайлов Владимир Афанасьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>начальник сектора</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=233106&month=2', true);">
+<td style="1border-right: none">233106</td>
+<td style="1border-left: none;border-right: none">Михайлов Сергей Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=132828&month=2', true);">
+<td style="1border-right: none">132828</td>
+<td style="1border-left: none;border-right: none">Монахов Дмитрий Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=141112&month=2', true);">
+<td style="1border-right: none">141112</td>
+<td style="1border-left: none;border-right: none">Назлев Христо Петков</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7622&month=2', true);">
+<td style="1border-right: none">7622</td>
+<td style="1border-left: none;border-right: none">Новиков Станислав Алексеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=262018&month=2', true);">
+<td style="1border-right: none">262018</td>
+<td style="1border-left: none;border-right: none">Панюшкин Владимир Анатольевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3131&month=2', true);">
+<td style="1border-right: none">3131</td>
+<td style="1border-left: none;border-right: none">Пиляр Николай Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>начальник группы</td>
+<td>Руководители</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=31428&month=2', true);">
+<td style="1border-right: none">31428</td>
+<td style="1border-left: none;border-right: none">Пушкин Михаил Геннадьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6277&month=2', true);">
+<td style="1border-right: none">6277</td>
+<td style="1border-left: none;border-right: none">Романов Сергей Валентинович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>начальник группы</td>
+<td>Руководители</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7482&month=2', true);">
+<td style="1border-right: none">7482</td>
+<td style="1border-left: none;border-right: none">Рукояткин Павел Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>начальник сектора</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=11690&month=2', true);">
+<td style="1border-right: none">11690</td>
+<td style="1border-left: none;border-right: none">Рукояткина Татьяна Владимировна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7666&month=2', true);">
+<td style="1border-right: none">7666</td>
+<td style="1border-left: none;border-right: none">Сальникова Галина Михайловна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=134497&month=2', true);">
+<td style="1border-right: none">134497</td>
+<td style="1border-left: none;border-right: none">Светов Леонид Андреевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>лаборант</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=58510&month=2', true);">
+<td style="1border-right: none">58510</td>
+<td style="1border-left: none;border-right: none">Свешникова Лариса Евгеньевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=263013&month=2', true);">
+<td style="1border-right: none">263013</td>
+<td style="1border-left: none;border-right: none">Седых Георгий Сергеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=233249&month=2', true);">
+<td style="1border-right: none">233249</td>
+<td style="1border-left: none;border-right: none">Смолков Роман Анатольевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3071&month=2', true);">
+<td style="1border-right: none">3071</td>
+<td style="1border-left: none;border-right: none">Тарасов Владимир Васильевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=243654&month=2', true);">
+<td style="1border-right: none">243654</td>
+<td style="1border-left: none;border-right: none">Тузиков Алексей Васильевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>старший научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=201387&month=2', true);">
+<td style="1border-right: none">201387</td>
+<td style="1border-left: none;border-right: none">Филиппов Александр Викторович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>старший научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=16890&month=2', true);">
+<td style="1border-right: none">16890</td>
+<td style="1border-left: none;border-right: none">Ширкова Евгения Эльмаровна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-технический отдел пучков</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=82772&month=2', true);">
+<td style="1border-right: none">82772</td>
+<td style="1border-left: none;border-right: none">Аверьянов Михаил Юрьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>слесарь-ремонтник</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=68700&month=2', true);">
+<td style="1border-right: none">68700</td>
+<td style="1border-left: none;border-right: none">Акимов Владислав Петрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7671&month=2', true);">
+<td style="1border-right: none">7671</td>
+<td style="1border-left: none;border-right: none">Базанов Александр Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>начальник группы</td>
+<td>Руководители</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3354&month=2', true);">
+<td style="1border-right: none">3354</td>
+<td style="1border-left: none;border-right: none">Балалыкин Николай Иванович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>ведущий научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3353&month=2', true);">
+<td style="1border-right: none">3353</td>
+<td style="1border-left: none;border-right: none">Бекетова Галина Васильевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>старший техник</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=173733&month=2', true);">
+<td style="1border-right: none">173733</td>
+<td style="1border-left: none;border-right: none">Богатов Алексей Сергеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=131945&month=2', true);">
+<td style="1border-right: none">131945</td>
+<td style="1border-left: none;border-right: none">Богданов Юрий Юрьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=121040&month=2', true);">
+<td style="1border-right: none">121040</td>
+<td style="1border-left: none;border-right: none">Бойцов Алексей Юрьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6608&month=2', true);">
+<td style="1border-right: none">6608</td>
+<td style="1border-left: none;border-right: none">Бугринов Евгений Иванович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=68399&month=2', true);">
+<td style="1border-right: none">68399</td>
+<td style="1border-left: none;border-right: none">Бутенко Андрей Валерьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>начальник отдела</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=261043&month=2', true);">
+<td style="1border-right: none">261043</td>
+<td style="1border-left: none;border-right: none">Вадеев Андрей Валерьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7562&month=2', true);">
+<td style="1border-right: none">7562</td>
+<td style="1border-left: none;border-right: none">Вадеев Валерий Петрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=41349&month=2', true);">
+<td style="1border-right: none">41349</td>
+<td style="1border-left: none;border-right: none">Вандровский Геннадий Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=253971&month=2', true);">
+<td style="1border-right: none">253971</td>
+<td style="1border-left: none;border-right: none">Воронин Алексей Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>начальник группы</td>
+<td>Руководители</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=272666&month=2', true);">
+<td style="1border-right: none">272666</td>
+<td style="1border-left: none;border-right: none">Гаранжа Никита Иванович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>старший техник</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7565&month=2', true);">
+<td style="1border-right: none">7565</td>
+<td style="1border-left: none;border-right: none">Гетьман Виктор Филиппович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7567&month=2', true);">
+<td style="1border-right: none">7567</td>
+<td style="1border-left: none;border-right: none">Говоров Александр Иванович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>начальник сектора</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=114233&month=2', true);">
+<td style="1border-right: none">114233</td>
+<td style="1border-left: none;border-right: none">Головенский Борис Викторович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=141043&month=2', true);">
+<td style="1border-right: none">141043</td>
+<td style="1border-left: none;border-right: none">Горелышев Иван Васильевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=98066&month=2', true);">
+<td style="1border-right: none">98066</td>
+<td style="1border-left: none;border-right: none">Гудков Станислав Вячеславович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>монтажник радиоэлектронной аппаратуры и приборов</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=170953&month=2', true);">
+<td style="1border-right: none">170953</td>
+<td style="1border-left: none;border-right: none">Гуран Йозеф</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>ведущий научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7573&month=2', true);">
+<td style="1border-right: none">7573</td>
+<td style="1border-left: none;border-right: none">Джакупов Игорь Кажигаливич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3363&month=2', true);">
+<td style="1border-right: none">3363</td>
+<td style="1border-left: none;border-right: none">Дмитриева Елена Ивановна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>старший техник</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=96718&month=2', true);">
+<td style="1border-right: none">96718</td>
+<td style="1border-left: none;border-right: none">Донец Денис Евгеньевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7575&month=2', true);">
+<td style="1border-right: none">7575</td>
+<td style="1border-left: none;border-right: none">Донец Евгений Денисович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>главный научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=45739&month=2', true);">
+<td style="1border-right: none">45739</td>
+<td style="1border-left: none;border-right: none">Донец Евгений Евгеньевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>начальник сектора</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=141485&month=2', true);">
+<td style="1border-right: none">141485</td>
+<td style="1border-left: none;border-right: none">Дорофеев Геннадий Леонидович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=113060&month=2', true);">
+<td style="1border-right: none">113060</td>
+<td style="1border-left: none;border-right: none">Елкин Владимир Геннадьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=160003&month=2', true);">
+<td style="1border-right: none">160003</td>
+<td style="1border-left: none;border-right: none">Захаров Андрей Юрьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=160860&month=2', true);">
+<td style="1border-right: none">160860</td>
+<td style="1border-left: none;border-right: none">Зиновьев Леонид Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=152285&month=2', true);">
+<td style="1border-right: none">152285</td>
+<td style="1border-left: none;border-right: none">Катрасев Денис Евгеньевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7595&month=2', true);">
+<td style="1border-right: none">7595</td>
+<td style="1border-left: none;border-right: none">Кислогубов Алексей Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=101605&month=2', true);">
+<td style="1border-right: none">101605</td>
+<td style="1border-left: none;border-right: none">Кобец Валерий Васильевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>начальник сектора</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6142&month=2', true);">
+<td style="1border-right: none">6142</td>
+<td style="1border-left: none;border-right: none">Комогоров Эдуард Викторович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=66392&month=2', true);">
+<td style="1border-right: none">66392</td>
+<td style="1border-left: none;border-right: none">Коровяков Виктор Дмитриевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>лаборант физической лаборатории</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=143058&month=2', true);">
+<td style="1border-right: none">143058</td>
+<td style="1border-left: none;border-right: none">Косачев Вячеслав Васильевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=110320&month=2', true);">
+<td style="1border-right: none">110320</td>
+<td style="1border-left: none;border-right: none">Кузнецов Сергей Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=170665&month=2', true);">
+<td style="1border-right: none">170665</td>
+<td style="1border-left: none;border-right: none">Кузякин Роман Анатольевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=173781&month=2', true);">
+<td style="1border-right: none">173781</td>
+<td style="1border-left: none;border-right: none">Куликов Михаил Валерьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=17719&month=2', true);">
+<td style="1border-right: none">17719</td>
+<td style="1border-left: none;border-right: none">Кутузова Людмила Викторовна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=240095&month=2', true);">
+<td style="1border-right: none">240095</td>
+<td style="1border-left: none;border-right: none">Левтеров Константин Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=124767&month=2', true);">
+<td style="1border-right: none">124767</td>
+<td style="1border-left: none;border-right: none">Люосев Дмитрий Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=161330&month=2', true);">
+<td style="1border-right: none">161330</td>
+<td style="1border-left: none;border-right: none">Мартынов Андрей Альбертович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=101859&month=2', true);">
+<td style="1border-right: none">101859</td>
+<td style="1border-left: none;border-right: none">Мялковский Владимир Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=1457&month=2', true);">
+<td style="1border-right: none">1457</td>
+<td style="1border-left: none;border-right: none">Нестеров Александр Васильевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=143309&month=2', true);">
+<td style="1border-right: none">143309</td>
+<td style="1border-left: none;border-right: none">Ноздрин Михаил Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=146710&month=2', true);">
+<td style="1border-right: none">146710</td>
+<td style="1border-left: none;border-right: none">Петров Владимир Григорьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=223197&month=2', true);">
+<td style="1border-right: none">223197</td>
+<td style="1border-left: none;border-right: none">Пивин Роман Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7630&month=2', true);">
+<td style="1border-right: none">7630</td>
+<td style="1border-left: none;border-right: none">Платонов Юрий Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=124621&month=2', true);">
+<td style="1border-right: none">124621</td>
+<td style="1border-left: none;border-right: none">Понкин Дмитрий Олегович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=244145&month=2', true);">
+<td style="1border-right: none">244145</td>
+<td style="1border-left: none;border-right: none">Прокофьичев Юрий Витальевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=230507&month=2', true);">
+<td style="1border-right: none">230507</td>
+<td style="1border-left: none;border-right: none">Пушкарь Роман Григорьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=102197&month=2', true);">
+<td style="1border-right: none">102197</td>
+<td style="1border-left: none;border-right: none">Рамздорф Александр Юрьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=161770&month=2', true);">
+<td style="1border-right: none">161770</td>
+<td style="1border-left: none;border-right: none">Рассадов Дмитрий Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=180253&month=2', true);">
+<td style="1border-right: none">180253</td>
+<td style="1border-left: none;border-right: none">Рахач Марек</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=151690&month=2', true);">
+<td style="1border-right: none">151690</td>
+<td style="1border-left: none;border-right: none">Романенко Станислав Сергеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=101175&month=2', true);">
+<td style="1border-right: none">101175</td>
+<td style="1border-left: none;border-right: none">Романов Александр Сергеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=20115&month=2', true);">
+<td style="1border-right: none">20115</td>
+<td style="1border-left: none;border-right: none">Рязанцев Юрий Васильевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>электромонтер по обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7635&month=2', true);">
+<td style="1border-right: none">7635</td>
+<td style="1border-left: none;border-right: none">Сальников Владимир Викторович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6476&month=2', true);">
+<td style="1border-right: none">6476</td>
+<td style="1border-left: none;border-right: none">Селезнев Василий Васильевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=170560&month=2', true);">
+<td style="1border-right: none">170560</td>
+<td style="1border-left: none;border-right: none">Семенов Сергей Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=161434&month=2', true);">
+<td style="1border-right: none">161434</td>
+<td style="1border-left: none;border-right: none">Сергеев Антон Сергеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6808&month=2', true);">
+<td style="1border-right: none">6808</td>
+<td style="1border-left: none;border-right: none">Скворцов Геннадий Дмитриевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3383&month=2', true);">
+<td style="1border-right: none">3383</td>
+<td style="1border-left: none;border-right: none">Скрыпник Александр Васильевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=164594&month=2', true);">
+<td style="1border-right: none">164594</td>
+<td style="1border-left: none;border-right: none">Следнева Анна Сергеевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=100778&month=2', true);">
+<td style="1border-right: none">100778</td>
+<td style="1border-left: none;border-right: none">Смирнов Александр Валентинович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>начальник сектора</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=100178&month=2', true);">
+<td style="1border-right: none">100178</td>
+<td style="1border-left: none;border-right: none">Сорокин Александр Геннадьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6645&month=2', true);">
+<td style="1border-right: none">6645</td>
+<td style="1border-left: none;border-right: none">Сотников Павел Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3063&month=2', true);">
+<td style="1border-right: none">3063</td>
+<td style="1border-left: none;border-right: none">Стариков Александр Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3189&month=2', true);">
+<td style="1border-right: none">3189</td>
+<td style="1border-left: none;border-right: none">Степанов Анатолий Дмитриевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=291146&month=2', true);">
+<td style="1border-right: none">291146</td>
+<td style="1border-left: none;border-right: none">Тимошенко Оксана Михайловна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3396&month=2', true);">
+<td style="1border-right: none">3396</td>
+<td style="1border-left: none;border-right: none">Уханов Анатолий Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=152241&month=2', true);">
+<td style="1border-right: none">152241</td>
+<td style="1border-left: none;border-right: none">Филимонов Владимир Витальевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6180&month=2', true);">
+<td style="1border-right: none">6180</td>
+<td style="1border-left: none;border-right: none">Фимушкин Виктор Васильевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>начальник сектора</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=124697&month=2', true);">
+<td style="1border-right: none">124697</td>
+<td style="1border-left: none;border-right: none">Чумаков Вадим Вячеславович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3389&month=2', true);">
+<td style="1border-right: none">3389</td>
+<td style="1border-left: none;border-right: none">Шабратов Владимир Григорьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>начальник группы</td>
+<td>Руководители</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=114420&month=2', true);">
+<td style="1border-right: none">114420</td>
+<td style="1border-left: none;border-right: none">Шевченко Константин Валерьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=124620&month=2', true);">
+<td style="1border-right: none">124620</td>
+<td style="1border-left: none;border-right: none">Шириков Илья Вячеславович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=7658&month=2', true);">
+<td style="1border-right: none">7658</td>
+<td style="1border-left: none;border-right: none">Шурховецкий Виктор Алексеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6205&month=2', true);">
+<td style="1border-right: none">6205</td>
+<td style="1border-left: none;border-right: none">Шутов Виталий Борисович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инжекции и кольца Нуклотрона</td>
+<td>старший научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3157&month=2', true);">
+<td style="1border-right: none">3157</td>
+<td style="1border-left: none;border-right: none">Буланов Владимир Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инженерно-физических проблем ускорителей</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3159&month=2', true);">
+<td style="1border-right: none">3159</td>
+<td style="1border-left: none;border-right: none">Голубев Иван Иванович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инженерно-физических проблем ускорителей</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=2383&month=2', true);">
+<td style="1border-right: none">2383</td>
+<td style="1border-left: none;border-right: none">Голубых Сергей Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инженерно-физических проблем ускорителей</td>
+<td>старший научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3168&month=2', true);">
+<td style="1border-right: none">3168</td>
+<td style="1border-left: none;border-right: none">Каминский Алим Константинович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инженерно-физических проблем ускорителей</td>
+<td>ведущий научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=244023&month=2', true);">
+<td style="1border-right: none">244023</td>
+<td style="1border-left: none;border-right: none">Козлов Александр Петрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инженерно-физических проблем ускорителей</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3174&month=2', true);">
+<td style="1border-right: none">3174</td>
+<td style="1border-left: none;border-right: none">Косухин Виталий Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инженерно-физических проблем ускорителей</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3113&month=2', true);">
+<td style="1border-right: none">3113</td>
+<td style="1border-left: none;border-right: none">Лебедева Галина Григорьевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инженерно-физических проблем ускорителей</td>
+<td>лаборант ускорительной установки</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3044&month=2', true);">
+<td style="1border-right: none">3044</td>
+<td style="1border-left: none;border-right: none">Лебедева Ирина Германовна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инженерно-физических проблем ускорителей</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3119&month=2', true);">
+<td style="1border-right: none">3119</td>
+<td style="1border-left: none;border-right: none">Леонов Николай Анисимович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инженерно-физических проблем ускорителей</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=161149&month=2', true);">
+<td style="1border-right: none">161149</td>
+<td style="1border-left: none;border-right: none">Маркелов Антон Федорович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инженерно-физических проблем ускорителей</td>
+<td>лаборант</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3126&month=2', true);">
+<td style="1border-right: none">3126</td>
+<td style="1border-left: none;border-right: none">Ососов Виктор Васильевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инженерно-физических проблем ускорителей</td>
+<td>лаборант ускорительной установки</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=151632&month=2', true);">
+<td style="1border-right: none">151632</td>
+<td style="1border-left: none;border-right: none">Петухов Александр Сергеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инженерно-физических проблем ускорителей</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=51714&month=2', true);">
+<td style="1border-right: none">51714</td>
+<td style="1border-left: none;border-right: none">Петухов Сергей Иванович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инженерно-физических проблем ускорителей</td>
+<td>слесарь механосборочных работ</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=18472&month=2', true);">
+<td style="1border-right: none">18472</td>
+<td style="1border-left: none;border-right: none">Седых Сергей Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инженерно-физических проблем ускорителей</td>
+<td>начальник сектора</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3400&month=2', true);">
+<td style="1border-right: none">3400</td>
+<td style="1border-left: none;border-right: none">Сидоров Алексей Иванович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инженерно-физических проблем ускорителей</td>
+<td>начальник отдела</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=4707&month=2', true);">
+<td style="1border-right: none">4707</td>
+<td style="1border-left: none;border-right: none">Сидорова Валентина Олеговна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инженерно-физических проблем ускорителей</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3191&month=2', true);">
+<td style="1border-right: none">3191</td>
+<td style="1border-left: none;border-right: none">Скорлупкин Валентин Иванович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инженерно-физических проблем ускорителей</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3147&month=2', true);">
+<td style="1border-right: none">3147</td>
+<td style="1border-left: none;border-right: none">Фатеев Анатолий Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инженерно-физических проблем ускорителей</td>
+<td>начальник сектора</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=243652&month=2', true);">
+<td style="1border-right: none">243652</td>
+<td style="1border-left: none;border-right: none">Федотов Олег Юрьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инженерно-физических проблем ускорителей</td>
+<td>лаборант</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=98396&month=2', true);">
+<td style="1border-right: none">98396</td>
+<td style="1border-left: none;border-right: none">Юрков Михаил Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел инженерно-физических проблем ускорителей</td>
+<td>ведущий научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6255&month=2', true);">
+<td style="1border-right: none">6255</td>
+<td style="1border-left: none;border-right: none">Блинников Николай Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>ведущий электроник</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=231119&month=2', true);">
+<td style="1border-right: none">231119</td>
+<td style="1border-left: none;border-right: none">Богдан Лариса Геннадьевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>инженер-электроник</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6256&month=2', true);">
+<td style="1border-right: none">6256</td>
+<td style="1border-left: none;border-right: none">Бровко Олег Игоревич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>начальник отдела</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6656&month=2', true);">
+<td style="1border-right: none">6656</td>
+<td style="1border-left: none;border-right: none">Брунерс Галина Алексеевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>инженер-конструктор 1 категории</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=170747&month=2', true);">
+<td style="1border-right: none">170747</td>
+<td style="1border-left: none;border-right: none">Ведерников Кирилл Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>лаборант</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=180413&month=2', true);">
+<td style="1border-right: none">180413</td>
+<td style="1border-left: none;border-right: none">Володин Антон Акмалович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>лаборант</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=170054&month=2', true);">
+<td style="1border-right: none">170054</td>
+<td style="1border-left: none;border-right: none">Галкин Владимир Евгеньевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>лаборант</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=111792&month=2', true);">
+<td style="1border-right: none">111792</td>
+<td style="1border-left: none;border-right: none">Гребенцов Александр Юрьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=294140&month=2', true);">
+<td style="1border-right: none">294140</td>
+<td style="1border-left: none;border-right: none">Гурылев Кирилл Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>инженер-электроник</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=104036&month=2', true);">
+<td style="1border-right: none">104036</td>
+<td style="1border-left: none;border-right: none">Иванов Георгий Евгеньевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=291177&month=2', true);">
+<td style="1border-right: none">291177</td>
+<td style="1border-left: none;border-right: none">Иванов Евгений Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>начальник группы</td>
+<td>Руководители</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=151490&month=2', true);">
+<td style="1border-right: none">151490</td>
+<td style="1border-left: none;border-right: none">Малышев Александр Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>лаборант</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=120313&month=2', true);">
+<td style="1border-right: none">120313</td>
+<td style="1border-left: none;border-right: none">Мыслинская Ольга Александровна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>лаборант</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=285240&month=2', true);">
+<td style="1border-right: none">285240</td>
+<td style="1border-left: none;border-right: none">Никитин Александр Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=171945&month=2', true);">
+<td style="1border-right: none">171945</td>
+<td style="1border-left: none;border-right: none">Петров Владимир Дмитриевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>инженер-электроник</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=1893&month=2', true);">
+<td style="1border-right: none">1893</td>
+<td style="1border-left: none;border-right: none">Писулина Александра Николаевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=50917&month=2', true);">
+<td style="1border-right: none">50917</td>
+<td style="1border-left: none;border-right: none">Прозоров Олег Владиславович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=264189&month=2', true);">
+<td style="1border-right: none">264189</td>
+<td style="1border-left: none;border-right: none">Решетников Геннадий Павлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>старший научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=81820&month=2', true);">
+<td style="1border-right: none">81820</td>
+<td style="1border-left: none;border-right: none">Румянцев Сергей Алексеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>инженер-электроник 1 категории</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=133251&month=2', true);">
+<td style="1border-right: none">133251</td>
+<td style="1border-left: none;border-right: none">Светов Андрей Леонидович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3467&month=2', true);">
+<td style="1border-right: none">3467</td>
+<td style="1border-left: none;border-right: none">Скиба Лариса Петровна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>инженер-электроник 2 категории</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=65434&month=2', true);">
+<td style="1border-right: none">65434</td>
+<td style="1border-left: none;border-right: none">Смирнова Зоя Ивановна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6049&month=2', true);">
+<td style="1border-right: none">6049</td>
+<td style="1border-left: none;border-right: none">Устинов Анатолий Викторович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=91482&month=2', true);">
+<td style="1border-right: none">91482</td>
+<td style="1border-left: none;border-right: none">Шумков Валерий Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел радиоэлектронных систем</td>
+<td>начальник группы</td>
+<td>Руководители</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=140011&month=2', true);">
+<td style="1border-right: none">140011</td>
+<td style="1border-left: none;border-right: none">Балонкин Юрий Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=163261&month=2', true);">
+<td style="1border-right: none">163261</td>
+<td style="1border-left: none;border-right: none">Белякин Дмитрий Юрьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>лаборант</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=165891&month=2', true);">
+<td style="1border-right: none">165891</td>
+<td style="1border-left: none;border-right: none">Беспалов Юрий Геннадьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=172090&month=2', true);">
+<td style="1border-right: none">172090</td>
+<td style="1border-left: none;border-right: none">Бобровский Андрей Валентинович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>лаборант</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=115231&month=2', true);">
+<td style="1border-right: none">115231</td>
+<td style="1border-left: none;border-right: none">Борисов Владимир Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>начальник группы</td>
+<td>Руководители</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6942&month=2', true);">
+<td style="1border-right: none">6942</td>
+<td style="1border-left: none;border-right: none">Буланов Игорь Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=140809&month=2', true);">
+<td style="1border-right: none">140809</td>
+<td style="1border-left: none;border-right: none">Бычков Александр Викторович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер-программист 2 категории</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=171855&month=2', true);">
+<td style="1border-right: none">171855</td>
+<td style="1border-left: none;border-right: none">Векличев Ян Юрьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=175082&month=2', true);">
+<td style="1border-right: none">175082</td>
+<td style="1border-left: none;border-right: none">Волченков Илья Сергеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>слесарь механосборочных работ</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=102187&month=2', true);">
+<td style="1border-right: none">102187</td>
+<td style="1border-left: none;border-right: none">Галимов Артем Рафаэлевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>заместитель начальника отдела</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=130157&month=2', true);">
+<td style="1border-right: none">130157</td>
+<td style="1border-left: none;border-right: none">Голубицкий Олег Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=140025&month=2', true);">
+<td style="1border-right: none">140025</td>
+<td style="1border-left: none;border-right: none">Дергунов Александр Петрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>заместитель начальника отдела</td>
+<td>Руководители</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6615&month=2', true);">
+<td style="1border-right: none">6615</td>
+<td style="1border-left: none;border-right: none">Долгий Сергей Алексеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=172200&month=2', true);">
+<td style="1border-right: none">172200</td>
+<td style="1border-left: none;border-right: none">Долотова Оксана Юрьевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>лаборант</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=151184&month=2', true);">
+<td style="1border-right: none">151184</td>
+<td style="1border-left: none;border-right: none">Донгузов Илья Игоревич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6616&month=2', true);">
+<td style="1border-right: none">6616</td>
+<td style="1border-left: none;border-right: none">Донягин Алексей Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=130002&month=2', true);">
+<td style="1border-right: none">130002</td>
+<td style="1border-left: none;border-right: none">Дорошенко Александр Дмитриевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=174850&month=2', true);">
+<td style="1border-right: none">174850</td>
+<td style="1border-left: none;border-right: none">Елсуков Сергей Витальевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>лаборант</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=150547&month=2', true);">
+<td style="1border-right: none">150547</td>
+<td style="1border-left: none;border-right: none">Ершов Геннадий Геннадьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>лаборант</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=174587&month=2', true);">
+<td style="1border-right: none">174587</td>
+<td style="1border-left: none;border-right: none">Жбанков Алексей Сергеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=160125&month=2', true);">
+<td style="1border-right: none">160125</td>
+<td style="1border-left: none;border-right: none">Зобков Дмитрий Геннадьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=165110&month=2', true);">
+<td style="1border-right: none">165110</td>
+<td style="1border-left: none;border-right: none">Золотых Дмитрий Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=76871&month=2', true);">
+<td style="1border-right: none">76871</td>
+<td style="1border-left: none;border-right: none">Иванов Михаил Викторович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=140024&month=2', true);">
+<td style="1border-right: none">140024</td>
+<td style="1border-left: none;border-right: none">Ильин Максим Валерьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>лаборант</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=161024&month=2', true);">
+<td style="1border-right: none">161024</td>
+<td style="1border-left: none;border-right: none">Ильина Ксения Владимировна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>старший лаборант</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=154355&month=2', true);">
+<td style="1border-right: none">154355</td>
+<td style="1border-left: none;border-right: none">Каретник Сергей Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>слесарь механосборочных работ</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=151249&month=2', true);">
+<td style="1border-right: none">151249</td>
+<td style="1border-left: none;border-right: none">Карпунин Роман Анатольевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>лаборант</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6433&month=2', true);">
+<td style="1border-right: none">6433</td>
+<td style="1border-left: none;border-right: none">Карпунина Ира Егоровна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=170330&month=2', true);">
+<td style="1border-right: none">170330</td>
+<td style="1border-left: none;border-right: none">Кашунин Михаил Андреевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=146608&month=2', true);">
+<td style="1border-right: none">146608</td>
+<td style="1border-left: none;border-right: none">Кондратьев Богдан</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=273421&month=2', true);">
+<td style="1border-right: none">273421</td>
+<td style="1border-left: none;border-right: none">Коровкин Сергей Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>младший научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=991570&month=2', true);">
+<td style="1border-right: none">991570</td>
+<td style="1border-left: none;border-right: none">Костромин Сергей Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>начальник отдела</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=273471&month=2', true);">
+<td style="1border-right: none">273471</td>
+<td style="1border-left: none;border-right: none">Кудашкин Алексей Васильевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=144316&month=2', true);">
+<td style="1border-right: none">144316</td>
+<td style="1border-left: none;border-right: none">Кудряшов Павел Игоревич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=60812&month=2', true);">
+<td style="1border-right: none">60812</td>
+<td style="1border-left: none;border-right: none">Кузнецов Григорий Леонидович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=285218&month=2', true);">
+<td style="1border-right: none">285218</td>
+<td style="1border-left: none;border-right: none">Кунченко Олег Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=165307&month=2', true);">
+<td style="1border-right: none">165307</td>
+<td style="1border-left: none;border-right: none">Левин Сергей Георгиевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=163787&month=2', true);">
+<td style="1border-right: none">163787</td>
+<td style="1border-left: none;border-right: none">Лушин Александр Валерьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=174694&month=2', true);">
+<td style="1border-right: none">174694</td>
+<td style="1border-left: none;border-right: none">Майоров Александр Сергеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>лаборант</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=110646&month=2', true);">
+<td style="1border-right: none">110646</td>
+<td style="1border-left: none;border-right: none">Меркурьев Андрей Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=174631&month=2', true);">
+<td style="1border-right: none">174631</td>
+<td style="1border-left: none;border-right: none">Михайленко Вячеслав</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=170833&month=2', true);">
+<td style="1border-right: none">170833</td>
+<td style="1border-left: none;border-right: none">Морозов Дмитрий Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>слесарь механосборочных работ</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=160300&month=2', true);">
+<td style="1border-right: none">160300</td>
+<td style="1border-left: none;border-right: none">Неаполитанский Денис Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер-программист</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=112135&month=2', true);">
+<td style="1border-right: none">112135</td>
+<td style="1border-left: none;border-right: none">Никифоров Дмитрий Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>начальник группы</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=170667&month=2', true);">
+<td style="1border-right: none">170667</td>
+<td style="1border-left: none;border-right: none">Омельяненко Леонид Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=122367&month=2', true);">
+<td style="1border-right: none">122367</td>
+<td style="1border-left: none;border-right: none">Омельяненко Михаил Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=160471&month=2', true);">
+<td style="1border-right: none">160471</td>
+<td style="1border-left: none;border-right: none">Орлов Дмитрий Артемович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>электромонтер по ремонту и обслуживанию электрооборудования</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=174849&month=2', true);">
+<td style="1border-right: none">174849</td>
+<td style="1border-left: none;border-right: none">Останин Павел Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>лаборант</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=160771&month=2', true);">
+<td style="1border-right: none">160771</td>
+<td style="1border-left: none;border-right: none">Парфенов Олег Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=174632&month=2', true);">
+<td style="1border-right: none">174632</td>
+<td style="1border-left: none;border-right: none">Парфило Тарас</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=153441&month=2', true);">
+<td style="1border-right: none">153441</td>
+<td style="1border-left: none;border-right: none">Пашинский Валерий Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=123215&month=2', true);">
+<td style="1border-right: none">123215</td>
+<td style="1border-left: none;border-right: none">Петров Михаил Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=153950&month=2', true);">
+<td style="1border-right: none">153950</td>
+<td style="1border-left: none;border-right: none">Пономарев Андрей Алексеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=170827&month=2', true);">
+<td style="1border-right: none">170827</td>
+<td style="1border-left: none;border-right: none">Рожков Владислав Андреевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=263043&month=2', true);">
+<td style="1border-right: none">263043</td>
+<td style="1border-left: none;border-right: none">Рыжов Денис Валерьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=174238&month=2', true);">
+<td style="1border-right: none">174238</td>
+<td style="1border-left: none;border-right: none">Салихова Айгуль Разифовна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=164238&month=2', true);">
+<td style="1border-right: none">164238</td>
+<td style="1border-left: none;border-right: none">Самуилов Милко Севдалинов</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>лаборант</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=160772&month=2', true);">
+<td style="1border-right: none">160772</td>
+<td style="1border-left: none;border-right: none">Свидетелев Алексей Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=28039&month=2', true);">
+<td style="1border-right: none">28039</td>
+<td style="1border-left: none;border-right: none">Селеверстова Елена Валерьевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>старший техник</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3185&month=2', true);">
+<td style="1border-right: none">3185</td>
+<td style="1border-left: none;border-right: none">Сергеев Анатолий Петрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=115290&month=2', true);">
+<td style="1border-right: none">115290</td>
+<td style="1border-left: none;border-right: none">Серочкина Татьяна Евгеньевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=151134&month=2', true);">
+<td style="1border-right: none">151134</td>
+<td style="1border-left: none;border-right: none">Скворцов Дмитрий Геннадьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>лаборант</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=110805&month=2', true);">
+<td style="1border-right: none">110805</td>
+<td style="1border-left: none;border-right: none">Смирнов Сергей Альбертович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=253357&month=2', true);">
+<td style="1border-right: none">253357</td>
+<td style="1border-left: none;border-right: none">Станков Олег Юрьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=6651&month=2', true);">
+<td style="1border-right: none">6651</td>
+<td style="1border-left: none;border-right: none">Стариков Андрей Юрьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>начальник сектора</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=165510&month=2', true);">
+<td style="1border-right: none">165510</td>
+<td style="1border-left: none;border-right: none">Степанов Виталий Сергеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>лаборант</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=153618&month=2', true);">
+<td style="1border-right: none">153618</td>
+<td style="1border-left: none;border-right: none">Талызин Роман Владимирович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=151434&month=2', true);">
+<td style="1border-right: none">151434</td>
+<td style="1border-left: none;border-right: none">Тихомиров Александр Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=134699&month=2', true);">
+<td style="1border-right: none">134699</td>
+<td style="1border-left: none;border-right: none">Ульянов Владимир Викторович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=200544&month=2', true);">
+<td style="1border-right: none">200544</td>
+<td style="1border-left: none;border-right: none">Хабарова Елена Михайловна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=174239&month=2', true);">
+<td style="1border-right: none">174239</td>
+<td style="1border-left: none;border-right: none">Хамидуллин Рамиль Наилевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=151280&month=2', true);">
+<td style="1border-right: none">151280</td>
+<td style="1border-left: none;border-right: none">Цветкова Юлия Анатольевна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=175295&month=2', true);">
+<td style="1border-right: none">175295</td>
+<td style="1border-left: none;border-right: none">Чебыкин Денис Александрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=160051&month=2', true);">
+<td style="1border-right: none">160051</td>
+<td style="1border-left: none;border-right: none">Черкунов Дмитрий Сергеевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>старший техник</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=161262&month=2', true);">
+<td style="1border-right: none">161262</td>
+<td style="1border-left: none;border-right: none">Шандов Михаил Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>младший научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=123385&month=2', true);">
+<td style="1border-right: none">123385</td>
+<td style="1border-left: none;border-right: none">Шевченко Екатерина Владимировна</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=146369&month=2', true);">
+<td style="1border-right: none">146369</td>
+<td style="1border-left: none;border-right: none">Шемчук Андрей Васильевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</td>
+<td>младший научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=224240&month=2', true);">
+<td style="1border-right: none">224240</td>
+<td style="1border-left: none;border-right: none">Бечер Юрген</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел ускорительных систем  </td>
+<td>ведущий инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=2275&month=2', true);">
+<td style="1border-right: none">2275</td>
+<td style="1border-left: none;border-right: none">Замрий Виктор Николаевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел ускорительных систем  </td>
+<td>консультант</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=5645&month=2', true);">
+<td style="1border-right: none">5645</td>
+<td style="1border-left: none;border-right: none">Калмыков Александр Викторович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел ускорительных систем  </td>
+<td>старший научный сотрудник</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=68548&month=2', true);">
+<td style="1border-right: none">68548</td>
+<td style="1border-left: none;border-right: none">Каляскин Алексей Вячеславович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел ускорительных систем  </td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=8778&month=2', true);">
+<td style="1border-right: none">8778</td>
+<td style="1border-left: none;border-right: none">Кульков Владимир Андреевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел ускорительных систем  </td>
+<td>механик экспериментальных стендов и установок</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3286&month=2', true);">
+<td style="1border-right: none">3286</td>
+<td style="1border-left: none;border-right: none">Лепкин Петр Михайлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел ускорительных систем  </td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3120&month=2', true);">
+<td style="1border-right: none">3120</td>
+<td style="1border-left: none;border-right: none">Минашкин Владимир Федорович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел ускорительных систем  </td>
+<td>начальник сектора</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3200&month=2', true);">
+<td style="1border-right: none">3200</td>
+<td style="1border-left: none;border-right: none">Соболев Евгений Петрович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел ускорительных систем  </td>
+<td>старший инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=3139&month=2', true);">
+<td style="1border-right: none">3139</td>
+<td style="1border-left: none;border-right: none">Сумбаев Анатолий Павлович</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел ускорительных систем  </td>
+<td>начальник отдела</td>
+<td>Научные и научно-педагогические работники</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+oddRow
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=124233&month=2', true);">
+<td style="1border-right: none">124233</td>
+<td style="1border-left: none;border-right: none">Сумбаев Иван Анатольевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел ускорительных систем  </td>
+<td>инженер</td>
+<td>Специалисты</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="pt
+"
+onClick="ShowDialog(true); AjaxCall('popupCont', 'c=edit/premiya&tab_n=110992&month=2', true);">
+<td style="1border-right: none">110992</td>
+<td style="1border-left: none;border-right: none">Шевелкин Александр Валерьевич</td>
+<td style="1border-right: none">Отделение №1 Ускорительное </td>
+<td style="1border-right: none;border-left: none">Научно-экспериментальный отдел ускорительных систем  </td>
+<td>слесарь механосборочных работ</td>
+<td>Рабочие</td>
+<td></td>
+<td></td>
+</tr>
+<tr><td colspan=7 class="pager last">
+Строк на странице:
+<SELECT NAME="rpp" class=small onChange="; goToRow(1);">
+<OPTION value="20"
+>20
+<OPTION value="50"
+>50 <OPTION value="100"
+>100<OPTION VALUE="9999"
+selected
+> не огр.
+</SELECT> &nbsp; &nbsp; &nbsp; Строки: |<span class=actPage>1-365</span> |
+</td></tr>
+</table>
+<script type="text/javascript">
+showSrt("sotr.FIO","sup");
+</script>
+</body></html>

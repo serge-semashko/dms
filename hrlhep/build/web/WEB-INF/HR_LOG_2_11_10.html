@@ -1,0 +1,227 @@
+<html>
+    <head>
+        <title>HR LHEP Log</title>
+        <META http-equiv=Content-Type content="text/html; charset=utf-8">
+        <style>
+            body{background-color:#eefff4;}
+            xmp {margin:0;} 
+            .pt {cursor:pointer;} 
+            span.req_start {border:solid 1px red; font-weight:bold; background-color:#FFFFA0;}
+            span.req_end {border:solid 1px red; font-weight:bold; background-color:#D0FFB0;}
+            div.req {display:none; border:solid 1px red; padding:4px; background-color:white;}
+
+            span.ss_start {border:solid 1px red; background-color:#D0E8FF;}
+            span.ss_back {border:solid 1px blue; background-color:#D0FFB0;}
+            div.ss {display:none; border:solid 1px green; border-right:none; padding:6px; margin-left:5px;}
+        </style>
+        <script type="text/javascript">
+            var toggleDiv = function (id) {
+                var d = document.getElementById(id);
+                if (d.style.display === "block")
+                    d.style.display = "none";
+                else
+                    d.style.display = "block";
+            };
+        </script>
+    </head><body>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_2_11_10.html maxLength=500000
+</xmp>------ SQL done, 0ms.<br><BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_44");'> Request_HR_LHEP_44 [11.02 10:52:8] 2: 0:0:0:0:0:0:0:1 c=tab_jubilee_table</span><div id='Request_HR_LHEP_44' class='req'> queryString:c=tab_jubilee_table&srn=1&srt=sotr.FIO&jubilee_mode=1&jubilee_period=7&rpp=20&ajax=Y; log=true; session inactive=min;<br>no lookup_date<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+from sotrudniki sotr
+where lab_id = 100000
+and (YEAR(CURRENT_DATE)-YEAR(dr)) > 1
+and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())>=0  and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())<=7
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=23</xmp>------ SQL done, 19ms.<br><BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, (YEAR(CURRENT_DATE)-YEAR(dr)) AS age
+from sotrudniki sotr
+where lab_id = 100000
+and (YEAR(CURRENT_DATE)-YEAR(dr)) >= 1
+and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())>=0  and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())<=7
+order by month(dr), day(dr)
+</xmp> <b> Processed in 11ms. </b><br> <b> NumTableRows=23; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_44");'>Request_HR_LHEP_44 (tab_jubilee_table) DONE! (893ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_45");'> Request_HR_LHEP_45 [11.02 10:52:25] 2: 0:0:0:0:0:0:0:1 c=fill_otdel</span><div id='Request_HR_LHEP_45' class='req'> queryString:c=fill_otdel&otdelenie=Административно-хозяйственное подразделение&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[scripts]<BR>
+<br> <b>SQL: [[get otdels] (1) ]:</b><xmp>select distinct concat('<option value="', short_name, '" '
+, case when short_name='' then 'selected' else '' end
+, '>' , short_name, '</option>')as OTDEL
+from struktura str
+where str.pid  in (select id from struktura where pid = 100000)
+and pid in (select id from struktura where short_name like "Административно-хозяйственное подразделение%")
+order by otdel
+</xmp><xmp>***** 2 record(s) retrieved. Filled 1 parameters: 
+OTDEL=<option value="Административное бюро" >Административное бюро</option><option value="Хозяйственный отдел" >Хозяйственный отдел</option></xmp>------ SQL done, 166ms.<br><BR>
+<br> <b>SQL: [[get otdels] (2) ]:</b><xmp></xmp></div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_45");'>Request_HR_LHEP_45 (fill_otdel) DONE! (329ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_46");'> Request_HR_LHEP_46 [11.02 10:52:26] 2: 0:0:0:0:0:0:0:1 c=tab_jubilee_table</span><div id='Request_HR_LHEP_46' class='req'> queryString:c=tab_jubilee_table&srn=1&srt=sotr.FIO&otdelenie=Административно-хозяйственное подразделение&jubilee_mode=1&jubilee_period=7&rpp=20&ajax=Y; log=true; session inactive=min;<br>no lookup_date<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+from sotrudniki sotr
+where lab_id = 100000
+and sotr.TopParent_name like 'Административно-хозяйственное подразделение%'
+and (YEAR(CURRENT_DATE)-YEAR(dr)) > 1
+and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())>=0  and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())<=7
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=5</xmp>------ SQL done, 11ms.<br><BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, (YEAR(CURRENT_DATE)-YEAR(dr)) AS age
+from sotrudniki sotr
+where lab_id = 100000
+and sotr.TopParent_name like 'Административно-хозяйственное подразделение%'
+and (YEAR(CURRENT_DATE)-YEAR(dr)) >= 1
+and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())>=0  and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())<=7
+order by month(dr), day(dr)
+</xmp> <b> Processed in 10ms. </b><br> <b> NumTableRows=5; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_46");'>Request_HR_LHEP_46 (tab_jubilee_table) DONE! (1077ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_47");'> Request_HR_LHEP_47 [11.02 10:52:32] 2: 0:0:0:0:0:0:0:1 c=tab_jubilee_table</span><div id='Request_HR_LHEP_47' class='req'> queryString:c=tab_jubilee_table&srn=1&srt=sotr.FIO&otdelenie=Административно-хозяйственное подразделение&jubilee_mode=0&jubilee_period=7&rpp=20&ajax=Y; log=true; session inactive=min;<br>no lookup_date<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+from sotrudniki sotr
+where lab_id = 100000
+and sotr.TopParent_name like 'Административно-хозяйственное подразделение%'
+and (YEAR(CURRENT_DATE)-YEAR(dr)) > 0
+and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())>=0  and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())<=7
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=5</xmp>------ SQL done, 12ms.<br><BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, (YEAR(CURRENT_DATE)-YEAR(dr)) AS age
+from sotrudniki sotr
+where lab_id = 100000
+and sotr.TopParent_name like 'Административно-хозяйственное подразделение%'
+and (YEAR(CURRENT_DATE)-YEAR(dr)) >= 0
+and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())>=0  and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())<=7
+order by month(dr), day(dr)
+</xmp> <b> Processed in 11ms. </b><br> <b> NumTableRows=5; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_47");'>Request_HR_LHEP_47 (tab_jubilee_table) DONE! (1015ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_48");'> Request_HR_LHEP_48 [11.02 10:52:40] 2: 0:0:0:0:0:0:0:1 c=tab_jubilee_table</span><div id='Request_HR_LHEP_48' class='req'> queryString:c=tab_jubilee_table&srn=1&srt=sotr.FIO&otdelenie=Административно-хозяйственное подразделение&jubilee_mode=50&jubilee_period=7&rpp=20&ajax=Y; log=true; session inactive=min;<br>no lookup_date<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+from sotrudniki sotr
+where lab_id = 100000
+and sotr.TopParent_name like 'Административно-хозяйственное подразделение%'
+and (YEAR(CURRENT_DATE)-YEAR(dr)) > 50
+and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())>=0  and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())<=7
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=5</xmp>------ SQL done, 10ms.<br><BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, (YEAR(CURRENT_DATE)-YEAR(dr)) AS age
+from sotrudniki sotr
+where lab_id = 100000
+and sotr.TopParent_name like 'Административно-хозяйственное подразделение%'
+and (YEAR(CURRENT_DATE)-YEAR(dr)) >= 50
+and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())>=0  and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())<=7
+order by month(dr), day(dr)
+</xmp> <b> Processed in 10ms. </b><br> <b> NumTableRows=5; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_48");'>Request_HR_LHEP_48 (tab_jubilee_table) DONE! (488ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_49");'> Request_HR_LHEP_49 [11.02 10:52:54] 2: 0:0:0:0:0:0:0:1 c=fill_otdel</span><div id='Request_HR_LHEP_49' class='req'> queryString:c=fill_otdel&otdelenie=Группа советников и консультантов&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[scripts]<BR>
+<br> <b>SQL: [[get otdels] (1) ]:</b><xmp>select distinct concat('<option value="', short_name, '" '
+, case when short_name='' then 'selected' else '' end
+, '>' , short_name, '</option>')as OTDEL
+from struktura str
+where str.pid  in (select id from struktura where pid = 100000)
+and pid in (select id from struktura where short_name like "Группа советников и консультантов%")
+order by otdel
+</xmp><xmp>***** 0 record(s) retrieved. Filled 0 parameters: </xmp>------ SQL done, 149ms.<br><BR>
+<br> <b>SQL: [[get otdels] (2) ]:</b><xmp></xmp></div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_49");'>Request_HR_LHEP_49 (fill_otdel) DONE! (624ms)</span> <BR>
+</div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_50");'> Request_HR_LHEP_50 [11.02 10:52:56] 2: 0:0:0:0:0:0:0:1 c=fill_otdel</span><div id='Request_HR_LHEP_50' class='req'> queryString:c=fill_otdel&otdelenie=Отделение №1 Ускорительное&ajax=Y; log=true; session inactive=min;<br><b>$INCLUDE </b>[scripts]<BR>
+<br> <b>SQL: [[get otdels] (1) ]:</b><xmp>select distinct concat('<option value="', short_name, '" '
+, case when short_name='' then 'selected' else '' end
+, '>' , short_name, '</option>')as OTDEL
+from struktura str
+where str.pid  in (select id from struktura where pid = 100000)
+and pid in (select id from struktura where short_name like "Отделение №1 Ускорительное%")
+order by otdel
+</xmp><xmp>***** 10 record(s) retrieved. Filled 1 parameters: 
+OTDEL=<option value="Диспетчерская служба Нуклотрона" >Диспетчерская служба Нуклотрона</option><option value="Инженерный энерготехнологический отдел " >Инженерный энерготехнологический отдел </option><option value="Научно-инженерный отдел систем электропитания Нуклотрона" >Научно-инженерный отдел систем электропитания Нуклотрона</option><option value="Научно-исследовательский криогенный отдел" >Научно-исследовательский криогенный отдел</option><option value="Научно-технический отдел пучков" >Научно-технический отдел пучков</option><option value="Научно-экспериментальный отдел инжекции и кольца Нуклотрона" >Научно-экспериментальный отдел инжекции и кольца Нуклотрона</option><option value="Научно-экспериментальный отдел инженерно-физических проблем ускорителей" >Научно-экспериментальный отдел инженерно-физических проблем ускорителей</option><option value="Научно-экспериментальный отдел радиоэлектронных систем" >Научно-экспериментальный отдел радиоэлектронных систем</option><option value="Научно-экспериментальный отдел сверхпроводящих магнитов и технологий" >Научно-экспериментальный отдел сверхпроводящих магнитов и технологий</option><option value="Научно-экспериментальный отдел ускорительных систем  " >Научно-экспериментальный отдел ускорительных систем  </option></xmp>------ SQL done, 4ms.<br><BR>
+<br> <b>SQL: [[get otdels] (2) ]:</b><xmp></xmp></div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_50");'>Request_HR_LHEP_50 (fill_otdel) DONE! (169ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_51");'> Request_HR_LHEP_51 [11.02 10:52:58] 2: 0:0:0:0:0:0:0:1 c=tab_jubilee_table</span><div id='Request_HR_LHEP_51' class='req'> queryString:c=tab_jubilee_table&srn=1&srt=sotr.FIO&otdelenie=Отделение №1 Ускорительное&jubilee_mode=50&jubilee_period=7&rpp=20&ajax=Y; log=true; session inactive=min;<br>no lookup_date<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+from sotrudniki sotr
+where lab_id = 100000
+and sotr.TopParent_name like 'Отделение №1 Ускорительное%'
+and (YEAR(CURRENT_DATE)-YEAR(dr)) > 50
+and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())>=0  and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())<=7
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=3</xmp>------ SQL done, 9ms.<br><BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, (YEAR(CURRENT_DATE)-YEAR(dr)) AS age
+from sotrudniki sotr
+where lab_id = 100000
+and sotr.TopParent_name like 'Отделение №1 Ускорительное%'
+and (YEAR(CURRENT_DATE)-YEAR(dr)) >= 50
+and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())>=0  and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())<=7
+order by month(dr), day(dr)
+</xmp> <b> Processed in 10ms. </b><br> <b> NumTableRows=3; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_51");'>Request_HR_LHEP_51 (tab_jubilee_table) DONE! (227ms)</span> <BR>
+<b>$INCLUDE </b>dat/common.dat[rowLinks]<BR>
+$$$$$$$$$$ prevSetLink=<a class=page href="javascript:; goToRow();"> <<< предыд. </a></div><br><span class='req_start pt' onClick='toggleDiv("Request_HR_LHEP_52");'> Request_HR_LHEP_52 [11.02 10:53:7] 2: 0:0:0:0:0:0:0:1 c=tab_jubilee_table</span><div id='Request_HR_LHEP_52' class='req'> queryString:c=tab_jubilee_table&srn=1&srt=sotr.FIO&otdelenie=Отделение №1 Ускорительное&jubilee_mode=1&jubilee_period=7&rpp=20&ajax=Y; log=true; session inactive=min;<br>no lookup_date<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [[get Totals] (1) ]:</b><xmp>select count(*) as "NUM_RECORDS"
+from sotrudniki sotr
+where lab_id = 100000
+and sotr.TopParent_name like 'Отделение №1 Ускорительное%'
+and (YEAR(CURRENT_DATE)-YEAR(dr)) > 1
+and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())>=0  and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())<=7
+</xmp><xmp>***** 1 record(s) retrieved. Filled 1 parameters: 
+NUM_RECORDS=6</xmp>------ SQL done, 11ms.<br><BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+ SQL: [SQL]<BR>
+<b>$INCLUDE </b>utils.cfg[criteria]<BR>
+<br> <b>SQL: [SQL]:</b><xmp>select sotr.tab_n,sotr.topparent_name,sotr.subtopparent_name, sotr.FIO, sotr.history_contract, sotr.stepen, sotr.otdel, sotr.shtat_direct
+, sotr.division, sotr.div_code, sotr.post, date_format(sotr.dr,'%d.%m.%Y') birthday
+, sotr.usl_truda, sotr.usl_rab, sotr.category, sotr.grazhdan, date_format(sotr.nachalo_rab,'%d.%m.%Y') nachalo_rab
+, date_format(sotr.okonch_rab,'%d.%m.%Y') okonch_rab, sotr.otdel, sotr.shtat_direct
+, sotr.sovmeshenie
+, (YEAR(CURRENT_DATE)-YEAR(dr)) AS age
+from sotrudniki sotr
+where lab_id = 100000
+and sotr.TopParent_name like 'Отделение №1 Ускорительное%'
+and (YEAR(CURRENT_DATE)-YEAR(dr)) >= 1
+and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())>=0  and  DAYOFYEAR(dr) - DAYOFYEAR(CURRENT_DATE())<=7
+order by month(dr), day(dr)
+</xmp> <b> Processed in 11ms. </b><br> <b> NumTableRows=6; </b><BR>
+<b>$INCLUDE </b>dat/common.dat[rpp]<BR>
+</div><span class='req_end pt' onClick='toggleDiv("Request_HR_LHEP_52");'>Request_HR_LHEP_52 (tab_jubilee_table) DONE! (1513ms)</span> <BR>
