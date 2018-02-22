@@ -224,13 +224,13 @@ public class IOUtil extends java.lang.Object {
             }
             String lf_name = getLogFileName(rmg);
             String prev_lf_name = rm.getString("lf_name", false, "");
-            System.out.println("=== IOUtil.getLogWriter(...): logPath = " + rm.getString("logPath") + " lf_name: " + lf_name);
+//            System.out.println("=== IOUtil.getLogWriter(...): logPath = " + rm.getString("logPath") + " lf_name: " + lf_name);
             String logPath = (rm.getString("logPath")+"/").replaceAll("[\\\\/]{1,}", "/");
-            rm.putString("logPath", logPath);
-            rmg.putString("logPath", logPath);
-            System.out.println("=== IOUtil.getLogWriter(...): logPath = " + logPath + " lf_name: " + lf_name);
+            rm.setParam("logPath", logPath, true);
+//            rmg.putString("logPath", logPath);
+//            System.out.println("=== IOUtil.getLogWriter(...): logPath = " + logPath + " lf_name: " + lf_name);
             String logFileFullPath = logPath + lf_name ;
-            System.out.println("=== IOUtil.getLogWriter(...): logFileFullPath = " + logFileFullPath);
+//            System.out.println("=== IOUtil.getLogWriter(...): logFileFullPath = " + logFileFullPath);
 
             lw = (PrintWriter) rmg.getObject("LogWriter", false);
             if (!lf_name.equals(prev_lf_name)) {  // имя сменилось - закрываем старый лог-файл

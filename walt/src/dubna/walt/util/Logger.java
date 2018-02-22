@@ -5,9 +5,9 @@
  */
 package dubna.walt.util;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
+//import java.sql.Connection;
+//import java.sql.DriverManager;
+//import java.sql.PreparedStatement;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -20,6 +20,7 @@ public class Logger {
 
     private ResourceManager rm_global;
     private DBUtil dbUtil = null;
+    private String now="NOW()";
 
     public Logger(ResourceManager rm_global) {
         this.rm_global = rm_global;
@@ -30,8 +31,8 @@ public class Logger {
         makeDBUtil();
         try {
             Tuner cfgTuner = (Tuner) rm.getObject("cfgTuner");
-//            System.out.println("-------");
-//            System.out.println("  Logger.logRequest2DB(): msg=" + msg + "; cfgTuner=" + cfgTuner);
+            System.out.println("-------");
+            System.out.println("  Logger.logRequest2DB(): msg=" + msg + "; cfgTuner=" + cfgTuner);
             String s = rm.getString("startTm");
             String sql;
             long l = 0;
@@ -56,7 +57,9 @@ public class Logger {
                             + "', " + cfgTuner.getIntParameter(null, "doc_id", 0)
                             + ", '" + trimString(cfgTuner.getParameter("h_cookie"), 2047)
                             + "', '" + ((ex == null) ? msg : ex.toString() + " / " + msg)
-                            + "', NOW()"
+                            + "', " + now
+//                            + "', SYSDATE"
+//                            + "', NOW()"
                             + ", '" + cfgTuner.getParameter("ClientIP")
                             + "', '" + cfgTuner.getParameter("h_user-agent")
                             + "', '" + cfgTuner.getParameter("h_referer")
@@ -123,7 +126,9 @@ public class Logger {
                             + "', '" + trimString(request.toString(), 2047)
                             + "', '" + trimString(q, 2047)
                             + "', '" + ((ex == null) ? msg : ex.toString() + " / " + msg)
-                            + "', NOW()"
+                            + "', " + now
+//                            + "', SYSDATE"
+//                            + "', NOW()"
                             + ", '" + rm.getString("clientIP")
                             + "', '*"
                             + "', '" + referer
@@ -154,24 +159,44 @@ public class Logger {
      * @return объект DBUtil, который далее будет использоваться для обращения к
      * БД.
      * @throws Exception
+     * 
+     * 
+  ..... Logger.makeDBUtil():jdbc:oracle:thin:@addb.jinr.ru:1522:ADM?useUnicode=false&characterEncoding=utf8 //|| ADB/*** STI4rF0x
+                          * jdbc:oracle:thin:@addb.jinr.ru:1522:ADM?useUnicode=false&characterEncoding=utf8
+Logger: Connection FAILED!...
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12505, TNS:listener does not currently know of SID given in connect descriptor
+ 
+ *             dbUtil = new DBUtil(rm.getString("connString"),
+                    rm.getString("usr", false),
+                    rm.getString("pw", false),
+                    queryLabel, 1);
      */
     private synchronized void makeDBUtil() {
         if (dbUtil != null && dbUtil.isAlive()) {
             return;
         }
         try {
+            Class.forName(rm_global.getString("dbDriver"));        // init the JDBC driver
+            if(rm_global.getString("DB",false,"MySQL").equals("ORA"))
+                now = "SYSDATE";
             /* Establish connection to the database and make DBUtil */
-            System.out.println("  ..... Logger.makeDBUtil():" + rm_global.getString("connString", true)
-                    + rm_global.getString("database", false, "") + rm_global.getString("connParam", false, "")
+            String connString=rm_global.getString("connString")
+                    + rm_global.getString("database", false, "")
+                    + rm_global.getString("connParam", false, "");
+            
+            System.out.println("  ..... Logger.makeDBUtil():" + connString
                     + " //|| " + rm_global.getString("usr") + "/*** "
                     + rm_global.getString("pw")
             );
-            Connection conn = DriverManager.getConnection(rm_global.getString("connString")
-                    + rm_global.getString("database", false, "")
-                    + rm_global.getString("connParam", false, ""), rm_global.getString("usr"), rm_global.getString("pw"));
-            conn.setAutoCommit(true);
-            dbUtil = new DBUtil(conn, "Logger_" + rm_global.getString(""));
+//            Connection conn = connString, rm_global.getString("usr"), rm_global.getString("pw"));
+//            conn.setAutoCommit(true);
+//            dbUtil = new DBUtil(conn, "Logger_" + rm_global.getString(""));
 //            dbUtil.db = DBUtil.DB_MySQL;
+            dbUtil = new DBUtil(connString
+                    , rm_global.getString("usr", false)
+                    , rm_global.getString("pw", false),
+                    "LOGGER", 1);
             dbUtil.allocate();
         } catch (Exception e) {
             System.out.println("Logger: Connection FAILED!...");
