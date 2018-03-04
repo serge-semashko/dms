@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>HR LHEP Log</title>
+        <META http-equiv=Content-Type content="text/html; charset=utf-8">
+        <style>
+            body{background-color:#eefff4;}
+            xmp {margin:0;} 
+            .pt {cursor:pointer;} 
+            span.req_start {border:solid 1px red; font-weight:bold; background-color:#FFFFA0;}
+            span.req_end {border:solid 1px red; font-weight:bold; background-color:#D0FFB0;}
+            div.req {display:none; border:solid 1px red; padding:4px; background-color:white;}
+
+            span.ss_start {border:solid 1px red; background-color:#D0E8FF;}
+            span.ss_back {border:solid 1px blue; background-color:#D0FFB0;}
+            div.ss {display:none; border:solid 1px green; border-right:none; padding:6px; margin-left:5px;}
+        </style>
+        <script type="text/javascript">
+            var toggleDiv = function (id) {
+                var d = document.getElementById(id);
+                if (d.style.display === "block")
+                    d.style.display = "none";
+                else
+                    d.style.display = "block";
+            };
+        </script>
+    </head><body>
+<b>$INCLUDE </b>[report_]<BR>
+<br> <b>SQL: [[read file] (1) ]:</b><xmp>read file: HR_LOG_3_3_11.html maxLength=500000
+</xmp>------ SQL done, 1ms.<br><BR>
+result=true; and=false; or=false<BR>
+result=false; and=false; or=false<BR>
+result=false; and=false; or=false<BR>
+result=false; and=false; or=false<BR>
+result=false; and=false; or=false<BR>
+result=false; and=false; or=false<BR>
+result=false; and=false; or=false<BR>
+result=false; and=false; or=false<BR>
+result=true; and=false; or=false<BR>
+result=true; and=false; or=false<BR>
+FALSE! <BR>
+FALSE! <BR>
+FALSE! <BR>
+result=false; and=false; or=false<BR>
+<xmp><BR>
+<HTML><HEAD><TITLE>LOG HR LHEP</TITLE><BR>
+<META http-equiv=Content-Type content="text/html; charset=utf-8"><BR>
+<script type="text/javascript"><BR>
+var clearLog=function() {<BR>
+document.theForm.ResetLog.value="true";<BR>
+document.theForm.submit();<BR>
+}<BR>
+var switchLog=function() {<BR>
+document.theForm.ResetLog.value="true";<BR>
+document.theForm.submit();<BR>
+}<BR>
+</script><BR>
+</head><BR>
+<body><BR>
+<div style="position: fixed; top:1; right:1; border:solid 1px gray; background-color:#FFFFA0; padding:5px;"><BR>
+<form name="theForm" method="POST" style="margin:0;"><BR>
+<input type=hidden name="c" value="sys/showLog_noDB"><BR>
+<input type=hidden name="ResetLog" value=""><BR>
+<input type=button value="ОБНОВИТЬ" style="width:120px; margin-right:20px;" onClick="document.theForm.submit();"><BR>
+<input type=button value="ОЧИСТИТЬ" style="width:120px; margin-right:20px;" onClick="clearLog();"><BR>
+LOG:<input type=radio name="setLog" value="on"<BR>
+checked<BR>
+onClick="switchLog();">ON<BR>
+<input type=radio name="setLog" value="off"<BR>
+onClick="switchLog();">OFF<BR>
+<input type=radio name="LogLevel" value="0"<BR>
+onClick="switchLog();">0<BR>
+<input type=radio name="LogLevel" value="1"<BR>
+onClick="switchLog();">1<BR>
+<input type=radio name="LogLevel" value="2"<BR>
+onClick="switchLog();">2<BR>
+<input type=radio name="LogLevel" value="3"<BR>
+onClick="switchLog();">3<BR>
+<input type=radio name="LogLevel" value="5"<BR>
+onClick="switchLog();">5<BR>
+<input type=radio name="LogLevel" value="7"<BR>
+onClick="switchLog();">7<BR>
+<input type=radio name="LogLevel" value="9"<BR>
+checked<BR>
+onClick="switchLog();">9<BR>
+&nbsp; &nbsp;<BR>
+<input type=checkbox name="setDebug"<BR>
+checked<BR>
+onClick="document.theForm.submit();">debug<BR>
+</form><BR>
+</div><BR>
+<input size=65 value='F:/LIT/dms/hrlhep/build/web/WEB-INF/HR_LOG_3_3_11.html'><BR>
+<br><BR>
+<hr><BR>
+</body></html><BR>
+</xmp><BR>
+result=false; and=false; or=true<BR>
+result=false; and=false; or=false<BR>
+result=true; and=false; or=false<BR>
