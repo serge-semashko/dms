@@ -24,10 +24,16 @@ public class Logger {
 
     public Logger(ResourceManager rm_global) {
         this.rm_global = rm_global;
-        makeDBUtil();
+        if(!rm_global.getBoolean("NO_LOG_TO_DB")) 
+            makeDBUtil();
     }
 
     public void logRequest2DB(ResourceManager rm, String msg, Exception ex) {
+        if(rm_global.getBoolean("NO_LOG_TO_DB")) {
+            System.out.println("-------");
+            System.out.println("  XXX Logger - NO DB! .logRequest2DB(): msg=" + msg + ";");
+        }
+        else {
         makeDBUtil();
         try {
             Tuner cfgTuner = (Tuner) rm.getObject("cfgTuner");
@@ -148,6 +154,7 @@ public class Logger {
             System.out.println("***** ERROR: Logger.logRequest2DB()" + e.toString());
             System.out.println("+++++++++++++++");
             e.printStackTrace();
+        }
         }
     }
 //insert into a_req_log (USER_ID, C, REQUEST_NAME, QUERY, DOC_ID, COOKIES, ERR, DAT, IP, USER_AGENT, REF, SESS_ID, SESS, DID, TIM, REAL_USER_ID) 

@@ -217,7 +217,7 @@ public class QueryThread extends dubna.walt.SimpleQueryThread {
             Connection conn = DriverManager.getConnection(cfgTuner.getParameter("connString")
                     + cfgTuner.getParameter("database")
                     + cfgTuner.getParameter("connParam"), cfgTuner.getParameter("usr"), cfgTuner.getParameter("pw"));
-            conn.setAutoCommit(false);
+            conn.setAutoCommit(true);
             dbUtil = new DBUtil(conn, queryLabel);
             dbUtil.db = DBUtil.DB_MySQL;
             dbUtil.allocate();

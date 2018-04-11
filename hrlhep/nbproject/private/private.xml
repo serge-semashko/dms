@@ -3,37 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/utils.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_premii.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/edit/fte_v1.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_personal_table.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/personal_XL.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/js/main.css</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_salary_table.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_reports.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_jubilee_table.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_reports_chart.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/jubilee_XL.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_povysh_table.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/main.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/oauth_check_user.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_fte_table.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/edit/premiya.cfg</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_iss.cfg</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_salary_table.cfg</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/sys/salary_XL.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_jubilee.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/salary_XL.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/js/data.js</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/premii_XL.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/edit/fte_edit.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/fte_XL.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_fte.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_personal.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/dat/common.dat</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/free/js_tabs.dat</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/gateway/receive.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_salary.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_premii_table.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/src/java/hrlhep.properties</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_jubilee_table.cfg</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_iss_table.cfg</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/edit/fte_v1.cfg</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/utils.cfg</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_personal_table.cfg</file>
             <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/gateway/receive_7_sotrudnik.cfg</file>
+            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/main.cfg</file>
         </group>
     </open-files>
 </project-private>

@@ -15,6 +15,7 @@ var t_fte = function() {AjaxCall("c_fte", "c=tab_fte"); }
 var t_povysh = function() {AjaxCall("c_povysh", "c=tab_povysh");}
 var t_reports = function() {AjaxCall("c_reports", "c=tab_reports");}; 
 var t_samples = function() {AjaxCall("c_samples", "c=tab_samples");} 
+var t_iss = function() {AjaxCall("c_iss", "c=tab_iss");} 
 
 //console.log("start loading");
 var setTabsClicks=function(tabDivId, act)
