@@ -68,7 +68,8 @@ var
  topic, project, fte,prstr, outstr,post, fio, tab_n : string;
  ff : tfilestream;
  ffsql : tfilestream;
- fte_perc : Integer;
+ fte_perc : double;
+ var strn : string;
 begin
   DeleteFile(ExtractFilePath(Application.ExeName)+'out.txt');
   DeleteFile(ExtractFilePath(Application.ExeName)+'sql.txt');
@@ -78,12 +79,53 @@ begin
   for sel:=0 to sheetlist.Items.Count-1 do begin
     if not sheetlist.Selected[sel] then continue;
     sheetin:=XLAppIn.Workbooks[1].WorkSheets[sel+1];
+         DecimalSeparator := '.';
     for xrow:=13 to 2000 do begin
+      strn := '#'+IntToStr(xrow)+' ';
        post := trim(sheetin.cells[xrow,6]);
        fio:=trim(sheetin.cells[xrow,7]);
        tab_n := trim(sheetin.cells[xrow,8].value);
        if Trim(tab_n)='' then Continue;
-       outstr := tab_n+' '+fio+' ';
+       outstr :=strn+ tab_n+' '+fio+' ';
+       fte := sheetin.cells[xrow,73];
+       if Trim(fte) <>'' then begin
+         topic := '1065';
+         project := '25';
+         fte := StringReplace(fte,',','.',[rfReplaceAll]);
+         fte_perc := strtofloat(fte);
+           outstr := strn+ tab_n +'  ' +fio+' 1065 *ƒÓÔ '+' '+floatToStr(fte_perc)+' '+#13;
+          ffsql.Write(outstr[1],Length(outstr));
+
+           outstr := 'insert FTE (tab_n,topic_id,project_id,percent, changed_by) values('+tab_n+', '+topic+', '+project+', '+
+           floatToStr(fte_perc)+',-1);'+#13;
+           ffsql.Write(outstr[1],Length(outstr));
+       end;
+       fte := sheetin.cells[xrow,74];
+       if Trim(fte) <>'' then begin
+           topic := '10';
+           project := '40';
+           fte := StringReplace(fte,',','.',[rfReplaceAll]);
+           fte_perc := strtofloat(fte);
+           outstr := strn+ tab_n +'  ' +fio+' ¿ƒÃ»Õ À‘¬› '+' '+floatToStr(fte_perc)+' '+#13;
+           ffsql.Write(outstr[1],Length(outstr));
+           outstr := 'insert FTE (tab_n,topic_id,project_id,percent, changed_by) values('+tab_n+', '+topic+', '+project+', '+
+           floatToStr(fte_perc)+',-1);'+#13;
+           ffsql.Write(outstr[1],Length(outstr));
+       end;
+       fte := sheetin.cells[xrow,75];
+
+       if Trim(fte) <>'' then begin
+           topic := '20';
+           project := '41';
+           fte := StringReplace(fte,',','.',[rfReplaceAll]);
+           fte_perc := strtofloat(fte);
+           outstr := strn+ tab_n +'  ' +fio+' Position À‘¬› '+' '+floatToStr(fte_perc)+' '+#13;
+           ffsql.Write(outstr[1],Length(outstr));
+           outstr := 'insert FTE (tab_n,topic_id,project_id,percent, changed_by) values('+tab_n+', '+topic+', '+project+', '+
+           floatToStr(fte_perc)+',-1);'+#13;
+           ffsql.Write(outstr[1],Length(outstr));
+       end;
+
        for prj:= 48 to 71 do begin
          if trim(sheetin.cells[xrow,8]) = '' then Continue;
          topic := sheetin.cells[6,prj] ;
@@ -94,18 +136,18 @@ begin
            projects[prj] := project;
          end;
          fte := sheetin.cells[xrow,prj];
-         DecimalSeparator := '.';
          if Trim(fte) <> ''  then begin
            fte := StringReplace(fte,',','.',[rfReplaceAll]);
 
-           fte_perc := Round(strtofloat(fte)*100);
-           outstr := tab_n   +fio+' '+' '+topic+ ' '+project+' '+' '+IntToStr(fte_perc)+' '+#13;
-           ff.Write(outstr[1],Length(outstr));
+           fte_perc := strtofloat(fte);
+           outstr := strn+ tab_n +'  ' +fio+' '+topic+ ' '+project+' '+' '+floatToStr(fte_perc)+' '+#13;
+           ffsql.Write(outstr[1],Length(outstr));
            outstr := 'insert FTE (tab_n,topic_id,project_id,percent, changed_by) values('+tab_n+', '+topic+', '+
-           'ifnull((select id from projects where short_name like "'+project+'%"),'+IntToStr(-xrow+13)+'),'+IntToStr(fte_perc)+',-1);'+#13;
+           'ifnull((select id from projects where short_name like "'+project+'%"),'+IntToStr(-xrow+13)+'),'+floatToStr(fte_perc)+',-1);'+#13;
            ffsql.Write(outstr[1],Length(outstr));
          end;
        end;
+
     end;
   end;
    xlappIn.visible:=true;
