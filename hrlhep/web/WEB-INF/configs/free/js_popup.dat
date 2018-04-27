@@ -18,7 +18,7 @@ ShowDialog = function(modal, minWidth)
 	$("##dialog").show();
 
 	if(minWidth) {
-		console.log($("##dialog").width()); ??
+		console.log($("##dialog").width()); 
 		dialogMinWidth = minWidth;
 		if($("##dialog").width() < minWidth)
 			$("##dialog").width(minWidth);
@@ -65,24 +65,24 @@ var centerDialog = function(){
 	if (h>500) h=500;
 	$('##ptree').height(h); ??
 	
-	if(dialogMinWidth)
-		if($("##dialog").width() < dialogMinWidth)
-			$("##dialog").width(dialogMinWidth);
 			
 //  if(document.all) t = ($("body").innerHeight() - $('.dialog').outerHeight())/2 + $(window).scrollTop(); ??
 //	else t = ($("window").innerHeight() - $('.dialog').outerHeight())/2 + $(window).scrollTop(); ??
 //	t=$(window).scrollTop() + 10;
 	var top = window.document.body.scrollTop + 50 + (h - $('.dialog').outerHeight())/2 ;
 	if (top<10) top=10;
-        var left = ($("body").innerWidth() - $('.dialog').outerWidth())/2;
+        var left = ($("body").innerWidth() - $('.dialog').outerWidth())/2+window.document.body.scrollLeft;
 console.log("centerDialog: body.innerWidth=" + $("body").innerWidth() + "; dialog.outerWidth=" + $('.dialog').outerWidth() + ";"); ??
 console.log("centerDialog: top=" + top + "; left=" + left + ";"); ??
 	$('.dialog').css({
 		position:'absolute',
 		left: left,
-		left: ($("body").innerWidth() - $('.dialog').outerWidth())/2, ??
 		top: top
 	});
+	if(dialogMinWidth)
+		if($("##dialog").width() < dialogMinWidth)
+			$("##dialog").width(dialogMinWidth);
+
 }
 
 $(window).resize(function(){

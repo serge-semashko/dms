@@ -10,7 +10,7 @@ testURL=free/js_tabs.dat
 var t_personal = function () {AjaxCall("c_personal", "c=tab_personal"); } // Клик на табе "Персонал" 
 var t_jubilee = function () {AjaxCall("c_jubilee", "c=tab_jubilee"); } // Клик на табе "Юбилей" 
 var t_premii = function () {AjaxCall("c_premii", "c=tab_premii"); } // Клик на табе "Премии" 
-var t_salary = function () {AjaxCall("c_salary", "c=tab_salary"); } // Клик на табе "Оклад" 
+var t_salary = function () {AjaxCall("c_salary", "c=tab_salary"); } // Клик на табе "Заработная плата" 
 var t_fte = function() {AjaxCall("c_fte", "c=tab_fte"); }
 var t_povysh = function() {AjaxCall("c_povysh", "c=tab_povysh");}
 var t_reports = function() {AjaxCall("c_reports", "c=tab_reports");}; 
