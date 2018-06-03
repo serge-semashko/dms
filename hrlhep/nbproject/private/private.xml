@@ -3,17 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_fte_table.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_salary_table.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/sys/cfgdoc/module_view.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/sys/cfgdoc/module_noDB.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/free/js_popup.dat</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/index.html</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/tab_iss_table.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/utils.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/edit/fte_v1.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/sys/cfgdoc/module_src_noDB.cfg</file>
-            <file>file:/F:/LIT/dms/hrlhep/web/WEB-INF/configs/main.cfg</file>
+            <file>file:/G:/home/dms/hrlhep/src/java/hrlhep.properties</file>
+            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/main.cfg</file>
+            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/free/main_js_noDB.cfg</file>
         </group>
     </open-files>
 </project-private>
