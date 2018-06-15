@@ -1,8 +1,4 @@
-
-#insert user_rights (person_id, topic_id,project_id, adm, RW )  values(878, 
-	(select topic_id from projects where short_name =':p1'),
-	 (select id from projects where short_name =':p1'),
-	 1,1);
-
-
-
+select * from sotrudniki where f like 'ладыг%' and lab_id = 100000;
+insert users (kod_fl, F,I,O,lab_id, right_level, fte_admin)
+  select person_id, f,i,o, 100000,2,1 
+  from sotrudniki where tab_n=-1;
