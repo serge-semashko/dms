@@ -7,7 +7,12 @@ import dubna.walt.service.Service;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.logging.Level;
 import javax.net.ssl.HttpsURLConnection;
+import javax.script.Bindings;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.SimpleBindings;
 import org.apache.regexp.*;
 import javax.servlet.http.*;
 
@@ -145,8 +150,9 @@ public class BasicTuner {
 
         /* read the source file, if specified */
         try {
-            if(fn != null)
+            if (fn != null) {
                 fn = getModFileName(fn, "SIMPLE");
+            }
             source = (fn == null) ? cfg : readFile(cfgRootPath + fn);
         } catch (Exception e) {
             source = null;
@@ -392,8 +398,8 @@ public class BasicTuner {
             } else if (line.indexOf("$LOG_ERROR") == 0 & parseData) { // Process "$LOG_ERROR Directive - store message to DB
                 String msg = parseString(line.substring(11).trim());
 //                System.out.println(line + "; msg=" + msg);
-                if(msg.length() > 1){
-                    ((Logger) rm.getObject("logger")).logRequest2DB(rm, "ERROR:" + msg + ".", null);                
+                if (msg.length() > 1) {
+                    ((Logger) rm.getObject("logger")).logRequest2DB(rm, "ERROR:" + msg + ".", null);
                 }
             } else if (line.indexOf("$LOG") == 0 & parseData) { // Process "$LOG Directive 
                 int lev = 0;
@@ -519,7 +525,30 @@ public class BasicTuner {
 //				q.logException(e);
                     ((QueryThread) rm.getObject("QueryThread")).logException(e);
                 }
-            } // process the normal line (not a directive)
+            } else if (line.indexOf("$JS") >= 0 & parseData){
+                String js = parseString(line.substring(3).trim());
+                try {
+                    execJS(js, sectionLines, out);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    String msg = e.toString().replaceAll("'", "`");
+                    while (msg.indexOf("Exception: ") > 0) {
+                        msg = msg.substring(msg.indexOf("Exception: ") + 10);
+                    }
+                    addParameter("$JS error = "+js,
+                            getParameter(null, null, "CALL_SERVICE_ERROR")
+                            + msg + "\n\r");
+                    addParameter("ERROR", msg);
+                    rm.println("========== $JS:");
+                    QueryThread q = (QueryThread) rm.getObject("QueryThread");
+                    if (q != null) {
+                        q.logException(e);
+                    }
+                }
+                
+            }
+            // process the normal line (not a directive)
+            
             else {
                 addLine(parseString(result), sectionLines, out);
             }
@@ -546,7 +575,7 @@ public class BasicTuner {
         if (securityMode.equals("")) {
             securityMode = rm.getString("securityMode", false, "SIMPLE");
         }
-        String fn = fname; 
+        String fn = fname;
 
 //        System.out.print("***** BasicTuner.getModFileName(): " + fname + "; requestType=" + requestType + "; securityMode=" + securityMode);
         if (securityMode.equalsIgnoreCase("SIMPLE")) {
@@ -564,7 +593,7 @@ public class BasicTuner {
             }
             if (!IOUtil.fileExists(cfgRootPath + fn)) {
                 ((Logger) rm.getObject("logger")).logRequest2DB(rm, "file not found(s): " + fname, null);
-                fn=fname;
+                fn = fname;
             }
 
         } else {
@@ -583,7 +612,7 @@ public class BasicTuner {
                     fn = fn.replace(".ajm", ".mod");
                     if (!IOUtil.fileExists(cfgRootPath + fn)) {
                         ((Logger) rm.getObject("logger")).logRequest2DB(rm, "FILE NOT FOUND(a): " + fname, null);
-                        fn=fname;
+                        fn = fname;
                     }
                 }
             }
@@ -697,8 +726,7 @@ public class BasicTuner {
             if (session != null) {
                 try {
                     value = (String) session.getAttribute(parameterName);
-                }
-                catch (Exception ex) {
+                } catch (Exception ex) {
                     System.out.println(" BasicTuner.getParameter() ERROR: Session invalidated!");
                 }
             }
@@ -1575,6 +1603,28 @@ public class BasicTuner {
             return null;
         }
         return outStr;
+    }
+
+    public void execJS(String jScript, Vector seclines, PrintWriter out) throws Exception {
+        // Get the JavaScript engine
+        ScriptEngineManager manager = new ScriptEngineManager();
+        ScriptEngine engine = manager.getEngineByName("JavaScript");
+
+        // Set JavaScript variables
+        Bindings vars = new SimpleBindings();
+        vars.put("demoVar", "value set in ScriptDemo.java");
+        vars.put("prm", parameters);
+        vars.put("out", out);
+        vars.put("seclines", seclines);
+
+        // Run DemoScript.js
+//        Reader scriptReader = new InputStreamReader(
+//            ScriptDemo.class.getResourceAsStream("DemoScript.js"));
+        try {
+            engine.eval(jScript, vars);
+        } finally {
+//            scriptReader.close();
+        }
     }
 
 }

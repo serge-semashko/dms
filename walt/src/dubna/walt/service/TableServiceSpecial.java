@@ -39,7 +39,7 @@ public class TableServiceSpecial extends dubna.walt.service.TableServiceSimple {
 //        IOUtil.writeLogLn("currentRow=" + currentRow + "; srn=" + srn + "; rpp=" + rpp, rm); 
         if (currentRow > srn - 2 && currentRow < srn + rpp) {
             for (int colNr = 0; colNr < numSqlColumns; colNr++) {
-IOUtil.writeLogLn(7, currentRow + "." + colNr + ": " + colNames[colNr] + "=" + record[colNr] + ";", rm); 
+                IOUtil.writeLogLn(7, currentRow + "." + colNr + ": " + colNames[colNr] + "=" + record[colNr] + ";", rm);
                 if (record[colNr] == null || record[colNr].length() < 1) {
                     record[colNr] = " ";
                 }
