@@ -775,6 +775,7 @@ public class Service {
 
                 int nr = 0;
                 while (r.next()) {
+                    
                     for (i = 0; i < params.length; i++) {
                         val = r.getString(i + 1);
                         if (val != null && val.length() > 0 && !val.equalsIgnoreCase("NULL")) {

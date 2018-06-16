@@ -117,6 +117,34 @@ public class BasicTuner {
         return getCustomSection(fileName, sectionName, null);
     }
 
+    public String getRawSection(String fileName, String sectionName, PrintWriter out) {
+        String sectionBody = null;
+        String[] source = null;
+        String fn = (fileName == null || fileName.trim().length() == 0) ? null : fileName.trim();
+
+        /* read the source file, if specified */
+        try {
+            if (fn != null) {
+                fn = getModFileName(fn, "SIMPLE");
+            }
+            source = (fn == null) ? cfg : readFile(cfgRootPath + fn);
+        } catch (Exception e) {
+            source = null;
+        } finally {
+            if (source == null) {
+                return null;
+            }
+        }
+        StringBuilder builder = new StringBuilder();
+        for (String current : source) {
+            builder.append(current);
+        }
+        sectionBody = builder.toString();
+        
+        return sectionBody;
+
+    }
+
     /**
      * Obtains a customized section from a template file.
      *
@@ -443,7 +471,8 @@ public class BasicTuner {
 //      rm.println(line);
                 Service serv = (Service) rm.getObject("service");
                 try {
-                    serv.getData(parseString((line.substring(j + ("$GET_DATA").length()))).trim());
+                    String news = parseString((line.substring(j + ("$GET_DATA").length()))).trim();
+                    serv.getData(news);
 //        rm.println("============ QUIT GET_DATA ============");
                 } catch (Exception e) {
                     String m = e.toString().replaceAll("'", "`");
@@ -525,7 +554,7 @@ public class BasicTuner {
 //				q.logException(e);
                     ((QueryThread) rm.getObject("QueryThread")).logException(e);
                 }
-            } else if (line.indexOf("$JS") >= 0 & parseData){
+            } else if (line.indexOf("$JS") >= 0 & parseData) {
                 String js = parseString(line.substring(3).trim());
                 try {
                     execJS(js, sectionLines, out);
@@ -535,7 +564,7 @@ public class BasicTuner {
                     while (msg.indexOf("Exception: ") > 0) {
                         msg = msg.substring(msg.indexOf("Exception: ") + 10);
                     }
-                    addParameter("$JS error = "+js,
+                    addParameter("$JS error = " + js,
                             getParameter(null, null, "CALL_SERVICE_ERROR")
                             + msg + "\n\r");
                     addParameter("ERROR", msg);
@@ -545,10 +574,8 @@ public class BasicTuner {
                         q.logException(e);
                     }
                 }
-                
-            }
-            // process the normal line (not a directive)
-            
+
+            } // process the normal line (not a directive)
             else {
                 addLine(parseString(result), sectionLines, out);
             }
@@ -1612,8 +1639,11 @@ public class BasicTuner {
 
         // Set JavaScript variables
         Bindings vars = new SimpleBindings();
-        vars.put("demoVar", "value set in ScriptDemo.java");
         vars.put("prm", parameters);
+        vars.put("prm", parameters);
+        Service serv = (Service) rm.getObject("service");
+        DBUtil dbUtil = serv.dbUtil;
+        vars.put("dbUtil", dbUtil);
         vars.put("out", out);
         vars.put("seclines", seclines);
 
