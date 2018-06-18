@@ -11,21 +11,10 @@
             <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/free/js_CallModule.old</file>
         </group>
         <group name="dms -SSS">
-            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/tab_iss_table.cfg</file>
+            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/grade/scale_header.cfg</file>
             <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/tab_fte_table.cfg</file>
-            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/tab_gradescale_table.cfg</file>
-            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/tab_personal.cfg</file>
-            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/salary_XL.cfg</file>
-            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/tab_personal_table.cfg</file>
-            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/free/empty_noDB.cfg</file>
-            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/free/main_js_noDB.cfg</file>
-            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/tab_iss.cfg</file>
-            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/main.cfg</file>
-            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/tab_grade.cfg</file>
-            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/free/js_tabs.dat</file>
-            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/tab_fte.cfg</file>
+            <file>file:/G:/home/dms/hrlhep/src/java/jinr/hrlhep/HttpURLConnector.java</file>
             <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/tab_gradescale.cfg</file>
-            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/dat/common.dat</file>
         </group>
     </open-files>
 </project-private>

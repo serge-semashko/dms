@@ -15,6 +15,7 @@ import javax.script.ScriptEngineManager;
 import javax.script.SimpleBindings;
 import org.apache.regexp.*;
 import javax.servlet.http.*;
+import javax.xml.transform.Source;
 
 /**
  * Provides the basic functionality for the Tuner class.<br>
@@ -117,7 +118,7 @@ public class BasicTuner {
         return getCustomSection(fileName, sectionName, null);
     }
 
-    public String getRawSection(String fileName, String sectionName, PrintWriter out) {
+    public String getRawSection(String fileName, String sectionName) {
         String sectionBody = null;
         String[] source = null;
         String fn = (fileName == null || fileName.trim().length() == 0) ? null : fileName.trim();
@@ -554,7 +555,8 @@ public class BasicTuner {
 //				q.logException(e);
                     ((QueryThread) rm.getObject("QueryThread")).logException(e);
                 }
-            } else if (line.indexOf("$JS") >= 0 & parseData) {
+            } else if (line.indexOf("$JS ") == 0 & parseData) {
+                System.out.println("$JS SIMPLE &^%$*&%*&^%*&^%*^&%");
                 String js = parseString(line.substring(3).trim());
                 try {
                     execJS(js, sectionLines, out);
@@ -569,6 +571,36 @@ public class BasicTuner {
                             + msg + "\n\r");
                     addParameter("ERROR", msg);
                     rm.println("========== $JS:");
+                    QueryThread q = (QueryThread) rm.getObject("QueryThread");
+                    if (q != null) {
+                        q.logException(e);
+                    }
+                }
+
+            } else if (line.indexOf("$JS_BEGIN") == 0 & parseData) {
+                System.out.println("$JS MULT &^%$*&%*&^%*&^%*^&%");
+                String js = "";
+                for (i++;i<source.length;i++){
+                    line = source[i].trim();
+                    if (line.indexOf("$JS_END") == 0){
+                        break;
+                    }
+                    js += line+"\r";
+                }
+                System.out.println("$JS MULT v2:\n"+js);
+                try {
+                    execJS(js, sectionLines, out);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    String msg = e.toString().replaceAll("'", "`");
+                    while (msg.indexOf("Exception: ") > 0) {
+                        msg = msg.substring(msg.indexOf("Exception: ") + 10);
+                    }
+                    addParameter("$JS error = " + js,
+                            getParameter(null, null, "CALL_SERVICE_ERROR")
+                            + msg + "\n\r");
+                    addParameter("ERROR", msg);
+                    System.out.println("==@@@#@%#$@W^%@#$%#@$======== $JS:");
                     QueryThread q = (QueryThread) rm.getObject("QueryThread");
                     if (q != null) {
                         q.logException(e);
