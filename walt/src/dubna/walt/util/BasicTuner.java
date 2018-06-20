@@ -117,34 +117,34 @@ public class BasicTuner {
     public String[] getCustomSection(String fileName, String sectionName) {
         return getCustomSection(fileName, sectionName, null);
     }
-
-    public String getRawSection(String fileName, String sectionName) {
-        String sectionBody = null;
-        String[] source = null;
-        String fn = (fileName == null || fileName.trim().length() == 0) ? null : fileName.trim();
-
-        /* read the source file, if specified */
-        try {
-            if (fn != null) {
-                fn = getModFileName(fn, "SIMPLE");
-            }
-            source = (fn == null) ? cfg : readFile(cfgRootPath + fn);
-        } catch (Exception e) {
-            source = null;
-        } finally {
-            if (source == null) {
-                return null;
-            }
-        }
-        StringBuilder builder = new StringBuilder();
-        for (String current : source) {
-            builder.append(current);
-        }
-        sectionBody = builder.toString();
-        
-        return sectionBody;
-
-    }
+// 
+//    public String getRawSection(String fileName, String sectionName) {
+//        String sectionBody = null;
+//        String[] source = null;
+//        String fn = (fileName == null || fileName.trim().length() == 0) ? null : fileName.trim();
+//
+//        /* read the source file, if specified */
+//        try {
+//            if (fn != null) {
+//                fn = getModFileName(fn, "SIMPLE");
+//            }
+//            source = (fn == null) ? cfg : readFile(cfgRootPath + fn);
+//        } catch (Exception e) {
+//            source = null;
+//        } finally {
+//            if (source == null) {
+//                return null;
+//            }
+//        }
+//        StringBuilder builder = new StringBuilder();
+//        for (String current : source) {
+//            builder.append(current);
+//        }
+//        sectionBody = builder.toString();
+//        
+//        return sectionBody;
+//
+//    }
 
     /**
      * Obtains a customized section from a template file.
@@ -556,8 +556,9 @@ public class BasicTuner {
                     ((QueryThread) rm.getObject("QueryThread")).logException(e);
                 }
             } else if (line.indexOf("$JS ") == 0 & parseData) {
-                System.out.println("$JS SIMPLE &^%$*&%*&^%*&^%*^&%");
                 String js = parseString(line.substring(3).trim());
+                IOUtil.writeLogLn(5, "<font color=green>$JS " + js + "</font>", rm);
+
                 try {
                     execJS(js, sectionLines, out);
                 } catch (Exception e) {
@@ -566,11 +567,7 @@ public class BasicTuner {
                     while (msg.indexOf("Exception: ") > 0) {
                         msg = msg.substring(msg.indexOf("Exception: ") + 10);
                     }
-                    addParameter("$JS error = " + js,
-                            getParameter(null, null, "CALL_SERVICE_ERROR")
-                            + msg + "\n\r");
                     addParameter("ERROR", msg);
-                    rm.println("========== $JS:");
                     QueryThread q = (QueryThread) rm.getObject("QueryThread");
                     if (q != null) {
                         q.logException(e);
@@ -578,16 +575,16 @@ public class BasicTuner {
                 }
 
             } else if (line.indexOf("$JS_BEGIN") == 0 & parseData) {
-                System.out.println("$JS MULT &^%$*&%*&^%*&^%*^&%");
                 String js = "";
-                for (i++;i<source.length;i++){
+                for (i++; i < source.length; i++) {
                     line = source[i].trim();
-                    if (line.indexOf("$JS_END") == 0){
+                    if (line.indexOf("$JS_END") == 0) {
                         break;
-                    }
-                    js += line+"\r";
+                    };
+//                    js += parseString(line) + "\r";
+                    js += line + "\r";
                 }
-                System.out.println("$JS MULT v2:\n"+js);
+                IOUtil.writeLogLn(5, "<font color=green>$JS block:" + js + "</font>", rm);
                 try {
                     execJS(js, sectionLines, out);
                 } catch (Exception e) {
@@ -596,11 +593,7 @@ public class BasicTuner {
                     while (msg.indexOf("Exception: ") > 0) {
                         msg = msg.substring(msg.indexOf("Exception: ") + 10);
                     }
-                    addParameter("$JS error = " + js,
-                            getParameter(null, null, "CALL_SERVICE_ERROR")
-                            + msg + "\n\r");
                     addParameter("ERROR", msg);
-                    System.out.println("==@@@#@%#$@W^%@#$%#@$======== $JS:");
                     QueryThread q = (QueryThread) rm.getObject("QueryThread");
                     if (q != null) {
                         q.logException(e);
@@ -1678,6 +1671,7 @@ public class BasicTuner {
         vars.put("dbUtil", dbUtil);
         vars.put("out", out);
         vars.put("seclines", seclines);
+        vars.put("BT", this);
 
         // Run DemoScript.js
 //        Reader scriptReader = new InputStreamReader(
