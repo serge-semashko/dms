@@ -199,12 +199,16 @@ nextSetLink=| <a class=page href="javascript:#execute#; goToRow(#srn_i#);"> сл
 <font color=white> ??
 Строк на странице:
 <SELECT NAME="rpp" class=small onChange="#execute#; goToRow(1);">
+<OPTION value="10"
+selected ??rpp=10
+>10
 <OPTION value="20"
 selected ??rpp=20
 >20
 <OPTION value="50"
 selected ??rpp=50
->50 <OPTION value="100"
+>50 
+<OPTION value="100"
 selected ??rpp=100
 >100<OPTION VALUE="9999"
 selected ??rpp=9999

@@ -28,6 +28,8 @@ public class BasicTuner {
     /**
      *
      */
+    Bindings vars = new SimpleBindings();
+
     public Deque<String[]> parastack = new ArrayDeque<String[]>();
     /**
      * The array of the dynamic parameters.
@@ -1663,14 +1665,13 @@ public class BasicTuner {
         ScriptEngine engine = manager.getEngineByName("JavaScript");
 
         // Set JavaScript variables
-        Bindings vars = new SimpleBindings();
-        vars.put("prm", parameters);
         vars.put("prm", parameters);
         Service serv = (Service) rm.getObject("service");
         DBUtil dbUtil = serv.dbUtil;
         vars.put("dbUtil", dbUtil);
         vars.put("out", out);
         vars.put("seclines", seclines);
+        vars.put("rm", rm);
         vars.put("BT", this);
 
         // Run DemoScript.js
