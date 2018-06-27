@@ -14,11 +14,14 @@
             <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/tab_iss_table.cfg</file>
             <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/update_oklad.cfg</file>
             <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/grade/scale_header.cfg</file>
+            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/tab_premii.cfg</file>
             <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/main.cfg</file>
             <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/tab_fte_table.cfg</file>
             <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/tab_grade.cfg</file>
-            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/tab_gradescale.cfg</file>
+            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/tab_personal.cfg</file>
             <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/tab_fte.cfg</file>
+            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/utils.cfg</file>
+            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/dat/common.dat</file>
             <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/tab_salary_table.cfg</file>
         </group>
     </open-files>
