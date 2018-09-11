@@ -561,7 +561,7 @@ public class BasicTuner {
                 IOUtil.writeLogLn(5, "<font color=green>$JS " + js + "</font>", rm);
 
                 try {
-                    JS_Execute(js, sectionLines, out);
+                    JS_Execute(js,  out);
                 } catch (Exception e) {
                     e.printStackTrace();
                     String msg = e.toString().replaceAll("'", "`");
@@ -601,7 +601,7 @@ public class BasicTuner {
                 IOUtil.writeLogLn(3, "<font color=green>$JS_CALL " + jsfileName + " >" + jsFunctionName + "(" + jsParams + ")" + "</font>", rm);
 
                 try {
-                    JS_invokeFunction(jsfileName, jsFunctionName, jsParams, out);
+                    JS_invokeFunction(jsFunctionName, jsParams, out);
                 } catch (Exception e) {
                     e.printStackTrace();
                     String msg = e.toString().replaceAll("'", "`");
@@ -627,7 +627,7 @@ public class BasicTuner {
                 }
                 IOUtil.writeLogLn(5, "<font color=green>$JS block:" + js + "</font>", rm);
                 try {
-                    JS_Execute(js, sectionLines, out);
+                    JS_Execute(js , out);
                 } catch (Exception e) {
                     e.printStackTrace();
                     String msg = e.toString().replaceAll("'", "`");
@@ -1697,16 +1697,36 @@ public class BasicTuner {
         }
         return outStr;
     }
+    /*
+     * Группа функций для работы с скриптами на JavaScript на стороне сервера заданных в файлах CFG MOD и ит.д.
+     *
+     * Выполнение скрипта JAVASCRIPT из строки. Для jlbyjxyjq cnhjrb операторa вида $JS ишли блока строк $JS_BEGIN  ... $JS_END
+     *  
+     * @param jScript текст скрипта
+     * @param out - для заполнения переменных в контекст выполнения скрипта в функции InitJSEngine
+     *
+     */
 
-    public void JS_Execute(String jScript, Vector seclines, PrintWriter out) throws Exception {
+    public void JS_Execute(String jScript , PrintWriter out) throws Exception {
         InitJSEngine(out);
         try {
             engine.eval(jScript);
         } finally {
         }
     }
+    /*
+     * Группа функций для работы с скриптами на JavaScript на стороне сервера заданных в файлах CFG MOD и ит.д.
+     *
+     * Выполнение функции из скрипта расположенного в JS/default.js . Для  операторa вида $JS_CALL
+     *  
+     * @param functionname имя функции
+     * @param Parms - параметр, который будет передан в функцию
+     * @param out - для заполнения переменных в контекст выполнения скрипта в функции InitJSEngine
+     * @return результат выполнения функции
+     *
+     */
 
-    public Object JS_invokeFunction(String jScriptFileName, String functionName, String Params, PrintWriter out) throws Exception {
+    public Object JS_invokeFunction( String functionName, String Params, PrintWriter out) throws Exception {
         InitJSEngine(out);
         System.out.println("Java Invoke: " + functionName + " params:" + Params);
         Object result = null;
@@ -1722,25 +1742,31 @@ public class BasicTuner {
         }
         return result;
     }
+    /*
+     * Группа функций для работы с скриптами на JavaScript на стороне сервера заданных в файлах CFG MOD и ит.д.
+     *
+     * Интерфейс к IOUtil.writelog как метод BasicTuner. Для возможности писать в лог из скрипта через метод BT
+     * @param Level в вызове  IOUtil.writeLog
+     * @param msg в вызове  IOUtil.writeLog
+     *
+     */
 
-    public Object executeJs(String js, String funcName, Object... args) {
-        ScriptEngineManager manager = new ScriptEngineManager();
-        ScriptEngine engine = manager.getEngineByName("javascript");
-        try {
-            Object res = engine.eval(js);
-            if (null != funcName) {
-                if (engine instanceof Invocable) {
-                    Invocable invoke = (Invocable) engine;
-                    res = invoke.invokeFunction(funcName, args);
-                }
-            }
-            return res;
-        } catch (Exception e) {
-        }
-        return null;
+
+    public void WriteLog(int Level, String msg){
+        IOUtil.writeLog(Level, msg, rm);
     }
-
-    private void InitJSEngine(PrintWriter out) throws Exception {
+    
+    /*
+     * Группа функций для работы с скриптами на JavaScript на стороне сервера заданных в файлах CFG MOD и ит.д.
+     *
+     * Установка переменных в контексте выполнения скрипта: 
+     * prm :parameters , dbUtil, out, rm, BT - basicTuner
+     * хватило бы и одного BT. Остальное для сокращения записи
+     * @param Level в вызове  IOUtil.writeLog
+     * @param msg в вызове  IOUtil.writeLog
+     *
+     */
+    public void InitJSEngine(PrintWriter out) throws Exception {
         if (engine.get("prm") != null) {
             return;
         }
@@ -1748,6 +1774,8 @@ public class BasicTuner {
         Service serv = (Service) rm.getObject("service");
         DBUtil dbUtil = serv.dbUtil;
         engine.put("dbUtil", dbUtil);
+        
+       //engine.put("dbUtil", Object );
         engine.put("out", out);
         engine.put("rm", rm);
         engine.put("BT", this);
