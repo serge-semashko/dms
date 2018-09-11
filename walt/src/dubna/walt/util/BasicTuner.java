@@ -10,6 +10,7 @@ import java.net.URLConnection;
 import java.util.logging.Level;
 import javax.net.ssl.HttpsURLConnection;
 import javax.script.Bindings;
+import javax.script.Invocable;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.SimpleBindings;
@@ -25,10 +26,8 @@ import javax.xml.transform.Source;
  */
 public class BasicTuner {
 
-    /**
-     *
-     */
-    Bindings vars = new SimpleBindings();
+    ScriptEngineManager manager = new ScriptEngineManager();
+    ScriptEngine engine = manager.getEngineByName("JavaScript");
 
     public Deque<String[]> parastack = new ArrayDeque<String[]>();
     /**
@@ -562,7 +561,47 @@ public class BasicTuner {
                 IOUtil.writeLogLn(5, "<font color=green>$JS " + js + "</font>", rm);
 
                 try {
-                    execJS(js, sectionLines, out);
+                    JS_Execute(js, sectionLines, out);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    String msg = e.toString().replaceAll("'", "`");
+                    while (msg.indexOf("Exception: ") > 0) {
+                        msg = msg.substring(msg.indexOf("Exception: ") + 10);
+                    }
+                    addParameter("ERROR", msg);
+                    QueryThread q = (QueryThread) rm.getObject("QueryThread");
+                    if (q != null) {
+                        q.logException(e);
+                    }
+                }
+            } else if (line.indexOf("$JS_CALL") == 0 & parseData) {
+                String js = (line.substring(8).trim());
+                IOUtil.writeLogLn(3, "<b>$JS_CALL 1:</b>" + js, rm);
+                String jsfileName = "JS/default.js";
+//                int bFileName = js.indexOf("");  // look for the section name
+//                int eFileName = js.indexOf("", bSect);
+//                IOUtil.writeLogLn(3,js +  " <b>bSect eSect 1 </b>" + bSect+" "+eSect, rm);
+//
+//                if (bFileName >= 0 && eFileName > bFileName + 1) // the section name found - get the section (recourcive call)
+//                {
+//                        jsfileName = js.substring(1, eFileName);
+//                        js = js.substring(eFileName+1);
+//                }
+                int bSect = js.indexOf("(");  // look for the section name
+                int eSect = js.indexOf(")", bSect);
+                IOUtil.writeLogLn(3, "jsFilename=" + jsfileName + "'" + js + "' <b>bSect eSect 2 </b>" + bSect + " " + eSect, rm);
+                String jsFunctionName = "";
+                String jsParams = "";
+                if (bSect > 2 && eSect > bSect + 1) // the section name found - get the section (recourcive call)
+                {
+                    jsFunctionName = js.substring(0, bSect);
+                    jsParams = js.substring(bSect + 1, eSect);
+                }
+
+                IOUtil.writeLogLn(3, "<font color=green>$JS_CALL " + jsfileName + " >" + jsFunctionName + "(" + jsParams + ")" + "</font>", rm);
+
+                try {
+                    JS_invokeFunction(jsfileName, jsFunctionName, jsParams, out);
                 } catch (Exception e) {
                     e.printStackTrace();
                     String msg = e.toString().replaceAll("'", "`");
@@ -588,7 +627,7 @@ public class BasicTuner {
                 }
                 IOUtil.writeLogLn(5, "<font color=green>$JS block:" + js + "</font>", rm);
                 try {
-                    execJS(js, sectionLines, out);
+                    JS_Execute(js, sectionLines, out);
                 } catch (Exception e) {
                     e.printStackTrace();
                     String msg = e.toString().replaceAll("'", "`");
@@ -1659,29 +1698,74 @@ public class BasicTuner {
         return outStr;
     }
 
-    public void execJS(String jScript, Vector seclines, PrintWriter out) throws Exception {
-        // Get the JavaScript engine
-        ScriptEngineManager manager = new ScriptEngineManager();
-        ScriptEngine engine = manager.getEngineByName("JavaScript");
+    public void JS_Execute(String jScript, Vector seclines, PrintWriter out) throws Exception {
+        InitJSEngine(out);
+        try {
+            engine.eval(jScript);
+        } finally {
+        }
+    }
 
-        // Set JavaScript variables
-        vars.put("prm", parameters);
+    public Object JS_invokeFunction(String jScriptFileName, String functionName, String Params, PrintWriter out) throws Exception {
+        InitJSEngine(out);
+        System.out.println("Java Invoke: " + functionName + " params:" + Params);
+        Object result = null;
+        if (engine instanceof Invocable) {
+            Invocable invEngine = (Invocable) engine;
+            result = invEngine.invokeFunction(functionName, Params);
+            System.out.println("[Java] result: " + result);
+            System.out.println("    Java object: "
+                    + result.getClass().getName());
+            System.out.println();
+        } else {
+            System.out.println("NOT Invocable");
+        }
+        return result;
+    }
+
+    public Object executeJs(String js, String funcName, Object... args) {
+        ScriptEngineManager manager = new ScriptEngineManager();
+        ScriptEngine engine = manager.getEngineByName("javascript");
+        try {
+            Object res = engine.eval(js);
+            if (null != funcName) {
+                if (engine instanceof Invocable) {
+                    Invocable invoke = (Invocable) engine;
+                    res = invoke.invokeFunction(funcName, args);
+                }
+            }
+            return res;
+        } catch (Exception e) {
+        }
+        return null;
+    }
+
+    private void InitJSEngine(PrintWriter out) throws Exception {
+        if (engine.get("prm") != null) {
+            return;
+        }
+        engine.put("prm", parameters);
         Service serv = (Service) rm.getObject("service");
         DBUtil dbUtil = serv.dbUtil;
-        vars.put("dbUtil", dbUtil);
-        vars.put("out", out);
-        vars.put("seclines", seclines);
-        vars.put("rm", rm);
-        vars.put("BT", this);
-
-        // Run DemoScript.js
-//        Reader scriptReader = new InputStreamReader(
-//            ScriptDemo.class.getResourceAsStream("DemoScript.js"));
-        try {
-            engine.eval(jScript, vars);
-        } finally {
-//            scriptReader.close();
+        engine.put("dbUtil", dbUtil);
+        engine.put("out", out);
+        engine.put("rm", rm);
+        engine.put("BT", this);
+        StringBuilder builder = new StringBuilder();
+        String source[] = readFile(cfgRootPath + "JS/default.js");
+        for (String current : source) {
+            builder.append(current);
         }
+
+        String jScript = builder.toString();
+        System.out.println("1jScript : " + jScript);
+        try {
+//            engine.eval("function aaa () {c = 1 + 2; return c; }");
+//            engine.eval(jScript, vars);
+            engine.eval(jScript);
+        } finally {
+        }
+
     }
 
 }
