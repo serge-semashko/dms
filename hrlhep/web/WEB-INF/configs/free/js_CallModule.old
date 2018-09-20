@@ -16,6 +16,7 @@ testURL=free/js_CallModule.dat
  * Если force не задано или не boolean, то запрос выполняется, если элемент target_div не скрыт.
  */
 var AjaxCall=function(target_div, query, force, containerId) {
+    console.log("AjaxCall init: target_div=" + target_div+" query="+query+" force="+force+" containerId="+containerId); ??
 
   var data = [];
   var vis = false;

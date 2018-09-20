@@ -12,9 +12,13 @@
         </group>
         <group name="dms -SSS">
             <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/grade/scale_header.cfg</file>
-            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/JS/default.js</file>
-            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/grade/test.js</file>
-            <file>file:/G:/home/dms/hrlhep/src/java/jinr/hrlhep/Servlet.java</file>
+            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/free/js_popup.dat</file>
+            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/main.cfg</file>
+            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/tab_grade.cfg</file>
+            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/free/js_tabs.dat</file>
+            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/tab_gradescale.cfg</file>
+            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/dat/common.dat</file>
+            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/free/js_CallModule.old</file>
         </group>
     </open-files>
 </project-private>

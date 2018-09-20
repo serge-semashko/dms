@@ -1786,7 +1786,7 @@ public class BasicTuner {
         }
 
         String jScript = builder.toString();
-        System.out.println("1jScript : " + jScript);
+        System.out.println("Default script: \n" + jScript);
         try {
 //            engine.eval("function aaa () {c = 1 + 2; return c; }");
 //            engine.eval(jScript, vars);
