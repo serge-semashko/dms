@@ -5,9 +5,9 @@
  */
 function addCell(celltxt, colspan = 1, rowspan = 1, cellType = "simple") {
     var sectName = cellType + " cell";
-    BT.addParameter("colspan", colspan);
-    BT.addParameter("rowspan", rowspan);
-    BT.addParameter("txt", celltxt);
+    prm.set("colspan", colspan);
+    prm.set("rowspan", rowspan);
+    prm.set("txt", celltxt);
     out.println("sect = " + sectName);
     BT.getCustomSection("", sectName, out);
 }
@@ -28,5 +28,6 @@ cats.forEach(function (item, i, arr) {
 BT.getCustomSection("", "new row", out);
 addCell("Уровень");
 BT.getCustomSection("", "category header", out);
+out.println("!!!!!!!!!!!!!!USER_PD = "+BT.getParameter(null,null,"USER_ID"));
 
 
