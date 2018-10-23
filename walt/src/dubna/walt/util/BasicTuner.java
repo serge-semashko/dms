@@ -12,6 +12,7 @@ import javax.net.ssl.HttpsURLConnection;
 import javax.script.Bindings;
 import javax.script.Invocable;
 import javax.script.ScriptEngine;
+import javax.script.ScriptEngineFactory;
 import javax.script.ScriptEngineManager;
 import javax.script.SimpleBindings;
 import org.apache.regexp.*;
@@ -27,7 +28,8 @@ import javax.xml.transform.Source;
 public class BasicTuner {
 
     ScriptEngineManager manager = new ScriptEngineManager();
-    ScriptEngine engine = manager.getEngineByName("JavaScript");
+    ScriptEngine engine_PY = manager.getEngineByName("python");
+    ScriptEngine engine_JS = manager.getEngineByName("JavaScript");
 
     public Deque<String[]> parastack = new ArrayDeque<String[]>();
     /**
@@ -561,7 +563,7 @@ public class BasicTuner {
                 IOUtil.writeLogLn(5, "<font color=green>$JS " + js + "</font>", rm);
 
                 try {
-                    JS_Execute(js,  out);
+                    JS_Execute(js, out);
                 } catch (Exception e) {
                     e.printStackTrace();
                     String msg = e.toString().replaceAll("'", "`");
@@ -627,7 +629,7 @@ public class BasicTuner {
                 }
                 IOUtil.writeLogLn(5, "<font color=green>$JS block:" + js + "</font>", rm);
                 try {
-                    JS_Execute(js , out);
+                    JS_Execute(js, out);
                 } catch (Exception e) {
                     e.printStackTrace();
                     String msg = e.toString().replaceAll("'", "`");
@@ -1697,23 +1699,24 @@ public class BasicTuner {
         }
         return outStr;
     }
+
     /*
      * Группа функций для работы с скриптами на JavaScript на стороне сервера заданных в файлах CFG MOD и ит.д.
      *
      * Выполнение скрипта JAVASCRIPT из строки. Для jlbyjxyjq cnhjrb операторa вида $JS ишли блока строк $JS_BEGIN  ... $JS_END
      *  
      * @param jScript текст скрипта
-     * @param out - для заполнения переменных в контекст выполнения скрипта в функции InitJSEngine
+     * @param out - для заполнения переменных в контекст выполнения скрипта в функции InitScriptEngine
      *
      */
-
-    public void JS_Execute(String jScript , PrintWriter out) throws Exception {
-        InitJSEngine(out);
+    public void JS_Execute(String jScript, PrintWriter out) throws Exception {
+        InitScriptEngine(out);
         try {
-            engine.eval(jScript);
+            engine_JS.eval(jScript);
         } finally {
         }
     }
+
     /*
      * Группа функций для работы с скриптами на JavaScript на стороне сервера заданных в файлах CFG MOD и ит.д.
      *
@@ -1721,17 +1724,16 @@ public class BasicTuner {
      *  
      * @param functionname имя функции
      * @param Parms - параметр, который будет передан в функцию
-     * @param out - для заполнения переменных в контекст выполнения скрипта в функции InitJSEngine
+     * @param out - для заполнения переменных в контекст выполнения скрипта в функции InitScriptEngine
      * @return результат выполнения функции
      *
      */
-
-    public Object JS_invokeFunction( String functionName, String Params, PrintWriter out) throws Exception {
-        InitJSEngine(out);
+    public Object JS_invokeFunction(String functionName, String Params, PrintWriter out) throws Exception {
+        InitScriptEngine(out);
         System.out.println("Java Invoke: " + functionName + " params:" + Params);
         Object result = null;
-        if (engine instanceof Invocable) {
-            Invocable invEngine = (Invocable) engine;
+        if (engine_JS instanceof Invocable) {
+            Invocable invEngine = (Invocable) engine_JS;
             result = invEngine.invokeFunction(functionName, Params);
             System.out.println("[Java] result: " + result);
             System.out.println("    Java object: "
@@ -1742,6 +1744,7 @@ public class BasicTuner {
         }
         return result;
     }
+
     /*
      * Группа функций для работы с скриптами на JavaScript на стороне сервера заданных в файлах CFG MOD и ит.д.
      *
@@ -1750,12 +1753,10 @@ public class BasicTuner {
      * @param msg в вызове  IOUtil.writeLog
      *
      */
-
-
-    public void WriteLog(int Level, String msg){
+    public void WriteLog(int Level, String msg) {
         IOUtil.writeLog(Level, msg, rm);
     }
-    
+
     /*
      * Группа функций для работы с скриптами на JavaScript на стороне сервера заданных в файлах CFG MOD и ит.д.
      *
@@ -1766,31 +1767,55 @@ public class BasicTuner {
      * @param msg в вызове  IOUtil.writeLog
      *
      */
-    public void InitJSEngine(PrintWriter out) throws Exception {
-        if (engine.get("prm") != null) {
+    private static void ListEngines(){
+    ScriptEngineManager manager = new ScriptEngineManager();
+    List<ScriptEngineFactory> factories = manager.getEngineFactories();
+    for (ScriptEngineFactory factory : factories) {
+        
+      System.out.print(factory.getEngineName()+": ");
+      System.out.println("      "+factory.getEngineVersion());
+      System.out.println("      "+factory.getLanguageName());
+      System.out.println("      "+factory.getLanguageVersion());
+      System.out.println("      "+factory.getExtensions());
+      System.out.println("      "+factory.getMimeTypes());
+      System.out.println("      "+factory.getNames());
+    }
+  }
+    public void InitScriptEngine(PrintWriter out) throws Exception {
+        if (engine_JS.get("prm") != null) {
             return;
         }
-        engine.put("prm", parameters);
+        ListEngines();
+        ScriptEngine engine_PY = manager.getEngineByName("python");
+        System.out.println("   python  python  "+engine_PY);
+        System.out.println("   JavaScript   "+engine_JS);
+
+        engine_JS.put("prm", parameters);
         Service serv = (Service) rm.getObject("service");
         DBUtil dbUtil = serv.dbUtil;
-        engine.put("dbUtil", dbUtil);
-        
-       //engine.put("dbUtil", Object );
-        engine.put("out", out);
-        engine.put("rm", rm);
-        engine.put("BT", this);
-        StringBuilder builder = new StringBuilder();
-        String source[] = readFile(cfgRootPath + "JS/default.js");
-        for (String current : source) {
-            builder.append(current);
+        engine_JS.put("dbUtil", dbUtil);
+
+        //engine.put("dbUtil", Object );
+        engine_JS.put("out", out);
+        engine_JS.put("rm", rm);
+        engine_JS.put("BT", this);
+        String jScript = "";
+        try {
+            StringBuilder builder = new StringBuilder();
+            String source[] = readFile(cfgRootPath + "JS/default.js");
+            for (String current : source) {
+                builder.append(current);
+            }
+            jScript = builder.toString();
+        } catch (Exception e) {
+            System.out.println(" error read default.js");
         }
 
-        String jScript = builder.toString();
         System.out.println("Default script: \n" + jScript);
         try {
-//            engine.eval("function aaa () {c = 1 + 2; return c; }");
-//            engine.eval(jScript, vars);
-            engine.eval(jScript);
+//            engine_JS.eval("function aaa () {c = 1 + 2; return c; }");
+//            engine_JS.eval(jScript, vars);
+            engine_JS.eval(jScript);
         } finally {
         }
 
