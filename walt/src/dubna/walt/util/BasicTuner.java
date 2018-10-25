@@ -1770,15 +1770,16 @@ public class BasicTuner {
     private static void ListEngines(){
     ScriptEngineManager manager = new ScriptEngineManager();
     List<ScriptEngineFactory> factories = manager.getEngineFactories();
+    System.out.print("Доступные script engine :");
     for (ScriptEngineFactory factory : factories) {
         
-      System.out.print(factory.getEngineName()+": ");
-      System.out.println("      "+factory.getEngineVersion());
-      System.out.println("      "+factory.getLanguageName());
-      System.out.println("      "+factory.getLanguageVersion());
-      System.out.println("      "+factory.getExtensions());
-      System.out.println("      "+factory.getMimeTypes());
-      System.out.println("      "+factory.getNames());
+      System.out.print("    "+factory.getEngineName()+": ");
+      System.out.print(" Ver="+factory.getEngineVersion());
+      System.out.print(", LangName:"+factory.getLanguageName());
+      System.out.print(", LangVer:"+factory.getLanguageVersion());
+      System.out.print(", Extention^"+factory.getExtensions());
+      System.out.print(", MimeTypes:"+factory.getMimeTypes());
+      System.out.print(", Name:"+factory.getNames());
     }
   }
     public void InitScriptEngine(PrintWriter out) throws Exception {
@@ -1787,8 +1788,8 @@ public class BasicTuner {
         }
         ListEngines();
         ScriptEngine engine_PY = manager.getEngineByName("python");
-        System.out.println("   python  python  "+engine_PY);
-        System.out.println("   JavaScript   "+engine_JS);
+        System.out.print(" python:"+engine_PY);
+        System.out.println(" JavaScript:"+engine_JS);
 
         engine_JS.put("prm", parameters);
         Service serv = (Service) rm.getObject("service");
