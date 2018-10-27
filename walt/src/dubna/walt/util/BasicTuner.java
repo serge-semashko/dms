@@ -229,402 +229,96 @@ public class BasicTuner {
             /* check for the end of section */
             if (line.toUpperCase().indexOf("[END]") == 0 && sectionName != null) {
                 break;
-            } // process the $SET_PARAMETERS directive
-            else if (line.indexOf("$SET_PARAMETERS") == 0 & parseData) {
-                line = parseString(line);
-                boolean prn = false;
-                if (line.indexOf("=") > 0) {
-                    StringTokenizer st = new StringTokenizer(
-                            //          line.substring(("$SET_PARAMETERS").length()).trim(), ";");
-                            //				 parseString(line.substring(line.indexOf(" "))), ";"); 
-                            line.substring(line.indexOf(" ")).trim(), ";");
-                    boolean global = (line.indexOf("$SET_PARAMETERS_GLOBAL") == 0);
-                    boolean sess = (line.indexOf("$SET_PARAMETERS_SESSION") == 0);
-//        if (sess && session== null)
-//        { HttpServletRequest req = (HttpServletRequest) rm.getObject("request");
-//	rm.println("***REQUEST:" + req + "; " + rm.toString());
-//          session = req.getSession();          
-//        }
-                    String pName;
-                    String pVal = null;
-                    while (st.hasMoreTokens()) {
-                        line = st.nextToken().trim();
-                        pName = line;
-                        int j = line.indexOf("=");
-                        if (j > 0) {
-                            pName = parseString(line.substring(0, j).trim());
-                            if (pName.equals("WWW")) {
-                                prn = true;
-                            }
-                            pVal = parseString(line.substring(j + 1).trim());
-//            if (pVal.equals("null")) pVal = null; //Убрано 13.11.2015. Непонятно, зачем было и используется ли где-то
-                        }
-                        if (global && rm != null) {
-                            rm.setParam(pName, pVal, true);
-                        } else {
-                            addParameter(pName, pVal);
-                        }
-                        if (sess) {
-                            setParameterSession(pName, pVal);
-                        }
-//            session.setAttribute(pName, pVal);
-                        if (prn) {
-                            rm.println("*" + pName + ":" + pVal);
-                        }
-                    }
-                } else {
-                    int b = line.indexOf("[");  // look for the section name
-                    int e = line.lastIndexOf("]");
-                    int j = line.indexOf(" ") + 1;
-                    String[] paramSection;
-                    if (b >= 0 && e > b + 1) // the section name found - get the section (recourcive call)
-                    {
-//          rm.println("======= file:"+line.substring(j, b)+"; section:"+line.substring(b+1, e));
-                        paramSection = getCustomSection(line.substring(j, b), line.substring(b + 1, e));
-                        if (paramSection != null) {
-                            for (j = 0; j < paramSection.length; j++) {
-                                if (paramSection[j].trim().length() > 0) {
-                                    addParameter(paramSection[j].trim(), null);
-                                }
-                            }
-                        }
-                    }
-                }
+            };
+            // process the $SET_PARAMETERS directive
+            if (line.indexOf("$SET_PARAMETERS") == 0 & parseData) {
+                _$SET_PARAMETERS(line, sectionLines, out);
                 continue;
             }
 
             /* process the $INCLUDE directive */
             if (line.indexOf("$INCLUDE") == 0 & parseData) {
-                String tmp = line;
-                if (enabledOption("debug=on")) {
-                    System.out.println(line);
-                }
-                line = parseString(line.substring(8).trim());
-                IOUtil.writeLogLn(3, "<b>$INCLUDE </b>" + line, rm);
-                int b = line.indexOf("[");  // look for the section name
-                int e = line.indexOf("]", b);
-                String[] subSection = null;
-
-                if (line.indexOf("param:") > 0) // Flash-parameters specified?
-                {
-                    flashParameters = null;
-                    setFlashParameters((line.substring(line.indexOf("param:") + 6)).trim());
-                    keepFlashParameters = true;
-                }
-
-                if (b >= 0 && e > b + 1) // the section name found - get the section (recourcive call)
-                {
-                    String fname = line.substring(0, b);
-//                    if (fname.length() > 0) {
-//                        fname = getModFileName(fname,"SIMPLE");
-//                        IOUtil.writeLogLn(7, "getModFileName=" + fname, rm);
-//                    }
-                    subSection = getCustomSection(fname, line.substring(b + 1, e), out);
-                }
-                keepFlashParameters = false;
-                if (subSection != null) {
-                    IOUtil.writeLogLn(7, "<xmp>", rm);
-                    for (String sectionLine : subSection) {
-                        IOUtil.writeLogLn(7, sectionLine, rm);
-                        addLine(sectionLine, sectionLines, null);
-                    }
-                    IOUtil.writeLogLn(7, "</xmp>", rm);
-//          sectionLines.addElement(subSection[j]);
-                } else // SubSection could not be found - put the err.msg
-                {
-//        rm.println("!!!!! SECTION NOT FOUND OR EMPTY: " + tmp);
-//        if (enabledOption("debug=on"))
-//          addLine("<br> <b>!!! NOT FOUND: '" + tmp + "'</b> (" + line + ")<br>", sectionLines, out);
-                    IOUtil.writeLogLn(5, "<font color=red>" + tmp + ": SECTION NOT FOUND OR EMPTY</font>", rm);
-                }
-                flashParameters = null; // **************** TEST 29.01.03
+                _$INCLUDE(line, sectionLines, out);
+                continue;
             } // Process "$GET_URL Directive 
-            else if (line.indexOf("$GET_URL") == 0 & parseData) {
-                String tmp = line;
-                line = parseString(line.substring(8).trim());
-                rm.println("+++ $GET_URL: '" + line + "'");
-//		 openURL(line, sectionLines);
-// sectionLines.addElement("+++ URL: " + line);
-                IOUtil.writeLogLn(3, "<font color=red><b>$GET_URL: </b></font>" + line + "...", rm);
-                try {
-                    URL u = new URL(line);
-                    URLConnection conn = u.openConnection();
-                    BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-                    String inputLine;
-                    int ln = 1;
-                    String url_responce_param = getParameter(null, null, "URL_RESPONCE_PARAM");
-                    String url_responce = "";
-                    IOUtil.writeLogLn(5, "<b>RESPONCE:</b>", rm);
-                    while ((inputLine = in.readLine()) != null) {
-                        IOUtil.writeLogLn(5, ln++ + ": '" + inputLine + "';", rm);
-                        sectionLines.addElement(inputLine);
-                        url_responce += inputLine + "\n\r";
-                    }
-                    in.close();
-                    if (url_responce_param.length() > 0) {
-                        addParameter(url_responce_param, url_responce);
-                    } else if (out != null) {
-                        out.print(url_responce);
-                        out.flush();
-                    }
-                } catch (Exception e) {
-                    IOUtil.writeLogLn(0, "<font color=red> get URL " + line + "; ERROR: " + e.toString() + "</font>", rm);
-                    addLine("ERROR: get URL " + line + "; " + e.toString(), sectionLines, null);
-                    addParameter("URL_ERROR", e.toString());
-                }
+
+            if (line.indexOf("$GET_URL") == 0 & parseData) {
+                _$GET_URL(line, sectionLines, out);
+                continue;
             } // Process "$GET_AUTH_URL Directive  
-            else if (line.indexOf("$GET_AUTH_URL") == 0 & parseData) {
-                String tmp = line;
-                line = parseString(line.substring(13).trim());
-                rm.println("+++ $GET_AUTH_URL: '" + line + "'");
-                //     openURL(line, sectionLines);
-                // sectionLines.addElement("+++ URL: " + line);
-//			if (out != null)
-//				out.println("+++ URL: " + line + "<br>");
-//			out.flush();
-                try {
-                    String authString = "nica:nica";
-                    String authStringEnc = Base64.encode(authString);
-
-                    URL u = new URL(line);
-                    HttpURLConnection conn;
-                    if (line.contains("https://")) {
-                        conn = (HttpsURLConnection) u.openConnection();
-                    } else {
-                        conn = (HttpURLConnection) u.openConnection();
-                    }
-                    conn.setRequestProperty("Authorization", "Basic " + authStringEnc);
-                    conn.setRequestProperty("Connection", "keep-alive");
-                    conn.setRequestProperty("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
-                    conn.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:29.0) Gecko/20100101 Firefox/29.0");
-                    conn.connect();
-
-                    BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-                    String inputLine;
-                    while ((inputLine = in.readLine()) != null) {
-                        IOUtil.writeLog(5, inputLine, rm);
-//	         System.out.println(inputLine);
-//			     System.out.println(inputLine.length() + ": " + line.equals("\r\n"));
-                        addLine(inputLine, sectionLines, out);
-//					 sectionLines.addElement(inputLine);
-//						if (out != null)
-//							out.println(inputLine);
-                    }
-                    in.close();
-                    if (out != null) {
-                        out.flush();
-                    }
-                } catch (Exception e) {
-                    addLine("ERROR: $GET_AUTH_URL " + line + "; " + e.toString(), sectionLines, null);
-                    if (out != null) {
-                        out.println("ERROR: $GET_AUTH_URL " + line + "; <b>" + e.toString() + "</b><br>");
-                    }
-                }
-            } else if (line.indexOf("$PRINT") == 0 & parseData) { // Process "$PRINT Directive
-                line = parseString(line.substring(6).trim());
-                rm.println(line);
-            } else if (line.indexOf("$STORE_PARAMETERS") == 0 & parseData) {
-                storeParameters();
-            } else if (line.indexOf("$RESTORE_PARAMETERS") == 0 & parseData) {
-                restoreParameters();
-            } else if (line.indexOf("$LOG_ERROR") == 0 & parseData) { // Process "$LOG_ERROR Directive - store message to DB
-                String msg = parseString(line.substring(11).trim());
-//                System.out.println(line + "; msg=" + msg);
-                if (msg.length() > 1) {
-                    ((Logger) rm.getObject("logger")).logRequest2DB(rm, "ERROR:" + msg + ".", null);
-                }
-            } else if (line.indexOf("$LOG") == 0 & parseData) { // Process "$LOG Directive 
-                int lev = 0;
-                try {
-                    lev = Integer.parseInt(line.substring(4, 5));
-                } catch (Exception e) {;
-                }
-                String tmp = line;
-                line = parseString(line.substring(5).trim());
-                IOUtil.writeLog(lev, line, rm);
-            } else if (line.indexOf("$GET_ID") == 0 & parseData) { // Process "$GET_ID Directive 
-                String param_name = parseString(line.substring(7).trim());
-                if (param_name.length() < 1) {
-                    param_name = "NEW_ID";
-                }
-                addParameter(param_name, getNewID());
-                addParameter(param_name + "_INT", getNewIntID());
-            } else if (line.indexOf("$USE_DB") == 0 & parseData) { // Process "$USE_DB Directive
-                try {
-                    Service serv = (Service) rm.getObject("service");
-                    String s = line.substring(("$USE_DB").length()).trim();
-                    serv.useDb(parseString(s));
-                } catch (Exception e) {
-                    String m = e.toString().replaceAll("'", "`");
-                    addParameter("USE_DB_ERROR",
-                            getParameter(null, null, "USE_DB_ERROR")
-                            + m + "\n\r");
-                    addParameter("ERROR", m);
-                }
-            } else if (line.indexOf("$WAIT") == 0 & parseData) { // Process "$WAIT Directive
-                String tmp = line;
-                line = parseString(line.substring(6).trim());
-                rm.println("WAITING for " + line);
-                try {
-                    Thread.sleep((new Long(line)));
-                } catch (Exception e) {
-                }
-                rm.println("Tuner: Continue... ");
-            } else if (line.indexOf("$GET_DATA") >= 0 & parseData) { // Process "$GET_DATA Directive
-                int j = line.indexOf("$GET_DATA");
-//      rm.println(line);
-                Service serv = (Service) rm.getObject("service");
-                try {
-                    String news = parseString((line.substring(j + ("$GET_DATA").length()))).trim();
-                    serv.getData(news);
-//        rm.println("============ QUIT GET_DATA ============");
-                } catch (Exception e) {
-                    String m = e.toString().replaceAll("'", "`");
-                    addParameter("GET_DATA_ERROR",
-                            getParameter(null, null, "GET_DATA_ERROR")
-                            + m + "\n\r");
-                    addParameter("ERROR", m);
-                }
-            } // Process "$EXECUTE_LOOP Directive 
-            else if (line.indexOf("$EXECUTE_LOOP") >= 0 & parseData) {
-                int j = line.indexOf("$EXECUTE_LOOP");
-                Service serv = (Service) rm.getObject("service");
-                String s = line.substring(j + ("$EXECUTE_LOOP").length()).trim();
-//      rm.println(parseString(s));
-                try {
-                    serv.executeLoop(parseString(s));
-//        rm.println("============ QUIT EXECUTE_LOOP ============");
-                } catch (Exception e) {
-                    String m = e.toString().replaceAll("'", "`");
-                    addParameter("EXECUTE_LOOP_ERROR",
-                            getParameter(null, null, "EXECUTE_LOOP_ERROR")
-                            + m + "\n\r");
-                    addParameter("ERROR", m);
-                }
-            } // Process "$CALL_SERVICE Directive 
-            else if (line.indexOf("$CALL_SERVICE") >= 0 & parseData) {
-//                IOUtil.writeLogLn("<b>PROCESSING `" + line + "`...</b> parseData=" + parseData + ";", rm);
-                int j = line.indexOf("$CALL_SERVICE");
-                if (j > 0) {
-                    addLine(parseString(line.substring(0, j)), sectionLines, out);
-                }
-//        sectionLines.addElement(parseString(line.substring(0,j)));
-                try {
-                    Service srv = (Service) rm.getObject("service");
-                    srv.callService(parseString((line.substring(j + ("$CALL_SERVICE").length())).trim()));
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    String msg = e.toString().replaceAll("'", "`");
-                    while (msg.indexOf("Exception: ") > 0) {
-                        msg = msg.substring(msg.indexOf("Exception: ") + 10);
-                    }
-                    addParameter("CALL_SERVICE_ERROR",
-                            getParameter(null, null, "CALL_SERVICE_ERROR")
-                            + msg + "\n\r");
-                    addParameter("ERROR", msg);
-                    rm.println("========== CALL_SERVICE_ERROR:");
-                    QueryThread q = (QueryThread) rm.getObject("QueryThread");
-                    if (q != null) {
-                        q.logException(e);
-                    }
-                }
+            if (line.indexOf("$GET_AUTH_URL") == 0 & parseData) {
+                _$GET_AUTH_URL(line, sectionLines, out);
+                continue;
+            }
+            if (line.indexOf("$PRINT") == 0 & parseData) { // Process "$PRINT Directive
+                _$PRINT(line, sectionLines, out);
+                continue;
+            }
+            if (line.indexOf("$STORE_PARAMETERS") == 0 & parseData) {
+                _$STORE_PARAMETERS(line, sectionLines, out);
+                continue;
+            }
+            if (line.indexOf("$RESTORE_PARAMETERS") == 0 & parseData) {
+                _$RESTORE_PARAMETERS(line, sectionLines, out);
+                continue;
+            }
+            if (line.indexOf("$LOG_ERROR") == 0 & parseData) { // Process "$LOG_ERROR Directive - store message to DB
+                _$LOG_ERROR(line, sectionLines, out);
+                continue;
+            }
+            if (line.indexOf("$LOG") == 0 & parseData) { // Process "$LOG Directive 
+                _$LOG(line, sectionLines, out);
+                continue;
+            }
+            if (line.indexOf("$GET_ID") == 0 & parseData) { // Process "$GET_ID Directive 
+                _$GET_ID(line, sectionLines, out);
+                continue;
+            }
+            if (line.indexOf("$USE_DB") == 0 & parseData) { // Process "$USE_DB Directive
+                _$USE_DB(line, sectionLines, out);
+                continue;
+            }
+            if (line.indexOf("$WAIT") == 0 & parseData) { // Process "$WAIT Directive
+                _$WAIT(line, sectionLines, out);
+                continue;
+            }
+            if (line.indexOf("$GET_DATA") == 0 & parseData) { // Process "$GET_DATA Directive
+                _$GET_DATA(line, sectionLines, out);
+                continue;
+            }
+            // Process "$EXECUTE_LOOP Directive 
+            if (line.indexOf("$EXECUTE_LOOP") == 0 & parseData) {
+                _$EXECUTE_LOOP(line, sectionLines, out);
+                continue;
+            }
+            // Process "$CALL_SERVICE Directive 
+            if (line.indexOf("$CALL_SERVICE") == 0 & parseData) {
+                _$CALL_SERVICE(line, sectionLines, out);
+                continue;
             } // Process "$COPY_FILE srcFilePath destFilePath Directive
-            else if (line.indexOf("$COPY_FILE") >= 0 & parseData) {
-                int j = line.indexOf("$COPY_FILE");
-                if (j > 0) {
-                    addLine(parseString(line.substring(0, j)), sectionLines, out);
-                }
-//        sectionLines.addElement(parseString(line.substring(0,j)));
-                try {
-                    String par = parseString(line.substring(("$COPY_FILE").length() + 1).trim());
-//                     System.out.println(line + "; PARSED: " + par);
-                    String params[] = par.split(";");
-                    if (params.length > 1) {
-                        FileContent.copyFile(params[0], params[1]);
-                    } else {
-                        throw (new Exception("WRONG DIRECTIVE: " + line + "=>" + par));
-                    }
-                } catch (Exception e) {
-                    String msg = e.toString().replaceAll("'", "`");
-                    while (msg.indexOf("Exception: ") > 0) {
-                        msg = msg.substring(msg.indexOf("Exception: ") + 10);
-                    }
-                    addParameter("COPY_FILE_ERROR",
-                            getParameter(null, null, "COPY_FILE_ERROR")
-                            + msg + "\n\r");
-                    addParameter("ERROR", msg);
-                    System.out.println("========== COPY_FILE_ERROR:");
-//				QueryThread q = (QueryThread) rm.getObject("QueryThread");
-//				q.logException(e);
-                    ((QueryThread) rm.getObject("QueryThread")).logException(e);
-                }
-            } else if (line.indexOf("$JS ") == 0 & parseData) {
-                String js = parseString(line.substring(3).trim());
-                IOUtil.writeLogLn(5, "<font color=green>$JS " + js + "</font>", rm);
+            if (line.indexOf("$COPY_FILE") >= 0 & parseData) {
+                _$COPY_FILE(line, sectionLines, out);
+                continue;
+            }
+            if (line.indexOf("$JS ") == 0 & parseData) {
+                _$JS(line, sectionLines, out);
+                continue;
+            }
+            if (line.indexOf("$JS_CALL") == 0 & parseData) {
+                _$JS_CALL(line, sectionLines, out);
+                continue;
 
-                try {
-                    JS_Execute(js, out);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    String msg = e.toString().replaceAll("'", "`");
-                    while (msg.indexOf("Exception: ") > 0) {
-                        msg = msg.substring(msg.indexOf("Exception: ") + 10);
-                    }
-                    addParameter("ERROR", msg);
-                    QueryThread q = (QueryThread) rm.getObject("QueryThread");
-                    if (q != null) {
-                        q.logException(e);
-                    }
-                }
-            } else if (line.indexOf("$JS_CALL") == 0 & parseData) {
-                String js = (line.substring(8).trim());
-                IOUtil.writeLogLn(3, "<b>$JS_CALL 1:</b>" + js, rm);
-                String jsfileName = "JS/default.js";
-//                int bFileName = js.indexOf("");  // look for the section name
-//                int eFileName = js.indexOf("", bSect);
-//                IOUtil.writeLogLn(3,js +  " <b>bSect eSect 1 </b>" + bSect+" "+eSect, rm);
-//
-//                if (bFileName >= 0 && eFileName > bFileName + 1) // the section name found - get the section (recourcive call)
-//                {
-//                        jsfileName = js.substring(1, eFileName);
-//                        js = js.substring(eFileName+1);
-//                }
-                int bSect = js.indexOf("(");  // look for the section name
-                int eSect = js.indexOf(")", bSect);
-                IOUtil.writeLogLn(3, "jsFilename=" + jsfileName + "'" + js + "' <b>bSect eSect 2 </b>" + bSect + " " + eSect, rm);
-                String jsFunctionName = "";
-                String jsParams = "";
-                if (bSect > 2 && eSect > bSect + 1) // the section name found - get the section (recourcive call)
-                {
-                    jsFunctionName = js.substring(0, bSect);
-                    jsParams = js.substring(bSect + 1, eSect);
-                }
-
-                IOUtil.writeLogLn(3, "<font color=green>$JS_CALL " + jsfileName + " >" + jsFunctionName + "(" + jsParams + ")" + "</font>", rm);
-
-                try {
-                    JS_invokeFunction(jsFunctionName, jsParams, out);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    String msg = e.toString().replaceAll("'", "`");
-                    while (msg.indexOf("Exception: ") > 0) {
-                        msg = msg.substring(msg.indexOf("Exception: ") + 10);
-                    }
-                    addParameter("ERROR", msg);
-                    QueryThread q = (QueryThread) rm.getObject("QueryThread");
-                    if (q != null) {
-                        q.logException(e);
-                    }
-                }
-
-            } else if (line.indexOf("$JS_BEGIN") == 0 & parseData) {
+            }
+            if (line.indexOf("$JS_BEGIN") == 0 & parseData) {
                 String js = "";
                 for (i++; i < source.length; i++) {
-                    line = source[i].trim();
+                    line = parseString(source[i].trim());
                     if (line.indexOf("$JS_END") == 0) {
                         break;
                     };
-//                    js += parseString(line) + "\r";
+                    if (line.indexOf("[END]") == 0) {
+                        break;
+                    };
                     js += line + "\r";
                 }
                 IOUtil.writeLogLn(5, "<font color=green>$JS block:" + js + "</font>", rm);
@@ -642,11 +336,10 @@ public class BasicTuner {
                         q.logException(e);
                     }
                 }
-
-            } // process the normal line (not a directive)
-            else {
-                addLine(parseString(result), sectionLines, out);
+                continue;
             }
+            // process the normal line (not a directive)
+            addLine(parseString(result), sectionLines, out);
         } // end of the foop through the section lines
 
         /* finally copy the resulting vector into a String array */
@@ -1767,29 +1460,30 @@ public class BasicTuner {
      * @param msg в вызове  IOUtil.writeLog
      *
      */
-    private static void ListEngines(){
-    ScriptEngineManager manager = new ScriptEngineManager();
-    List<ScriptEngineFactory> factories = manager.getEngineFactories();
-    System.out.print("Доступные script engine :");
-    for (ScriptEngineFactory factory : factories) {
-        
-      System.out.print("    "+factory.getEngineName()+": ");
-      System.out.print(" Ver="+factory.getEngineVersion());
-      System.out.print(", LangName:"+factory.getLanguageName());
-      System.out.print(", LangVer:"+factory.getLanguageVersion());
-      System.out.print(", Extention^"+factory.getExtensions());
-      System.out.print(", MimeTypes:"+factory.getMimeTypes());
-      System.out.print(", Name:"+factory.getNames());
+    private static void ListEngines() {
+        ScriptEngineManager manager = new ScriptEngineManager();
+        List<ScriptEngineFactory> factories = manager.getEngineFactories();
+        System.out.print("Доступные script engine :");
+        for (ScriptEngineFactory factory : factories) {
+
+            System.out.print("    " + factory.getEngineName() + ": ");
+            System.out.print(" Ver=" + factory.getEngineVersion());
+            System.out.print(", LangName:" + factory.getLanguageName());
+            System.out.print(", LangVer:" + factory.getLanguageVersion());
+            System.out.print(", Extention^" + factory.getExtensions());
+            System.out.print(", MimeTypes:" + factory.getMimeTypes());
+            System.out.print(", Name:" + factory.getNames());
+        }
     }
-  }
+
     public void InitScriptEngine(PrintWriter out) throws Exception {
         if (engine_JS.get("prm") != null) {
             return;
         }
         ListEngines();
         ScriptEngine engine_PY = manager.getEngineByName("python");
-        System.out.print(" python:"+engine_PY);
-        System.out.println(" JavaScript:"+engine_JS);
+        System.out.print(" python:" + engine_PY);
+        System.out.println(" JavaScript:" + engine_JS);
 
         engine_JS.put("prm", parameters);
         Service serv = (Service) rm.getObject("service");
@@ -1820,6 +1514,387 @@ public class BasicTuner {
         } finally {
         }
 
+    }
+
+    private void _$SET_PARAMETERS(String line, Vector sectionLines, PrintWriter out) {
+        line = parseString(line);
+        boolean prn = false;
+        if (line.indexOf("=") > 0) {
+            StringTokenizer st = new StringTokenizer(
+                    //          line.substring(("$SET_PARAMETERS").length()).trim(), ";");
+                    //				 parseString(line.substring(line.indexOf(" "))), ";"); 
+                    line.substring(line.indexOf(" ")).trim(), ";");
+            boolean global = (line.indexOf("$SET_PARAMETERS_GLOBAL") == 0);
+            boolean sess = (line.indexOf("$SET_PARAMETERS_SESSION") == 0);
+            String pName;
+            String pVal = null;
+            while (st.hasMoreTokens()) {
+                line = st.nextToken().trim();
+                pName = line;
+                int j = line.indexOf("=");
+                if (j > 0) {
+                    pName = parseString(line.substring(0, j).trim());
+                    if (pName.equals("WWW")) {
+                        prn = true;
+                    }
+                    pVal = parseString(line.substring(j + 1).trim());
+                }
+                if (global && rm != null) {
+                    rm.setParam(pName, pVal, true);
+                } else {
+                    addParameter(pName, pVal);
+                }
+                if (sess) {
+                    setParameterSession(pName, pVal);
+                }
+                if (prn) {
+                    rm.println("*" + pName + ":" + pVal);
+                }
+            }
+        } else {
+            int b = line.indexOf("[");  // look for the section name
+            int e = line.lastIndexOf("]");
+            int j = line.indexOf(" ") + 1;
+            String[] paramSection;
+            if (b >= 0 && e > b + 1) // the section name found - get the section (recourcive call)
+            {
+//          rm.println("======= file:"+line.substring(j, b)+"; section:"+line.substring(b+1, e));
+                paramSection = getCustomSection(line.substring(j, b), line.substring(b + 1, e));
+                if (paramSection != null) {
+                    for (j = 0; j < paramSection.length; j++) {
+                        if (paramSection[j].trim().length() > 0) {
+                            addParameter(paramSection[j].trim(), null);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private void _$INCLUDE(String line, Vector sectionLines, PrintWriter out) {
+        String tmp = line;
+        if (enabledOption("debug=on")) {
+            System.out.println(line);
+        }
+        line = parseString(line.substring(8).trim());
+        IOUtil.writeLogLn(3, "<b>$INCLUDE </b>" + line, rm);
+        int b = line.indexOf("[");  // look for the section name
+        int e = line.indexOf("]", b);
+        String[] subSection = null;
+
+        if (line.indexOf("param:") > 0) // Flash-parameters specified?
+        {
+            flashParameters = null;
+            setFlashParameters((line.substring(line.indexOf("param:") + 6)).trim());
+            keepFlashParameters = true;
+        }
+
+        if (b >= 0 && e > b + 1) // the section name found - get the section (recourcive call)
+        {
+            String fname = line.substring(0, b);
+            subSection = getCustomSection(fname, line.substring(b + 1, e), out);
+        }
+        keepFlashParameters = false;
+        if (subSection != null) {
+            IOUtil.writeLogLn(7, "<xmp>", rm);
+            for (String sectionLine : subSection) {
+                IOUtil.writeLogLn(7, sectionLine, rm);
+                addLine(sectionLine, sectionLines, null);
+            }
+            IOUtil.writeLogLn(7, "</xmp>", rm);
+        } else // SubSection could not be found - put the err.msg
+        {
+            IOUtil.writeLogLn(5, "<font color=red>" + tmp + ": SECTION NOT FOUND OR EMPTY</font>", rm);
+        }
+        flashParameters = null; // **************** TEST 29.01.03
+    }
+
+    private void _$GET_URL(String line, Vector sectionLines, PrintWriter out) {
+        String tmp = line;
+        line = parseString(line.substring(8).trim());
+        rm.println("+++ $GET_URL: '" + line + "'");
+        IOUtil.writeLogLn(3, "<font color=red><b>$GET_URL: </b></font>" + line + "...", rm);
+        try {
+            URL u = new URL(line);
+            URLConnection conn = u.openConnection();
+            BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            String inputLine;
+            int ln = 1;
+            String url_responce_param = getParameter(null, null, "URL_RESPONCE_PARAM");
+            String url_responce = "";
+            IOUtil.writeLogLn(5, "<b>RESPONCE:</b>", rm);
+            while ((inputLine = in.readLine()) != null) {
+                IOUtil.writeLogLn(5, ln++ + ": '" + inputLine + "';", rm);
+                sectionLines.addElement(inputLine);
+                url_responce += inputLine + "\n\r";
+            }
+            in.close();
+            if (url_responce_param.length() > 0) {
+                addParameter(url_responce_param, url_responce);
+            } else if (out != null) {
+                out.print(url_responce);
+                out.flush();
+            }
+        } catch (Exception e) {
+            IOUtil.writeLogLn(0, "<font color=red> get URL " + line + "; ERROR: " + e.toString() + "</font>", rm);
+            addLine("ERROR: get URL " + line + "; " + e.toString(), sectionLines, null);
+            addParameter("URL_ERROR", e.toString());
+        }
+    }
+
+    private void _$GET_AUTH_URL(String line, Vector sectionLines, PrintWriter out) {
+        String tmp = line;
+        line = parseString(line.substring(13).trim());
+
+        rm.println("+++ $GET_AUTH_URL: '" + line + "'");
+        try {
+            String authString = "nica:nica";
+            String authStringEnc = Base64.encode(authString);
+
+            URL u = new URL(line);
+            HttpURLConnection conn;
+            if (line.contains("https://")) {
+                conn = (HttpsURLConnection) u.openConnection();
+            } else {
+                conn = (HttpURLConnection) u.openConnection();
+            }
+            conn.setRequestProperty("Authorization", "Basic " + authStringEnc);
+            conn.setRequestProperty("Connection", "keep-alive");
+            conn.setRequestProperty("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
+            conn.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:29.0) Gecko/20100101 Firefox/29.0");
+            conn.connect();
+
+            BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            String inputLine;
+            while ((inputLine = in.readLine()) != null) {
+                IOUtil.writeLog(5, inputLine, rm);
+                addLine(inputLine, sectionLines, out);
+            }
+            in.close();
+            if (out != null) {
+                out.flush();
+            }
+        } catch (Exception e) {
+            addLine("ERROR: $GET_AUTH_URL " + line + "; " + e.toString(), sectionLines, null);
+            if (out != null) {
+                out.println("ERROR: $GET_AUTH_URL " + line + "; <b>" + e.toString() + "</b><br>");
+            }
+        }
+    }
+
+    private void _$PRINT(String line, Vector sectionLines, PrintWriter out) {
+        line = parseString(line.substring(6).trim());
+        rm.println(line);
+    }
+
+    private void _$STORE_PARAMETERS(String line, Vector sectionLines, PrintWriter out) {
+        storeParameters();
+    }
+
+    private void _$RESTORE_PARAMETERS(String line, Vector sectionLines, PrintWriter out) {
+        restoreParameters();
+    }
+
+    private void _$LOG_ERROR(String line, Vector sectionLines, PrintWriter out) {
+        String msg = parseString(line.substring(11).trim());
+        if (msg.length() > 1) {
+            ((Logger) rm.getObject("logger")).logRequest2DB(rm, "ERROR:" + msg + ".", null);
+        }
+    }
+
+    private void _$LOG(String line, Vector sectionLines, PrintWriter out) {
+        int lev = 0;
+        try {
+            lev = Integer.parseInt(line.substring(4, 5));
+        } catch (Exception e) {;
+        }
+        String tmp = line;
+        line = parseString(line.substring(5).trim());
+        IOUtil.writeLog(lev, line, rm);
+    }
+
+    private void _$GET_ID(String line, Vector sectionLines, PrintWriter out) {
+        String param_name = parseString(line.substring(7).trim());
+        if (param_name.length() < 1) {
+            param_name = "NEW_ID";
+        }
+        addParameter(param_name, getNewID());
+        addParameter(param_name + "_INT", getNewIntID());
+    }
+
+    private void _$USE_DB(String line, Vector sectionLines, PrintWriter out) {
+        try {
+            Service serv = (Service) rm.getObject("service");
+            String s = line.substring(("$USE_DB").length()).trim();
+            serv.useDb(parseString(s));
+        } catch (Exception e) {
+            String m = e.toString().replaceAll("'", "`");
+            addParameter("USE_DB_ERROR",
+                    getParameter(null, null, "USE_DB_ERROR")
+                    + m + "\n\r");
+            addParameter("ERROR", m);
+        }
+    }
+
+    private void _$WAIT(String line, Vector sectionLines, PrintWriter out) {
+        String tmp = line;
+        line = parseString(line.substring(6).trim());
+        rm.println("WAITING for " + line);
+        try {
+            Thread.sleep((new Long(line)));
+        } catch (Exception e) {
+        }
+        rm.println("Tuner: Continue... ");
+    }
+
+    private void _$GET_DATA(String line, Vector sectionLines, PrintWriter out) {
+        int j = line.indexOf("$GET_DATA");
+//      rm.println(line);
+        Service serv = (Service) rm.getObject("service");
+        try {
+            String news = parseString((line.substring(j + ("$GET_DATA").length()))).trim();
+            serv.getData(news);
+//        rm.println("============ QUIT GET_DATA ============");
+        } catch (Exception e) {
+            String m = e.toString().replaceAll("'", "`");
+            addParameter("GET_DATA_ERROR",
+                    getParameter(null, null, "GET_DATA_ERROR")
+                    + m + "\n\r");
+            addParameter("ERROR", m);
+        }
+    }
+
+    private void _$EXECUTE_LOOP(String line, Vector sectionLines, PrintWriter out) {
+        int j = line.indexOf("$EXECUTE_LOOP");
+        Service serv = (Service) rm.getObject("service");
+        String s = line.substring(j + ("$EXECUTE_LOOP").length()).trim();
+//      rm.println(parseString(s));
+        try {
+            serv.executeLoop(parseString(s));
+//        rm.println("============ QUIT EXECUTE_LOOP ============");
+        } catch (Exception e) {
+            String m = e.toString().replaceAll("'", "`");
+            addParameter("EXECUTE_LOOP_ERROR",
+                    getParameter(null, null, "EXECUTE_LOOP_ERROR")
+                    + m + "\n\r");
+            addParameter("ERROR", m);
+        }
+    }
+
+    private void _$CALL_SERVICE(String line, Vector sectionLines, PrintWriter out) {
+        int j = line.indexOf("$CALL_SERVICE");
+        try {
+            Service srv = (Service) rm.getObject("service");
+            srv.callService(parseString((line.substring(j + ("$CALL_SERVICE").length())).trim()));
+        } catch (Exception e) {
+            e.printStackTrace();
+            String msg = e.toString().replaceAll("'", "`");
+            while (msg.indexOf("Exception: ") > 0) {
+                msg = msg.substring(msg.indexOf("Exception: ") + 10);
+            }
+            addParameter("CALL_SERVICE_ERROR",
+                    getParameter(null, null, "CALL_SERVICE_ERROR")
+                    + msg + "\n\r");
+            addParameter("ERROR", msg);
+            rm.println("========== CALL_SERVICE_ERROR:");
+            QueryThread q = (QueryThread) rm.getObject("QueryThread");
+            if (q != null) {
+                q.logException(e);
+            }
+        }
+    }
+
+    private void _$COPY_FILE(String line, Vector sectionLines, PrintWriter out) {
+        int j = line.indexOf("$COPY_FILE");
+        if (j > 0) {
+            addLine(parseString(line.substring(0, j)), sectionLines, out);
+        }
+//        sectionLines.addElement(parseString(line.substring(0,j)));
+        try {
+            String par = parseString(line.substring(("$COPY_FILE").length() + 1).trim());
+//                     System.out.println(line + "; PARSED: " + par);
+            String params[] = par.split(";");
+            if (params.length > 1) {
+                FileContent.copyFile(params[0], params[1]);
+            } else {
+                throw (new Exception("WRONG DIRECTIVE: " + line + "=>" + par));
+            }
+        } catch (Exception e) {
+            String msg = e.toString().replaceAll("'", "`");
+            while (msg.indexOf("Exception: ") > 0) {
+                msg = msg.substring(msg.indexOf("Exception: ") + 10);
+            }
+            addParameter("COPY_FILE_ERROR",
+                    getParameter(null, null, "COPY_FILE_ERROR")
+                    + msg + "\n\r");
+            addParameter("ERROR", msg);
+            System.out.println("========== COPY_FILE_ERROR:");
+//				QueryThread q = (QueryThread) rm.getObject("QueryThread");
+//				q.logException(e);
+            ((QueryThread) rm.getObject("QueryThread")).logException(e);
+        }
+    }
+
+    private void _$JS(String line, Vector sectionLines, PrintWriter out) {
+        String js = parseString(line.substring(3).trim());
+        IOUtil.writeLogLn(5, "<font color=green>$JS " + js + "</font>", rm);
+
+        try {
+            JS_Execute(js, out);
+        } catch (Exception e) {
+            e.printStackTrace();
+            String msg = e.toString().replaceAll("'", "`");
+            while (msg.indexOf("Exception: ") > 0) {
+                msg = msg.substring(msg.indexOf("Exception: ") + 10);
+            }
+            addParameter("ERROR", msg);
+            QueryThread q = (QueryThread) rm.getObject("QueryThread");
+            if (q != null) {
+                q.logException(e);
+            }
+        }
+    }
+
+    private void _$JS_CALL(String line, Vector sectionLines, PrintWriter out) {
+        String js = (line.substring(8).trim());
+        IOUtil.writeLogLn(3, "<b>$JS_CALL 1:</b>" + js, rm);
+        String jsfileName = "JS/default.js";
+//                int bFileName = js.indexOf("");  // look for the section name
+//                int eFileName = js.indexOf("", bSect);
+//                IOUtil.writeLogLn(3,js +  " <b>bSect eSect 1 </b>" + bSect+" "+eSect, rm);
+//
+//                if (bFileName >= 0 && eFileName > bFileName + 1) // the section name found - get the section (recourcive call)
+//                {
+//                        jsfileName = js.substring(1, eFileName);
+//                        js = js.substring(eFileName+1);
+//                }
+        int bSect = js.indexOf("(");  // look for the section name
+        int eSect = js.indexOf(")", bSect);
+        IOUtil.writeLogLn(3, "jsFilename=" + jsfileName + "'" + js + "' <b>bSect eSect 2 </b>" + bSect + " " + eSect, rm);
+        String jsFunctionName = "";
+        String jsParams = "";
+        if (bSect > 2 && eSect > bSect + 1) // the section name found - get the section (recourcive call)
+        {
+            jsFunctionName = js.substring(0, bSect);
+            jsParams = js.substring(bSect + 1, eSect);
+        }
+
+        IOUtil.writeLogLn(3, "<font color=green>$JS_CALL " + jsfileName + " >" + jsFunctionName + "(" + jsParams + ")" + "</font>", rm);
+
+        try {
+            JS_invokeFunction(jsFunctionName, jsParams, out);
+        } catch (Exception e) {
+            e.printStackTrace();
+            String msg = e.toString().replaceAll("'", "`");
+            while (msg.indexOf("Exception: ") > 0) {
+                msg = msg.substring(msg.indexOf("Exception: ") + 10);
+            }
+            addParameter("ERROR", msg);
+            QueryThread q = (QueryThread) rm.getObject("QueryThread");
+            if (q != null) {
+                q.logException(e);
+            }
+        }
     }
 
 }
