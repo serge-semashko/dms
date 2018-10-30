@@ -10,6 +10,9 @@
             <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/free/js_CallModule.dat</file>
             <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/free/js_CallModule.old</file>
         </group>
-        <group name="dms -SSS"/>
+        <group name="dms -SSS">
+            <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/grade/test.js</file>
+            <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/grade/scale_header.cfg</file>
+        </group>
     </open-files>
 </project-private>

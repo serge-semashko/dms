@@ -27,8 +27,9 @@ import javax.xml.transform.Source;
  */
 public class BasicTuner {
 
+    // Поддержка использования JavaScript на стороне сервера в CFG AJM и других файлах
     ScriptEngineManager manager = new ScriptEngineManager();
-    ScriptEngine engine_PY = manager.getEngineByName("python");
+//    ScriptEngine engine_PY = manager.getEngineByName("python");
     ScriptEngine engine_JS = manager.getEngineByName("JavaScript");
 
     public Deque<String[]> parastack = new ArrayDeque<String[]>();
@@ -120,34 +121,6 @@ public class BasicTuner {
     public String[] getCustomSection(String fileName, String sectionName) {
         return getCustomSection(fileName, sectionName, null);
     }
-// 
-//    public String getRawSection(String fileName, String sectionName) {
-//        String sectionBody = null;
-//        String[] source = null;
-//        String fn = (fileName == null || fileName.trim().length() == 0) ? null : fileName.trim();
-//
-//        /* read the source file, if specified */
-//        try {
-//            if (fn != null) {
-//                fn = getModFileName(fn, "SIMPLE");
-//            }
-//            source = (fn == null) ? cfg : readFile(cfgRootPath + fn);
-//        } catch (Exception e) {
-//            source = null;
-//        } finally {
-//            if (source == null) {
-//                return null;
-//            }
-//        }
-//        StringBuilder builder = new StringBuilder();
-//        for (String current : source) {
-//            builder.append(current);
-//        }
-//        sectionBody = builder.toString();
-//        
-//        return sectionBody;
-//
-//    }
 
     /**
      * Obtains a customized section from a template file.
@@ -300,20 +273,23 @@ public class BasicTuner {
                 _$COPY_FILE(line, sectionLines, out);
                 continue;
             }
+            // исполнение строки javascript 
             if (line.indexOf("$JS ") == 0 & parseData) {
                 _$JS(line, sectionLines, out);
                 continue;
             }
-            if (line.indexOf("$JS_CALL") == 0 & parseData) {
-                _$JS_CALL(line, sectionLines, out);
-                continue;
+            // Похоже, что больше не нужно
+//            if (line.indexOf("$JS_CALL") == 0 & parseData) {
+//                _$JS_CALL(line, sectionLines, out);
+//                continue;
+//            }
 
-            }
-            if (line.indexOf("$JS_BEGIN") == 0 & parseData) {
+            // От директивы $JS_BEGIN до $JS_END иди до конца секции блок будет будет исполняться как javascript код
+            if (((line.indexOf("$JS_BEGIN") == 0) || (line.indexOf("$JS_{") == 0)) & parseData) {
                 String js = "";
                 for (i++; i < source.length; i++) {
                     line = parseString(source[i].trim());
-                    if (line.indexOf("$JS_END") == 0) {
+                    if ((line.indexOf("$JS_END") == 0) || (line.indexOf("$JS_}") == 0)) {
                         break;
                     };
                     if (line.indexOf("[END]") == 0) {
@@ -321,9 +297,9 @@ public class BasicTuner {
                     };
                     js += line + "\r";
                 }
-                IOUtil.writeLogLn(5, "<font color=green>$JS block:" + js + "</font>", rm);
+                IOUtil.writeLogLn(5, "<font color=green>JAVASCRIPT: " + js + "</font>", rm);
                 try {
-                    JS_Execute(js, out);
+                    JS_Execute(js,sectionLines, out);
                 } catch (Exception e) {
                     e.printStackTrace();
                     String msg = e.toString().replaceAll("'", "`");
@@ -1402,8 +1378,9 @@ public class BasicTuner {
      * @param out - для заполнения переменных в контекст выполнения скрипта в функции InitScriptEngine
      *
      */
-    public void JS_Execute(String jScript, PrintWriter out) throws Exception {
+    public void JS_Execute(String jScript, Vector sectionLines, PrintWriter out) throws Exception {
         InitScriptEngine(out);
+        engine_JS.put("sectionLines", sectionLines);
         try {
             engine_JS.eval(jScript);
         } finally {
@@ -1428,12 +1405,12 @@ public class BasicTuner {
         if (engine_JS instanceof Invocable) {
             Invocable invEngine = (Invocable) engine_JS;
             result = invEngine.invokeFunction(functionName, Params);
-            System.out.println("[Java] result: " + result);
-            System.out.println("    Java object: "
-                    + result.getClass().getName());
-            System.out.println();
+//            System.out.println("[Java] result: " + result);
+//            System.out.println("    Java object: "
+//                    + result.getClass().getName());
+//            System.out.println();
         } else {
-            System.out.println("NOT Invocable");
+//            System.out.println("NOT Invocable");
         }
         return result;
     }
@@ -1480,10 +1457,10 @@ public class BasicTuner {
         if (engine_JS.get("prm") != null) {
             return;
         }
-        ListEngines();
+//        ListEngines();
         ScriptEngine engine_PY = manager.getEngineByName("python");
-        System.out.print(" python:" + engine_PY);
-        System.out.println(" JavaScript:" + engine_JS);
+//        System.out.print(" python:" + engine_PY);
+//        System.out.println(" JavaScript:" + engine_JS);
 
         engine_JS.put("prm", parameters);
         Service serv = (Service) rm.getObject("service");
@@ -1503,10 +1480,10 @@ public class BasicTuner {
             }
             jScript = builder.toString();
         } catch (Exception e) {
-            System.out.println(" error read default.js");
+//            System.out.println(" error read default.js");
         }
 
-        System.out.println("Default script: \n" + jScript);
+//        System.out.println("Default script: \n" + jScript);
         try {
 //            engine_JS.eval("function aaa () {c = 1 + 2; return c; }");
 //            engine_JS.eval(jScript, vars);
@@ -1516,7 +1493,7 @@ public class BasicTuner {
 
     }
 
-    private void _$SET_PARAMETERS(String line, Vector sectionLines, PrintWriter out) {
+    public void _$SET_PARAMETERS(String line, Vector sectionLines, PrintWriter out) {
         line = parseString(line);
         boolean prn = false;
         if (line.indexOf("=") > 0) {
@@ -1571,7 +1548,7 @@ public class BasicTuner {
         }
     }
 
-    private void _$INCLUDE(String line, Vector sectionLines, PrintWriter out) {
+    public void _$INCLUDE(String line, Vector sectionLines, PrintWriter out) {
         String tmp = line;
         if (enabledOption("debug=on")) {
             System.out.println(line);
@@ -1609,7 +1586,7 @@ public class BasicTuner {
         flashParameters = null; // **************** TEST 29.01.03
     }
 
-    private void _$GET_URL(String line, Vector sectionLines, PrintWriter out) {
+    public void _$GET_URL(String line, Vector sectionLines, PrintWriter out) {
         String tmp = line;
         line = parseString(line.substring(8).trim());
         rm.println("+++ $GET_URL: '" + line + "'");
@@ -1642,7 +1619,7 @@ public class BasicTuner {
         }
     }
 
-    private void _$GET_AUTH_URL(String line, Vector sectionLines, PrintWriter out) {
+    public void _$GET_AUTH_URL(String line, Vector sectionLines, PrintWriter out) {
         String tmp = line;
         line = parseString(line.substring(13).trim());
 
@@ -1682,27 +1659,28 @@ public class BasicTuner {
         }
     }
 
-    private void _$PRINT(String line, Vector sectionLines, PrintWriter out) {
+    public void _$PRINT(String line, Vector sectionLines, PrintWriter out) {
         line = parseString(line.substring(6).trim());
-        rm.println(line);
+        rm.println(line);  
+        
     }
 
-    private void _$STORE_PARAMETERS(String line, Vector sectionLines, PrintWriter out) {
+    public void _$STORE_PARAMETERS(String line, Vector sectionLines, PrintWriter out) {
         storeParameters();
     }
 
-    private void _$RESTORE_PARAMETERS(String line, Vector sectionLines, PrintWriter out) {
+    public void _$RESTORE_PARAMETERS(String line, Vector sectionLines, PrintWriter out) {
         restoreParameters();
     }
 
-    private void _$LOG_ERROR(String line, Vector sectionLines, PrintWriter out) {
+    public void _$LOG_ERROR(String line, Vector sectionLines, PrintWriter out) {
         String msg = parseString(line.substring(11).trim());
         if (msg.length() > 1) {
             ((Logger) rm.getObject("logger")).logRequest2DB(rm, "ERROR:" + msg + ".", null);
         }
     }
 
-    private void _$LOG(String line, Vector sectionLines, PrintWriter out) {
+    public void _$LOG(String line, Vector sectionLines, PrintWriter out) {
         int lev = 0;
         try {
             lev = Integer.parseInt(line.substring(4, 5));
@@ -1713,7 +1691,7 @@ public class BasicTuner {
         IOUtil.writeLog(lev, line, rm);
     }
 
-    private void _$GET_ID(String line, Vector sectionLines, PrintWriter out) {
+    public void _$GET_ID(String line, Vector sectionLines, PrintWriter out) {
         String param_name = parseString(line.substring(7).trim());
         if (param_name.length() < 1) {
             param_name = "NEW_ID";
@@ -1722,7 +1700,7 @@ public class BasicTuner {
         addParameter(param_name + "_INT", getNewIntID());
     }
 
-    private void _$USE_DB(String line, Vector sectionLines, PrintWriter out) {
+    public void _$USE_DB(String line, Vector sectionLines, PrintWriter out) {
         try {
             Service serv = (Service) rm.getObject("service");
             String s = line.substring(("$USE_DB").length()).trim();
@@ -1747,7 +1725,7 @@ public class BasicTuner {
         rm.println("Tuner: Continue... ");
     }
 
-    private void _$GET_DATA(String line, Vector sectionLines, PrintWriter out) {
+    public void _$GET_DATA(String line, Vector sectionLines, PrintWriter out) {
         int j = line.indexOf("$GET_DATA");
 //      rm.println(line);
         Service serv = (Service) rm.getObject("service");
@@ -1764,7 +1742,7 @@ public class BasicTuner {
         }
     }
 
-    private void _$EXECUTE_LOOP(String line, Vector sectionLines, PrintWriter out) {
+    public void _$EXECUTE_LOOP(String line, Vector sectionLines, PrintWriter out) {
         int j = line.indexOf("$EXECUTE_LOOP");
         Service serv = (Service) rm.getObject("service");
         String s = line.substring(j + ("$EXECUTE_LOOP").length()).trim();
@@ -1781,7 +1759,7 @@ public class BasicTuner {
         }
     }
 
-    private void _$CALL_SERVICE(String line, Vector sectionLines, PrintWriter out) {
+    public void _$CALL_SERVICE(String line, Vector sectionLines, PrintWriter out) {
         int j = line.indexOf("$CALL_SERVICE");
         try {
             Service srv = (Service) rm.getObject("service");
@@ -1804,7 +1782,7 @@ public class BasicTuner {
         }
     }
 
-    private void _$COPY_FILE(String line, Vector sectionLines, PrintWriter out) {
+    public void _$COPY_FILE(String line, Vector sectionLines, PrintWriter out) {
         int j = line.indexOf("$COPY_FILE");
         if (j > 0) {
             addLine(parseString(line.substring(0, j)), sectionLines, out);
@@ -1835,12 +1813,12 @@ public class BasicTuner {
         }
     }
 
-    private void _$JS(String line, Vector sectionLines, PrintWriter out) {
+    public void _$JS(String line, Vector sectionLines, PrintWriter out) {
         String js = parseString(line.substring(3).trim());
         IOUtil.writeLogLn(5, "<font color=green>$JS " + js + "</font>", rm);
 
         try {
-            JS_Execute(js, out);
+            JS_Execute(js, sectionLines, out);
         } catch (Exception e) {
             e.printStackTrace();
             String msg = e.toString().replaceAll("'", "`");
@@ -1855,46 +1833,47 @@ public class BasicTuner {
         }
     }
 
-    private void _$JS_CALL(String line, Vector sectionLines, PrintWriter out) {
-        String js = (line.substring(8).trim());
-        IOUtil.writeLogLn(3, "<b>$JS_CALL 1:</b>" + js, rm);
-        String jsfileName = "JS/default.js";
-//                int bFileName = js.indexOf("");  // look for the section name
-//                int eFileName = js.indexOf("", bSect);
-//                IOUtil.writeLogLn(3,js +  " <b>bSect eSect 1 </b>" + bSect+" "+eSect, rm);
+//    public void _$JS_CALL(String line, Vector sectionLines, PrintWriter out) {
+//        
+//        String js = (line.substring(8).trim());
+//        IOUtil.writeLogLn(3, "<b>$JS_CALL 1:</b>" + js, rm);
+//        String jsfileName = "JS/default.js";
+//           int bFileName = js.indexOf("");  // look for the section name
+////                int eFileName = js.indexOf("", bSect);
+////                IOUtil.writeLogLn(3,js +  " <b>bSect eSect 1 </b>" + bSect+" "+eSect, rm);
+////
+////                if (bFileName >= 0 && eFileName > bFileName + 1) // the section name found - get the section (recourcive call)
+////                {
+////                        jsfileName = js.substring(1, eFileName);
+////                        js = js.substring(eFileName+1);
+////                }
+//        int bSect = js.indexOf("(");  // look for the section name
+//        int eSect = js.indexOf(")", bSect);
+//        IOUtil.writeLogLn(3, "jsFilename=" + jsfileName + "'" + js + "' <b>bSect eSect 2 </b>" + bSect + " " + eSect, rm);
+//        String jsFunctionName = "";
+//        String jsParams = "";
+//        if (bSect > 2 && eSect > bSect + 1) // the section name found - get the section (recourcive call)
+//        {
+//            jsFunctionName = js.substring(0, bSect);
+//            jsParams = js.substring(bSect + 1, eSect);
+//        }
 //
-//                if (bFileName >= 0 && eFileName > bFileName + 1) // the section name found - get the section (recourcive call)
-//                {
-//                        jsfileName = js.substring(1, eFileName);
-//                        js = js.substring(eFileName+1);
-//                }
-        int bSect = js.indexOf("(");  // look for the section name
-        int eSect = js.indexOf(")", bSect);
-        IOUtil.writeLogLn(3, "jsFilename=" + jsfileName + "'" + js + "' <b>bSect eSect 2 </b>" + bSect + " " + eSect, rm);
-        String jsFunctionName = "";
-        String jsParams = "";
-        if (bSect > 2 && eSect > bSect + 1) // the section name found - get the section (recourcive call)
-        {
-            jsFunctionName = js.substring(0, bSect);
-            jsParams = js.substring(bSect + 1, eSect);
-        }
-
-        IOUtil.writeLogLn(3, "<font color=green>$JS_CALL " + jsfileName + " >" + jsFunctionName + "(" + jsParams + ")" + "</font>", rm);
-
-        try {
-            JS_invokeFunction(jsFunctionName, jsParams, out);
-        } catch (Exception e) {
-            e.printStackTrace();
-            String msg = e.toString().replaceAll("'", "`");
-            while (msg.indexOf("Exception: ") > 0) {
-                msg = msg.substring(msg.indexOf("Exception: ") + 10);
-            }
-            addParameter("ERROR", msg);
-            QueryThread q = (QueryThread) rm.getObject("QueryThread");
-            if (q != null) {
-                q.logException(e);
-            }
-        }
-    }
+//        IOUtil.writeLogLn(3, "<font color=green>$JS_CALL " + jsfileName + " >" + jsFunctionName + "(" + jsParams + ")" + "</font>", rm);
+//
+//        try {
+//            JS_invokeFunction(jsFunctionName, jsParams, out);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            String msg = e.toString().replaceAll("'", "`");
+//            while (msg.indexOf("Exception: ") > 0) {
+//                msg = msg.substring(msg.indexOf("Exception: ") + 10);
+//            }
+//            addParameter("ERROR", msg);
+//            QueryThread q = (QueryThread) rm.getObject("QueryThread");
+//            if (q != null) {
+//                q.logException(e);
+//            }
+//        }
+//    }
 
 }
