@@ -7,11 +7,13 @@ import dubna.walt.service.Service;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.logging.Level;
 import javax.net.ssl.HttpsURLConnection;
 import javax.script.Invocable;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineFactory;
 import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 import org.apache.regexp.*;
 import javax.servlet.http.*;
 
@@ -24,14 +26,17 @@ import javax.servlet.http.*;
 public class BasicTuner {
 
     /**
-     * Поддержка использования JavaScript на стороне сервера в CFG AJM и других файлах
+     * Поддержка использования JavaScript на стороне сервера в CFG AJM и других
+     * файлах
      */
-
     // 
     ScriptEngineManager manager = new ScriptEngineManager();
 //    ScriptEngine engine_PY = manager.getEngineByName("python");
     ScriptEngine engine_JS = manager.getEngineByName("JavaScript");
-
+    /**
+     * Для использовании в javascript
+     */
+    PrintWriter BTout = null;
     /**
      *
      */
@@ -151,6 +156,7 @@ public class BasicTuner {
      * @return String array, containing the customized section.
      */
     public String[] getCustomSection(String fileName, String sectionName, PrintWriter out) {
+        BTout = out;
         String line, result;
         String[] sectionBody = null;
         String[] source = null;
@@ -226,15 +232,15 @@ public class BasicTuner {
                 continue;
             }
             if (line.indexOf("$PRINT") == 0 & parseData) { // Process "$PRINT Directive
-                _$PRINT(line, sectionLines,out);
+                _$PRINT(line, sectionLines, out);
                 continue;
             }
             if (line.indexOf("$STORE_PARAMETERS") == 0 & parseData) {
-                _$STORE_PARAMETERS(line, sectionLines,out);
+                _$STORE_PARAMETERS(line, sectionLines, out);
                 continue;
             }
             if (line.indexOf("$RESTORE_PARAMETERS") == 0 & parseData) {
-                _$RESTORE_PARAMETERS(line, sectionLines,out);
+                _$RESTORE_PARAMETERS(line, sectionLines, out);
                 continue;
             }
             if (line.indexOf("$LOG_ERROR") == 0 & parseData) { // Process "$LOG_ERROR Directive - store message to DB
@@ -289,9 +295,9 @@ public class BasicTuner {
             }
             // Process "$GET_FILE_SIZE srcFilePath Directive
             if (line.indexOf("$GET_FILE_SIZE") >= 0 & parseData) {
-                _$GET_FILE_SIZE(line, sectionLines,out);
+                _$GET_FILE_SIZE(line, sectionLines, out);
                 continue;
-            } 
+            }
             // выполнение одиносной строки как javascript
             if (line.indexOf("$JS ") == 0 & parseData) {
                 _$JS(line, sectionLines, out);
@@ -318,7 +324,7 @@ public class BasicTuner {
                 }
                 IOUtil.writeLogLn(5, "<font color=green>JAVASCRIPT: " + js + "</font>", rm);
                 try {
-                    JS_Execute(js,sectionLines, out);
+                    JS_Execute(js, sectionLines, out);
                 } catch (Exception e) {
                     e.printStackTrace();
                     String msg = e.toString().replaceAll("'", "`");
@@ -335,10 +341,8 @@ public class BasicTuner {
             }
 
             // process the normal line (not a directive)
-            
-           
-             addLine(parseString(result), sectionLines, out);
-            
+            addLine(parseString(result), sectionLines, out);
+
         } // end of the foop through the section lines
 
         /* finally copy the resulting vector into a String array */
@@ -917,7 +921,15 @@ public class BasicTuner {
                     if (ref) {
                         paramName = getParameter(null, null, paramName);
                     }
-                    result.append(getParameter(null, null, paramName));  // add the parameter value
+                    if (paramName.charAt(0) == ':') {
+                        InitScriptEngine();
+                        String tmpvar = "var tmp_for_parameter = "+paramName.substring(1)+";";
+                        JS_Execute(tmpvar, null, BTout);
+                        String test = engine_JS.get("tmp_for_parameter").toString();
+                        result.append(test);
+                    } else {
+                        result.append(getParameter(null, null, paramName));  // add the parameter value
+                    }
                 }
                 i = e + 1;  // shift to the next part of the 'source' string
             }
@@ -1801,37 +1813,38 @@ public class BasicTuner {
     }
 
     public void _$GET_FILE_SIZE(String line, Vector sectionLines, PrintWriter out) {
-                addParameter("FILE_SIZE", "-1");
+        addParameter("FILE_SIZE", "-1");
 //                int j = line.indexOf("$GET_FILE_SIZE");
 //                if (j > 0) {
 //                    addLine(parseString(line.substring(0, j)), sectionLines, out);
 //                }
-                try {
-                    String par = parseString(line.substring(("$GET_FILE_SIZE").length() + 1).trim());
+        try {
+            String par = parseString(line.substring(("$GET_FILE_SIZE").length() + 1).trim());
 //                     System.out.println(line + "; PARSED: " + par);
-                    String params[] = par.split(";");
-                    if (params.length > 0) {
-                        long fileSize = FileContent.getFileSize(params[0]);
-                        addParameter("FILE_SIZE", Long.toString(fileSize));
-                    } else {
-                        throw (new Exception("WRONG DIRECTIVE: " + line + "=>" + par));
-                    }
-                } catch (Exception e) {
-                    String msg = e.toString().replaceAll("'", "`");
-                    while (msg.indexOf("Exception: ") > 0) {
-                        msg = msg.substring(msg.indexOf("Exception: ") + 10);
-                    }
-                    addParameter("GET_FILE_SIZE_ERROR",
-                            getParameter(null, null, "GET_FILE_SIZE ")
-                            + msg + "\n\r");
-                    addParameter("ERROR", msg);
-                    System.out.println("========== GET_FILE_SIZE ERROR:");
+            String params[] = par.split(";");
+            if (params.length > 0) {
+                long fileSize = FileContent.getFileSize(params[0]);
+                addParameter("FILE_SIZE", Long.toString(fileSize));
+            } else {
+                throw (new Exception("WRONG DIRECTIVE: " + line + "=>" + par));
+            }
+        } catch (Exception e) {
+            String msg = e.toString().replaceAll("'", "`");
+            while (msg.indexOf("Exception: ") > 0) {
+                msg = msg.substring(msg.indexOf("Exception: ") + 10);
+            }
+            addParameter("GET_FILE_SIZE_ERROR",
+                    getParameter(null, null, "GET_FILE_SIZE ")
+                    + msg + "\n\r");
+            addParameter("ERROR", msg);
+            System.out.println("========== GET_FILE_SIZE ERROR:");
 //				QueryThread q = (QueryThread) rm.getObject("QueryThread");
 //				q.logException(e);
-                    ((QueryThread) rm.getObject("QueryThread")).logException(e);
-                }
-                
+            ((QueryThread) rm.getObject("QueryThread")).logException(e);
+        }
+
     }
+
     /*
      * Группа функций для работы с скриптами на JavaScript на стороне сервера заданных в файлах CFG MOD и ит.д.
      *
@@ -1841,12 +1854,26 @@ public class BasicTuner {
      * @param out - для заполнения переменных в контекст выполнения скрипта в функции InitScriptEngine
      *
      */
-    public void JS_Execute(String jScript, Vector sectionLines, PrintWriter out) throws Exception {
-        InitScriptEngine(out);
+    public void JS_Execute(String jScript, Vector sectionLines, PrintWriter out) {
+        InitScriptEngine();
         engine_JS.put("sectionLines", sectionLines);
         try {
             engine_JS.eval(jScript);
-        } finally {
+        } catch (ScriptException e) {
+            e.printStackTrace();
+            String msg = e.toString().replaceAll("'", "`");
+            while (msg.indexOf("Exception: ") > 0) {
+                msg = msg.substring(msg.indexOf("Exception: ") + 10);
+            }
+            addParameter("$JS_Execute",
+                    getParameter(null, null, "JS_ERROR")
+                    + msg + "\n\r");
+            addParameter("ERROR", msg);
+            rm.println("========== JS_Execute:");
+            QueryThread q = (QueryThread) rm.getObject("QueryThread");
+            if (q != null) {
+                q.logException(e);
+            }
         }
     }
 
@@ -1862,21 +1889,17 @@ public class BasicTuner {
      *
      */
     public Object JS_invokeFunction(String functionName, String Params, PrintWriter out) throws Exception {
-        InitScriptEngine(out);
+        InitScriptEngine();
         System.out.println("Java Invoke: " + functionName + " params:" + Params);
         Object result = null;
         if (engine_JS instanceof Invocable) {
             Invocable invEngine = (Invocable) engine_JS;
             result = invEngine.invokeFunction(functionName, Params);
-//            System.out.println("[Java] result: " + result);
-//            System.out.println("    Java object: "
-//                    + result.getClass().getName());
-//            System.out.println();
         } else {
-//            System.out.println("NOT Invocable");
         }
         return result;
     }
+
     /*
      * Группа функций для работы с скриптами на JavaScript на стороне сервера заданных в файлах CFG MOD и ит.д.
      *
@@ -1912,13 +1935,13 @@ public class BasicTuner {
     public void WriteLog(int Level, String msg) {
         IOUtil.writeLog(Level, msg, rm);
     }
+
     /*
      * Группа функций для работы с скриптами на JavaScript на стороне сервера заданных в файлах CFG MOD и ит.д.
         
      * Спискок акдивных engine
      *
      */
-
     private static void ListEngines() {
         ScriptEngineManager manager = new ScriptEngineManager();
         List<ScriptEngineFactory> factories = manager.getEngineFactories();
@@ -1934,6 +1957,7 @@ public class BasicTuner {
             System.out.print(", Name:" + factory.getNames());
         }
     }
+
     /*
      * Группа функций для работы с скриптами на JavaScript на стороне сервера заданных в файлах CFG MOD и ит.д.
      *
@@ -1941,23 +1965,16 @@ public class BasicTuner {
      * prm :parameters , dbUtil, out, rm, BT - basicTuner
      * хватило бы и одного BT. Остальное для сокращения записи
      */
-
-    public void InitScriptEngine(PrintWriter out) throws Exception {
+    public void InitScriptEngine() {
+        engine_JS.put("out", rm.getObject("outWriter", false));
         if (engine_JS.get("prm") != null) {
             return;
         }
-//        ListEngines();
-        ScriptEngine engine_PY = manager.getEngineByName("python");
-//        System.out.print(" python:" + engine_PY);
-//        System.out.println(" JavaScript:" + engine_JS);
 
         engine_JS.put("prm", parameters);
         Service serv = (Service) rm.getObject("service");
         DBUtil dbUtil = serv.dbUtil;
         engine_JS.put("dbUtil", dbUtil);
-
-        //engine.put("dbUtil", Object );
-        engine_JS.put("out", out);
         engine_JS.put("rm", rm);
         engine_JS.put("BT", this);
         String jScript = "";
@@ -1969,30 +1986,40 @@ public class BasicTuner {
             }
             jScript = builder.toString();
         } catch (Exception e) {
-//            System.out.println(" error read default.js");
         }
 
-//        System.out.println("Default script: \n" + jScript);
         try {
-//            engine_JS.eval("function aaa () {c = 1 + 2; return c; }");
-//            engine_JS.eval(jScript, vars);
             engine_JS.eval(jScript);
-        } finally {
+        } catch (ScriptException e) {
+            e.printStackTrace();
+            String msg = e.toString().replaceAll("'", "`");
+            while (msg.indexOf("Exception: ") > 0) {
+                msg = msg.substring(msg.indexOf("Exception: ") + 10);
+            }
+            addParameter("$JS_ERROR",
+                    getParameter(null, null, "JS_ERROR")
+                    + msg + "\n\r");
+            addParameter("ERROR", msg);
+            rm.println("========== JS_ERROR process DEFAULT.JS :");
+            QueryThread q = (QueryThread) rm.getObject("QueryThread");
+            if (q != null) {
+                q.logException(e);
+            }
         }
 
     }
 
     public void _$STORE_PARAMETERS(String line, Vector sectionLines, PrintWriter out) {
-                storeParameters();
+        storeParameters();
     }
 
     public void _$RESTORE_PARAMETERS(String line, Vector sectionLines, PrintWriter out) {
-                restoreParameters();
+        restoreParameters();
     }
 
     public void _$PRINT(String line, Vector sectionLines, PrintWriter out) {
-                line = parseString(line.substring(6).trim());
-                rm.println(line);
+        line = parseString(line.substring(6).trim());
+        rm.println(line);
     }
 
 }

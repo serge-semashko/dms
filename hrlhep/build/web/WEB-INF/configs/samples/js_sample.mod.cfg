@@ -1,12 +1,50 @@
+samples/js_sample1.cfg
+
+[comments]
+testURL=?c=samples/js_sample1
+author:Semashko S
+[end]
+
+[description]
+    Пример использования javascript на стороне сервера
+    <p>Выводит таблице </p>
+        В javascript доступны объекты : 
+        rm  
+        BT
+        dbUtil
+        out
+        sectionLines - sectionLines обрабатываемой секции
+    
+[end]
+
+[parameters]
+    service=dubna.walt.service.Service
+    tableCfg=table_no
+[end]
+
+[head]
+    <head>
+    <meta charset="utf-8">
+    <title>js_sample1</title>
+    <style>
+        td {border:1px solid white}
+        tr:nth-child(2n) {
+            background: #E0FFFF;
+           } 
+        tr:nth-child(1) {
+           background: #B0E0E6; 
+           }
+    </style>
+    </head>
+[end]
 tab_personal_table.cfg
 
 [comments]
     descr=Таб "Шкала повышения зарплаты"
     input=none
     output=HTML таблица объектов
-    parents=tab_gradescale
     childs=
-    testURL=?c=tab_gradescale_table
+    testURL=?c=samples/js_sample1
     author:Semashko
 [end]
 
@@ -17,11 +55,24 @@ tab_personal_table.cfg
 [end]
 
 [report]
-    <table class="tlist tgreen" cellspacing=0" border=1>
+        Использование javascript 
+        $JS out.println("UID:"+BT.parseString("#USER_ID#"));
+        $JS BT._$PRINT(" TEST $PRINT ", sectionLines, out);
+        $JS BT._$LOG(" TEST $LOG ", sectionLines, out);
         $JS_BEGIN
+            //Определяем функцию. Переменные и ункции сохряняются для этого экземпляра basciTuner
             function addCell(celltxt, colspan   , rowspan ,cellType){
-                var sectName = (cellType?cellType:"simple")+" cell";
-                BT.addParameter("colspan",colspan?colspan:1);
+                
+                if(typeof cellType == "undefined")
+                  var sectName = "simple cell";
+                else
+                  var sectName = cellType+" cell";
+                if(typeof colspan == "undefined")
+                  var colspan = 1;
+                if(typeof row == "undefined")
+                  var rowspan = 1;
+
+                BT.addParameter("colspan",colspan);
                 BT.addParameter("rowspan",rowspan);
                 BT.addParameter("txt",celltxt);
                 
@@ -30,17 +81,19 @@ tab_personal_table.cfg
 
             }
         $JS_END
-
+    <table class="tlist tgreen" cellspacing=0" border=1>
     
     <tr>
-   !@$!@$ JS= #:parseInt("123F", 10)#;
-        $JS BT._$PRINT(" TEST $PRINT !!!!!!!!!!!!!!!!!", sectionLines, out);
-        $JS BT._$LOG(" TEST $LOG !!!!!!!!!!!!!!!!!", sectionLines, out);
+
+        
+
         $JS_BEGIN
-            r = dbUtil.getResults("select  cat, base, step, id from grade_category order by id");
+            r = dbUtil.getResults("select  cat, base, step, id from samples_js order by id");
+            // r - объект recordset java - все его паблик методы доступны как и для всех объектов java
             var cats = [];
             var bases = [];
             var steps = [];
+            // Заносим в массивы cats: названия категорий, bases: базовая ставка для категории, steps: шаг повышения с уровнем
             while (r.next()) {
                 cats.push(r.getString(1));
                 bases.push(r.getString(2));
