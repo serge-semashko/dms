@@ -919,8 +919,19 @@ public class BasicTuner {
                 {
                     String paramName = source.substring(b + 1, e);
                     if (ref) {
-                        paramName = getParameter(null, null, paramName);
+                        
+                        if (paramName.charAt(0) == ':') {
+                            InitScriptEngine();
+                            String tmpvar = "var tmp_for_parameter = " + paramName.substring(1) + ";";
+                            JS_Execute(tmpvar, null, BTout);
+                            String test = engine_JS.get("tmp_for_parameter").toString();
+                            paramName = test;
+                        } else {
+                            paramName = getParameter(null, null, paramName);
+                        }
+
                     }
+                    
                     if (paramName.charAt(0) == ':') {
                         InitScriptEngine();
                         String tmpvar = "var tmp_for_parameter = " + paramName.substring(1) + ";";
