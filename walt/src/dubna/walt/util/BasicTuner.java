@@ -923,7 +923,7 @@ public class BasicTuner {
                     }
                     if (paramName.charAt(0) == ':') {
                         InitScriptEngine();
-                        String tmpvar = "var tmp_for_parameter = "+paramName.substring(1)+";";
+                        String tmpvar = "var tmp_for_parameter = " + paramName.substring(1) + ";";
                         JS_Execute(tmpvar, null, BTout);
                         String test = engine_JS.get("tmp_for_parameter").toString();
                         result.append(test);
@@ -1475,6 +1475,37 @@ public class BasicTuner {
         IOUtil.writeLogLn(3, "<b>$INCLUDE </b>" + line, rm);
         int b = line.indexOf("[");  // look for the section name
         int e = line.indexOf("]", b);
+
+        if ((b < 0) && (e < 0)) {
+
+            String fname = line;
+            String strFileExtension = "";
+
+            int intLastDotPosition = fname.lastIndexOf(".");
+            int intLastSlashPosition = fname.lastIndexOf("/");
+
+            if (intLastDotPosition > intLastSlashPosition) {
+                strFileExtension = fname.substring(intLastDotPosition + 1);
+            }
+            if (strFileExtension.toLowerCase().trim().equals("js")) {
+                IOUtil.writeLogLn(3, "<b>$INCLUDE execute Javascript:</b>" + line, rm);
+                String jScript = "";
+                try {
+                    StringBuilder builder = new StringBuilder();
+                    String source[] = readFile(cfgRootPath + fname);
+                    for (String current : source) {
+                        builder.append(current);
+                    }
+                    jScript = builder.toString();
+                    JS_Execute(jScript, sectionLines, out);
+//                rm.println("========== JS_Execute file :" + fname);
+                } catch (Exception ex) {
+                    IOUtil.writeLogLn(5, "<font color=red>" + fname + ": JavaScript file NOT FOUND </font>", rm);
+                }
+                return;
+            }
+        }
+
         String[] subSection = null;
 
         if (line.indexOf("param:") > 0) // Flash-parameters specified?
@@ -1492,6 +1523,7 @@ public class BasicTuner {
 //                        IOUtil.writeLogLn(7, "getModFileName=" + fname, rm);
 //                    }
             subSection = getCustomSection(fname, line.substring(b + 1, e), out);
+
         }
         keepFlashParameters = false;
         if (subSection != null) {
