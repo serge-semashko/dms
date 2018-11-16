@@ -96,6 +96,8 @@ public class BasicTuner {
      */
     public HttpSession session = null;
 
+    private long tm = 0;
+
     /**
      * Sets the session attribute.<p>
      *
@@ -160,6 +162,7 @@ public class BasicTuner {
         String line, result;
         String[] sectionBody = null;
         String[] source = null;
+        String ifState = "";
         String fn = (fileName == null || fileName.trim().length() == 0) ? null : fileName.trim();
 
         /* read the source file, if specified */
@@ -255,16 +258,23 @@ public class BasicTuner {
                 _GET_ID(line, sectionLines, out);
                 continue;
             }
-            if (line.indexOf("$USE_DB") == 0 & parseData) { // Process "$USE_DB Directive
+            if (line.indexOf("$USE_DB") == 0 & parseData) { // Process $USE_DB Directive
                 _$USE_DB(line, sectionLines, out);
+                continue;
+            }
+            if (line.startsWith("$CLOSE_DB") & parseData) { // Process $CLOSE_DB Directive
+                _$CLOSE_DB(line, sectionLines, out);
+                continue;
+            }
+            if (line.startsWith("$TIMER") & parseData) { // Process $CLOSE_DB Directive
+                _$TIMER(line, sectionLines, out);
                 continue;
             }
             if (line.indexOf("$WAIT") == 0 & parseData) { // Process "$WAIT Directive
                 _$WAIT(line, sectionLines, out);
                 continue;
             }
-            // Process "$GET_DATA Directive
-            if (line.indexOf("$GET_DATA") >= 0 & parseData) {
+            if (line.indexOf("$GET_DATA") >= 0 & parseData) { // Process "$GET_DATA Directive
                 _$GET_DATA(line, sectionLines, out);
                 continue;
             }
@@ -303,40 +313,55 @@ public class BasicTuner {
                 _$JS(line, sectionLines, out);
                 continue;
             }
-            // ѕохоже, что больше не нужно
-//            if (line.indexOf("$JS_CALL") == 0 & parseData) {
-//                _$JS_CALL(line, sectionLines, out);
-//                continue;
-//            }
 
-            // ќт директивы $JS_BEGIN/$JS_{ до $JS_END/$JS_} иди до конца секции блок будет будет исполн€тьс€ как javascript код
-            if (((line.indexOf("$JS_BEGIN") == 0) || (line.indexOf("$JS_{") == 0)) & parseData) {
-                String js = "";
+            if (line.startsWith("$ELSE") & parseData) { // Process ELSE part of IF
+                int iStart = i;
                 for (i++; i < source.length; i++) {
-                    line = parseString(source[i].trim());
-                    if ((line.indexOf("$JS_END") == 0) || (line.indexOf("$JS_}") == 0)) {
-                        break;
-                    };
+                    line = (source[i].trim());
                     if (line.indexOf("[END]") == 0) {
                         break;
                     };
-                    js += line + "\r";
+                    if (line.startsWith("$ENDIF")) {
+                        break;
+                    };
+                    if (line.startsWith("$EIF")) {
+                        break;
+                    };
                 }
-                IOUtil.writeLogLn(5, "<font color=green>JAVASCRIPT: " + js + "</font>", rm);
-                try {
-                    JS_Execute(js, sectionLines, out);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    String msg = e.toString().replaceAll("'", "`");
-                    while (msg.indexOf("Exception: ") > 0) {
-                        msg = msg.substring(msg.indexOf("Exception: ") + 10);
+                IOUtil.writeLogLn(2, "<font color=green>$IF state True. ELSE part. skip  " + (i-1 - iStart) + " lines</font>", rm);
+                continue;
+            }
+            if (line.startsWith("$IF ") & parseData) { // 
+                String expression = line.substring(4);
+                if (enabledExpression(expression.trim())) {
+                    IOUtil.writeLogLn(2, "<font color=green>" + line + "  state=True</font>", rm);
+                    continue;
+                } else {
+                    int iStart = i;
+                    for (i++; i < source.length; i++) {
+                        line = (source[i].trim());
+                        if (line.startsWith("$ELSE")) {
+                            break;
+                        };
+                        if (line.indexOf("[END]") == 0) {
+                            break;
+                        };
+                        if (line.startsWith("$ENDIF")) {
+                            break;
+                        };
+                        if (line.startsWith("$EIF")) {
+                            break;
+                        };
                     }
-                    addParameter("ERROR", msg);
-                    QueryThread q = (QueryThread) rm.getObject("QueryThread");
-                    if (q != null) {
-                        q.logException(e);
-                    }
+                    IOUtil.writeLogLn(2, "<font color=green>$IF state FALSE. skip  " + (i-1 - iStart) + " lines</font>", rm);
                 }
+
+                continue;
+            }
+
+            // ќт директивы $JS_BEGIN/$JS_{ до $JS_END/$JS_} иди до конца секции блок будет будет исполн€тьс€ как javascript код
+            if (((line.indexOf("$JS_BEGIN") == 0) || (line.indexOf("$JS_{") == 0)) & parseData) {
+                _$JS_BLOCK(source, i, line, sectionLines, out);
                 continue;
             }
 
@@ -919,7 +944,7 @@ public class BasicTuner {
                 {
                     String paramName = source.substring(b + 1, e);
                     if (ref) {
-                        
+
                         if (paramName.charAt(0) == ':') {
                             InitScriptEngine();
                             String tmpvar = "var tmp_for_parameter = " + paramName.substring(1) + ";";
@@ -931,7 +956,7 @@ public class BasicTuner {
                         }
 
                     }
-                    
+
                     if (paramName.charAt(0) == ':') {
                         InitScriptEngine();
                         String tmpvar = "var tmp_for_parameter = " + paramName.substring(1) + ";";
@@ -1668,6 +1693,7 @@ public class BasicTuner {
     }
 
     public void _$USE_DB(String line, Vector sectionLines, PrintWriter out) {
+        System.out.println(" --> " + line);
         try {
             Service serv = (Service) rm.getObject("service");
             String s = line.substring(("$USE_DB").length()).trim();
@@ -1681,15 +1707,77 @@ public class BasicTuner {
         }
     }
 
+    public void _$CLOSE_DB(String line, Vector sectionLines, PrintWriter out) {
+        System.out.println(" xxx " + line + " NOT SUPPORTED!");
+        /*        
+        try {
+            Service serv = (Service) rm.getObject("service");
+            String s = line.substring(("$CLOSE_DB").length()).trim();
+            serv.closeDb(parseString(s));
+        } catch (Exception e) {
+            String m = e.toString().replaceAll("'", "`");
+            addParameter("CLOSE_DB_ERROR",
+                    getParameter(null, null, "CLOSE_DB_ERROR")
+                    + m + "\n\r");
+            addParameter("ERROR", m);
+        }
+/**/
+    }
+
+    /**
+     * $TIMER без параметра - запомнить врем€ в мс., поставить его в TIMER_START
+     * и в TIMER. прежние значени€ забываютс€. $TIMER #TIMER# - поставить в
+     * TIMER разницу в мс. между тек.временем и #TIMER# $TIMER #TIMER_START#s -
+     * поставить в TIMER разницу в сек. между тек.временем и #TIMER_START#
+     * (FLOAT, 1 цифра после точки) ѕ–» »—ѕќЋ№«ќ¬јЌ»» $TIMER #...#s Ќ≈Ћ№«я
+     * ѕќ¬“ќ–Ќќ »—ѕќЋ№«ќ¬ј“№ #TIMER#!
+     *
+     * @param line
+     * @param sectionLines
+     * @param out
+     */
+    public void _$TIMER(String line, Vector sectionLines, PrintWriter out) {
+        boolean sec = false;
+        String t = "";
+        String s = parseString(line.substring(("$TIMER").length()).trim());
+//        System.out.println("_$TIMER: s=" + s);
+        if (s.isEmpty()) {
+            tm = System.currentTimeMillis();
+            t = Long.toString(tm);
+            addParameter("TIMER_START", t);
+//            addParameter("TIMER", t);
+        } else {
+            long t0 = 0;
+            if (s.endsWith("s")) {
+                sec = true;
+                s = s.replace("s", "");
+            }
+            try {
+                t0 = Long.parseLong(s);
+            } catch (Exception e) {
+                t0 = 0;
+            }
+            long t2 = System.currentTimeMillis() - t0;
+            if (sec) {
+                t = StrUtil.formatDouble(t2 / 1000, 1, "");
+            } else {
+                t = Long.toString(t2);
+            }
+        }
+        addParameter("TIMER", t);
+    }
+
     public void _$WAIT(String line, Vector sectionLines, PrintWriter out) {
         String tmp = line;
         line = parseString(line.substring(6).trim());
-        rm.println("WAITING for " + line);
+        rm.print("Tuner: waiting for " + line + "ms... ");
+        IOUtil.writeLog("Tuner: waiting for " + line + "ms... ", rm);
         try {
             Thread.sleep((new Long(line)));
         } catch (Exception e) {
         }
-        rm.println("Tuner: Continue... ");
+        rm.println(" Continue... ");
+        IOUtil.writeLogLn(" continue... ", rm);
     }
 
     public void _$GET_DATA(String line, Vector sectionLines, PrintWriter out) {
@@ -2022,14 +2110,15 @@ public class BasicTuner {
         engine_JS.put("BT", this);
         String jScript = "";
         try {
-            StringBuilder builder = new StringBuilder();
             String source[] = readFile(cfgRootPath + "JS/default.js");
             for (String current : source) {
-                builder.append(current);
+                jScript += current + "\n";
             }
-            jScript = builder.toString();
         } catch (Exception e) {
+            rm.println("====== JS error read DEFAULT.JS :\n");
         }
+//        rm.println("====== DEFAULT.JS :\n");
+//        rm.println(jScript);
 
         try {
             engine_JS.eval(jScript);
@@ -2063,6 +2152,36 @@ public class BasicTuner {
     public void _$PRINT(String line, Vector sectionLines, PrintWriter out) {
         line = parseString(line.substring(6).trim());
         rm.println(line);
+    }
+
+    private void _$JS_BLOCK(String[] source, int i, String line, Vector sectionLines, PrintWriter out) {
+
+        String js = "";
+        for (i++; i < source.length; i++) {
+            line = (source[i].trim());
+            if ((line.indexOf("$JS_END") == 0) || (line.indexOf("$JS_}") == 0)) {
+                break;
+            };
+            if (line.indexOf("[END]") == 0) {
+                break;
+            };
+            js += line + "\r";
+        }
+        IOUtil.writeLogLn(5, "<font color=green>JAVASCRIPT: " + js + "</font>", rm);
+        try {
+            JS_Execute(js, sectionLines, out);
+        } catch (Exception e) {
+            e.printStackTrace();
+            String msg = e.toString().replaceAll("'", "`");
+            while (msg.indexOf("Exception: ") > 0) {
+                msg = msg.substring(msg.indexOf("Exception: ") + 10);
+            }
+            addParameter("ERROR", msg);
+            QueryThread q = (QueryThread) rm.getObject("QueryThread");
+            if (q != null) {
+                q.logException(e);
+            }
+        }
     }
 
 }

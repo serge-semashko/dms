@@ -3,18 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group/>
-        <group name="dms_original">
-            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/edit/salary.cfg</file>
-            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/tab_jubilee.cfg</file>
-            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/tab_salary_table.cfg</file>
-            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/free/js_CallModule.dat</file>
-            <file>file:/G:/home/dms/hrlhep/web/WEB-INF/configs/free/js_CallModule.old</file>
-        </group>
         <group name="dms -SSS">
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/grade/test.js</file>
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/JS/test.js</file>
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/samples/js_sample.mod.cfg</file>
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/grade/scale_header.cfg</file>
         </group>
+        <group name="dms_original"/>
     </open-files>
 </project-private>
