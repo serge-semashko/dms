@@ -3,3 +3,5 @@
 /walt/build/
 /walt/dist/
 HR_LOG*.*
+/converter/nbproject/private/
+/arch/nbproject/private/
