@@ -16,5 +16,12 @@
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/grade/test.js</file>
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/grade/scale_header.cfg</file>
         </group>
+        <group name="HRLHEP">
+            <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/JS/test.js</file>
+            <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/tab_premii_table.cfg</file>
+            <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/grade/scale_header.cfg</file>
+            <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/samples/js_sample.mod.cfg</file>
+            <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/grade/test.js</file>
+        </group>
     </open-files>
 </project-private>

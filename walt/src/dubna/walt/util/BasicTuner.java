@@ -361,7 +361,7 @@ public class BasicTuner {
 
             // От директивы $JS_BEGIN/$JS_{ до $JS_END/$JS_} иди до конца секции блок будет будет исполняться как javascript код
             if (((line.indexOf("$JS_BEGIN") == 0) || (line.indexOf("$JS_{") == 0)) & parseData) {
-                _$JS_BLOCK(source, i, line, sectionLines, out);
+                i = _$JS_BLOCK(source, i, line, sectionLines, out);
                 continue;
             }
 
@@ -2114,10 +2114,11 @@ public class BasicTuner {
             for (String current : source) {
                 jScript += current + "\n";
             }
+//            rm.println("======Load JS/DEFAULT.JS :\n");
         } catch (Exception e) {
             rm.println("====== JS error read DEFAULT.JS :\n");
         }
-//        rm.println("====== DEFAULT.JS :\n");
+//        rm.println("======JS/DEFAULT.JS :\n");
 //        rm.println(jScript);
 
         try {
@@ -2154,8 +2155,8 @@ public class BasicTuner {
         rm.println(line);
     }
 
-    private void _$JS_BLOCK(String[] source, int i, String line, Vector sectionLines, PrintWriter out) {
-
+    private int _$JS_BLOCK(String[] source, int i, String line, Vector sectionLines, PrintWriter out) {
+        
         String js = "";
         for (i++; i < source.length; i++) {
             line = (source[i].trim());
@@ -2167,7 +2168,7 @@ public class BasicTuner {
             };
             js += line + "\r";
         }
-        IOUtil.writeLogLn(5, "<font color=green>JAVASCRIPT: " + js + "</font>", rm);
+//        IOUtil.writeLogLn(2, "<font color=green>JAVASCRIPT BLOCK: <br>" + js.replace("\r", "<br>") + "</font>", rm);
         try {
             JS_Execute(js, sectionLines, out);
         } catch (Exception e) {
@@ -2182,6 +2183,7 @@ public class BasicTuner {
                 q.logException(e);
             }
         }
+        return i;
     }
 
 }
