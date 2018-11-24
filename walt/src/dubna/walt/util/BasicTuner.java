@@ -328,7 +328,7 @@ public class BasicTuner {
                         break;
                     };
                 }
-                IOUtil.writeLogLn(2, "<font color=green>$IF state True. ELSE part. skip  " + (i-1 - iStart) + " lines</font>", rm);
+                IOUtil.writeLogLn(2, "<font color=green>$IF state True. ELSE part. skip  " + (i - 1 - iStart) + " lines</font>", rm);
                 continue;
             }
             if (line.startsWith("$IF ") & parseData) { // 
@@ -353,7 +353,7 @@ public class BasicTuner {
                             break;
                         };
                     }
-                    IOUtil.writeLogLn(2, "<font color=green>$IF state FALSE. skip  " + (i-1 - iStart) + " lines</font>", rm);
+                    IOUtil.writeLogLn(2, "<font color=green>$IF state FALSE. skip  " + (i - 1 - iStart) + " lines</font>", rm);
                 }
 
                 continue;
@@ -945,11 +945,15 @@ public class BasicTuner {
                     String paramName = source.substring(b + 1, e);
                     if (ref) {
 
-                        if (paramName.charAt(0) == ':') {
+                        if ((paramName.length()>0) && (paramName.charAt(0) == ':')) {
                             InitScriptEngine();
                             String tmpvar = "var tmp_for_parameter = " + paramName.substring(1) + ";";
                             JS_Execute(tmpvar, null, BTout);
-                            String test = engine_JS.get("tmp_for_parameter").toString();
+                            Object res = engine_JS.get("tmp_for_parameter");
+                            String test = "";
+                            if (res != null) {
+                                test = res.toString();
+                            }
                             paramName = test;
                         } else {
                             paramName = getParameter(null, null, paramName);
@@ -957,11 +961,18 @@ public class BasicTuner {
 
                     }
 
-                    if (paramName.charAt(0) == ':') {
+                        if ((paramName.length()>0) && (paramName.charAt(0) == ':')) {
                         InitScriptEngine();
                         String tmpvar = "var tmp_for_parameter = " + paramName.substring(1) + ";";
+                        rm.println("========== JS parameter:" + paramName.substring(1) + "\n");
                         JS_Execute(tmpvar, null, BTout);
-                        String test = engine_JS.get("tmp_for_parameter").toString();
+                        rm.println("========== JS eval parameter:" + paramName.substring(1) + "\n");
+                        Object res = engine_JS.get("tmp_for_parameter");
+                        String test = "";
+                        if (res != null) {
+                            test = res.toString();
+                        }
+                        rm.println("========== JS result eval parameter:" + test + "\n");
                         result.append(test);
                     } else {
                         result.append(getParameter(null, null, paramName));  // add the parameter value
@@ -2156,7 +2167,7 @@ public class BasicTuner {
     }
 
     private int _$JS_BLOCK(String[] source, int i, String line, Vector sectionLines, PrintWriter out) {
-        
+
         String js = "";
         for (i++; i < source.length; i++) {
             line = (source[i].trim());
