@@ -430,7 +430,7 @@ public class Service {
      */
     public void getData(String sectionName) throws Exception {
         String s; //, cmd="";
-        IOUtil.writeLogLn(9, "<br><b>$GET_DATA</b> " + sectionName, rm);
+        IOUtil.writeLogLn(3, "<br><b>$GET_DATA</b> " + sectionName, rm);
         if (sectionName.indexOf("SQL:") == 0) {
             s = sectionName.substring(4).trim();
             IOUtil.writeLogLn(2, "------ <b>exec SQL: </b>'" + s + "'", rm);

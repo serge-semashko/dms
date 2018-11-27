@@ -313,6 +313,13 @@ public class BasicTuner {
                 _$JS(line, sectionLines, out);
                 continue;
             }
+            //Проверка на закрытие $IF
+            if (line.startsWith("$EIF") & parseData) { // Process ELSE part of IF
+                continue;
+            }
+            if (line.startsWith("$ENDIF") & parseData) { // Process ELSE part of IF
+                continue;
+            }
 
             if (line.startsWith("$ELSE") & parseData) { // Process ELSE part of IF
                 int iStart = i;
