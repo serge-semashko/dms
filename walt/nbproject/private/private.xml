@@ -35,8 +35,7 @@
         <group name="HRLHEP">
             <file>file:/G:/home/JINR/hr/walt/src/dubna/walt/util/ResourceManager.java</file>
             <file>file:/G:/home/JINR/hr/walt/src/dubna/walt/service/Service.java</file>
-            <file>file:/G:/home/JINR/hr/walt/src/dubna/walt/util/BasicTuner.java</file>
-            <file>file:/G:/home/JINR/hr/walt/src/dubna/walt/util/Logger.java</file>
+            <file>file:/G:/home/JINR/hr/walt/src/dubna/walt/util/Tuner.java</file>
         </group>
     </open-files>
 </project-private>
