@@ -14,19 +14,21 @@
         <group name="HRLHEP">
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/edit/old_junk/fte.cfg</file>
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/edit/old_junk/premii.cfg</file>
-            <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/edit/user_grade.cfg</file>
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/tab_upgrade_table.cfg</file>
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/tab_reports_chart.cfg</file>
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/tab_fte_table.cfg</file>
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/JS/test.js</file>
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/samples/js_sample.mod.cfg</file>
+            <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/edit/edit_user_grade.cfg</file>
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/dat/common.dat</file>
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/gateway/receive_7_sotrudnik.cfg</file>
+            <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/tab_premii.cfg</file>
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/gateway/receive_3_podrazd.cfg</file>
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/edit/old_junk/fte_edit.cfg</file>
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/grade/test.js</file>
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/tab_premii_table.cfg</file>
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/edit/fte_v1.cfg</file>
+            <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/edit/premiya.cfg</file>
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/gateway/jinr_setDivParents.cfg</file>
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/gateway/jinr_setPersonPosts.cfg</file>
             <file>file:/G:/home/JINR/hr/hrlhep/web/WEB-INF/configs/edit/personal.cfg</file>
